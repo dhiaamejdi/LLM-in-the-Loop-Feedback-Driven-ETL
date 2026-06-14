@@ -1,0 +1,37 @@
+# --- Secrets: never commit tokens or credentials ---
+.env
+*.env
+secrets.*
+*token*
+*.key
+
+# --- Intermediate pipeline outputs (regenerated at runtime) ---
+# NOTE: if you intend to ship the saved .txt outputs so reviewers can run the
+# resumed mode, comment the next two lines out. Otherwise they stay local.
+results_safeguarded_raw_transform_batch_*.txt
+results_safeguarded_raw_hybrid_semantic_checks_batch_*.txt
+*_final_report.json
+archive.zip
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# --- Models / data caches ---
+*.safetensors
+*.bin
+.cache/
+huggingface/
+data/*.data
+data/*.test
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
