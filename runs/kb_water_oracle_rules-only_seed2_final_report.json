@@ -1,0 +1,2440 @@
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "oracle",
+    "data_csv": "../datasets/water-body-testing-2019.csv",
+    "worker_model": null,
+    "checker_model": null,
+    "seed": 2,
+    "sample_size": 1000,
+    "heldout_size": 300,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 756,
+    "residual_bad_rows_full_sample": 7,
+    "residual_bad_rows_in_heldout": 0
+  },
+  "checker_metrics": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 300,
+    "ground_truth_positives": 0,
+    "rows_flagged": 0,
+    "recall": null,
+    "recall_ci95": null,
+    "precision": null,
+    "precision_ci95": null,
+    "per_path": {
+      "deterministic": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 300
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 3,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 8,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 11,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 16,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 22,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 29,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 30,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 36,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 38,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 39,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 42,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 43,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 45,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 46,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 49,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 50,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 54,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 59,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 60,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 65,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 66,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 76,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 79,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 80,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 81,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 82,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 83,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 87,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 93,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 96,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 102,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 103,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 108,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 114,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 117,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 118,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 130,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 132,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 134,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 138,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 141,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 144,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 149,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 153,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 160,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 163,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 165,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 168,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 170,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 172,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 183,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 187,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 188,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 191,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 193,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 197,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 202,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 206,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 210,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 212,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 215,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 219,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 220,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 224,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 227,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 232,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 233,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 234,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 237,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 238,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 240,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 246,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 255,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 256,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 258,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 259,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 264,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 268,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 273,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 280,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 282,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 283,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 289,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 291,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 297,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 308,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 311,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 313,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 314,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 316,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 317,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 319,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 326,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 333,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 341,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 342,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 344,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 346,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 349,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 355,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 359,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 362,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 365,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 366,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 367,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 375,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 376,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 379,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 380,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 382,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 389,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 392,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 394,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 397,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 399,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 400,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 405,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 406,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 409,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 415,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 417,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 418,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 419,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 422,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 424,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 426,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 429,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 430,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 431,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 443,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 449,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 450,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 456,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 458,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 460,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 462,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 463,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 465,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 467,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 468,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 469,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 471,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 473,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 477,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 481,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 485,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 487,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 493,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 496,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 498,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 499,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 500,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 502,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 515,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 516,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 518,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 520,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 521,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 522,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 523,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 524,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 525,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 530,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 533,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 535,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 536,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 543,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 546,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 547,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 555,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 560,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 562,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 567,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 574,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 577,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 578,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 580,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 583,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 587,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 591,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 608,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 609,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 611,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 613,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 615,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 620,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 623,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 624,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 629,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 634,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 635,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 637,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 638,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 641,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 648,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 651,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 652,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 655,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 657,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 662,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 664,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 670,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 674,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 675,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 681,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 685,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 689,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 690,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 692,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 693,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 695,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 696,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 697,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 698,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 707,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 709,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 710,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 711,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 719,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 721,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 723,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 724,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 728,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 731,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 741,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 748,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 759,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 762,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 765,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 773,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 774,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 779,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 782,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 786,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 788,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 790,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 791,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 796,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 798,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 802,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 803,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 805,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 808,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 810,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 813,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 815,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 819,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 823,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 827,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 828,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 838,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 840,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 845,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 847,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 849,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 856,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 862,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 863,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 866,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 867,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 870,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 877,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 878,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 883,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 890,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 893,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 894,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 899,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 902,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 907,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 910,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 916,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 924,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 928,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 930,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 934,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 937,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 941,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 942,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 945,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 949,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 952,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 953,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 956,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 958,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 962,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 964,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 967,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 969,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 971,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 973,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 976,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 982,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 983,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 986,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 990,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 991,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 992,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    }
+  ]
+}

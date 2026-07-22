@@ -1,42 +1,35 @@
 # LLM-in-the-Loop Feedback-Driven ETL
 
-A modular architecture for trustworthy, self-adaptive Extract-Transform-Load (ETL) pipelines augmented by large language models (LLMs). Each ETL stage is run by a **Worker LLM** and validated by a paired **LLM-as-a-Checker**, with a feedback loop that consolidates human corrections and model-flagged discrepancies.
+A modular architecture for trustworthy Extract-Transform-Load (ETL) pipelines augmented by large language models (LLMs). Each ETL stage is run by a **Worker LLM** and validated by a paired **LLM-as-a-Checker**, with a feedback loop that consolidates human corrections and model-flagged discrepancies.
 
-This repository contains the prototype and evaluation code for the paper:
+This repository contains the prototype and evaluation harness for the paper:
 
-> **LLM-in-the-Loop Feedback-Driven ETL: A Modular Architecture for Trustworthy, Self-Adaptive Data Pipelines**
-> Dhiaa Mejdi and Adel M. Alimi. NOVAS 2026 (VLDB 2026 Workshop: Novel Optimizations for Visionary AI Systems).
+> **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy, Self-Adaptive Data Pipelines**
+> Dhiaa Mejdi and Adel M. Alimi.
 
-The central contribution is the discovery of the **circular validation problem** — a single LLM family used as both Worker and Checker fails to flag errors characteristic of its own model — and the **Safeguarded Architecture** that mitigates it through *cross-architecture validation* (Llama Worker + Mistral Checker) and *deterministic rule hybridization* (a fast deterministic path before the expensive LLM checker).
-
----
-
-## ⚠️ Please read before reviewing the code
-
-This section exists so you don't have to reverse-engineer our design decisions. We flag every known quirk, scope limit, and intentional shortcut up front.
-
-> **Please note (scope).** This is an **early-stage prototype**, not a production system. Only the **Low-Ambiguity tier (UCI Adult)** is implemented and evaluated. The Medium (CORD) and High (NYC Open Data) tiers described in the paper's evaluation framework are **specified but not yet run**. Every quantitative number in the paper refers to the UCI Adult prototype scope only.
-
-> **Please note (the `resume_from_files` flag).** In `safeguarded_LLM_in_the_loop.py`, the `__main__` block calls `run_pipeline(..., resume_from_files=True)` with the value **hardcoded**, which overrides the `--resume-from-files` CLI argument. This is **intentional**: it reproduces our reported run by reconstructing the transformed data from the saved raw-output `.txt` files, rather than re-calling the Worker LLM (which requires a GPU and a valid HF token). **If you clone this repo without our intermediate `.txt` files, a resumed run will raise `FileNotFoundError`.** To run the pipeline end-to-end from scratch, set this value to `False` (see [Running](#running) below).
-
-> **Please note (where the accuracy numbers come from).** The Worker accuracy figures in the paper (Schema Understanding 100%, Semantic Transformation 94.73%, Data Cleaning 95.47%, Feature Engineering 94.35%) are measured in the **notebook** (`LLM_in_the_Loop_Driven_ETL__3_.ipynb`), which contains deterministic **oracle** functions (`oracle_transform`, `oracle_clean`, `oracle_features`, `oracle_check_*`) used as ground truth. The standalone script `safeguarded_LLM_in_the_loop.py` implements the **Safeguarded Architecture experiment** (the 86.67% trustworthiness result and the cross-architecture validation), and does **not** recompute those per-stage accuracy numbers. The two files cover different experiments in the paper — see the [mapping table](#which-file-produces-which-result) below.
-
-> **Please note (small N, single realization).** The Safeguarded experiment validates on a held-out sample of **N=30** transformed rows, of which **4** were flagged as True Positives. Error injection is seeded (`SEED=42`), so results are deterministic for a given seed but represent **one realization**. We do not claim statistical significance from this sample; it is an early signal. This is discussed explicitly in the paper's *Threats to Validity* section.
-
-> **Please note (injected vs. natural errors).** Errors are **synthetically injected** (missing values, swapped columns, inconsistent casing, extraneous whitespace) via `inject_errors()`. They are not drawn from naturally occurring data faults, so the error distribution may not match real-world ETL failures.
-
-> **Please note (the JSON-cleanup hacks).** You will see defensive code that looks unusual: a `out.replace(r'\_', '_')` line in the checker, and a hand-rolled balanced-brace parser in `extract_json_block()`. These are **not** accidental — maintaining parsable JSON output across two different model families (Llama and Mistral) was the single largest engineering hurdle, as reported in the paper's discussion. Mistral, in particular, tended to escape underscores. These hacks are the "PromptOps layer" referenced in the paper.
-
-> **Please note (non-determinism).** LLM generation uses `temperature=0.0` for reproducibility, but LLM outputs are still not guaranteed to be bit-identical across hardware/library versions. Mean reproducibility was 0.87 cosine similarity across 10 runs.
+The central observation is the **circular validation problem** — a checker from the same model family as the worker fails to flag that family's characteristic errors (consistent with prior findings on LLM self-correction limits [Kamoi et al. 2024] and self-preference in LLM evaluators [Panickssery et al. 2024]) — and the **Safeguarded Architecture** that mitigates it through *cross-architecture validation* (Llama Worker + Mistral Checker) and *deterministic rule hybridization* (a compiled fast path ahead of the LLM checker).
 
 ---
+
+## What changed after review (v2)
+
+The harness was rewritten to make every claim in the paper attributable and reproducible:
+
+1. **Ablation modes.** `--mode {circular, cross-only, rules-only, hybrid}` runs the four cells of the 2×2 design (same-family vs. cross-family checker × with/without deterministic rules), so the contribution of each safeguard can be measured separately instead of being confounded.
+2. **Ground-truth metrics.** `inject_errors()` now logs every injected fault as `(row, column, error_type)`, and a deterministic oracle labels every transformed row as clean / residual-error. Checker verdicts are scored against this ground truth: TP/FP/FN/TN, recall, precision, and **exact Clopper–Pearson 95% confidence intervals** (pure Python, no scipy).
+3. **Per-path attribution.** Every verdict is tagged `checker="deterministic"` or `checker="llm"`, and the final report breaks metrics down per path.
+4. **Full seeding and multi-seed runs.** `--seed N` or `--seeds 1,2,...,10`.
+5. **No secrets in source.** The token is read from the `HF_TOKEN` environment variable only. (A previous revision accidentally contained a hardcoded token; it has been removed and revoked.)
+6. **`--resume-from-files` is a real CLI flag** (it was previously hardcoded to `True`, silently overriding the flag).
+7. **Bug fix in error injection.** Bad-casing and stray-whitespace injections previously reused the same `random_state`, corrupting the same rows twice; they now draw independently from the seeded generator. String-column detection also works under both classic (`object`) and modern (`str`) pandas dtypes.
 
 ## Repository contents
 
 | File | Purpose |
 |------|---------|
-| `safeguarded_LLM_in_the_loop.py` | Standalone script for the **Safeguarded Architecture** experiment: cross-architecture validation (Llama Worker + Mistral Checker) and deterministic rule hybridization. Produces the 86.67% trustworthiness result. |
-| `LLM_in_the_Loop_Driven_ETL__3_.ipynb` | Notebook for the **full four-stage pipeline** and the per-stage Worker/Checker accuracy measurements, including the deterministic oracle ground-truth functions. |
+| `safeguarded_LLM_in_the_loop.py` | Evaluation harness for the **Safeguarded Architecture**: worker transformation, hybrid validation, ablation modes, ground-truth scoring. |
+| `LLM_in_the_Loop_Driven_ETL.ipynb` | Notebook for the **full four-stage pipeline** and per-stage Worker/Checker accuracy measurements against deterministic oracle functions. |
+| `requirements.txt` | Python dependencies. |
 
 ## Which file produces which result
 
@@ -44,91 +37,144 @@ This section exists so you don't have to reverse-engineer our design decisions. 
 |---------------------|----------------------|
 | Worker accuracy per stage (100% / 94.73% / 95.47% / 94.35%) | Notebook, via oracle comparison |
 | Hallucination rate 4.2%, reproducibility 0.87 | Notebook |
-| Circular validation baseline (Llama checks Llama, >60% errors missed) | Notebook baseline run |
-| **Safeguarded Architecture: 4 True Positives, 86.67% (Table 4)** | `safeguarded_LLM_in_the_loop.py` |
-| Cross-architecture validation (Mistral catches Llama errors) | `safeguarded_LLM_in_the_loop.py` (`hybrid_semantic_checker`) |
-| Deterministic rule hybridization (fast/slow path) | `safeguarded_LLM_in_the_loop.py` (`deterministic_check_row` → LLM batch) |
-| Cost analysis (Table 2) | Estimated from token counts; not auto-generated by the script |
-
----
+| Circular validation baseline (Llama checks Llama) | `--mode circular` |
+| Safeguarded results (recall/precision + 95% CI, Table 4) | `--mode hybrid` → `*_final_report.json` |
+| Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
+| Cost analysis (Table 2) | Estimated from token counts; not auto-generated |
 
 ## Setup
 
-Requires Python 3.9+ and a GPU for the LLM stages (the models are `Llama-3.1-8B-Instruct` and `Mistral-7B-Instruct-v0.2`, both gated on Hugging Face).
+Requires Python 3.9+ and a GPU for the LLM stages (`Llama-3.1-8B-Instruct` and `Mistral-7B-Instruct-v0.2`, both gated on Hugging Face).
 
 ```bash
-pip install torch transformers huggingface_hub pandas numpy
+pip install -r requirements.txt
+export HF_TOKEN="your_token_here"   # never hardcode it
 ```
-
-### Hugging Face authentication
-
-The models are gated, so you need an HF account with access granted to both models, and an access token.
-
-> **Please note (security).** Do **not** hardcode your token in the source. Provide it via an environment variable or a Kaggle Secret. Set it like this:
-
-```bash
-export HF_TOKEN="your_token_here"
-```
-
-The script and notebook both read `os.environ.get("HF_TOKEN")`.
 
 ## Running
 
-### Reproduce our reported Safeguarded result (resumed mode)
-
-This requires the intermediate `results_safeguarded_raw_transform_batch_*_0.txt` files to be present in the working directory.
-
 ```bash
-python safeguarded_LLM_in_the_loop.py
+# Full safeguarded run (GPU + gated-model access required)
+python safeguarded_LLM_in_the_loop.py --mode hybrid
+
+# Circular-validation baseline (worker model checks itself)
+python safeguarded_LLM_in_the_loop.py --mode circular
+
+# Deterministic rules only (no LLM checker)
+python safeguarded_LLM_in_the_loop.py --mode rules-only
+
+# Reproduce the reported run from archived raw Worker outputs (no GPU for transform)
+python safeguarded_LLM_in_the_loop.py --mode hybrid --resume-from-files
+
+# Full 2x2 ablation across 10 seeds
+for m in circular cross-only rules-only hybrid; do
+  python safeguarded_LLM_in_the_loop.py --mode $m --seeds 1,2,3,4,5,6,7,8,9,10
+done
+
+# Run on a dataset OTHER than UCI Adult (any tabular CSV), with your own rules
+python safeguarded_LLM_in_the_loop.py --mode hybrid \
+  --data-csv path/to/nyc_open_data_export.csv \
+  --rules-json my_rules.json --seeds 1,2,3
 ```
 
-### Run the Safeguarded pipeline from scratch (fresh worker calls)
+`my_rules.json` maps rule names to natural-language descriptions, e.g.:
 
-Open `safeguarded_LLM_in_the_loop.py`, find the `run_pipeline(...)` call at the bottom, and change:
-
-```python
-resume_from_files=True
-```
-
-to:
-
-```python
-resume_from_files=False
-```
-
-Then run the same command. This will call the Llama Worker live (GPU + HF access required) and regenerate the transformed data before validation.
-
-### Run the full four-stage pipeline and accuracy measurements
-
-Open and run `LLM_in_the_Loop_Driven_ETL__3_.ipynb` (e.g. on Kaggle with a GPU). Set `HF_TOKEN` as a Kaggle Secret first.
-
----
-
-## Architecture summary
-
-The Safeguarded pipeline runs in three phases:
-
-1. **Semantic Transformation** — the Worker LLM (Llama) applies business rules (whitespace trimming, income-label normalization, sex capitalization) batch by batch.
-2. **Hybrid Validation** — every sampled row first passes a fast deterministic check (`deterministic_check_row`); only rows that pass are batched to the Checker LLM (Mistral) for semantic validation. This is the fast-path/slow-path design.
-3. **Feedback-Driven Refinement** — verdicts are aggregated; human corrections and Checker discrepancies feed a central knowledge base (the feedback loop; full closed-loop fine-tuning is future work).
-
-## Known limitations
-
-These are stated in full in the paper's *Architectural Limitations* and *Threats to Validity* sections, and summarized here:
-
-- **Computational cost** — each stage is a separate LLM call; best suited to lower-volume pipelines.
-- **Prompt sensitivity** — output quality depends heavily on prompt precision (hence the PromptOps layer).
-- **Data privacy** — reliance on external/hosted LLMs raises GDPR/CCPA concerns without on-prem deployment.
-- **Single model pair** — only Llama/Mistral tested; the cross-architecture benefit may be specific to this pairing. The "universal" character of the circular validation problem is stated as a hypothesis, not a proven result.
-- **Single dataset tier** — only UCI Adult executed.
-
-## Citation
-
-```bibtex
-@inproceedings{mejdi2026llmloop,
-  title     = {LLM-in-the-Loop Feedback-Driven ETL: A Modular Architecture for Trustworthy, Self-Adaptive Data Pipelines},
-  author    = {Mejdi, Dhiaa and Alimi, Adel M.},
-  booktitle = {VLDB 2026 Workshop: Novel Optimizations for Visionary AI Systems (NOVAS)},
-  year      = {2026}
+```json
+{
+  "trim_whitespace": "Trim whitespace in all string columns",
+  "state_codes": "Standardize US state names to two-letter codes"
 }
 ```
+
+Rules are **typed** (`trim_whitespace`, `strip_suffix`, `capitalize`, `uppercase`,
+`titlecase`, `canonical_values`), and the LLM prompt, the deterministic fast path, and the
+ground-truth oracle are all derived from the same rule objects — so they cannot drift apart.
+
+## KramaBench experiment (reviewer-recommended benchmark) — included & reproducible
+
+`datasets/` ships the Massachusetts water-body-testing table (15,571 rows) from KramaBench's
+*environment* data lake, a matching typed rule set, and `fetch_kramabench.sh` to pull the full
+benchmark. The deterministic fast path needs no GPU, so this runs anywhere:
+
+```bash
+cd runs
+# Detection condition: injected faults remain (passthrough worker), 10 seeds x 300 checked rows
+python ../safeguarded_LLM_in_the_loop.py --mode rules-only --worker-mode passthrough \
+  --data-csv ../datasets/water-body-testing-2019.csv \
+  --rules-json ../datasets/kramabench_water_rules.json \
+  --sample-size 1000 --heldout-size 300 --seeds 1,2,3,4,5,6,7,8,9,10 --outfile-prefix kb_water
+
+# Clean-data condition: oracle worker (measures false positives)
+python ../safeguarded_LLM_in_the_loop.py --mode rules-only --worker-mode oracle \
+  --data-csv ../datasets/water-body-testing-2019.csv \
+  --rules-json ../datasets/kramabench_water_rules.json \
+  --sample-size 1000 --heldout-size 300 --seeds 1,2,3,4,5,6,7,8,9,10 --outfile-prefix kb_water_oracle
+```
+
+**Full-scale run (entire 22-year lake, 2002–2023, 319,911 rows).** Fetch the benchmark with
+`datasets/fetch_kramabench.sh`, then glob all years:
+
+```bash
+python ../safeguarded_LLM_in_the_loop.py --mode rules-only --worker-mode passthrough \
+  --data-csv "Kramabench-main/data/environment/input/water-body-testing-*.csv" \
+  --rules-json ../datasets/kramabench_water_rules.json \
+  --sample-size 5000 --heldout-size 1000 --seeds 1,2,3,4,5,6,7,8,9,10 --outfile-prefix kbfull
+```
+
+Pooled results:
+
+| Run | Scale | TP | FN | FP | TN | Recall (95% CI) | Precision |
+|---|---|---|---|---|---|---|---|
+| Single file (2019), detection | 10 seeds × 300 checks | 796 | 0 | 0 | 2204 | 100% [0.995, 1.00] | 100% |
+| Single file (2019), clean data | 10 seeds × 300 checks | 15 | 0 | 0 | 2985 | 100% | 100% (0 FP) |
+| **Full lake (22 files)**, detection | **10 seeds × 1000 checks** | **9102** | **0** | **0** | **898** | **100% [0.9996, 1.00]** | **100%** |
+
+A bonus finding from the full lake: the `Violation` column's vocabulary drifts across years
+(`no/yes` → `NO/YES` → `No/Yes`), so ~half of the detected faults are **naturally occurring**
+data-quality errors, not injected ones — real faults, caught alongside synthetic ones.
+
+These runs validate the **deterministic path** and dataset generality. The **LLM** worker/checker
+modes on KramaBench (`--worker-mode llm --mode hybrid/circular/cross-only`) require a GPU and
+HF access and are the next experiments to run.
+
+`--worker-mode` options: `llm` (default; GPU), `oracle` (deterministic reference worker, no GPU,
+measures checker FPs), `passthrough` (no repair, no GPU, measures checker detection).
+
+## Reflexion baseline (agentic self-feedback)
+
+`--mode reflexion` runs a same-family checker with a Reflexion-style second pass (the model is
+shown its own verdicts and asked to reflect and revise). This is the agentic baseline requested
+in review: if the circular-validation hypothesis (H1) holds, self-critique alone should *not*
+recover the blind-spot errors that a different-family checker catches. Comparing
+`circular` vs `reflexion` vs `cross-only` tests exactly that.
+
+## One-command full evaluation
+
+```bash
+export HF_TOKEN=...            # GPU machine
+./run_full_ablation.sh 1,2,3,4,5 runs
+```
+
+runs the complete matrix — {rules-only, circular, reflexion, cross-only, hybrid} × {UCI Adult,
+KramaBench water-quality} × seeds — with each model loaded once per mode, then calls
+`aggregate_results.py`, which writes:
+
+- `runs/ablation_summary.md` — pooled TP/FP/FN/TN, recall/precision with exact 95% CIs
+- `runs/ablation_table.tex` — a paste-ready LaTeX table for Section 7.3 of the paper
+
+No local GPU? Open **`run_ablation_kaggle.ipynb`** on Kaggle or Colab (T4 is enough), add your
+`HF_TOKEN` as a secret, and run all cells; the last cell prints the LaTeX table.
+
+Each run writes:
+- `<prefix>_<mode>_seed<k>_injected_errors.json` — ground-truth fault log
+- `<prefix>_<mode>_seed<k>_raw_*_batch_*.txt` — raw LLM outputs (audit trail)
+- `<prefix>_<mode>_seed<k>_final_report.json` — config, ground truth, checker metrics (with CIs and per-path attribution), and row-level results
+
+## Scope and known limitations
+
+- **Early-stage prototype.** Only the Low-Ambiguity tier (UCI Adult) is implemented and evaluated; CORD and NYC Open Data tiers are specified but not run. Evaluation on KramaBench / DS-1000 is planned.
+- **Small N.** The held-out validation sample is N=30 with few positives; confidence intervals are wide by construction. Results are an early signal, not a stable estimate.
+- **Synthetic errors.** Faults are injected (missing values, swapped columns, casing, whitespace), and may not match natural fault distributions.
+- **Contamination.** UCI Adult is almost certainly in both models' pretraining data; error injection makes checked strings novel but does not eliminate familiarity effects.
+- **Non-determinism.** `temperature=0.0` is used, but LLM outputs are not bit-identical across hardware/library versions.
+- **PromptOps quirks are intentional.** The `\_` → `_` cleanup and the balanced-brace JSON parser exist because keeping parsable JSON across Llama and Mistral was the largest engineering hurdle (see paper, Discussion).

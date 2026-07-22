@@ -1,0 +1,2631 @@
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "passthrough",
+    "data_csv": "../datasets/water-body-testing-2019.csv",
+    "worker_model": null,
+    "checker_model": null,
+    "seed": 9,
+    "sample_size": 1000,
+    "heldout_size": 300,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 756,
+    "residual_bad_rows_full_sample": 259,
+    "residual_bad_rows_in_heldout": 81
+  },
+  "checker_metrics": {
+    "tp": 81,
+    "fp": 0,
+    "fn": 0,
+    "tn": 219,
+    "ground_truth_positives": 81,
+    "rows_flagged": 81,
+    "recall": 1.0,
+    "recall_ci95": [
+      0.9555,
+      1.0
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.9555,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 81,
+        "fp": 0,
+        "fn": 0,
+        "tn": 219
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 1,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 4,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 5,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 9,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 10,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 12,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Type Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got ' Fresh '"
+      ]
+    },
+    {
+      "row_idx": 13,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-20 00:00:00', got ' 2019-08-20 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 19,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected '593 Commercial Street', got ' 593 Commercial Street '"
+      ]
+    },
+    {
+      "row_idx": 26,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 33,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 34,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Boston', got ' Boston '"
+      ]
+    },
+    {
+      "row_idx": 38,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 43,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Worcester', got ' Worcester '",
+        "Sample Date: expected '2019-07-08 00:00:00', got ' 2019-07-08 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 45,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 47,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 48,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 58,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 59,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 60,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Newton', got ' Newton '"
+      ]
+    },
+    {
+      "row_idx": 61,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 68,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 77,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 78,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 80,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'essex' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Essex', got 'essex'"
+      ]
+    },
+    {
+      "row_idx": 84,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 85,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 95,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 97,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 98,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 103,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 105,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Sherwood Greens Road District Beach @ Main Beach', got ' Sherwood Greens Road District Beach @ Main Beach '"
+      ]
+    },
+    {
+      "row_idx": 107,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 110,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 115,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 116,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 117,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 128,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 135,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 136,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'norfolk' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Norfolk', got 'norfolk'"
+      ]
+    },
+    {
+      "row_idx": 138,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Violation'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' YES ' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'YES', got ' YES '"
+      ]
+    },
+    {
+      "row_idx": 143,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 145,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 147,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 148,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 149,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'essex' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Essex', got 'essex'"
+      ]
+    },
+    {
+      "row_idx": 150,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 159,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 176,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Type Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got ' Fresh '"
+      ]
+    },
+    {
+      "row_idx": 177,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 178,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 179,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Abington', got ' Abington '"
+      ]
+    },
+    {
+      "row_idx": 180,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 191,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 192,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Dukes', got ' Dukes '"
+      ]
+    },
+    {
+      "row_idx": 196,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 197,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 201,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 204,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 207,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 210,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 213,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'Enterococci', got ' Enterococci '"
+      ]
+    },
+    {
+      "row_idx": 214,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 217,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 220,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 226,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 231,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Whales', got ' Whales '"
+      ]
+    },
+    {
+      "row_idx": 237,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 241,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'fresh' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got 'fresh'"
+      ]
+    },
+    {
+      "row_idx": 254,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 260,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-05 00:00:00', got ' 2019-08-05 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 263,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Type Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got ' Fresh '"
+      ]
+    },
+    {
+      "row_idx": 266,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 267,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Beach Type Description: expected 'Fresh', got 'fresh'",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 268,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 279,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 281,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 282,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 287,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 292,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 294,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 295,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'Enterococci', got ' Enterococci '"
+      ]
+    },
+    {
+      "row_idx": 309,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Lynn', got ' Lynn '"
+      ]
+    },
+    {
+      "row_idx": 313,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-22 00:00:00', got ' 2019-07-22 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 314,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'E. Coli', got ' E. Coli '"
+      ]
+    },
+    {
+      "row_idx": 316,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 317,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 338,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 350,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 351,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 353,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 356,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 357,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 359,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 361,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 365,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 371,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 379,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 401,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 416,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 419,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 420,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 421,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 422,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'barnstable' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Barnstable', got 'barnstable'"
+      ]
+    },
+    {
+      "row_idx": 425,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 433,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 436,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 437,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 438,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Worcester', got ' Worcester '"
+      ]
+    },
+    {
+      "row_idx": 439,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 443,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 444,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 445,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 449,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 452,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 455,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 456,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 458,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 461,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 462,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 466,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 469,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 471,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 473,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 474,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 475,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Barnstable', got ' Barnstable '",
+        "Beach Name: expected 'Cotuit Bay Shores Association', got ' Cotuit Bay Shores Association '"
+      ]
+    },
+    {
+      "row_idx": 476,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'worcester' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Worcester', got 'worcester'"
+      ]
+    },
+    {
+      "row_idx": 478,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 485,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Violation'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' YES ' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'YES', got ' YES '"
+      ]
+    },
+    {
+      "row_idx": 487,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'middlesex' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Middlesex', got 'middlesex'"
+      ]
+    },
+    {
+      "row_idx": 488,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 490,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 494,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 501,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 507,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Violation'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' NO ' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got ' NO '"
+      ]
+    },
+    {
+      "row_idx": 508,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 509,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 510,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 512,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 514,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 515,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'E. Coli', got ' E. Coli '"
+      ]
+    },
+    {
+      "row_idx": 516,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 519,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 523,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'E. Coli', got ' E. Coli '"
+      ]
+    },
+    {
+      "row_idx": 525,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 527,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Violation'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' NO ' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got ' NO '"
+      ]
+    },
+    {
+      "row_idx": 528,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 529,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 530,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 531,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 533,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 534,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 539,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 543,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 548,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 549,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Ashburnham', got ' Ashburnham '"
+      ]
+    },
+    {
+      "row_idx": 550,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 551,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 559,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-28 00:00:00', got ' 2019-08-28 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 568,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 569,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 573,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'Enterococci', got ' Enterococci '"
+      ]
+    },
+    {
+      "row_idx": 574,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 577,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 578,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 582,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 583,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'suffolk' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Suffolk', got 'suffolk'"
+      ]
+    },
+    {
+      "row_idx": 588,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 591,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 600,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 604,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Beach Type Description: expected 'Marine', got 'marine'",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 607,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Type Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got ' Fresh '"
+      ]
+    },
+    {
+      "row_idx": 608,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 610,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 612,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'E. Coli', got ' E. Coli '"
+      ]
+    },
+    {
+      "row_idx": 614,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 615,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Type Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got ' Fresh '"
+      ]
+    },
+    {
+      "row_idx": 616,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 617,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 620,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 624,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 636,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 642,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' NO ' violates canonical set ['YES', 'NO']",
+        "Community: expected 'Dennis', got ' Dennis '",
+        "Violation: expected 'NO', got ' NO '"
+      ]
+    },
+    {
+      "row_idx": 646,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 647,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 648,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' NO ' violates canonical set ['YES', 'NO']",
+        "Sample Date: expected '2019-08-26 00:00:00', got ' 2019-08-26 00:00:00 '",
+        "Violation: expected 'NO', got ' NO '"
+      ]
+    },
+    {
+      "row_idx": 649,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Surf Drive (Pool)', got ' Surf Drive (Pool) '"
+      ]
+    },
+    {
+      "row_idx": 650,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 651,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 653,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'nantucket' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Nantucket', got 'nantucket'"
+      ]
+    },
+    {
+      "row_idx": 654,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 657,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 658,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-28 00:00:00', got ' 2019-05-28 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 660,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Dukes', got ' Dukes '"
+      ]
+    },
+    {
+      "row_idx": 662,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 663,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 670,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 675,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 676,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 678,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Kings (DCR) @ Pierce Rd.', got ' Kings (DCR) @ Pierce Rd. '"
+      ]
+    },
+    {
+      "row_idx": 682,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 685,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 686,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 687,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Falmouth', got ' Falmouth '"
+      ]
+    },
+    {
+      "row_idx": 688,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Middlesex', got ' Middlesex '"
+      ]
+    },
+    {
+      "row_idx": 691,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 695,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 697,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 698,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 699,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 703,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 704,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 708,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Violation'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' NO ' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got ' NO '"
+      ]
+    },
+    {
+      "row_idx": 713,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Hingham Town Beach', got ' Hingham Town Beach '"
+      ]
+    },
+    {
+      "row_idx": 714,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 715,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Carver', got ' Carver '"
+      ]
+    },
+    {
+      "row_idx": 717,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 718,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Carver', got ' Carver '"
+      ]
+    },
+    {
+      "row_idx": 722,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 733,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 735,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 736,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 737,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 739,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 747,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 748,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 750,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 751,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 753,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 762,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 763,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Cold River Pool (DCR)', got ' Cold River Pool (DCR) '"
+      ]
+    },
+    {
+      "row_idx": 771,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Barnstable', got ' Barnstable '",
+        "Sample Date: expected '2019-08-19 00:00:00', got ' 2019-08-19 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 776,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 780,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 783,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 784,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 785,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Beach Name'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected 'Wildwood - Lakeside', got ' Wildwood - Lakeside '"
+      ]
+    },
+    {
+      "row_idx": 788,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 790,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 791,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 793,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 795,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 796,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 799,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 803,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 809,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 812,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 823,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 826,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 833,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'worcester' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Worcester', got 'worcester'"
+      ]
+    },
+    {
+      "row_idx": 841,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 842,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 845,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 847,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Mashpee', got ' Mashpee '"
+      ]
+    },
+    {
+      "row_idx": 852,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-15 00:00:00', got ' 2019-07-15 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 855,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 859,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 861,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'E. Coli', got ' E. Coli '"
+      ]
+    },
+    {
+      "row_idx": 862,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Organism'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Organism: expected 'E. Coli', got ' E. Coli '"
+      ]
+    },
+    {
+      "row_idx": 863,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'marine' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Marine', got 'marine'"
+      ]
+    },
+    {
+      "row_idx": 873,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 880,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 883,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 886,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 892,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 894,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 895,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 906,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 909,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Dartmouth', got ' Dartmouth '"
+      ]
+    },
+    {
+      "row_idx": 912,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 914,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 915,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'marine' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Marine', got 'marine'"
+      ]
+    },
+    {
+      "row_idx": 924,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 925,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 930,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Violation'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: ' NO ' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got ' NO '"
+      ]
+    },
+    {
+      "row_idx": 931,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 932,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 933,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 934,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'marine' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Marine', got 'marine'"
+      ]
+    },
+    {
+      "row_idx": 935,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 937,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Barnstable', got ' Barnstable '"
+      ]
+    },
+    {
+      "row_idx": 938,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation 'no' not uppercase",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 940,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 941,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'barnstable' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Barnstable', got 'barnstable'"
+      ]
+    },
+    {
+      "row_idx": 949,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 962,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 969,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Sample Date'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-17 00:00:00', got ' 2019-06-17 00:00:00 '"
+      ]
+    },
+    {
+      "row_idx": 971,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 975,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 976,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Nantucket', got ' Nantucket '"
+      ]
+    },
+    {
+      "row_idx": 977,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'Community'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Tisbury', got ' Tisbury '"
+      ]
+    },
+    {
+      "row_idx": 981,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 983,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'essex' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Essex', got 'essex'"
+      ]
+    },
+    {
+      "row_idx": 984,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 987,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 988,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 990,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 991,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'County Description'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Worcester', got ' Worcester '"
+      ]
+    },
+    {
+      "row_idx": 994,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 995,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    }
+  ]
+}

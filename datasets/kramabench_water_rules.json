@@ -1,0 +1,12 @@
+[
+  {"type": "trim_whitespace",
+   "description": "Trim whitespace in all string columns"},
+  {"type": "uppercase", "column": "Violation",
+   "description": "Normalize the Violation flag to uppercase ('yes' becomes 'YES')"},
+  {"type": "canonical_values", "column": "Violation", "allowed": ["YES", "NO"],
+   "description": "Violation must be exactly 'YES' or 'NO'"},
+  {"type": "titlecase", "column": "Beach Type Description",
+   "description": "Beach type must be title-case ('marine' becomes 'Marine')"},
+  {"type": "titlecase", "column": "County Description",
+   "description": "County names must be title-case"}
+]

@@ -1,0 +1,8 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+# LLM stages (GPU strongly recommended; models are gated on Hugging Face)
+torch>=2.1
+transformers>=4.43
+huggingface_hub>=0.23
+accelerate>=0.30
