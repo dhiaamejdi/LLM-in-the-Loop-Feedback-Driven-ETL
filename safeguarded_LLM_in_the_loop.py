@@ -772,24 +772,34 @@ def llm_check_batches(
         ]
         prompt = (
             "You are a silent, precise JSON-generating API. You will be given a rule and a JSON "
-            "array of data cases. For each case, you will check if the 'transformed' data is a "
-            "valid transformation of the 'original' data according to the rule. Your entire "
-            "response MUST be a single JSON array, with one object per case. Do not include any "
-            "text, explanations, or markdown before or after the JSON array.\n\n"
+            "array of data cases. For each case, decide whether the 'transformed' data is a valid "
+            "transformation of the 'original' data according to the rule. Your entire response "
+            "MUST be a single JSON array, one object per case, no other text or markdown.\n\n"
             "## RULE:\n"
-            "The 'transformed' row should be a semantically correct version of the 'original' "
-            "row, with whitespace trimmed and labels normalized.\n\n"
+            "Compare every field of 'transformed' against 'original' character by character. "
+            "Return verdict NOT_OK if ANY field has: leading/trailing whitespace that was not "
+            "trimmed; a label that was not normalized (e.g. a trailing period, or wrong casing "
+            "such as lowercase where canonical casing is expected); or a value that does not "
+            "belong in its column. Return OK only if EVERY field is correct.\n\n"
             "## EXAMPLE:\n### INPUT:\n"
             "[\n  {\n"
-            '    "row_idx": 999,\n'
+            '    "row_idx": 998,\n'
             '    "original": {"name": " john ", "income": "<=50K."},\n'
             '    "transformed": {"name": "john", "income": "<=50K"}\n'
+            "  },\n  {\n"
+            '    "row_idx": 999,\n'
+            '    "original": {"name": " mary ", "income": ">50K."},\n'
+            '    "transformed": {"name": " mary", "income": ">50K."}\n'
             "  }\n]\n"
             "### CORRECT OUTPUT:\n"
             "[\n  {\n"
-            '    "row_idx": 999,\n'
+            '    "row_idx": 998,\n'
             '    "verdict": "OK",\n'
-            '    "notes": "Whitespace was trimmed and income label was normalized correctly."\n'
+            '    "notes": "Whitespace trimmed and income label normalized correctly."\n'
+            "  },\n  {\n"
+            '    "row_idx": 999,\n'
+            '    "verdict": "NOT_OK",\n'
+            '    "notes": "Leading whitespace in name was not trimmed; income label retains trailing period."\n'
             "  }\n]\n\n"
             "## ACTUAL TASK:\n### INPUT:\n"
             f"{json.dumps(cases, indent=2)}\n"
@@ -988,7 +998,7 @@ def run_pipeline(
     verdict_by_idx = {v.get("row_idx"): v for v in verdicts}
     scored_rows = []
     for idx in sample_idxs:
-        v = verdict_by_idx.get(idx, {"verdict": "OK", "notes": "no verdict returned", "checker": "none"})
+        v = verdict_by_idx.get(idx, {"verdict": "OK", "notes": "NO VERDICT RETURNED (parse failure or row skipped)", "checker": "missing"})
         not_ok = v.get("verdict") == "NOT_OK"
         truth_bad, reasons = truth[idx]
         metrics.record(not_ok, truth_bad, v.get("checker", "none"))
@@ -1014,6 +1024,11 @@ def run_pipeline(
             "injected_faults": len(error_log),
             "residual_bad_rows_full_sample": n_bad,
             "residual_bad_rows_in_heldout": sum(1 for i in sample_idxs if truth[i][0]),
+        },
+        "verdict_coverage": {
+            "rows_sampled": len(sample_idxs),
+            "rows_with_verdict": sum(1 for i in sample_idxs if i in verdict_by_idx),
+            "rows_missing_verdict": sum(1 for i in sample_idxs if i not in verdict_by_idx),
         },
         "checker_metrics": metrics.to_dict(),
         "row_level_results": scored_rows,
