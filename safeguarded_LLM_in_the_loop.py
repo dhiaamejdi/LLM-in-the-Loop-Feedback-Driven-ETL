@@ -468,27 +468,80 @@ def extract_json_block(text: str):
 _CLIENT_CACHE: Dict[str, "LLMClient"] = {}
 
 
-def get_llm_client(hf_token: str, model_name: str) -> "LLMClient":
-    """Cache clients across seeds/modes so each model loads only once per process."""
-    if model_name not in _CLIENT_CACHE:
-        _CLIENT_CACHE[model_name] = LLMClient(hf_token=hf_token, model_name=model_name)
+def _gpu_total_gb() -> float:
+    if TRANSFORMERS_AVAILABLE and torch.cuda.is_available():
+        return torch.cuda.get_device_properties(0).total_memory / 1e9
+    return 0.0
+
+
+def resolve_quantization(quantization: str) -> str:
+    """'auto' -> 4bit on small GPUs (e.g. Kaggle/Colab T4, 16 GB), none otherwise.
+
+    An 8B model in fp16 (~16 GB) does not fit a T4 alongside its KV cache, and
+    two 8B models never fit; in 4-bit NF4 each is ~5.5 GB so worker + checker
+    coexist comfortably. Requires bitsandbytes.
+    """
+    if quantization != "auto":
+        return quantization
+    if not (TRANSFORMERS_AVAILABLE and torch.cuda.is_available()):
+        return "none"
+    if _gpu_total_gb() < 24:
+        try:
+            import bitsandbytes  # noqa: F401
+            return "4bit"
+        except ImportError:
+            print("[LLM Client] WARNING: GPU < 24 GB and bitsandbytes not installed; "
+                  "falling back to fp16 with single-model cache eviction. "
+                  "`pip install bitsandbytes` is strongly recommended.")
+            return "none"
+    return "none"
+
+
+def get_llm_client(hf_token: str, model_name: str, quantization: str = "auto") -> "LLMClient":
+    """Cache clients across seeds/modes so each model loads only once per process.
+
+    In fp16 on a small GPU, only one model fits: evict cached models before
+    loading a different one. In 4/8-bit, worker and checker can coexist.
+    """
+    q = resolve_quantization(quantization)
+    if model_name in _CLIENT_CACHE:
+        return _CLIENT_CACHE[model_name]
+    if q == "none" and _CLIENT_CACHE and _gpu_total_gb() and _gpu_total_gb() < 40:
+        print(f"[LLM Client] Evicting cached model(s) {list(_CLIENT_CACHE)} to free GPU memory (fp16 mode).")
+        import gc
+        for k in list(_CLIENT_CACHE):
+            del _CLIENT_CACHE[k].model
+            del _CLIENT_CACHE[k]
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+    _CLIENT_CACHE[model_name] = LLMClient(hf_token=hf_token, model_name=model_name, quantization=q)
     return _CLIENT_CACHE[model_name]
 
 
 class LLMClient:
-    def __init__(self, hf_token: str, model_name: str):
+    def __init__(self, hf_token: str, model_name: str, quantization: str = "none"):
         if not TRANSFORMERS_AVAILABLE:
             raise RuntimeError("transformers/torch not available. pip install -r requirements.txt")
         if not hf_token:
             raise RuntimeError("HF token required for LLM mode (set HF_TOKEN env var).")
-        print(f"[LLM Client] Loading tokenizer and model: {model_name}")
+        print(f"[LLM Client] Loading tokenizer and model: {model_name} (quantization={quantization})")
         self.model_name = model_name
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token)
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name, device_map="auto", torch_dtype=torch.float16, token=hf_token
-        )
+        load_kwargs: Dict[str, Any] = dict(device_map="auto", token=hf_token, low_cpu_mem_usage=True)
+        if quantization in ("4bit", "8bit"):
+            from transformers import BitsAndBytesConfig
+            load_kwargs["quantization_config"] = (
+                BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
+                                   bnb_4bit_compute_dtype=torch.float16,
+                                   bnb_4bit_use_double_quant=True)
+                if quantization == "4bit" else BitsAndBytesConfig(load_in_8bit=True)
+            )
+        else:
+            load_kwargs["torch_dtype"] = torch.float16
+        self.model = AutoModelForCausalLM.from_pretrained(model_name, **load_kwargs)
         self.model.eval()
 
     def call(self, prompt: str, max_length: int = 1024, temperature: float = 0.0) -> str:
@@ -783,6 +836,7 @@ def run_pipeline(
     data_csv: Optional[str] = None,
     business_rules: Optional[List[Dict[str, Any]]] = None,
     worker_mode: str = "llm",
+    quantization: str = "auto",
 ) -> Dict[str, Any]:
     assert mode in MODES, f"mode must be one of {MODES}"
     seed_everything(seed)
@@ -818,7 +872,7 @@ def run_pipeline(
         # so this directly measures checker DETECTION of known faults. No GPU required.
         df_transformed = df_with_errors.copy(deep=True)
     else:  # "llm"
-        worker_client = get_llm_client(hf_token, worker_model)
+        worker_client = get_llm_client(hf_token, worker_model, quantization)
         df_transformed = llm_transform_stage(worker_client, df_with_errors, run_prefix, business_rules)
         # client stays cached for reuse across seeds/modes
 
@@ -834,7 +888,7 @@ def run_pipeline(
     checker_client = None
     if mode in ("hybrid", "cross-only", "circular", "reflexion"):
         model_for_checker = worker_model if mode in ("circular", "reflexion") else checker_model
-        checker_client = get_llm_client(hf_token, model_for_checker)
+        checker_client = get_llm_client(hf_token, model_for_checker, quantization)
 
     rng = np.random.default_rng(seed)
     sample_idxs = sorted(int(i) for i in rng.choice(
@@ -904,6 +958,9 @@ def main():
     parser.add_argument("--outfile-prefix", type=str, default="results_safeguarded")
     parser.add_argument("--data-csv", type=str, default=None,
                         help="Path to a custom tabular CSV. Default: UCI Adult (downloaded).")
+    parser.add_argument("--quantization", type=str, choices=("auto", "4bit", "8bit", "none"), default="auto",
+                        help="Model quantization. auto = 4-bit on GPUs under 24 GB (Kaggle/Colab T4) "
+                             "when bitsandbytes is installed, fp16 otherwise.")
     parser.add_argument("--worker-mode", type=str, choices=("llm", "oracle", "passthrough"), default="llm",
                         help="llm: call the Worker LLM (GPU). oracle: deterministic reference worker "
                              "(no GPU; measures checker false positives). passthrough: no transformation "
@@ -943,6 +1000,7 @@ def main():
             data_csv=args.data_csv,
             business_rules=load_business_rules(args.rules_json),
             worker_mode=args.worker_mode,
+            quantization=args.quantization,
         )
     print(f"Total execution time: {time.time() - start_time:.2f} seconds.")
 

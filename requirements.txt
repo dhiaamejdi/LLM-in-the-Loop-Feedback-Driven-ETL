@@ -6,3 +6,4 @@ torch>=2.1
 transformers>=4.43
 huggingface_hub>=0.23
 accelerate>=0.30
+bitsandbytes>=0.43   # 4-bit loading on 16 GB GPUs (Kaggle/Colab T4)
