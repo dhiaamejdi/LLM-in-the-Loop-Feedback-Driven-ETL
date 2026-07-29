@@ -5,3 +5,4 @@ __pycache__/
 repo.zip
 kramabench.zip
 runs/*.log
+runs_checkpoint.zip

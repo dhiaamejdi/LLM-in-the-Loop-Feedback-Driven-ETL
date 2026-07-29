@@ -591,12 +591,16 @@ def llm_transform_stage(
     business_rules: List[Dict[str, Any]],
     batch_size: int = BATCH_SIZE,
     retries: int = 2,
+    max_new_tokens: int = 2048,
 ) -> pd.DataFrame:
     rows_out = []
     n = len(df_in)
+    n_batches = (n + batch_size - 1) // batch_size
     for start in range(0, n, batch_size):
         batch = df_in.iloc[start:start + batch_size]
-        print(f"[Worker LLM: {client.model_name}] Transforming rows {start}..{start + len(batch) - 1}")
+        t0 = time.time()
+        print(f"[Worker LLM: {client.model_name}] Transforming rows {start}..{start + len(batch) - 1} "
+              f"(batch {start // batch_size + 1}/{n_batches})", flush=True)
         prompt = (
             "Transform rows according to the business rules and return a JSON object like "
             "{'rows':[ {...}, {...} ]}.\n"
@@ -607,7 +611,7 @@ def llm_transform_stage(
         )
         parsed_rows = None
         for attempt in range(retries):
-            out = client.call(prompt, max_length=4096, temperature=0.0)
+            out = client.call(prompt, max_length=max_new_tokens, temperature=0.0)
             with open(f"{outfile_prefix}_raw_transform_batch_{start}_{attempt}.txt", "w", encoding="utf-8") as f:
                 f.write(out)
             try:
@@ -622,6 +626,7 @@ def llm_transform_stage(
                 parsed_rows = None
         if parsed_rows is None:
             parsed_rows = []
+        print(f"  batch done in {time.time() - t0:.1f}s", flush=True)
         for i in range(len(batch)):
             rows_out.append(
                 parsed_rows[i] if i < len(parsed_rows) and isinstance(parsed_rows[i], dict)
@@ -749,9 +754,11 @@ def llm_check_batches(
             "### CORRECT OUTPUT:"
         )
         print(f"[Checker LLM: {checker_client.model_name}] Validating batch of {len(cases)} rows...")
-        out = checker_client.call(prompt, max_length=8192, temperature=0.0)
+        t0 = time.time()
+        out = checker_client.call(prompt, max_length=1024, temperature=0.0)
         # PromptOps cleanup: Mistral escapes underscores in JSON keys.
         out = out.replace(r"\_", "_")
+        print(f"  checker batch done in {time.time() - t0:.1f}s", flush=True)
         with open(f"{outfile_prefix}_raw_llm_checks_batch_{start}.txt", "w", encoding="utf-8") as f:
             f.write(out)
         try:
@@ -776,7 +783,7 @@ def llm_check_batches(
                 "## YOUR PREVIOUS VERDICTS:\n" + json.dumps(batch_verdicts, indent=2) + "\n\n"
                 "## REVISED VERDICTS:"
             )
-            out2 = checker_client.call(reflect_prompt, max_length=8192, temperature=0.0)
+            out2 = checker_client.call(reflect_prompt, max_length=1024, temperature=0.0)
             out2 = out2.replace(r"\_", "_")
             with open(f"{outfile_prefix}_raw_reflexion_batch_{start}.txt", "w", encoding="utf-8") as f:
                 f.write(out2)
@@ -849,6 +856,7 @@ def run_pipeline(
     business_rules: Optional[List[Dict[str, Any]]] = None,
     worker_mode: str = "llm",
     quantization: str = "auto",
+    max_new_tokens: int = 2048,
 ) -> Dict[str, Any]:
     assert mode in MODES, f"mode must be one of {MODES}"
     seed_everything(seed)
@@ -869,10 +877,33 @@ def run_pipeline(
     print(f"[Pipeline] Injected {len(error_log)} faults (ground-truth log saved).")
 
     # ---- Stage: Worker semantic transformation ----
+    # The transform depends only on (dataset, rules, seed) — NOT on the checker
+    # mode — so raw worker outputs are written under a mode-independent prefix
+    # and automatically reused by every other mode with the same seed. This cuts
+    # the dominant GPU cost of an ablation matrix by ~the number of modes.
+    transform_prefix = f"{outfile_prefix}_seed{seed}"
     print(f"\n--- [Stage] Semantic Transformation (Worker: {worker_mode}) ---")
+
+    def _try_reuse_cached_transform() -> Optional[pd.DataFrame]:
+        if not glob.glob(f"{transform_prefix}_raw_transform_batch_*_0.txt"):
+            return None
+        try:
+            cached = reconstruct_transformed_df_from_files(transform_prefix)
+        except Exception as e:
+            print(f"[Transform cache] Unusable ({e}); regenerating.")
+            return None
+        if len(cached) != len(df_with_errors):
+            print(f"[Transform cache] Row count mismatch ({len(cached)} vs {len(df_with_errors)}); regenerating.")
+            return None
+        print(f"[Transform cache] Reusing worker output for seed {seed} ({len(cached)} rows) — no worker LLM call needed.")
+        return cached.reindex(columns=df_with_errors.columns)
+
+    cached_transform = _try_reuse_cached_transform() if worker_mode == "llm" else None
     if resume_from_files:
         df_transformed = reconstruct_transformed_df_from_files(outfile_prefix)
         df_transformed = df_transformed.reindex(columns=df_with_errors.columns)
+    elif cached_transform is not None:
+        df_transformed = cached_transform
     elif worker_mode == "oracle":
         # Deterministic reference worker: useful for measuring checker FP rate
         # (all rows are clean by construction). No GPU required.
@@ -885,7 +916,8 @@ def run_pipeline(
         df_transformed = df_with_errors.copy(deep=True)
     else:  # "llm"
         worker_client = get_llm_client(hf_token, worker_model, quantization)
-        df_transformed = llm_transform_stage(worker_client, df_with_errors, run_prefix, business_rules)
+        df_transformed = llm_transform_stage(worker_client, df_with_errors, transform_prefix, business_rules,
+                                             max_new_tokens=max_new_tokens)
         # client stays cached for reuse across seeds/modes
 
     # ---- Ground truth: which transformed rows still violate the rules? ----
@@ -970,6 +1002,8 @@ def main():
     parser.add_argument("--outfile-prefix", type=str, default="results_safeguarded")
     parser.add_argument("--data-csv", type=str, default=None,
                         help="Path to a custom tabular CSV. Default: UCI Adult (downloaded).")
+    parser.add_argument("--max-new-tokens", type=int, default=2048,
+                        help="Generation cap for the worker transform (default 2048; lower = faster).")
     parser.add_argument("--quantization", type=str, choices=("auto", "4bit", "8bit", "none"), default="auto",
                         help="Model quantization. auto = 4-bit on GPUs under 24 GB (Kaggle/Colab T4) "
                              "when bitsandbytes is installed, fp16 otherwise.")
@@ -1013,6 +1047,7 @@ def main():
             business_rules=load_business_rules(args.rules_json),
             worker_mode=args.worker_mode,
             quantization=args.quantization,
+            max_new_tokens=args.max_new_tokens,
         )
     print(f"Total execution time: {time.time() - start_time:.2f} seconds.")
 
