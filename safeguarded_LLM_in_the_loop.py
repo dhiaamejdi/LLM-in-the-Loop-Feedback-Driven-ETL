@@ -593,15 +593,21 @@ def llm_transform_stage(
     retries: int = 2,
     max_new_tokens: int = 2048,
 ) -> pd.DataFrame:
-    rows_out = []
+    """Worker transformation with truncation-proof batching.
+
+    If a batch's output cannot be parsed as JSON (the usual cause is the
+    generation hitting the token cap mid-JSON), the batch is SPLIT IN HALF and
+    each half retried, recursively down to single rows. A row falls back to its
+    untransformed original only if even its single-row generation is unparsable,
+    and every fallback is counted and reported loudly — a silently passthrough
+    "worker" would invalidate the experiment.
+    """
     n = len(df_in)
     n_batches = (n + batch_size - 1) // batch_size
-    for start in range(0, n, batch_size):
-        batch = df_in.iloc[start:start + batch_size]
-        t0 = time.time()
-        print(f"[Worker LLM: {client.model_name}] Transforming rows {start}..{start + len(batch) - 1} "
-              f"(batch {start // batch_size + 1}/{n_batches})", flush=True)
-        prompt = (
+    fallback_rows = [0]
+
+    def build_prompt(batch: pd.DataFrame) -> str:
+        return (
             "Transform rows according to the business rules and return a JSON object like "
             "{'rows':[ {...}, {...} ]}.\n"
             "Business rules:\n" + rules_prompt_lines(business_rules) + "\n\n"
@@ -609,11 +615,16 @@ def llm_transform_stage(
             "IMPORTANT: You MUST return only the JSON object. Do not include any introductory "
             "text or explanations. Your entire response must be the JSON itself, starting with '{'."
         )
+
+    def transform_chunk(batch: pd.DataFrame, tag: str) -> List[Dict]:
+        prompt = build_prompt(batch)
         parsed_rows = None
         for attempt in range(retries):
             out = client.call(prompt, max_length=max_new_tokens, temperature=0.0)
-            with open(f"{outfile_prefix}_raw_transform_batch_{start}_{attempt}.txt", "w", encoding="utf-8") as f:
+            with open(f"{outfile_prefix}_raw_transform_batch_{tag}_{attempt}.txt", "w", encoding="utf-8") as f:
                 f.write(out)
+            # Truncation heuristic: output that never closes its JSON almost always
+            # means the token cap was hit. Splitting beats retrying the same prompt.
             try:
                 parsed = extract_json_block(out)
                 parsed_rows = parsed.get("rows") if isinstance(parsed, dict) else (
@@ -622,16 +633,44 @@ def llm_transform_stage(
                 if parsed_rows is not None:
                     break
             except Exception as e:
-                print(f"  Transform batch {start} attempt {attempt + 1} failed to parse: {e}")
+                print(f"  chunk {tag} attempt {attempt + 1} unparsable ({e})", flush=True)
                 parsed_rows = None
+                if len(batch) > 1:
+                    break  # don't waste a retry on a likely-truncated prompt; split instead
         if parsed_rows is None:
-            parsed_rows = []
-        print(f"  batch done in {time.time() - t0:.1f}s", flush=True)
+            if len(batch) > 1:
+                mid = len(batch) // 2
+                print(f"  splitting chunk {tag} ({len(batch)} rows) -> halves", flush=True)
+                return (transform_chunk(batch.iloc[:mid], f"{tag}a")
+                        + transform_chunk(batch.iloc[mid:], f"{tag}b"))
+            fallback_rows[0] += 1
+            print(f"  WARNING: single-row chunk {tag} unparsable after {retries} attempts; "
+                  f"falling back to original row.", flush=True)
+            return [batch.iloc[0].to_dict()]
+        out_rows = []
         for i in range(len(batch)):
-            rows_out.append(
-                parsed_rows[i] if i < len(parsed_rows) and isinstance(parsed_rows[i], dict)
-                else batch.iloc[i].to_dict()  # fallback to original row on parse failure
-            )
+            if i < len(parsed_rows) and isinstance(parsed_rows[i], dict):
+                out_rows.append(parsed_rows[i])
+            else:
+                fallback_rows[0] += 1
+                out_rows.append(batch.iloc[i].to_dict())
+        return out_rows
+
+    rows_out: List[Dict] = []
+    for start in range(0, n, batch_size):
+        batch = df_in.iloc[start:start + batch_size]
+        t0 = time.time()
+        print(f"[Worker LLM: {client.model_name}] Transforming rows {start}..{start + len(batch) - 1} "
+              f"(batch {start // batch_size + 1}/{n_batches})", flush=True)
+        rows_out.extend(transform_chunk(batch, str(start)))
+        print(f"  batch done in {time.time() - t0:.1f}s", flush=True)
+    if fallback_rows[0]:
+        pct = 100.0 * fallback_rows[0] / n
+        print(f"[Worker LLM] WARNING: {fallback_rows[0]}/{n} rows ({pct:.1f}%) fell back to originals. "
+              f"If this exceeds a few percent, results reflect a partially-passthrough worker — "
+              f"reduce --batch-size or raise --max-new-tokens and rerun.", flush=True)
+    else:
+        print(f"[Worker LLM] All {n} rows transformed by the model (0 fallbacks).", flush=True)
     return pd.DataFrame(rows_out)
 
 
@@ -649,7 +688,10 @@ def reconstruct_transformed_df_from_files(outfile_prefix: str) -> pd.DataFrame:
             "Run once without --resume-from-files first (GPU required), or download the "
             "archived outputs from the repository release."
         )
-    transform_files.sort(key=lambda f: int(re.search(r"_batch_(\d+)_", f).group(1)))
+    def _batch_key(f):
+        mm = re.search(r"_batch_([0-9]+)([ab]*)_", f)
+        return (int(mm.group(1)), mm.group(2)) if mm else (10**9, "")
+    transform_files.sort(key=_batch_key)
     all_rows: List[Dict] = []
     for file_path in transform_files:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -857,6 +899,7 @@ def run_pipeline(
     worker_mode: str = "llm",
     quantization: str = "auto",
     max_new_tokens: int = 2048,
+    batch_size: int = BATCH_SIZE,
 ) -> Dict[str, Any]:
     assert mode in MODES, f"mode must be one of {MODES}"
     seed_everything(seed)
@@ -917,7 +960,7 @@ def run_pipeline(
     else:  # "llm"
         worker_client = get_llm_client(hf_token, worker_model, quantization)
         df_transformed = llm_transform_stage(worker_client, df_with_errors, transform_prefix, business_rules,
-                                             max_new_tokens=max_new_tokens)
+                                             batch_size=batch_size, max_new_tokens=max_new_tokens)
         # client stays cached for reuse across seeds/modes
 
     # ---- Ground truth: which transformed rows still violate the rules? ----
@@ -1002,6 +1045,9 @@ def main():
     parser.add_argument("--outfile-prefix", type=str, default="results_safeguarded")
     parser.add_argument("--data-csv", type=str, default=None,
                         help="Path to a custom tabular CSV. Default: UCI Adult (downloaded).")
+    parser.add_argument("--batch-size", type=int, default=BATCH_SIZE,
+                        help="Rows per worker transform call. Use smaller values for wide datasets "
+                             "so the JSON output fits --max-new-tokens (e.g. 8 for KramaBench).")
     parser.add_argument("--max-new-tokens", type=int, default=2048,
                         help="Generation cap for the worker transform (default 2048; lower = faster).")
     parser.add_argument("--quantization", type=str, choices=("auto", "4bit", "8bit", "none"), default="auto",
@@ -1048,6 +1094,7 @@ def main():
             worker_mode=args.worker_mode,
             quantization=args.quantization,
             max_new_tokens=args.max_new_tokens,
+            batch_size=args.batch_size,
         )
     print(f"Total execution time: {time.time() - start_time:.2f} seconds.")
 
