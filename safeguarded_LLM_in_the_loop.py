@@ -548,17 +548,29 @@ class LLMClient:
         messages = [{"role": "user", "content": prompt}]
         if "mistral" in self.model_name.lower():
             full_prompt = f"<s>[INST] {prompt} [/INST]"
-            input_ids = self.tokenizer(full_prompt, return_tensors="pt").input_ids.to(self.model.device)
+            enc = self.tokenizer(full_prompt, return_tensors="pt")
         else:  # Llama-3 chat template
-            input_ids = self.tokenizer.apply_chat_template(
-                messages, add_generation_prompt=True, return_tensors="pt"
-            ).to(self.model.device)
+            enc = self.tokenizer.apply_chat_template(
+                messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
+            )
+        # Newer transformers return a BatchEncoding (dict-like); older return a bare
+        # tensor from apply_chat_template. Normalize to (input_ids, attention_mask).
+        if hasattr(enc, "keys"):  # BatchEncoding / dict
+            input_ids = enc["input_ids"].to(self.model.device)
+            attention_mask = enc.get("attention_mask")
+            attention_mask = attention_mask.to(self.model.device) if attention_mask is not None else None
+        else:  # bare tensor
+            input_ids = enc.to(self.model.device)
+            attention_mask = None
+        if attention_mask is None:
+            attention_mask = torch.ones_like(input_ids)
         terminators = [self.tokenizer.eos_token_id]
         if "Llama-3" in self.model_name:
             terminators.append(self.tokenizer.convert_tokens_to_ids("<|eot_id|>"))
         with torch.no_grad():
             outputs = self.model.generate(
-                input_ids,
+                input_ids=input_ids,
+                attention_mask=attention_mask,
                 max_new_tokens=max_length,
                 eos_token_id=terminators,
                 do_sample=temperature > 0,
