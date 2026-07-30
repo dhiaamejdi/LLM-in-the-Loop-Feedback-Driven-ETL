@@ -35,8 +35,8 @@ The harness was rewritten to make every claim in the paper attributable and repr
 
 | Paper claim / table | Where it is produced |
 |---------------------|----------------------|
-| Worker accuracy per stage (100% / 94.73% / 95.47% / 94.35%) | Notebook, via oracle comparison |
-| Hallucination rate 4.2%, reproducibility 0.87 | Notebook |
+| Worker accuracy per stage (100% / 94.73% / 95.47% / 94.35%) | Pilot notebook, via oracle comparison (pilot scope; see paper §5.2) |
+| Hallucination 4.2%, reproducibility 0.87, prompt-success 73.2%, checker 42%/8.3% | **Withdrawn** — no artifact source; see paper §5.2 |
 | Circular validation baseline (Llama checks Llama) | `--mode circular` |
 | Safeguarded results (recall/precision + 95% CI, Tables 4–5) | `--mode hybrid` → `*_final_report.json` |
 | Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
@@ -180,11 +180,11 @@ Each run writes:
 - `<prefix>_<mode>_seed<k>_raw_*_batch_*.txt` — raw LLM outputs (audit trail)
 - `<prefix>_<mode>_seed<k>_final_report.json` — config, ground truth, checker metrics (with CIs and per-path attribution), and row-level results
 
-## Scope and known limitations
+## Scope and known limitations (post-ablation)
 
-- **Early-stage prototype.** Only the Low-Ambiguity tier (UCI Adult) is implemented and evaluated; CORD and NYC Open Data tiers are specified but not run. Evaluation on KramaBench / DS-1000 is planned.
-- **Small N.** The held-out validation sample is N=30 with few positives; confidence intervals are wide by construction. Results are an early signal, not a stable estimate.
-- **Synthetic errors.** Faults are injected (missing values, swapped columns, casing, whitespace), and may not match natural fault distributions.
-- **Contamination.** UCI Adult is almost certainly in both models' pretraining data; error injection makes checked strings novel but does not eliminate familiarity effects.
-- **Non-determinism.** `temperature=0.0` is used, but LLM outputs are not bit-identical across hardware/library versions.
-- **PromptOps quirks are intentional.** The `\_` → `_` cleanup and the balanced-brace JSON parser exist because keeping parsable JSON across Llama and Mistral was the largest engineering hurdle (see paper, Discussion).
+- **Executed.** The Low-Ambiguity tier (UCI Adult); the five-configuration, three-seed checker ablation on UCI Adult **and** the KramaBench water-quality table (the paper's primary evidence; Section 7.3); and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7.4). **Planned:** the CORD and NYC Open Data tiers, DS-1000, and the DAB benchmark.
+- **Sample sizes.** The ablation checks 90 (UCI) and 120 (KramaBench) rows across 3 seeds per configuration — usable but with wide confidence intervals; the superseded single-seed pilot (N=30) is retained in the paper only as a record.
+- **Fault realism.** UCI-tier errors are synthetically injected; on the KramaBench tier roughly half of detected faults are *naturally occurring* vocabulary-drift errors (Section 7.4), dominated by one error class (label casing).
+- **Prompt sensitivity.** The paper's own results show checker-prompt specification can qualitatively change conclusions; all findings are conditional on the fixed, balanced prompt used in the ablation.
+- **Quantization & hardware.** Ablation models ran in 4-bit NF4 on a single 16 GB GPU; full-precision behavior may differ. Outputs are not bit-reproducible across hardware, which is why seeds, model commit pins (`runs/model_pins.json`), and raw outputs are archived.
+- **Known engineering hazard.** Same-family (Llama) checkers degenerated into unparsable repetition on 12.5% of checked KramaBench rows' batches, while Mistral parsed cleanly on every batch (388 checked rows) — see paper Section 7.3, finding 5. The recursive batch-splitting transform and per-verdict attribution exist because of this.
