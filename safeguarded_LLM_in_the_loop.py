@@ -4,7 +4,7 @@ Safeguarded LLM-in-the-Loop ETL — reproducible evaluation harness.
 
 Implements the Safeguarded Architecture from:
   "LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy, Self-Adaptive
-   Data Pipelines" (Mejdi & Alimi).
+   Data Pipelines" (Anonymous).
 
 Key properties (added in the post-review revision):
 
@@ -116,7 +116,7 @@ BUSINESS_RULES: List[Dict[str, Any]] = [
      "description": "Map sex to 'Male'/'Female' (capitalize)"},
 ]
 
-MODES = ("hybrid", "circular", "cross-only", "rules-only", "reflexion")
+MODES = ("hybrid", "circular", "cross-only", "rules-only", "reflexion", "hybrid-circular")
 # reflexion: same-family checker with Reflexion-style self-critique (verdict pass,
 # then a reflection pass asking the model to re-examine and revise its verdicts).
 # This is the agentic self-feedback baseline requested by Reviewer 1VsF (O4): if
@@ -870,8 +870,8 @@ def run_checker(
     rules: Optional[List[Dict[str, Any]]] = None,
 ) -> List[Dict]:
     """Dispatch validation according to the ablation mode."""
-    use_rules = mode in ("hybrid", "rules-only")
-    use_llm = mode in ("hybrid", "cross-only", "circular", "reflexion")
+    use_rules = mode in ("hybrid", "rules-only", "hybrid-circular")
+    use_llm = mode in ("hybrid", "cross-only", "circular", "reflexion", "hybrid-circular")
 
     verdicts: List[Dict] = []
     rows_for_llm = []
@@ -1006,8 +1006,8 @@ def run_pipeline(
     # ---- Stage: Hybrid / ablation checker ----
     print(f"\n--- [Stage] Validation (mode={mode}) ---")
     checker_client = None
-    if mode in ("hybrid", "cross-only", "circular", "reflexion"):
-        model_for_checker = worker_model if mode in ("circular", "reflexion") else checker_model
+    if mode in ("hybrid", "cross-only", "circular", "reflexion", "hybrid-circular"):
+        model_for_checker = worker_model if mode in ("circular", "reflexion", "hybrid-circular") else checker_model
         checker_client = get_llm_client(hf_token, model_for_checker, quantization)
 
     rng = np.random.default_rng(seed)
@@ -1036,7 +1036,7 @@ def run_pipeline(
             "worker_mode": worker_mode,
             "data_csv": data_csv or "UCI Adult (default)",
             "worker_model": worker_model if worker_mode == "llm" else None,
-            "checker_model": (worker_model if mode in ("circular", "reflexion") else checker_model)
+            "checker_model": (worker_model if mode in ("circular", "reflexion", "hybrid-circular") else checker_model)
             if mode != "rules-only" else None,
             "seed": seed,
             "sample_size": sample_size,

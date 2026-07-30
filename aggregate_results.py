@@ -48,8 +48,9 @@ MODE_LABELS = {
     "cross-only": "Cross-architecture LLM only",
     "rules-only": "Deterministic rules only",
     "hybrid": "Hybrid (rules + cross-architecture)",
+    "hybrid-circular": "Hybrid (rules + same-family)",
 }
-MODE_ORDER = ["circular", "reflexion", "rules-only", "cross-only", "hybrid"]
+MODE_ORDER = ["circular", "reflexion", "rules-only", "cross-only", "hybrid", "hybrid-circular"]
 
 
 def main(outdir):

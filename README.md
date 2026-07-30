@@ -5,7 +5,7 @@ A modular architecture for trustworthy Extract-Transform-Load (ETL) pipelines au
 This repository contains the prototype and evaluation harness for the paper:
 
 > **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy, Self-Adaptive Data Pipelines**
-> Dhiaa Mejdi and Adel M. Alimi.
+> Anonymous Authors.
 
 The paper's arc, honestly: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors, echoing LLM self-correction limits [Kamoi et al. 2024] and evaluator self-preference [Panickssery et al. 2024]). A controlled five-configuration, multi-seed ablation — the primary evidence of the paper — did **not** reproduce that blindness: with a balanced checker prompt, same-family checkers *over-flag* (recall 0.84–0.93 at precision 0.49–0.64), cross-architecture checkers are conservative-but-precise (0.22–0.28 recall at 0.94–1.00 precision), Reflexion-style self-critique adds nothing, and the durable positive result is that deterministic rules and cross-model checking catch **complementary** errors: the hybrid achieves the best zero-false-positive coverage (0.45–0.51 recall at ≥0.96 precision) while sending 14–17% fewer rows to the LLM. The pilot's apparent blindness traces to an OK-anchored checker prompt — prompt specification is a first-order variable in LLM-validation studies. All numbers reproduce from the committed `runs/` artifacts.
 
