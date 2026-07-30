@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 49,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, Violation was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels retain wrong casing."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Year was not trimmed; Year is null, which does not belong in its column."
+  },
+  {
+    "row_idx": 52,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, Violation was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels retain wrong casing; Organism value is not a valid label."
+  },
+  {
+    "row_idx": 53,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, Violation was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels retain wrong casing."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, Violation was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels retain wrong casing; Violation value is not a valid label."
+  }
+]

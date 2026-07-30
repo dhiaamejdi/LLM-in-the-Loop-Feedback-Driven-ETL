@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "20.0",
+      "Community": "",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24 00:00:00",
+      "Beach Name": "Barnstable Yacht Club",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-23 00:00:00",
+      "Beach Name": "Wollaston @ Rice Road (DCR)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "41.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-16 00:00:00",
+      "Beach Name": "Old Silver Residents",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": ""
+    },
+    {
+      "Community Code": "168.0",
+      "Community": "Marblehead",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-09-11 00:00:00",
+      "Beach Name": "Stramski",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-12 00:00:00",
+      "Beach Name": "Seaview Avenue",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "298.0",
+      "Community": "Topsfield",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "E. Coli,Hood's Pond,Fresh,2019-08-21 00:00:00",
+      "Beach Name": "Hood's Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "5.0",
+      "Indicator Level": "NO",
+      "Violation": ""
+    },
+    {
+      "Community Code": "169.0",
+      "Community": "Marion",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-10 00:00:00",
+      "Beach Name": "Island Wharf",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "20.0",
+      "Community": "Barnstable",
+      "County Code": "1.0",
+      "County Description": "barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-08 00:00:00",
+      "Beach Name": "Kennedy Memorial/Veterans Beach",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    }
+  ]
+}

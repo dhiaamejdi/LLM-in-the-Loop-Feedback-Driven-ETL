@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; education label was not normalized; income label was not normalized."
+  },
+  {
+    "row_idx": 40,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; sex label was not normalized."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label was not normalized."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; marital-status label was not normalized."
+  },
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; age value was incorrect; education value was incorrect; education-num value was incorrect; marital-status value was incorrect; sex value was incorrect; occupation value was incorrect; relationship value was incorrect; income value was incorrect."
+  }
+]

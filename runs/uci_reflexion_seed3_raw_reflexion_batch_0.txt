@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label retains trailing period; non-normalized label in income."
+  },
+  {
+    "row_idx": 3,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in workclass was not trimmed; income label retains trailing period; non-normalized label in income."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in income was not trimmed; non-normalized label in income."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in income was not trimmed; non-normalized label in income; missing value in income."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in income was not trimmed; non-normalized label in income; missing value in income."
+  }
+]

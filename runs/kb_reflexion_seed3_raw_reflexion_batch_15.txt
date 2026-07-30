@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed. 'Community' has untrimmed whitespace."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed. 'Beach Type Description' has wrong casing."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed. 'Year' is missing or empty."
+  }
+]

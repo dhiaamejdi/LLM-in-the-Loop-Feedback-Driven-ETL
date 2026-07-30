@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community label was not normalized."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Organism value is missing in original data."
+  },
+  {
+    "row_idx": 23,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Organism value is missing in original data."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Community label was not normalized."
+  }
+]

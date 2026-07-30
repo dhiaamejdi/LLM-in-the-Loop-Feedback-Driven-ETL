@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in workclass was not trimmed; education-num was not normalized (null -> 8.0); occupation and capital-gain were not normalized (null -> empty string); income label retains trailing period."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "OK",
+    "notes": "All fields were correctly transformed."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "NOT_OK",
+    "notes": "Income label retains trailing period."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "education-num was not normalized (null -> 8.0); occupation was not normalized (null -> empty string); income label retains trailing period."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "All fields were correctly transformed."
+  }
+]

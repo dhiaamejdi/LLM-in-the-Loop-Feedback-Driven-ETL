@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 41,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations needed."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and 'Sample Date' and 'Beach Name' fields left empty as per original."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and 'Sample Date' field left empty as per original."
+  },
+  {
+    "row_idx": 47,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations needed."
+  },
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations needed."
+  }
+]

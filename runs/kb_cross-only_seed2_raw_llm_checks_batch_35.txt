@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "NOT_OK",
+    "notes": "Community Code in transformed data is not the same as original; Community 'Dartmouth' in transformed data is not normalized correctly (capital 'D' expected); County Description 'Bristol' in transformed data is not normalized correctly (capital 'B' expected); Year in transformed data is a string instead of a number; Sample Date in transformed data has a different format; Beach Name in transformed data has leading space and trailing period at the end; Beach Type Description in transformed data is all lowercase."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "NOT_OK",
+    "notes": "Community 'Lynn' in transformed data is not the same as original; County Code in transformed data is not a number; County Description 'Essex' in transformed data is not normalized correctly (capital 'E' expected); Sample Date in transformed data has a different format; Beach Name in transformed data has a different name."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Community 'Plymouth' in transformed data is not the same as original; County Code in transformed data is empty; Year in transformed data is an empty string; Sample Date in transformed data has a different format; Beach Name in transformed data has a different name; Organism in transformed data is 'E. Coli' instead of 'Enterococci'; Indicator Level in transformed data is a string instead of a number."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "NOT_OK",
+    "notes": "Community 'Auburn' in transformed data is not the same as original; County Code in transformed data is empty; Year in transformed data is an empty string; Sample Date in transformed data has a different format; Beach Name in transformed data has a different name."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "No changes were made to the original data."
+  }
+]

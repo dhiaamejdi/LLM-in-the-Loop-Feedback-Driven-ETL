@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 4,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; hours-per-week is null in original but empty string in transformed."
+  },
+  {
+    "row_idx": 14,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; workclass and occupation are null in original but empty string in transformed."
+  },
+  {
+    "row_idx": 17,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; marital-status has leading/trailing whitespace in original but not in transformed."
+  }
+]

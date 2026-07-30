@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other changes."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "NOT_OK",
+    "notes": "County Code in 'transformed' is empty where 'original' has a value."
+  },
+  {
+    "row_idx": 9,
+    "verdict": "NOT_OK",
+    "notes": "Community name in 'transformed' is incorrect; Community 'Chatham' should be 'Stockbridge', Community Code '55.0' should be '283.0', County Description 'Barnstable' should be 'Berkshire', Year '2019.0' should be '2019.0', Sample Date '2019-07-29 00:00:00' should be '2019-08-05 00:00:00', Beach Name 'Ridgevale' should be 'Kripalu Beach', Indicator Level '80.0' should be '0.5', and Violation 'NO' should remain the same."
+  },
+  {
+    "row_idx": 11,
+    "verdict": "NOT_OK",
+    "notes": "Community name in 'transformed' is incorrect; Community 'West Brookfield' should be 'Chicopee', Community Code '323.0' should be '61.0', County Code '27.0' should be '13.0', Year '2019.0' should remain the same, Sample Date '2019-07-31 00:00:00' should be '2019-07-15 00:00:00', Beach Name 'Lake Wickabog Boat Club' should be 'Chicopee Beach (DCR)', Beach Type Description 'Fresh' should remain the same, Organism 'E. Coli' should remain the same, Indicator Level '10.0' should be '16.0', and Violation 'NO' should remain the same."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Community name in 'transformed' is incorrect; Community 'Chicopee' should be 'Wendell', Community Code '61.0' should be '319.0', County Code '13.0' should be '11.0', Year '2019.0' should remain the same, Sample Date '2019-07-15 00:00:00' should be '2019-07-23 00:00:00', Beach Name 'Chicopee Beach (DCR)' should be 'Ruggles Pond (DCR)', Beach Type Description 'Fresh' should remain the same, Organism 'Enterococci' should remain the same, Indicator Level '16.0' should be '32.0', and Violation 'NO' should remain the same."
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "row_idx": 65,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  },
+  {
+    "row_idx": 71,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in income was not trimmed."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Income label changed from '<=50K' to '>50K'."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  }
+]
+
+{
+  "row_idx": 71,
+  "verdict": "NOT_OK",
+  "notes": "Leading whitespace in income was not trimmed."
+}
+
+[
+  {
+    "row_idx": 65,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  },
+  {
+    "row_idx": 71,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in income was not trimmed."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Income label changed from '<=50K' to '>50K'."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  }
+]

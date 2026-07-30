@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "",
+      "Beach Name": "Malfa Road",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "",
+      "Community": "Hull",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-25 00:00:00",
+      "Beach Name": "Nantasket (DCR) @ Water St.",
+      "Beach Type Description": "",
+      "Organism": "Enterococci",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "341.0",
+      "Community": "",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-05 00:00:00",
+      "Beach Name": " Margaret Lindley Park ",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "196.0",
+      "Community": "Nahant",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-15 00:00:00",
+      "Beach Name": "Black Rock",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "140.0",
+      "Community": "Hubbardston",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20 00:00:00",
+      "Beach Name": "Pinecrest Property Owners Assoc.",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22 00:00:00",
+      "Beach Name": "Flax Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "48.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "318.0",
+      "Community": "wellfleet",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-07 00:00:00",
+      "Beach Name": "Great Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "316.0",
+      "Community": "Webster",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02 00:00:00",
+      "Beach Name": "Treasure Island Condominiums",
+      "Beach Type Description": "",
+      "Organism": "E. Coli",
+      "Indicator Level": "8.5",
+      "Violation": "NO"
+    }
+  ]
+}

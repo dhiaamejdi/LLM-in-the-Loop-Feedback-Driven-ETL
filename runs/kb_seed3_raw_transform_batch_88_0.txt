@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "306.0",
+      "Community": "Wales",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "",
+      "Beach Name": "Lakeland Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "35.0",
+      "Violation": "no"
+    },
+    {
+      "Community Code": "203.0",
+      "Community": "New Marlborough",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-10 00:00:00",
+      "Beach Name": "York Lake Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "242.0",
+      "Community": "Provincetown",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-01 00:00:00",
+      "Beach Name": "Town Landing - Breakwater",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "169.0",
+      "Community": "Marion",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-15 00:00:00",
+      "Beach Name": "Island Wharf",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "296.0",
+      "Community": "Tisbury",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-29 00:00:00",
+      "Beach Name": "Tashmoo Cut",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "108.0",
+      "Community": "Goshen",
+      "County Code": "15.0",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-05 00:00:00",
+      "Beach Name": "Camp Howe",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-30 00:00:00",
+      "Beach Name": "Barrett Pond (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "",
+      "Community": "Lunenburg",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-08 00:00:00",
+      "Beach Name": "Lunenburg Town Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    }
+  ]
+}

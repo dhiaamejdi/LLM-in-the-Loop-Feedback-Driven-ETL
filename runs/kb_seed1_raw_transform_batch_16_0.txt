@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "173.0",
+      "Community": "Mattapoisett",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-05 00:00:00",
+      "Beach Name": "Aucoot",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-23 00:00:00",
+      "Beach Name": "Morton Park @ Main",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "196.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "227.0",
+      "Community": "Palmer",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24 00:00:00",
+      "Beach Name": " camp ramah - beach b ",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-13 00:00:00",
+      "Beach Name": "Pinewood Camp (Long Pond at main dock)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "14.0",
+      "Community": "Ashland",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-25 00:00:00",
+      "Beach Name": "Warren Conference Center",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "13.1",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "292.0",
+      "Community": "Swansea",
+      "County Code": "5.0",
+      "County Description": "bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22 00:00:00",
+      "Beach Name": "Cedar Cove Club",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "108.0",
+      "Community": "Goshen",
+      "County Code": "15.0",
+      "County Description": "Hampshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-20 00:00:00",
+      "Beach Name": "Upper Highland Lake - Campers Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13 00:00:00",
+      "Beach Name": "Megansett",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    }
+  ]
+}

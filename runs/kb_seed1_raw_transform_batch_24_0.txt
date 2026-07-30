@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "316.0",
+      "Community": "Webster",
+      "County Code": "27.0",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-13 00:00:00",
+      "Beach Name": "Nipmuc Cove",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "10.9",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "36.0",
+      "Community": "Bourne",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "",
+      "Sample Date": "2019-08-21 00:00:00",
+      "Beach Name": "Patuisset",
+      "Beach Type Description": "Marine",
+      "Organism": "enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "316.0",
+      "Community": "Webster",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02 00:00:00",
+      "Beach Name": "Birch Island",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "287.0",
+      "Community": "Sturbridge",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-03 00:00:00",
+      "Beach Name": "Sturbridge Host Hotel",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "108.0",
+      "Community": "Goshen",
+      "County Code": "15.0",
+      "County Description": "Hampshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24 00:00:00",
+      "Beach Name": "Upper Highland Lake - Campers Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "82.0",
+      "Community": "",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "",
+      "Beach Name": "West End",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "7.0",
+      "Community": "Amesbury",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-17 00:00:00",
+      "Beach Name": "Glen Devin Condominiums",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "141.0",
+      "Community": "Hudson",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-31 00:00:00",
+      "Beach Name": "Centennial Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.1",
+      "Violation": "NO"
+    }
+  ]
+}

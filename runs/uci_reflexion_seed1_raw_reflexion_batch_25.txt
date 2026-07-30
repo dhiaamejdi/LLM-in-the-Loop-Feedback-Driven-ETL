@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 80,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; education value was not normalized; native-country value contains untrimmed whitespace."
+  },
+  {
+    "row_idx": 89,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; relationship value was not normalized; race value contains wrong casing."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; relationship value was not normalized; native-country value contains untrimmed whitespace."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; native-country value was not normalized."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; fnlwgt value was not normalized; native-country value contains untrimmed whitespace."
+  }
+]

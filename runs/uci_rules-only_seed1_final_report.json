@@ -1,0 +1,351 @@
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "checker_model": null,
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 54,
+    "residual_bad_rows_in_heldout": 19
+  },
+  "verdict_coverage": {
+    "rows_sampled": 30,
+    "rows_with_verdict": 30,
+    "rows_missing_verdict": 0
+  },
+  "checker_metrics": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 14,
+    "tn": 11,
+    "ground_truth_positives": 19,
+    "rows_flagged": 5,
+    "recall": 0.2631578947368421,
+    "recall_ci95": [
+      0.0915,
+      0.512
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.4782,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 14,
+        "tn": 11
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: income '<=50k' not in allowed set ['>50K', '<=50K']",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "income: '<=50k' violates canonical set ['>50K', '<=50K']"
+      ]
+    },
+    {
+      "row_idx": 7,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: sex 'female' not capitalized",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "sex: expected 'Female', got 'female'"
+      ]
+    },
+    {
+      "row_idx": 10,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 12,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education-num: expected np.float64(nan), got '8.0'",
+        "occupation: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 19,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 21,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "race: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 22,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 24,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education-num: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 30,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: income '<=50k' not in allowed set ['>50K', '<=50K']",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "income: '<=50k' violates canonical set ['>50K', '<=50K']"
+      ]
+    },
+    {
+      "row_idx": 31,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 33,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "native-country: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 34,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "hours-per-week: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 35,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 36,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(nan), got '20.0'",
+        "sex: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 43,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(30.0), got '51.0'",
+        "fnlwgt: expected np.float64(330802.0), got '143822.0'",
+        "education: expected 'HS-grad', got 'Some-college'",
+        "education-num: expected np.float64(9.0), got '10.0'",
+        "marital-status: expected 'Never-married', got 'Married-civ-spouse'",
+        "occupation: expected 'Adm-clerical', got 'Craft-repair'",
+        "relationship: expected 'Own-child', got 'Husband'",
+        "sex: expected 'Female', got 'Male'",
+        "capital-gain: expected np.float64(0.0), got '7298.0'",
+        "income: expected '<=50K', got '>50K'"
+      ]
+    },
+    {
+      "row_idx": 48,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(19.0), got '34.0'",
+        "fnlwgt: expected np.float64(281704.0), got '185216.0'",
+        "education: expected 'Some-college', got 'Bachelors'",
+        "education-num: expected np.float64(10.0), got '13.0'",
+        "marital-status: expected 'Never-married', got 'Married-civ-spouse'",
+        "occupation: expected 'Other-service', got 'Prof-specialty'",
+        "relationship: expected 'Not-in-family', got ''",
+        "hours-per-week: expected np.float64(35.0), got '40.0'",
+        "income: expected '<=50K', got '>50K'"
+      ]
+    },
+    {
+      "row_idx": 50,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 55,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 56,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 63,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "workclass: expected nan, got ''",
+        "occupation: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 69,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 70,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: income '<=50K.' retains suffix '.'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "income: '<=50K.' violates canonical set ['>50K', '<=50K']",
+        "income: expected '<=50K', got '<=50K.'"
+      ]
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 77,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "hours-per-week: expected np.float64(nan), got ''",
+        "native-country: expected nan, got 'United-States'"
+      ]
+    },
+    {
+      "row_idx": 78,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 80,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 89,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'relationship'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "relationship: expected 'wife', got ' wife '"
+      ]
+    },
+    {
+      "row_idx": 91,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 94,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "native-country: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 97,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "fnlwgt: expected np.float64(nan), got ''"
+      ]
+    }
+  ]
+}

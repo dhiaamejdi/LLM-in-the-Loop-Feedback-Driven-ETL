@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "337.0",
+      "Community": "Whately",
+      "County Code": "11.0",
+      "County Description": "Franklin",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-09 00:00:00",
+      "Beach Name": "Tri-Town Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "310.0",
+      "Community": "Wareham",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-25 00:00:00",
+      "Beach Name": "Briarwood",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "30.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "",
+      "Sample Date": "2019-07-09 00:00:00",
+      "Beach Name": "Bay Shores Homeowners Association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "290.0",
+      "Community": "Sutton",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-19 00:00:00",
+      "Beach Name": "Marions Camp",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "327.0",
+      "Community": "West Tisbury",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-17 00:00:00",
+      "Beach Name": "Seth's Pond @ Town Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "51.2",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "166.0",
+      "Community": "Manchester",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "",
+      "Sample Date": "2019-08-26 00:00:00",
+      "Beach Name": "Magnolia @ East",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-03 00:00:00",
+      "Beach Name": "Indian Head Resort",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "",
+      "Community": "Dracut",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": " 2019-06-15 00:00:00 ",
+      "Beach Name": "Richardson",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    }
+  ]
+}

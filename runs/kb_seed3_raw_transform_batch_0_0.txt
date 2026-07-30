@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-23 00:00:00",
+      "Beach Name": "Wood Neck River",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "400.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "36.0",
+      "Community": "Bourne",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-31 00:00:00",
+      "Beach Name": "Monument",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "41.0",
+      "Community": "Brewster",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-15 00:00:00",
+      "Beach Name": "Brewster Dunes I Coop Recreational Housing Inc.",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "261.0",
+      "Community": "",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-29 00:00:00",
+      "Beach Name": "Torrey Beach Community Association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "400.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "54.0",
+      "Community": "Charlton",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-19 00:00:00",
+      "Beach Name": "Salem Covenant Church Camp",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "30.0",
+      "Community": "Beverly",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-09 00:00:00",
+      "Beach Name": "Rice's",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "318.0",
+      "Community": "Wellfleet",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-31 00:00:00",
+      "Beach Name": "Newcomb Hollow",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "64.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "67.0",
+      "Community": "Concord",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-27 00:00:00",
+      "Beach Name": "Walden Pond - Red Cross (DCR) @ West",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    }
+  ]
+}

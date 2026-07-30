@@ -1,0 +1,22 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "NOT_OK",
+    "notes": "Community code in transformed data is not a number; Community 'Dartmouth' in transformed data should be 'dartmouth'; County code in transformed data is not a number; County Description 'Bristol' in transformed data should be 'Bristol'; Year in transformed data is a string instead of a number; Sample Date in transformed data has a different format; Beach Name in transformed data has leading whitespace and a different label."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "NOT_OK",
+    "notes": "Community code in transformed data is not a number; Community 'Lynn' in transformed data should be 'lynn'; County code in transformed data is not a number; County Description 'Essex' in transformed data should be 'Essex'; Year in transformed data is a string instead of a number; Sample Date in transformed data has a different format; Beach Name in transformed data has a different label."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Community code in transformed data is not the same as original; County Code in transformed data is empty; Year in transformed data is an empty string; Beach Name in transformed data has a different label and leading whitespace."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "NOT_OK",
+    "notes": "Community code in transformed data is not a number; County Code in transformed data is empty; Year in transformed data is a string instead of a number; Sample Date in transformed data has a different format; Beach Name in transformed data has a different label and a different organism."
+  }
+]

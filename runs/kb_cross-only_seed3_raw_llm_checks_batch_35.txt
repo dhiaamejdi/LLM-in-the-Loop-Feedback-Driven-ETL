@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 87,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 88,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 99,
+    "verdict": "OK",
+    "notes": "No issues found."
+  }
+]

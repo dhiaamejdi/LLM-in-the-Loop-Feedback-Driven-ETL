@@ -1,0 +1,387 @@
+[
+  {
+    "row": 81,
+    "column": "Community Code",
+    "type": "missing_value"
+  },
+  {
+    "row": 17,
+    "column": "County Code",
+    "type": "missing_value"
+  },
+  {
+    "row": 18,
+    "column": "Organism",
+    "type": "missing_value"
+  },
+  {
+    "row": 86,
+    "column": "Beach Name",
+    "type": "missing_value"
+  },
+  {
+    "row": 3,
+    "column": "Community",
+    "type": "missing_value"
+  },
+  {
+    "row": 33,
+    "column": "Year",
+    "type": "missing_value"
+  },
+  {
+    "row": 62,
+    "column": "Sample Date",
+    "type": "missing_value"
+  },
+  {
+    "row": 26,
+    "column": "Community",
+    "type": "missing_value"
+  },
+  {
+    "row": 69,
+    "column": "Organism",
+    "type": "missing_value"
+  },
+  {
+    "row": 3,
+    "column": "Community",
+    "type": "missing_value"
+  },
+  {
+    "row": 45,
+    "column": "Year",
+    "type": "missing_value"
+  },
+  {
+    "row": 88,
+    "column": "Sample Date",
+    "type": "missing_value"
+  },
+  {
+    "row": 42,
+    "column": "Year",
+    "type": "missing_value"
+  },
+  {
+    "row": 66,
+    "column": "Beach Name",
+    "type": "missing_value"
+  },
+  {
+    "row": 17,
+    "column": "Organism",
+    "type": "missing_value"
+  },
+  {
+    "row": 75,
+    "column": "Violation",
+    "type": "missing_value"
+  },
+  {
+    "row": 78,
+    "column": "County Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 31,
+    "column": "Beach Type Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 65,
+    "column": "Beach Type Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 86,
+    "column": "County Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 93,
+    "column": "Community Code",
+    "type": "missing_value"
+  },
+  {
+    "row": 7,
+    "column": "Violation",
+    "type": "missing_value"
+  },
+  {
+    "row": 94,
+    "column": "County Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 13,
+    "column": "County Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 4,
+    "column": "Indicator Level",
+    "type": "missing_value"
+  },
+  {
+    "row": 66,
+    "column": "Beach Name",
+    "type": "missing_value"
+  },
+  {
+    "row": 24,
+    "column": "Sample Date",
+    "type": "missing_value"
+  },
+  {
+    "row": 19,
+    "column": "Organism",
+    "type": "missing_value"
+  },
+  {
+    "row": 47,
+    "column": "Community Code",
+    "type": "missing_value"
+  },
+  {
+    "row": 25,
+    "column": "Beach Type Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 51,
+    "column": "Year",
+    "type": "missing_value"
+  },
+  {
+    "row": 25,
+    "column": "Community Code",
+    "type": "missing_value"
+  },
+  {
+    "row": 60,
+    "column": "Beach Type Description",
+    "type": "missing_value"
+  },
+  {
+    "row": 52,
+    "column": "Violation<->Organism",
+    "type": "swap_columns"
+  },
+  {
+    "row": 60,
+    "column": "County Description<->Beach Name",
+    "type": "swap_columns"
+  },
+  {
+    "row": 48,
+    "column": "Community",
+    "type": "bad_casing"
+  },
+  {
+    "row": 73,
+    "column": "Community",
+    "type": "bad_casing"
+  },
+  {
+    "row": 30,
+    "column": "Community",
+    "type": "bad_casing"
+  },
+  {
+    "row": 21,
+    "column": "Community",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 39,
+    "column": "Community",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 83,
+    "column": "Community",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 0,
+    "column": "County Description",
+    "type": "bad_casing"
+  },
+  {
+    "row": 65,
+    "column": "County Description",
+    "type": "bad_casing"
+  },
+  {
+    "row": 22,
+    "column": "County Description",
+    "type": "bad_casing"
+  },
+  {
+    "row": 73,
+    "column": "County Description",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 93,
+    "column": "County Description",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 41,
+    "column": "County Description",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 37,
+    "column": "Sample Date",
+    "type": "bad_casing"
+  },
+  {
+    "row": 9,
+    "column": "Sample Date",
+    "type": "bad_casing"
+  },
+  {
+    "row": 58,
+    "column": "Sample Date",
+    "type": "bad_casing"
+  },
+  {
+    "row": 47,
+    "column": "Sample Date",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 38,
+    "column": "Sample Date",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 89,
+    "column": "Sample Date",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 79,
+    "column": "Beach Name",
+    "type": "bad_casing"
+  },
+  {
+    "row": 68,
+    "column": "Beach Name",
+    "type": "bad_casing"
+  },
+  {
+    "row": 20,
+    "column": "Beach Name",
+    "type": "bad_casing"
+  },
+  {
+    "row": 84,
+    "column": "Beach Name",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 26,
+    "column": "Beach Name",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 14,
+    "column": "Beach Name",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 39,
+    "column": "Beach Type Description",
+    "type": "bad_casing"
+  },
+  {
+    "row": 12,
+    "column": "Beach Type Description",
+    "type": "bad_casing"
+  },
+  {
+    "row": 98,
+    "column": "Beach Type Description",
+    "type": "bad_casing"
+  },
+  {
+    "row": 17,
+    "column": "Beach Type Description",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 79,
+    "column": "Beach Type Description",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 18,
+    "column": "Beach Type Description",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 20,
+    "column": "Organism",
+    "type": "bad_casing"
+  },
+  {
+    "row": 34,
+    "column": "Organism",
+    "type": "bad_casing"
+  },
+  {
+    "row": 75,
+    "column": "Organism",
+    "type": "bad_casing"
+  },
+  {
+    "row": 22,
+    "column": "Organism",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 48,
+    "column": "Organism",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 90,
+    "column": "Organism",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 57,
+    "column": "Violation",
+    "type": "bad_casing"
+  },
+  {
+    "row": 17,
+    "column": "Violation",
+    "type": "bad_casing"
+  },
+  {
+    "row": 88,
+    "column": "Violation",
+    "type": "bad_casing"
+  },
+  {
+    "row": 60,
+    "column": "Violation",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 99,
+    "column": "Violation",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 96,
+    "column": "Violation",
+    "type": "stray_whitespace"
+  }
+]

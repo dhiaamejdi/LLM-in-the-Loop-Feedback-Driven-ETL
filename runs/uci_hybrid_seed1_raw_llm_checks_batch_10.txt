@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "NOT_OK",
+    "notes": "Age value in transformed data is incorrect."
+  },
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Education label in transformed data is not normalized; education-num is incorrect."
+  },
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 50,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 55,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  }
+]

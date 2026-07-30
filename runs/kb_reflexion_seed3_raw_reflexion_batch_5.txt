@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community label was not normalized; non-normalized labels in 'Community Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level'; wrong casing in 'Community Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level'; values that do not belong in their column in 'Community Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level'."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed; non-normalized labels in 'Community Code', 'County Code', 'Year', 'Indicator Level'; wrong casing in 'Community Code', 'County Code', 'Year', 'Indicator Level'; values that do not belong in their column in 'Community Code', 'County Code', 'Year', 'Indicator Level'."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed; non-normalized labels in 'Community Code', 'County Code', 'Year', 'Indicator Level'; wrong casing in 'Community Code', 'County Code', 'Year', 'Indicator Level'; values that do not belong in their column in 'Community Code', 'County Code', 'Year', 'Indicator Level'; missing value in 'Organism'."
+  },
+  {
+    "row_idx": 23,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed; non-normalized labels in 'Community Code', 'County Code', 'Year', 'Indicator Level'; wrong casing in 'Community Code', 'County Code', 'Year', 'Indicator Level'; values that do not belong in their column in 'Community Code', 'County Code', 'Year', 'Indicator Level'; missing value in 'Organism'."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed; non-normalized labels in 'Community Code', 'County Code', 'Year', 'Indicator Level'; wrong casing in 'Community Code', 'County Code', 'Year', 'Indicator Level'; values that do not belong in their column in 'Community Code', 'County Code', 'Year', 'Indicator Level'; missing value in 'Community'."
+  }
+]

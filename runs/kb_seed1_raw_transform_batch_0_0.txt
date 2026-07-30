@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-03 00:00:00",
+      "Beach Name": "Indian Memorial",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "16.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "330.0",
+      "Community": "Westford",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-15 00:00:00",
+      "Beach Name": "Edwards Town Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "5.0",
+      "Community": "Agawam",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-08 00:00:00",
+      "Beach Name": "Robinson Pond Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "201.0",
+      "Community": "",
+      "County Code": "5.0",
+      "County Description": "Bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-26 00:00:00",
+      "Beach Name": "Tower Beach @ Tower 1",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "144.0",
+      "Community": "Ipswich",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-10 00:00:00",
+      "Beach Name": "Clark",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "41.0",
+      "Community": "Brewster",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-29 00:00:00",
+      "Beach Name": "Halliday Acres/Winslow Landing",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "22.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "126.0",
+      "Community": "Harwich",
+      "County Code": "",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-27 00:00:00",
+      "Beach Name": "Hinkley's Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "221.0",
+      "Community": "Oak Bluffs",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24 00:00:00",
+      "Beach Name": "Eastville Town Beach - Lagoon side",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    }
+  ]
+}

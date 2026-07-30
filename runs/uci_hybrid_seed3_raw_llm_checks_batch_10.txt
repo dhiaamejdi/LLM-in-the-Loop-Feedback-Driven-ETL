@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 41,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and marital status normalized to empty string."
+  },
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Age value is incorrect; expected '34.0' but received '27.0'; education level is also incorrect; expected 'HS-grad' but received 'Some-college'."
+  },
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 60,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  }
+]

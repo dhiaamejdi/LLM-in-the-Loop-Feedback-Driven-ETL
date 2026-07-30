@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 63,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations were made."
+  },
+  {
+    "row_idx": 65,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations were made."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations were made."
+  },
+  {
+    "row_idx": 67,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and County Description 'Barnstable' in original is normalized to 'Barnstable' in transformed."
+  },
+  {
+    "row_idx": 67,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations were made."
+  },
+  {
+    "row_idx": 72,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other transformations were made."
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "row_idx": 3,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed from Sample Date."
+  },
+  {
+    "row_idx": 4,
+    "verdict": "OK"
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK"
+  },
+  {
+    "row_idx": 12,
+    "verdict": "OK"
+  },
+  {
+    "row_idx": 13,
+    "verdict": "OK"
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "197.0",
+      "Community": "Nantucket",
+      "County Code": "19.0",
+      "County Description": "Nantucket",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20 00:00:00",
+      "Beach Name": "Sconset",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "330.0",
+      "Community": "westford",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-15 00:00:00",
+      "Beach Name": "Nabnassett American Legion",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "175.0",
+      "Community": "Medfield",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-10 00:00:00",
+      "Beach Name": "Hinkley @ Left",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "316.0",
+      "Community": "Webster",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-06 00:00:00",
+      "Beach Name": "Memorial Beach @ Location 2",
+      "Beach Type Description": "Fresh",
+      "Organism": "e. coli",
+      "Indicator Level": "2.0",
+      "Violation": ""
+    },
+    {
+      "Community Code": "23.0",
+      "Community": "Bedford",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-17 00:00:00",
+      "Beach Name": "Springs Brook Park Bathing Beach @ Location 2",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "53.0",
+      "Community": "Charlemont",
+      "County Code": "11.0",
+      "County Description": "Franklin",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-28 00:00:00",
+      "Beach Name": "Cold River Pool (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "327.0",
+      "Community": "West Tisbury",
+      "County Code": "7.0",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-26 00:00:00",
+      "Beach Name": "Saltworks Beach",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13 00:00:00",
+      "Beach Name": "white horse - full sail",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    }
+  ]
+}

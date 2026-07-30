@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 28,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Beach Type Description label was not normalized; non-normalized label 'Fresh'-> 'Fresh'."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed; non-normalized label 'Fresh' -> 'Fresh'."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; non-normalized label 'Fresh' -> 'Fresh'."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; non-normalized label 'Fresh' -> 'Fresh'."
+  },
+  {
+    "row_idx": 38,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; non-normalized label 'Fresh' -> 'Fresh'; non-normalized label 'E. Coli' -> 'E. Coli'; non-normalized label 'NO' -> 'NO'."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 68,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; County Description is missing in transformed."
+  },
+  {
+    "row_idx": 73,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in County Description was not trimmed; County Description is missing a space."
+  },
+  {
+    "row_idx": 78,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 84,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  }
+]

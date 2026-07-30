@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "300.0",
+      "Community": "Truro",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22 00:00:00",
+      "Beach Name": "",
+      "Beach Type Description": "",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "75.0",
+      "Community": "Dennis",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-26 00:00:00",
+      "Beach Name": "Chapin Memorial",
+      "Beach Type Description": "marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "101.0",
+      "Community": "Franklin",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13 00:00:00",
+      "Beach Name": "Chilson Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "no"
+    },
+    {
+      "Community Code": "86.0",
+      "Community": "Eastham",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-08 00:00:00",
+      "Beach Name": "Dyer Prince",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "150.0",
+      "Community": "Lee",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-17 00:00:00",
+      "Beach Name": "Goose Pond at Leisure Lee Rd.",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "351.0",
+      "Community": "yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24 00:00:00",
+      "Beach Name": "Halcyon Condominiums/Horse Pond Corporation",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "12.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "224.0",
+      "Community": "Orleans",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-30 00:00:00",
+      "Beach Name": "Meeting House Pond",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-27 00:00:00",
+      "Beach Name": "Falmouth Tides",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    }
+  ]
+}

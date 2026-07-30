@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "55.0",
+      "Community": "Chatham",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-12 00:00:00",
+      "Beach Name": "White Pond Town Landing",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-09 00:00:00",
+      "Beach Name": "Wood Neck River",
+      "Beach Type Description": "Marine",
+      "Organism": "enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "271.0",
+      "Community": "Shrewsbury",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-14 00:00:00",
+      "Beach Name": "Sunset Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "25.0",
+      "Violation": ""
+    },
+    {
+      "Community Code": "236.0",
+      "Community": "Pittsfield",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "",
+      "Beach Name": "Lulu Pond Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "287.0",
+      "Community": "Sturbridge",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-20 00:00:00",
+      "Beach Name": "Walker Pond - Main Beach",
+      "Beach Type Description": "fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "6.3",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "94.0",
+      "Community": "Fairhaven",
+      "County Code": "5.0",
+      "County Description": "Bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-23 00:00:00",
+      "Beach Name": "west island causeway",
+      "Beach Type Description": "marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "500.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "189.0",
+      "Community": "milton",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "",
+      "Sample Date": "2019-06-20 00:00:00",
+      "Beach Name": "Cunningham Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "2.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "296.0",
+      "Community": "Tisbury",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-08 00:00:00",
+      "Beach Name": "Owen Park",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    }
+  ]
+}

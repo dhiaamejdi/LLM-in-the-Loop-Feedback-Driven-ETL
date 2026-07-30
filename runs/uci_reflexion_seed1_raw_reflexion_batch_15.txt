@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, occupation, relationship, capital-gain, capital-loss, hours-per-week; wrong casing in education, education-num, occupation, relationship, race; wrong income label; wrong casing in marital-status."
+  },
+  {
+    "row_idx": 50,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 55,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, occupation, relationship, capital-gain, capital-loss, hours-per-week; wrong casing in education, education-num, occupation, relationship, race; wrong income label."
+  },
+  {
+    "row_idx": 56,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, occupation, relationship, capital-gain, capital-loss, hours-per-week; wrong casing in education, education-num, occupation, relationship, race; wrong income label."
+  },
+  {
+    "row_idx": 63,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, workclass, fnlwgt, education, education-num, occupation, relationship, capital-gain, capital-loss, hours-per-week; wrong casing in education, education-num, occupation, relationship, race; wrong income label."
+  }
+]

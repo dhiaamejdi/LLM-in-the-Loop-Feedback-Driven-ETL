@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 24,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 38,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Year in original is a number, but in transformed it is an empty string."
+  }
+]

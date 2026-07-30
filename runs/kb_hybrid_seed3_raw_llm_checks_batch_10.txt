@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 31,
+    "verdict": "OK",
+    "notes": "No leading/trailing whitespace found in any field and label casing is correct."
+  },
+  {
+    "row_idx": 32,
+    "verdict": "OK",
+    "notes": "No leading/trailing whitespace found in any field and label casing is correct."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "No leading/trailing whitespace found in any field and label casing is correct."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "No leading/trailing whitespace found in any field and label casing is correct."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "No leading/trailing whitespace found in any field and label casing is correct."
+  }
+]

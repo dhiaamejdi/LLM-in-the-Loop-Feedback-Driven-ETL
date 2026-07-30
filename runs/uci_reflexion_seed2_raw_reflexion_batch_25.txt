@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 89,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in sex was not trimmed; income is null in original but empty string in transformed."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in education-num was not trimmed; income label retains trailing period."
+  }
+]

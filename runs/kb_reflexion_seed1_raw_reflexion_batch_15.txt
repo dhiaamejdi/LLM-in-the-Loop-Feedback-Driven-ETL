@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed; 'Sample Date' and 'Beach Name' values do not belong in their columns."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed; 'Sample Date' and 'Beach Name' values do not belong in their columns."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Community' field was not trimmed; 'Sample Date' value does not belong in its column; 'Beach Name' value does not belong in its column."
+  },
+  {
+    "row_idx": 47,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Beach Name' field was not trimmed; 'Sample Date' value does not belong in its column."
+  }
+]

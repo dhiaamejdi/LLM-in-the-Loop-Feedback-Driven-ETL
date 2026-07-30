@@ -694,17 +694,25 @@ def reconstruct_transformed_df_from_files(outfile_prefix: str) -> pd.DataFrame:
     transform_files.sort(key=_batch_key)
     all_rows: List[Dict] = []
     for file_path in transform_files:
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        try:
-            parsed = extract_json_block(content)
-            parsed_rows = parsed.get("rows") if isinstance(parsed, dict) else parsed
-            if isinstance(parsed_rows, list):
-                all_rows.extend(parsed_rows)
-            else:
-                print(f"  WARNING: no row list in {file_path}; skipping.")
-        except Exception as e:
-            print(f"  WARNING: failed to parse {file_path}: {e}; skipping.")
+        parsed_rows = None
+        for candidate in (file_path, file_path.replace("_0.txt", "_1.txt")):
+            if not os.path.exists(candidate):
+                continue
+            with open(candidate, "r", encoding="utf-8") as f:
+                content = f.read()
+            try:
+                parsed = extract_json_block(content)
+                cand_rows = parsed.get("rows") if isinstance(parsed, dict) else parsed
+                if isinstance(cand_rows, list):
+                    parsed_rows = cand_rows
+                    break
+            except Exception:
+                continue
+        if parsed_rows is not None:
+            all_rows.extend(parsed_rows)
+        else:
+            print(f"  WARNING: no parsable attempt for {file_path}; rows from this chunk are lost — "
+                  f"prefer the consolidated *_transformed.csv cache.")
     if not all_rows:
         raise ValueError("Could not reconstruct any rows from the saved files.")
     print(f"[Resume] Reconstructed {len(all_rows)} rows.")
@@ -938,6 +946,16 @@ def run_pipeline(
     print(f"\n--- [Stage] Semantic Transformation (Worker: {worker_mode}) ---")
 
     def _try_reuse_cached_transform() -> Optional[pd.DataFrame]:
+        json_path = f"{transform_prefix}_transformed.json"
+        if os.path.exists(json_path):
+            with open(json_path) as jf:
+                cached = pd.DataFrame(json.load(jf))
+            if len(cached) == len(df_with_errors):
+                print(f"[Transform cache] Reusing exact transformed table for seed {seed} "
+                      f"({len(cached)} rows) — no worker LLM call needed.")
+                return cached.reindex(columns=df_with_errors.columns)
+            print(f"[Transform cache] Cached table row count mismatch ({len(cached)} vs {len(df_with_errors)}); "
+                  f"falling back to raw-file reconstruction.")
         if not glob.glob(f"{transform_prefix}_raw_transform_batch_*_0.txt"):
             return None
         try:
@@ -971,6 +989,11 @@ def run_pipeline(
         worker_client = get_llm_client(hf_token, worker_model, quantization)
         df_transformed = llm_transform_stage(worker_client, df_with_errors, transform_prefix, business_rules,
                                              batch_size=batch_size, max_new_tokens=max_new_tokens)
+        # Persist the exact transformed table so cache reuse across modes is
+        # byte-exact. JSON (not CSV) is used deliberately: CSV round-trips
+        # coerce whitespace-padded numerics back to numbers, silently erasing
+        # injected faults and changing ground truth between modes.
+        df_transformed.to_json(f"{transform_prefix}_transformed.json", orient="records")
         # client stays cached for reuse across seeds/modes
 
     # ---- Ground truth: which transformed rows still violate the rules? ----

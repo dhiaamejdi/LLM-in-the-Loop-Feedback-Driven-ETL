@@ -1,0 +1,442 @@
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "checker_model": null,
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 44,
+    "residual_bad_rows_in_heldout": 21
+  },
+  "verdict_coverage": {
+    "rows_sampled": 40,
+    "rows_with_verdict": 40,
+    "rows_missing_verdict": 0
+  },
+  "checker_metrics": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 16,
+    "tn": 19,
+    "ground_truth_positives": 21,
+    "rows_flagged": 5,
+    "recall": 0.23809523809523808,
+    "recall_ci95": [
+      0.0822,
+      0.4717
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.4782,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 16,
+        "tn": 19
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(1.0), got ''",
+        "County Description: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 9,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(55.0), got '283.0'",
+        "Community: expected 'Chatham', got 'Stockbridge'",
+        "County Code: expected np.float64(1.0), got '3.0'",
+        "County Description: expected 'Barnstable', got 'Berkshire'",
+        "Sample Date: expected '2019-07-29 00:00:00', got '2019-08-05 00:00:00'",
+        "Beach Name: expected 'Ridgevale', got 'Kripalu Beach'",
+        "Beach Type Description: expected nan, got 'Fresh'",
+        "Organism: expected 'Enterococci', got 'E. Coli'",
+        "Indicator Level: expected np.float64(80.0), got '0.5'"
+      ]
+    },
+    {
+      "row_idx": 11,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(323.0), got '61.0'",
+        "Community: expected 'West Brookfield', got 'Chicopee'",
+        "County Code: expected np.float64(27.0), got '13.0'",
+        "County Description: expected 'Worcester', got ''",
+        "Sample Date: expected '2019-07-31 00:00:00', got '2019-07-15 00:00:00'",
+        "Beach Name: expected 'Lake Wickabog Boat Club', got 'Chicopee Beach (DCR)'",
+        "Organism: expected 'E. Coli', got 'Enterococci'",
+        "Indicator Level: expected np.float64(10.0), got '16.0'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 12,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(61.0), got '319.0'",
+        "Community: expected 'Chicopee', got 'Wendell'",
+        "County Code: expected np.float64(13.0), got '11.0'",
+        "County Description: expected nan, got 'Franklin'",
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-07-15 00:00:00', got '2019-07-23 00:00:00'",
+        "Beach Name: expected 'Chicopee Beach (DCR)', got 'Ruggles Pond (DCR)'",
+        "Indicator Level: expected np.float64(16.0), got '32.0'"
+      ]
+    },
+    {
+      "row_idx": 17,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 19,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 21,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'bristol' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Bristol', got 'bristol'"
+      ]
+    },
+    {
+      "row_idx": 26,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 27,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Indicator Level: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 28,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 30,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 31,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 36,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 38,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 39,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 41,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 42,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''",
+        "Beach Name: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 45,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected 'Fresh', got '2019-07-22 00:00:00'",
+        "Beach Type Description: expected '2019-07-22 00:00:00', got 'Fresh'",
+        "Organism: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 47,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 49,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 55,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 60,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 61,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 64,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Name: expected nan, got ''",
+        "Beach Type Description: expected 'Marine', got ''"
+      ]
+    },
+    {
+      "row_idx": 69,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 70,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 74,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Violation '' not in allowed set ['YES', 'NO']",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: '' violates canonical set ['YES', 'NO']",
+        "Violation: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 75,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 79,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: County Description 'barnstable' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected 'Barnstable', got 'barnstable'"
+      ]
+    },
+    {
+      "row_idx": 81,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 84,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'fresh' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Fresh', got 'fresh'"
+      ]
+    },
+    {
+      "row_idx": 85,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'marine' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Beach Type Description: expected 'Marine', got 'marine'"
+      ]
+    },
+    {
+      "row_idx": 87,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 90,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 92,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 96,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 97,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 98,
+      "verdict": "OK",
+      "checker_path": "deterministic",
+      "checker_notes": "rules-only mode",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    }
+  ]
+}

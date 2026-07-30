@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 52,
+    "verdict": "NOT_OK",
+    "notes": "Empty Organism field in transformed data."
+  },
+  {
+    "row_idx": 53,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "OK",
+    "notes": "No issues found."
+  }
+]

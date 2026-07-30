@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 37,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; Community Code is a number, but it should be an integer; Year is a number, but it should be an integer; Sample Date is a date, but it should be in a normalized format."
+  },
+  {
+    "row_idx": 38,
+    "verdict": "NOT_OK",
+    "notes": "Year is null, which is not a valid value for this column."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community was not trimmed; Community Code is a number, but it should be an integer."
+  },
+  {
+    "row_idx": 46,
+    "verdict": "NOT_OK",
+    "notes": "Community Code is a number, but it should be an integer."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Sample Date was not trimmed; Sample Date is a date, but it should be in a normalized format."
+  }
+]

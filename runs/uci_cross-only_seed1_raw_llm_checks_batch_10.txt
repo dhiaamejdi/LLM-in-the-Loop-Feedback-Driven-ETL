@@ -1,0 +1,47 @@
+[
+  {
+    "row_idx": 33,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 34,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Age is not a number in transformed data."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Sex is missing in transformed data."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Income label is incorrect in transformed data."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "NOT_OK",
+    "notes": "Age is incorrect in transformed data; education label is not normalized."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "NOT_OK",
+    "notes": "Capital-gain is missing in transformed data."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "NOT_OK",
+    "notes": "Income label is incorrect in transformed data."
+  }
+]

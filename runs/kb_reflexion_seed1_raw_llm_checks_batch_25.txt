@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 69,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed."
+  },
+  {
+    "row_idx": 70,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed."
+  },
+  {
+    "row_idx": 73,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed; Violation value changed from null to empty string."
+  },
+  {
+    "row_idx": 75,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed; Violation value changed from null to 'NO'."
+  }
+]

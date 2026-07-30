@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "329.0",
+      "Community": "Westfield",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-05 00:00:00",
+      "Beach Name": "Hampton Ponds - Lamberts Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "75.0",
+      "Community": "Dennis",
+      "County Code": "1.0",
+      "County Description": "barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-26 00:00:00",
+      "Beach Name": "Sea Street (East Dennis)",
+      "Beach Type Description": "",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "197.0",
+      "Community": "Nantucket",
+      "County Code": "19.0",
+      "County Description": "Nantucket",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20 00:00:00",
+      "Beach Name": "",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "18.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "75.0",
+      "Community": "Dennis",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-26 00:00:00",
+      "Beach Name": "Clipper Lane",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "222.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-04 00:00:00",
+      "Beach Name": "wollaston @ sachem street (dcr)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "294.0",
+      "Community": "Templeton",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-27 00:00:00",
+      "Beach Name": "Pinewood Shores",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "173.0",
+      "Community": "Mattapoisett",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22 00:00:00",
+      "Beach Name": "Mattapoisett Shores Association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "296.0",
+      "Community": "Tisbury",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-19 00:00:00",
+      "Beach Name": "Sound @ Wilfred's Pond Preserve",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    }
+  ]
+}

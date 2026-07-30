@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed from Sample Date."
+  },
+  {
+    "row_idx": 46,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 53,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 57,
+    "verdict": "OK",
+    "notes": "Null value in original replaced with empty string in transformed."
+  }
+]

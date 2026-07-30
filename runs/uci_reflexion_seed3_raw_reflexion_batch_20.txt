@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 73,
+    "verdict": "OK",
+    "notes": "All values appear to be correctly transformed."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in native-country was not trimmed."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "OK",
+    "notes": "All values appear to be correctly transformed."
+  },
+  {
+    "row_idx": 85,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in education was not trimmed; sex has incorrect casing."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed; education-num is missing value."
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "196.0",
+      "Community": "Nahant",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-01 00:00:00",
+      "Beach Name": "Short",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "231.0",
+      "Community": "Pembroke",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13 00:00:00",
+      "Beach Name": "Oldham Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "14.0",
+      "Community": "Ashland",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-06 00:00:00",
+      "Beach Name": "Hopkinton Reservoir-Upper Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "318.0",
+      "Community": "Wellfleet",
+      "County Code": "",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": " 2019-07-01 00:00:00 ",
+      "Beach Name": "Duck Harbor",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "310.0",
+      "Community": "Wareham",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02 00:00:00",
+      "Beach Name": "Parkwood",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "18.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "337.0",
+      "Community": "Whately",
+      "County Code": "11.0",
+      "County Description": "Franklin",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-05 00:00:00",
+      "Beach Name": "Tri-Town Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "12.0",
+      "Community": "Ashby",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20 00:00:00",
+      "Beach Name": "Damon Pond Beach (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "1410.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02 00:00:00",
+      "Beach Name": "Falmouth Associates",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    }
+  ]
+}

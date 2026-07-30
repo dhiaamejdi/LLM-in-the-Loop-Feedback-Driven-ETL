@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 13,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 17,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and education-num normalized correctly."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in workclass was not trimmed; education-num retains trailing period."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in workclass and fnlwgt were not trimmed; education and race labels have incorrect casing."
+  },
+  {
+    "row_idx": 29,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  }
+]

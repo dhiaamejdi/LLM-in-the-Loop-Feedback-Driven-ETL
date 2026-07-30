@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "8.0",
+      "Community": "Amherst",
+      "County Code": "15.0",
+      "County Description": "Hampshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-09-10 00:00:00",
+      "Beach Name": "Puffers Pond (AKA Factory Hollow Pond) @ Mill St.",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "14.8",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "75.0",
+      "Community": "Dennis",
+      "County Code": "1.0",
+      "County Description": "barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-14 00:00:00",
+      "Beach Name": "West Dennis (Snack Bar)",
+      "Beach Type Description": "Marine",
+      "Organism": "",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "63.0",
+      "Community": "Clarksburg",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-01 00:00:00",
+      "Beach Name": "Mauserts Pond (DCR)",
+      "Beach Type Description": "Fresh",
+      "Organism": " Enterococci ",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "113.0",
+      "Community": "Great Barrington",
+      "County Code": "",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-01 00:00:00",
+      "Beach Name": "Lake Mansfield",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "34.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "166.0",
+      "Community": "Manchester",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-18 00:00:00",
+      "Beach Name": "Tuck's Point",
+      "Beach Type Description": "Marine",
+      "Organism": " Enterococci ",
+      "Indicator Level": "75.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "330.0",
+      "Community": "Westford",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-29 00:00:00",
+      "Beach Name": "NVSR: Tiki Pond 1",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "256.0",
+      "Community": "Russell",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-30 00:00:00",
+      "Beach Name": "H.A. Moses Beach (Scout Reservation)",
+      "Beach Type Description": "",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.1",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "Boston",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-07 00:00:00",
+      "Beach Name": "Malibu (DCR)",
+      "Beach Type Description": "Marine",
+      "Organism": "",
+      "Indicator Level": "256.0",
+      "Violation": "YES"
+    }
+  ]
+}

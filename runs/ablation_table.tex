@@ -8,11 +8,23 @@
 \toprule
 \textbf{Dataset} & \textbf{Configuration} & \textbf{TP/Pos} & \textbf{Recall (CI)} & \textbf{FP} & \textbf{Precision} \\
 \midrule
+kb & Circular (same-family LLM) & 43/51 & 0.843 [0.714, 0.930] & 45 & 0.49 \\
+kb & Reflexion (same-family + self-critique) & 43/51 & 0.843 [0.714, 0.930] & 39 & 0.52 \\
+kb & Deterministic rules only & 17/51 & 0.333 [0.208, 0.479] & 0 & 1.00 \\
+kb & Cross-architecture LLM only & 11/51 & 0.216 [0.113, 0.353] & 0 & 1.00 \\
+kb & Hybrid (rules + cross-architecture) & 26/51 & 0.510 [0.366, 0.652] & 0 & 1.00 \\
+\midrule
 kb\_water & Deterministic rules only & 796/796 & 1.000 [0.995, 1.000] & 0 & 1.00 \\
 \midrule
 kb\_water\_oracle & Deterministic rules only & 15/15 & 1.000 [0.782, 1.000] & 0 & 1.00 \\
 \midrule
 kbfull & Deterministic rules only & 9102/9102 & 1.000 [1.000, 1.000] & 0 & 1.00 \\
+\midrule
+uci & Circular (same-family LLM) & 49/53 & 0.925 [0.818, 0.979] & 27 & 0.64 \\
+uci & Reflexion (same-family + self-critique) & 46/53 & 0.868 [0.747, 0.945] & 25 & 0.65 \\
+uci & Deterministic rules only & 15/53 & 0.283 [0.168, 0.423] & 0 & 1.00 \\
+uci & Cross-architecture LLM only & 15/53 & 0.283 [0.168, 0.423] & 1 & 0.94 \\
+uci & Hybrid (rules + cross-architecture) & 24/53 & 0.453 [0.316, 0.596] & 1 & 0.96 \\
 \bottomrule
 \end{tabular}
 \end{table}

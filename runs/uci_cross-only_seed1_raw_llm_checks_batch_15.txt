@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Age value in transformed data is not a number; workclass label in transformed data is empty when original is 'Private'; income label in transformed data does not match original."
+  },
+  {
+    "row_idx": 50,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 55,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 56,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 63,
+    "verdict": "NOT_OK",
+    "notes": "Workclass label in transformed data is empty when original is null; occupation label in transformed data is empty when original is null."
+  }
+]

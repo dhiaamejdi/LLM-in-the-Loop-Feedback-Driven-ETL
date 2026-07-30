@@ -1,8 +1,6 @@
 __pycache__/
 *.pyc
 .env
-*_raw_*.txt
 repo.zip
 kramabench.zip
-runs/*.log
 runs_checkpoint.zip

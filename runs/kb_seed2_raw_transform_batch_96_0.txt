@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "Community Code": "36.0",
+      "Community": "Bourne",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-14 00:00:00",
+      "Beach Name": "Cedar Point Association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "100.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "Boston",
+      "County Code": "25.0",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22 00:00:00",
+      "Beach Name": "Constitution (DCR) @ Middle ",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20 00:00:00",
+      "Beach Name": "Germantown Firestation",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "242.0",
+      "Community": "Provincetown",
+      "County Code": "",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-26 00:00:00",
+      "Beach Name": "Town Landing - West of Coast Guard",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "24.0",
+      "Violation": "NO"
+    }
+  ]
+}

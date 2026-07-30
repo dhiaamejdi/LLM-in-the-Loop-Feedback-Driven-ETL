@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "118.0",
+      "Community": "Halifax",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-25 00:00:00",
+      "Beach Name": "Lingan Street",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "20.0",
+      "Community": "Barnstable",
+      "County Code": "1.0",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-10 00:00:00",
+      "Beach Name": "",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "36.0",
+      "Community": "Bourne",
+      "County Code": "1.0",
+      "County Description": " Barnstable ",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-31 00:00:00",
+      "Beach Name": "pocasset beach improvement association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "300.0",
+      "Community": "Truro",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13 00:00:00",
+      "Beach Name": "Sutton Place Condominiums",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "38.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "72.0",
+      "Community": "Dartmouth",
+      "County Code": "5.0",
+      "County Description": "Bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20 00:00:00",
+      "Beach Name": "Round Hill",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-21 00:00:00",
+      "Beach Name": "Wollaston @ Rice Road (DCR)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2600.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "31.0",
+      "Community": "Billerica",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "",
+      "Sample Date": "2019-07-08 00:00:00",
+      "Beach Name": "Nutting Lake - Micozzi Beach @ South",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "34.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "86.0",
+      "Community": "Eastham",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-01 00:00:00",
+      "Beach Name": " Jemima Pond ",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    }
+  ]
+}

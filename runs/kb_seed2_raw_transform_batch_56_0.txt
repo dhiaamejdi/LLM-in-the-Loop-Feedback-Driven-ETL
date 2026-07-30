@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "346.0",
+      "Community": "Winthrop",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-12 00:00:00",
+      "Beach Name": "Donovans",
+      "Beach Type Description": "",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "304.0",
+      "Community": "Uxbridge",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "",
+      "Beach Name": "Fairwoods",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "15.8",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "221.0",
+      "Community": "Oak Bluffs",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-10 00:00:00",
+      "Beach Name": "Pay Beach",
+      "Beach Type Description": "Marine",
+      "Organism": "enterococci",
+      "Indicator Level": "0.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "7.0",
+      "Community": "amesbury",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-26 00:00:00",
+      "Beach Name": "Tuxbury RV Resort Lagoon",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "34.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "8.0",
+      "Community": "Amherst",
+      "County Code": "15.0",
+      "County Description": "Hampshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-29 00:00:00",
+      "Beach Name": "Puffers Pond (AKA Factory Hollow Pond) @ Mill St.",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "28.1",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-25 00:00:00",
+      "Beach Name": "Acapesket Improvement Association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "310.0",
+      "Community": "Wareham",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13 00:00:00",
+      "Beach Name": "White Island Association",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "86.0",
+      "Community": "Eastham",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-22 00:00:00",
+      "Beach Name": "Long Pond (Depot St.)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    }
+  ]
+}
