@@ -53,7 +53,8 @@ MODE_ORDER = ["circular", "reflexion", "rules-only", "cross-only", "hybrid"]
 
 
 def main(outdir):
-    pooled = defaultdict(lambda: {"tp": 0, "fp": 0, "fn": 0, "tn": 0, "seeds": set()})
+    pooled = defaultdict(lambda: {"tp": 0, "fp": 0, "fn": 0, "tn": 0, "seeds": set(),
+                                  "seed_recalls": [], "unscored": 0})
     for f in glob.glob(os.path.join(outdir, "*_final_report.json")):
         base = os.path.basename(f)
         mm = re.match(r"(.+?)_([a-z\-]+)_seed(\d+)_final_report\.json", base)
@@ -66,6 +67,9 @@ def main(outdir):
         for k in ("tp", "fp", "fn", "tn"):
             pooled[key][k] += cm[k]
         pooled[key]["seeds"].add(seed)
+        if cm.get("recall") is not None:
+            pooled[key]["seed_recalls"].append(cm["recall"])
+        pooled[key]["unscored"] += r.get("verdict_coverage", {}).get("rows_missing_verdict", 0)
 
     if not pooled:
         print(f"No reports found in {outdir}/")
@@ -79,9 +83,9 @@ def main(outdir):
         "\\caption{Ablation: checker recall/precision against ground truth, pooled across seeds. CIs are exact Clopper--Pearson 95\\%.}",
         "\\label{tab:ablation}",
         "\\small",
-        "\\begin{tabular}{llrrrr}",
+        "\\begin{tabular}{llrlcrrr}",
         "\\toprule",
-        "\\textbf{Dataset} & \\textbf{Configuration} & \\textbf{TP/Pos} & \\textbf{Recall (CI)} & \\textbf{FP} & \\textbf{Precision} \\\\",
+        "\\textbf{Dataset} & \\textbf{Configuration} & \\textbf{TP/Pos} & \\textbf{Recall (CI)} & \\textbf{Seed min--max} & \\textbf{FP} & \\textbf{Prec.} & \\textbf{Unsc.} \\\\",
         "\\midrule",
     ]
     for dataset in sorted({k[0] for k in pooled}):
@@ -100,15 +104,18 @@ def main(outdir):
                 f"TP={tp} FN={fn} FP={fp} TN={tn} | recall {tp}/{pos}"
                 + (f" = {rec:.3f} CI [{rci[0]:.3f}, {rci[1]:.3f}]" if pos else "")
                 + (f" | precision {prec:.3f}" if flagged else " | nothing flagged")
+                + (f" | unscored rows {d['unscored']}" if d["unscored"] else "")
             )
+            srs = d["seed_recalls"]
+            minmax = f"{min(srs):.2f}--{max(srs):.2f}" if srs else "--"
             tex.append(
                 f"{dataset.replace(chr(95), chr(92)+chr(95))} & {MODE_LABELS.get(mode, mode)} & "
                 + (f"{tp}/{pos}" if pos else "--")
                 + " & "
                 + (f"{rec:.3f} [{rci[0]:.3f}, {rci[1]:.3f}]" if pos else "--")
-                + f" & {fp} & "
+                + f" & {minmax} & {fp} & "
                 + (f"{prec:.2f}" if flagged else "--")
-                + " \\\\"
+                + f" & {d['unscored']} \\\\"
             )
         tex.append("\\midrule")
     tex[-1] = "\\bottomrule"

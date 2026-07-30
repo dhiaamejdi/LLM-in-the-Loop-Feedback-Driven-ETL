@@ -38,7 +38,7 @@ The harness was rewritten to make every claim in the paper attributable and repr
 | Worker accuracy per stage (100% / 94.73% / 95.47% / 94.35%) | Notebook, via oracle comparison |
 | Hallucination rate 4.2%, reproducibility 0.87 | Notebook |
 | Circular validation baseline (Llama checks Llama) | `--mode circular` |
-| Safeguarded results (recall/precision + 95% CI, Table 4) | `--mode hybrid` → `*_final_report.json` |
+| Safeguarded results (recall/precision + 95% CI, Tables 4–5) | `--mode hybrid` → `*_final_report.json` |
 | Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
 | Cost analysis (Table 2) | Estimated from token counts; not auto-generated |
 
@@ -77,14 +77,24 @@ python safeguarded_LLM_in_the_loop.py --mode hybrid \
   --rules-json my_rules.json --seeds 1,2,3
 ```
 
-`my_rules.json` maps rule names to natural-language descriptions, e.g.:
+`my_rules.json` is a JSON **list of typed rules** (see `datasets/kramabench_water_rules.json`
+for a working example). Each rule has a `type`, a natural-language `description` used in the
+worker prompt, and type-specific fields:
 
 ```json
-{
-  "trim_whitespace": "Trim whitespace in all string columns",
-  "state_codes": "Standardize US state names to two-letter codes"
-}
+[
+  {"type": "trim_whitespace",
+   "description": "Trim whitespace in all string columns"},
+  {"type": "uppercase", "column": "Violation",
+   "description": "Normalize the Violation flag to uppercase"},
+  {"type": "canonical_values", "column": "Violation", "allowed": ["YES", "NO"],
+   "description": "Violation must be exactly 'YES' or 'NO'"}
+]
 ```
+
+Supported types: `trim_whitespace`, `strip_suffix`, `capitalize`, `uppercase`, `titlecase`,
+`canonical_values`. The prompt, deterministic fast path, and ground-truth oracle are all
+derived from these same objects.
 
 Rules are **typed** (`trim_whitespace`, `strip_suffix`, `capitalize`, `uppercase`,
 `titlecase`, `canonical_values`), and the LLM prompt, the deterministic fast path, and the
@@ -134,8 +144,8 @@ A bonus finding from the full lake: the `Violation` column's vocabulary drifts a
 data-quality errors, not injected ones — real faults, caught alongside synthetic ones.
 
 These runs validate the **deterministic path** and dataset generality. The **LLM** worker/checker
-modes on KramaBench (`--worker-mode llm --mode hybrid/circular/cross-only`) require a GPU and
-HF access and are the next experiments to run.
+modes were subsequently run on this same table as part of the five-configuration ablation
+(see `runs/` and the paper, Section 7.3).
 
 `--worker-mode` options: `llm` (default; GPU), `oracle` (deterministic reference worker, no GPU,
 measures checker FPs), `passthrough` (no repair, no GPU, measures checker detection).
