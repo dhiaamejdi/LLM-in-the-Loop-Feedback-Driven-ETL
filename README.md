@@ -160,6 +160,12 @@ transform identity against the rules+same-family reports, and mechanically check
 circular-checker false positive's stated rationale. Expected output on this repo:
 `verifiable: 39 ... 39/39`.
 
+## Paired significance tests
+
+`mcnemar_tests.py` regenerates the paper's paired-significance paragraph: exact McNemar
+tests and approximate minimum detectable effects for every comparison, computed from the
+per-row verdicts on the identical row sets of the original five configurations.
+
 ## Reflexion baseline (agentic self-feedback)
 
 `--mode reflexion` runs a same-family checker with a Reflexion-style second pass (the model is
