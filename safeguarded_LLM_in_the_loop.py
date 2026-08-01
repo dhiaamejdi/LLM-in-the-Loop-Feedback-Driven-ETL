@@ -3,10 +3,10 @@
 Safeguarded LLM-in-the-Loop ETL — reproducible evaluation harness.
 
 Implements the Safeguarded Architecture from:
-  "LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy, Self-Adaptive
-   Data Pipelines" (Anonymous).
+  "LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy Data Pipelines"
+  (Anonymous).
 
-Key properties (added in the post-review revision):
+Key properties of this harness:
 
 1. Ablation modes (--mode), so the contribution of each safeguard is
    attributable rather than confounded:
