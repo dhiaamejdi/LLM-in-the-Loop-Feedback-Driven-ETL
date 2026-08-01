@@ -7,7 +7,7 @@ This repository contains the prototype and evaluation harness for the paper:
 > **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy, Self-Adaptive Data Pipelines**
 > Anonymous Authors.
 
-The paper's arc, honestly: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors, echoing LLM self-correction limits [Kamoi et al. 2024] and evaluator self-preference [Panickssery et al. 2024]). A controlled five-configuration, multi-seed ablation — the primary evidence of the paper — did **not** reproduce that blindness: with a balanced checker prompt, same-family checkers *over-flag* (recall 0.84–0.93 at precision 0.49–0.64), cross-architecture checkers are conservative-but-precise (0.22–0.28 recall at 0.94–1.00 precision), Reflexion-style self-critique adds nothing, and the durable positive result is that deterministic rules and cross-model checking catch **complementary** errors: the hybrid achieves the best zero-false-positive coverage (0.45–0.51 recall at ≥0.96 precision) while sending 14–17% fewer rows to the LLM. The pilot's apparent blindness traces to an OK-anchored checker prompt — prompt specification is a first-order variable in LLM-validation studies. All numbers reproduce from the committed `runs/` artifacts.
+The paper's arc, honestly: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors, echoing LLM self-correction limits [Kamoi et al. 2024] and evaluator self-preference [Panickssery et al. 2024]). A controlled six-configuration, multi-seed ablation — the primary evidence of the paper — did **not** reproduce that blindness: with a balanced checker prompt, the same-family checker in our pairing *over-flags* (recall 0.84–0.93 at precision 0.49–0.64, barely above a flag-everything floor of 0.43–0.59), cross-architecture checkers are conservative-but-precise (0.22–0.28 recall at 0.94–1.00 precision), Reflexion-style self-critique shows no detectable benefit at this scale, and the durable positive result is that deterministic rules and cross-model checking catch **complementary** errors: the rules+cross hybrid achieves the best near-zero-false-positive coverage (0.45–0.51 recall at ≥0.96 precision) while sending 14–17% fewer rows to the LLM, and a rules+same-family hybrid attains the highest observed recall (0.96 on UCI) but inherits the same-family false-positive flood — hybridization complements precision, it does not repair it. The pilot's apparent blindness traces to an OK-anchored checker prompt — prompt specification is a first-order variable in LLM-validation studies. All numbers reproduce from the committed `runs/` artifacts.
 
 ---
 
@@ -15,7 +15,7 @@ The paper's arc, honestly: an early pilot suggested a **circular validation prob
 
 The harness was rewritten to make every claim in the paper attributable and reproducible:
 
-1. **Ablation modes.** `--mode {circular, cross-only, rules-only, hybrid}` runs the four cells of the 2×2 design (same-family vs. cross-family checker × with/without deterministic rules), so the contribution of each safeguard can be measured separately instead of being confounded.
+1. **Ablation modes.** `--mode {circular, reflexion, cross-only, rules-only, hybrid, hybrid-circular}` runs all six cells of the design (same-family vs. cross-family checker × with/without deterministic rules, plus a Reflexion-style self-critique baseline), so the contribution of each safeguard can be measured separately instead of being confounded.
 2. **Ground-truth metrics.** `inject_errors()` now logs every injected fault as `(row, column, error_type)`, and a deterministic oracle labels every transformed row as clean / residual-error. Checker verdicts are scored against this ground truth: TP/FP/FN/TN, recall, precision, and **exact Clopper–Pearson 95% confidence intervals** (pure Python, no scipy).
 3. **Per-path attribution.** Every verdict is tagged `checker="deterministic"` or `checker="llm"`, and the final report breaks metrics down per path.
 4. **Full seeding and multi-seed runs.** `--seed N` or `--seeds 1,2,...,10`.
@@ -40,6 +40,8 @@ The harness was rewritten to make every claim in the paper attributable and repr
 | Circular validation baseline (Llama checks Llama) | `--mode circular` |
 | Safeguarded results (recall/precision + 95% CI, Tables 4–5) | `--mode hybrid` → `*_final_report.json` |
 | Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
+| Reflexion baseline / rules+same-family hybrid | `--mode reflexion` / `--mode hybrid-circular` |
+| FP audit (finding 1, 39/39) | `python audit_fps.py runs` |
 | Cost analysis (Table 2) | Estimated from token counts; not auto-generated |
 
 ## Setup
@@ -144,11 +146,19 @@ A bonus finding from the full lake: the `Violation` column's vocabulary drifts a
 data-quality errors, not injected ones — real faults, caught alongside synthetic ones.
 
 These runs validate the **deterministic path** and dataset generality. The **LLM** worker/checker
-modes were subsequently run on this same table as part of the five-configuration ablation
+modes were subsequently run on this same table as part of the six-configuration ablation
 (see `runs/` and the paper, Section 7.3).
 
 `--worker-mode` options: `llm` (default; GPU), `oracle` (deterministic reference worker, no GPU,
 measures checker FPs), `passthrough` (no repair, no GPU, measures checker detection).
+
+## False-positive audit
+
+`audit_fps.py` regenerates the paper's FP-audit claim (finding 1) from the committed
+artifacts: it reconstructs transformed rows from the raw worker outputs, certifies per-seed
+transform identity against the rules+same-family reports, and mechanically checks each
+circular-checker false positive's stated rationale. Expected output on this repo:
+`verifiable: 39 ... 39/39`.
 
 ## Reflexion baseline (agentic self-feedback)
 
@@ -182,7 +192,7 @@ Each run writes:
 
 ## Scope and known limitations (post-ablation)
 
-- **Executed.** The Low-Ambiguity tier (UCI Adult); the five-configuration, three-seed checker ablation on UCI Adult **and** the KramaBench water-quality table (the paper's primary evidence; Section 7.3); and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7.4). **Planned:** the CORD and NYC Open Data tiers, DS-1000, and the DAB benchmark.
+- **Executed.** The Low-Ambiguity tier (UCI Adult); the six-configuration, three-seed checker ablation on UCI Adult **and** the KramaBench water-quality table (the paper's primary evidence; Section 7.3); and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7.4). **Planned:** the CORD and NYC Open Data tiers, DS-1000, and the DAB benchmark.
 - **Sample sizes.** The ablation checks 90 (UCI) and 120 (KramaBench) rows across 3 seeds per configuration — usable but with wide confidence intervals; the superseded single-seed pilot (N=30) is retained in the paper only as a record.
 - **Fault realism.** UCI-tier errors are synthetically injected; on the KramaBench tier roughly half of detected faults are *naturally occurring* vocabulary-drift errors (Section 7.4), dominated by one error class (label casing).
 - **Prompt sensitivity.** The paper's own results show checker-prompt specification can qualitatively change conclusions; all findings are conditional on the fixed, balanced prompt used in the ablation.
