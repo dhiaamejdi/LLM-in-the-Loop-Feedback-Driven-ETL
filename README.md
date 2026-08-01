@@ -35,10 +35,10 @@ The harness was rewritten to make every claim in the paper attributable and repr
 
 | Paper claim / table | Where it is produced |
 |---------------------|----------------------|
-| Worker accuracy per stage (100% / 94.73% / 95.47% / 94.35%) | Pilot notebook, via oracle comparison (pilot scope; see paper §5.2) |
-| Hallucination 4.2%, reproducibility 0.87, prompt-success 73.2%, checker 42%/8.3% | **Withdrawn** — no artifact source; see paper §5.2 |
+| Worker accuracy per stage (100% / 94.73% / 95.47% / 94.35%) | Pilot notebook, via oracle comparison (pilot scope; see paper §5) |
+| Hallucination 4.2%, reproducibility 0.87, prompt-success 73.2%, checker 42%/8.3% | **Withdrawn** — no artifact source; see paper §5 |
 | Circular validation baseline (Llama checks Llama) | `--mode circular` |
-| Safeguarded results (recall/precision + 95% CI, Tables 4–5) | `--mode hybrid` → `*_final_report.json` |
+| Safeguarded results (recall/precision + 95% CI, Table 3) | `--mode hybrid` → `*_final_report.json` |
 | Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
 | Reflexion baseline / rules+same-family hybrid | `--mode reflexion` / `--mode hybrid-circular` |
 | FP audit (finding 1, 39/39) | `python audit_fps.py runs` |
@@ -147,7 +147,7 @@ data-quality errors, not injected ones — real faults, caught alongside synthet
 
 These runs validate the **deterministic path** and dataset generality. The **LLM** worker/checker
 modes were subsequently run on this same table as part of the six-configuration ablation
-(see `runs/` and the paper, Section 7.3).
+(see `runs/` and the paper, Section 6).
 
 `--worker-mode` options: `llm` (default; GPU), `oracle` (deterministic reference worker, no GPU,
 measures checker FPs), `passthrough` (no repair, no GPU, measures checker detection).
@@ -181,12 +181,15 @@ export HF_TOKEN=...            # GPU machine
 ./run_full_ablation.sh 1,2,3,4,5 runs
 ```
 
-runs the complete matrix — {rules-only, circular, reflexion, cross-only, hybrid} × {UCI Adult,
+runs the original five configurations — {rules-only, circular, reflexion, cross-only, hybrid} × {UCI Adult,
 KramaBench water-quality} × seeds — with each model loaded once per mode, then calls
 `aggregate_results.py`, which writes:
 
 - `runs/ablation_summary.md` — pooled TP/FP/FN/TN, recall/precision with exact 95% CIs
-- `runs/ablation_table.tex` — a paste-ready LaTeX table for Section 7.3 of the paper
+- `runs/ablation_table.tex` — a paste-ready LaTeX table for Section 6 of the paper
+
+The rules+same-family cell (the sixth configuration) runs separately via `--mode hybrid-circular`
+on the same seeds and sample sizes; the aggregator picks its reports up automatically.
 
 No local GPU? Open **`run_ablation_kaggle.ipynb`** on Kaggle or Colab (T4 is enough), add your
 `HF_TOKEN` as a secret, and run all cells; the last cell prints the LaTeX table.
@@ -198,9 +201,9 @@ Each run writes:
 
 ## Scope and known limitations (post-ablation)
 
-- **Executed.** The Low-Ambiguity tier (UCI Adult); the six-configuration, three-seed checker ablation on UCI Adult **and** the KramaBench water-quality table (the paper's primary evidence; Section 7.3); and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7.4). **Planned:** the CORD and NYC Open Data tiers, DS-1000, and the DAB benchmark.
+- **Executed.** The Low-Ambiguity tier (UCI Adult); the six-configuration, three-seed checker ablation on UCI Adult **and** the KramaBench water-quality table (the paper's primary evidence; Section 6); and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7). **Planned:** the CORD and NYC Open Data tiers, DS-1000.
 - **Sample sizes.** The ablation checks 90 (UCI) and 120 (KramaBench) rows across 3 seeds per configuration — usable but with wide confidence intervals; the superseded single-seed pilot (N=30) is retained in the paper only as a record.
-- **Fault realism.** UCI-tier errors are synthetically injected; on the KramaBench tier roughly half of detected faults are *naturally occurring* vocabulary-drift errors (Section 7.4), dominated by one error class (label casing).
+- **Fault realism.** UCI-tier errors are synthetically injected; on the KramaBench tier roughly half of detected faults are *naturally occurring* vocabulary-drift errors (Section 7), dominated by one error class (label casing).
 - **Prompt sensitivity.** The paper's own results show checker-prompt specification can qualitatively change conclusions; all findings are conditional on the fixed, balanced prompt used in the ablation.
 - **Quantization & hardware.** Ablation models ran in 4-bit NF4 on a single 16 GB GPU; full-precision behavior may differ. Outputs are not bit-reproducible across hardware, which is why seeds, model commit pins (`runs/model_pins.json`), and raw outputs are archived.
-- **Known engineering hazard.** Same-family (Llama) checkers degenerated into unparsable repetition on 12.5% of checked KramaBench rows' batches, while Mistral parsed cleanly on every batch (388 checked rows) — see paper Section 7.3, finding 5. The recursive batch-splitting transform and per-verdict attribution exist because of this.
+- **Known engineering hazard.** Same-family (Llama) checkers degenerated into unparsable repetition on 12.5% of checked KramaBench rows' batches, while Mistral parsed cleanly on every batch (388 checked rows) — see paper Section 6, finding 5. The recursive batch-splitting transform and per-verdict attribution exist because of this.
