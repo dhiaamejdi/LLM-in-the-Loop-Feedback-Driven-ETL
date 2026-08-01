@@ -4,14 +4,14 @@ A modular architecture for trustworthy Extract-Transform-Load (ETL) pipelines au
 
 This repository contains the prototype and evaluation harness for the paper:
 
-> **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy, Self-Adaptive Data Pipelines**
+> **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy Data Pipelines**
 > Anonymous Authors.
 
 The paper's arc, honestly: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors, echoing LLM self-correction limits [Kamoi et al. 2024] and evaluator self-preference [Panickssery et al. 2024]). A controlled six-configuration, multi-seed ablation — the primary evidence of the paper — did **not** reproduce that blindness: with a balanced checker prompt, the same-family checker in our pairing *over-flags* (recall 0.84–0.93 at precision 0.49–0.64, barely above a flag-everything floor of 0.43–0.59), cross-architecture checkers are conservative-but-precise (0.22–0.28 recall at 0.94–1.00 precision), Reflexion-style self-critique shows no detectable benefit at this scale, and the durable positive result is that deterministic rules and cross-model checking catch **complementary** errors: the rules+cross hybrid achieves the best near-zero-false-positive coverage (0.45–0.51 recall at ≥0.96 precision) while sending 14–17% fewer rows to the LLM, and a rules+same-family hybrid attains the highest observed recall (0.96 on UCI) but inherits the same-family false-positive flood — hybridization complements precision, it does not repair it. The pilot's apparent blindness traces to an OK-anchored checker prompt — prompt specification is a first-order variable in LLM-validation studies. All numbers reproduce from the committed `runs/` artifacts.
 
 ---
 
-## What changed after review (v2)
+## Harness design guarantees
 
 The harness was rewritten to make every claim in the paper attributable and reproducible:
 
@@ -102,7 +102,7 @@ Rules are **typed** (`trim_whitespace`, `strip_suffix`, `capitalize`, `uppercase
 `titlecase`, `canonical_values`), and the LLM prompt, the deterministic fast path, and the
 ground-truth oracle are all derived from the same rule objects — so they cannot drift apart.
 
-## KramaBench experiment (reviewer-recommended benchmark) — included & reproducible
+## KramaBench experiment — included & reproducible
 
 `datasets/` ships the Massachusetts water-body-testing table (15,571 rows) from KramaBench's
 *environment* data lake, a matching typed rule set, and `fetch_kramabench.sh` to pull the full
@@ -170,7 +170,7 @@ per-row verdicts on the identical row sets of the original five configurations.
 
 `--mode reflexion` runs a same-family checker with a Reflexion-style second pass (the model is
 shown its own verdicts and asked to reflect and revise). This is the agentic baseline requested
-in review: if the circular-validation hypothesis (H1) holds, self-critique alone should *not*
+as the agentic self-feedback baseline: if the circular-validation hypothesis (H1) holds, self-critique alone should *not*
 recover the blind-spot errors that a different-family checker catches. Comparing
 `circular` vs `reflexion` vs `cross-only` tests exactly that.
 

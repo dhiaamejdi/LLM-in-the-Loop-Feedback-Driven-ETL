@@ -119,9 +119,8 @@ BUSINESS_RULES: List[Dict[str, Any]] = [
 MODES = ("hybrid", "circular", "cross-only", "rules-only", "reflexion", "hybrid-circular")
 # reflexion: same-family checker with Reflexion-style self-critique (verdict pass,
 # then a reflection pass asking the model to re-examine and revise its verdicts).
-# This is the agentic self-feedback baseline requested by Reviewer 1VsF (O4): if
-# H1 holds, self-reflection alone should NOT recover the blind-spot errors that
-# a different-family checker catches.
+# This is the agentic self-feedback baseline: if H1 holds, self-reflection alone
+# should NOT recover the blind-spot errors that a different-family checker catches.
 
 
 # -------------------------
