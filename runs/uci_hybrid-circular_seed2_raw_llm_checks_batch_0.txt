@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 4,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; education-num label was not normalized."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week value was not null; native-country label was not normalized."
+  },
+  {
+    "row_idx": 14,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week value was not null; income label was not normalized."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "NOT_OK",
+    "notes": "Workclass and occupation values were not null; income label was not normalized."
+  },
+  {
+    "row_idx": 18,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week value was not null; native-country value was not null; race label was not normalized."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 22,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; capital-loss value was not normalized."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "OK",
+    "notes": "All fields were correctly transformed."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; hours-per-week value was not normalized."
+  }
+]

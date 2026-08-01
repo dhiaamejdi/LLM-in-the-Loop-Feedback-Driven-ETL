@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 58,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, and Violation was not trimmed."
+  },
+  {
+    "row_idx": 59,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, and Violation was not trimmed."
+  },
+  {
+    "row_idx": 63,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in County Description was not trimmed."
+  },
+  {
+    "row_idx": 65,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, and Violation was not trimmed."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level, and Violation was not trimmed."
+  }
+]

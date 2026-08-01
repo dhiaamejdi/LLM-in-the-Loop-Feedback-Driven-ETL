@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 78,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 80,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; education value is null in original but empty string in transformed."
+  },
+  {
+    "row_idx": 89,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; relationship label was not normalized."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; native-country label was not normalized."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; native-country value is null in original but empty string in transformed."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year; Community label not normalized; Violation value not present in original column."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code; Community label not normalized; Violation value not present in original column."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year; Community label not normalized; Organism label not normalized; Violation value not present in original column; Indicator Level value not present in original column."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code; Community label not normalized; Year value not present in original column; Violation value not present in original column; Indicator Level value not present in original column."
+  }
+]

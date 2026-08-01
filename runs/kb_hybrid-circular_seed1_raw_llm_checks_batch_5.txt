@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 17,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fields was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "NOT_OK",
+    "notes": "Indicator Level is null in original but empty string in transformed."
+  },
+  {
+    "row_idx": 28,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Beach Type Description was not trimmed; Organism label was not normalized."
+  }
+]

@@ -1,0 +1,340 @@
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 54,
+    "residual_bad_rows_in_heldout": 17
+  },
+  "verdict_coverage": {
+    "rows_sampled": 30,
+    "rows_with_verdict": 30,
+    "rows_missing_verdict": 0
+  },
+  "checker_metrics": {
+    "tp": 17,
+    "fp": 8,
+    "fn": 0,
+    "tn": 5,
+    "ground_truth_positives": 17,
+    "rows_flagged": 25,
+    "recall": 1.0,
+    "recall_ci95": [
+      0.8049,
+      1.0
+    ],
+    "precision": 0.68,
+    "precision_ci95": [
+      0.465,
+      0.8505
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 14,
+        "fp": 8,
+        "fn": 0,
+        "tn": 5
+      },
+      "deterministic": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, capital-gain, capital-loss, hours-per-week, income was not trimmed; education-num label was not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-gain: expected np.float64(0.0), got '1980.0'",
+        "capital-loss: expected np.float64(1980.0), got '0.0'"
+      ]
+    },
+    {
+      "row_idx": 3,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in workclass was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "workclass: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields were trimmed and labels were normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 7,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in income was not trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "income: expected nan, got '>50K'"
+      ]
+    },
+    {
+      "row_idx": 10,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in income was not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 13,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in multiple fields was not trimmed; education value does not belong in its column.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education-num: expected np.float64(nan), got '9.0'"
+      ]
+    },
+    {
+      "row_idx": 17,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in multiple fields was not trimmed; marital-status value was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education: expected nan, got ''",
+        "capital-loss: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 22,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in multiple fields was not trimmed; race value was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "workclass: expected nan, got ''",
+        "occupation: expected nan, got ''",
+        "hours-per-week: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 26,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in multiple fields was not trimmed; race value was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "workclass: expected nan, got ''",
+        "fnlwgt: expected np.float64(nan), got ''",
+        "education: expected 'Some-college', got ''",
+        "education-num: expected np.float64(10.0), got 'Some-college'",
+        "occupation: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 35,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 39,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'education'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education: expected 'HS-grad', got ' HS-grad '"
+      ]
+    },
+    {
+      "row_idx": 40,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 41,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 45,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in fnlwgt, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "marital-status: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 48,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, sex, income was not trimmed; income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-loss: expected np.float64(nan), got '0.0'"
+      ]
+    },
+    {
+      "row_idx": 51,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "marital-status: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 57,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; education label retains wrong casing.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 60,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; sex value is null in original but empty string in transformed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "sex: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 64,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; education label retains wrong casing.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 66,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; race value is null in original but empty string in transformed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "race: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 74,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Whitespace not trimmed in column 'native-country'",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "native-country: expected 'Ecuador', got ' Ecuador '"
+      ]
+    },
+    {
+      "row_idx": 82,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, fnlwgt, education-num, marital-status, occupation, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 85,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: sex 'male' not capitalized",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "sex: expected 'Male', got 'male'"
+      ]
+    },
+    {
+      "row_idx": 86,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in education-num, marital-status, occupation, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "education-num: expected np.float64(nan), got ''",
+        "race: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 91,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in workclass, occupation, marital-status, relationship, capital-gain, native-country were not trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "occupation: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 95,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, workclass, fnlwgt, education, education-num, marital-status, occupation, relationship, race, sex, capital-gain, hours-per-week, native-country were not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 96,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in age, workclass, fnlwgt, education, education-num, marital-status, occupation, relationship, race, sex, capital-gain, hours-per-week, native-country were not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 97,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 98,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading whitespace in age was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    }
+  ]
+}

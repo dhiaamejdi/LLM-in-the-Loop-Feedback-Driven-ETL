@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 65,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized incorrectly."
+  },
+  {
+    "row_idx": 71,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized incorrectly."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized incorrectly."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized incorrectly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in workclass, age, fnlwgt, capital-gain, capital-loss, hours-per-week, income was not trimmed; income label normalized incorrectly."
+  }
+]

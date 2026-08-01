@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "age": "38.0",
+      "workclass": "Private",
+      "fnlwgt": "205493.0",
+      "education": "HS-grad",
+      "education-num": "9.0",
+      "marital-status": "Married-civ-spouse",
+      "occupation": "Exec-managerial",
+      "relationship": "Wife",
+      "race": "White",
+      "sex": "Female",
+      "capital-gain": "0.0",
+      "capital-loss": "0.0",
+      "hours-per-week": "60.0",
+      "native-country": "United-States",
+      "income": ">50K"
+    },
+    {
+      "age": "30.0",
+      "workclass": "Self-emp-inc",
+      "fnlwgt": "68330.0",
+      "education": "Some-college",
+      "education-num": "10.0",
+      "marital-status": "Married-civ-spouse",
+      "occupation": "Sales",
+      "relationship": "husband",
+      "race": "White",
+      "sex": "Male",
+      "capital-gain": "0.0",
+      "capital-loss": "0.0",
+      "hours-per-week": "50.0",
+      "native-country": "United-States",
+      "income": "<=50K"
+    },
+    {
+      "age": "68.0",
+      "workclass": "Private",
+      "fnlwgt": "174895.0",
+      "education": "HS-grad",
+      "education-num": "9.0",
+      "marital-status": "Married-civ-spouse",
+      "occupation": "other-service",
+      "relationship": "Husband",
+      "race": "White",
+      "sex": "Male",
+      "capital-gain": "0.0",
+      "capital-loss": "0.0",
+      "hours-per-week": "40.0",
+      "native-country": "United-States",
+      "income": "<=50K"
+    },
+    {
+      "age": "34.0",
+      "workclass": "Private",
+      "fnlwgt": "191291.0",
+      "education": "Some-college",
+      "education-num": "10.0",
+      "marital-status": "Never-married",
+      "occupation": "Craft-repair",
+      "relationship": "Not-in-family",
+      "race": "White",
+      "sex": "Male",
+      "capital-gain": "0.0",
+      "capital-loss": "0.0",
+      "hours-per-week": "40.0",
+      "native-country": "United-States",
+      "income": "<=50K"
+    }
+  ]
+}

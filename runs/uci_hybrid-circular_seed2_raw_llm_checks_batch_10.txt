@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Native-country in original is null, but in transformed it is an empty string."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 59,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 61,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  }
+]

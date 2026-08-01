@@ -135,40 +135,6 @@
       "hours-per-week": "40.0",
       "native-country": "United-States",
       "income": ">50K"
-    },
-    {
-      "age": "23.0",
-      "workclass": "Private",
-      "fnlwgt": "306309.0",
-      "education": "10th",
-      "education-num": "6.0",
-      "marital-status": "Married-civ-spouse",
-      "occupation": "Farming-fishing",
-      "relationship": "Husband",
-      "race": "White",
-      "sex": "male",
-      "capital-gain": "0.0",
-      "capital-loss": "0.0",
-      "hours-per-week": "40.0",
-      "native-country": "United-States",
-      "income": "<=50K"
-    },
-    {
-      "age": "39.0",
-      "workclass": "Self-emp-inc",
-      "fnlwgt": "142149.0",
-      "education": "Assoc-acdm",
-      "education-num": "12.0",
-      "marital-status": "Married-civ-spouse",
-      "occupation": "Exec-managerial",
-      "relationship": " wife ",
-      "race": "white",
-      "sex": "Female",
-      "capital-gain": "0.0",
-      "capital-loss": "0.0",
-      "hours-per-week": "20.0",
-      "native-country": "United-States",
-      "income": ">50K"
     }
   ]
 }

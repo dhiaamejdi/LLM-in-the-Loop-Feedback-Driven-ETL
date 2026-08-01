@@ -1,0 +1,7 @@
+[
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fnlwgt was not trimmed; age and education-num values are strings instead of numbers."
+  }
+]

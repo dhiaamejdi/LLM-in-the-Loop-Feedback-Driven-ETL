@@ -45,8 +45,8 @@
       "relationship": "Not-in-family",
       "race": "White",
       "sex": "Male",
-      "capital-gain": "0.0",
-      "capital-loss": "1980.0",
+      "capital-gain": "1980.0",
+      "capital-loss": "0.0",
       "hours-per-week": "35.0",
       "native-country": "United-States",
       "income": "<=50K"
@@ -134,41 +134,7 @@
       "capital-loss": "0.0",
       "hours-per-week": "63.0",
       "native-country": "United-States",
-      "income": ""
-    },
-    {
-      "age": "38.0",
-      "workclass": "Self-emp-inc",
-      "fnlwgt": "176357.0",
-      "education": "HS-grad",
-      "education-num": "9.0",
-      "marital-status": "Married-civ-spouse",
-      "occupation": "Exec-managerial",
-      "relationship": "Husband",
-      "race": "White",
-      "sex": "Male",
-      "capital-gain": "0.0",
-      "capital-loss": "0.0",
-      "hours-per-week": "50.0",
-      "native-country": "United-States",
-      "income": "<=50K"
-    },
-    {
-      "age": "20.0",
-      "workclass": "State-gov",
-      "fnlwgt": "30796.0",
-      "education": "Some-college",
-      "education-num": "10.0",
-      "marital-status": "Never-married",
-      "occupation": "Adm-clerical",
-      "relationship": "Own-child",
-      "race": "White",
-      "sex": "Female",
-      "capital-gain": "0.0",
-      "capital-loss": "0.0",
-      "hours-per-week": "10.0",
-      "native-country": "United-States",
-      "income": "<=50K"
+      "income": ">50K"
     }
   ]
 }

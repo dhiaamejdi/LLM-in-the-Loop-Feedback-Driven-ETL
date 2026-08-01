@@ -1,0 +1,22 @@
+[
+  {
+    "row_idx": 86,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in numeric fields was not trimmed."
+  },
+  {
+    "row_idx": 87,
+    "verdict": "OK",
+    "notes": "All fields were correctly transformed."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in numeric fields was not trimmed."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in numeric fields was not trimmed."
+  }
+]
