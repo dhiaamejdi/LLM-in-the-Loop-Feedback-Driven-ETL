@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 51,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; marital-status label retains leading whitespace."
+  },
+  {
+    "row_idx": 59,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; marital-status, sex labels retain leading/trailing whitespace."
+  },
+  {
+    "row_idx": 61,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; marital-status label retains leading/trailing whitespace."
+  },
+  {
+    "row_idx": 65,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; marital-status label retains leading whitespace."
+  },
+  {
+    "row_idx": 71,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income was not trimmed; marital-status label retains leading whitespace."
+  }
+]

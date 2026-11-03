@@ -1,0 +1,248 @@
+{
+ "prefix": "kb",
+ "worker": "llama",
+ "checker": "mistral",
+ "seed": 1,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'County Description' fields.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 6,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 9,
+   "verdict": "Invalid",
+   "notes": "Community 'Chatham' was normalized to 'Stockbridge', but the Community Code '283.0' does not match the original '55.0'. Also, County Description 'Barnstable' was not provided in the transformed data.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 11,
+   "verdict": "Invalid",
+   "notes": "Community 'West Brookfield' was normalized to 'Chicopee', but the Community Code '61.0' does not match the original '323.0'. Also, the Year and Sample Date were changed in the transformed data.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 12,
+   "verdict": "Invalid",
+   "notes": "Community 'Chicopee' was normalized to 'Wendell', but the Community Code '319.0' does not match the original '61.0'. Also, the Year was not provided in the transformed data.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 17,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 19,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 21,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 26,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 27,
+   "verdict": "OK",
+   "notes": "Indicator Level was changed to an empty string instead of null. This is considered semantically equivalent.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 28,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 30,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 31,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 36,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 38,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and 'Year' key in 'original' was replaced with an empty string in 'transformed' due to null value.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 39,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Beach Name' fields.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 41,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 42,
+   "verdict": "OK",
+   "notes": "Null values were replaced with empty strings.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 45,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 47,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 49,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'County Description' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 55,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 60,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 61,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 64,
+   "verdict": "OK",
+   "notes": "Whitespace was removed from 'Beach Name' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 69,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 70,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 74,
+   "verdict": "OK",
+   "notes": "Violation key was changed to an empty string in the transformed data, but this is semantically equivalent to null.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 75,
+   "verdict": "OK",
+   "notes": "No transformation needed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 79,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Organism' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 81,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 84,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 85,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 87,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 90,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'County Description' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 92,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 96,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 98,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": false
+  }
+ ]
+}

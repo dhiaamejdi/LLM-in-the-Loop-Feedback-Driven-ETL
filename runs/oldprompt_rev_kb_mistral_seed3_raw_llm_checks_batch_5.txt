@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 12,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was needed."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Organism' field and 'Sample Date' was normalized to ISO format."
+  },
+  {
+    "row_idx": 23,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was needed."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "Community name was normalized and County name was assigned to 'Community' field."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' field."
+  },
+  {
+    "row_idx": 9,
+    "verdict": "Invalid",
+    "notes": "Community 'Chatham' was normalized to 'Stockbridge', but the Community Code '283.0' does not match the original '55.0'. Also, County Description 'Barnstable' was not normalized."
+  },
+  {
+    "row_idx": 11,
+    "verdict": "Invalid",
+    "notes": "Community 'West Brookfield' was normalized to 'Chicopee', but the Community Code '61.0' does not match the original '323.0'. Also, Year and Sample Date were changed, which is not allowed."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "Invalid",
+    "notes": "Community 'Chicopee' was normalized to 'Wendell', but the County Code '11.0' does not match the original '13.0'. Also, Year was changed, which is not allowed."
+  }
+]

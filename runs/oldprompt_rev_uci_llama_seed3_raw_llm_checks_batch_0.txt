@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "NG",
+    "notes": "Whitespace was trimmed but income label was not normalized correctly. Expected '<=50K.' but got '<=50K'."
+  },
+  {
+    "row_idx": 3,
+    "verdict": "NG",
+    "notes": "Whitespace was trimmed but workclass was not normalized correctly. Expected 'Private' but got ''."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "NG",
+    "notes": "Whitespace was trimmed but hours-per-week was not normalized correctly. Expected '40.0' but got 'Ireland'."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NG",
+    "notes": "Whitespace was trimmed but hours-per-week was not normalized correctly. Expected '63.0' but got 'United-States'."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "NG",
+    "notes": "Whitespace was not trimmed. Expected '29' but got '29.0'."
+  }
+]

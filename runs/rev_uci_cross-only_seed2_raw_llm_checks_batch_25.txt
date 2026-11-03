@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 89,
+    "verdict": "NOT_OK",
+    "notes": "Original and transformed data are identical, but no transformation was applied."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in relationship was not trimmed; income label is correct."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Original income is null, but transformed income is '>50K'; other fields are correct."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "NOT_OK",
+    "notes": "Age, fnlwgt, education, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country, and income are all incorrect."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Original and transformed data are identical, but no transformation was applied."
+  }
+]

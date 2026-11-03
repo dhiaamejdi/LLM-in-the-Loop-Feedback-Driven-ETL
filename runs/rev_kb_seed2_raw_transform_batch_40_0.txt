@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "281.0",
+      "Community": "Springfield",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-19T00:00:00.000Z",
+      "Beach Name": "Five Mile Pond @ Right",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "58.1",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-11T00:00:00.000Z",
+      "Beach Name": "Menauhant (West)",
+      "Beach Type Description": "Marine",
+      "Organism": "",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-15T00:00:00.000Z",
+      "Beach Name": "Lyman Lane",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "8.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "193.0",
+      "Community": "Monterey",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-26T00:00:00.000Z",
+      "Beach Name": "Lake Garfield",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "10.9",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "184.0",
+      "Community": "Middleton",
+      "County Code": "9.0",
+      "County Description": "essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-16T00:00:00.000Z",
+      "Beach Name": "Thunderbridge @ Center",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-11T00:00:00.000Z",
+      "Beach Name": "Sea Crest Beach Hotel",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "22.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-29T00:00:00.000Z",
+      "Beach Name": "Flax Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "292.0",
+      "Community": "",
+      "County Code": "5.0",
+      "County Description": "Bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-29T00:00:00.000Z",
+      "Beach Name": "Leeside",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    }
+  ]
+}

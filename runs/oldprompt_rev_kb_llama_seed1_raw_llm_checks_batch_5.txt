@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 17,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 21,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  }
+]

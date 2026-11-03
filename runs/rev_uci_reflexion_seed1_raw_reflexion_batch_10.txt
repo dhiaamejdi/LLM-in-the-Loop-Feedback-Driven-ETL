@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 33,
+    "verdict": "OK",
+    "notes": "Whitespace removed from 'income' field."
+  },
+  {
+    "row_idx": 34,
+    "verdict": "OK",
+    "notes": "No changes needed."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "No changes needed."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Workclass label changed from 'Private' to 'Local-gov'; occupation label is empty; 'native-country' value changed to 'Cuba'."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "No changes needed."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "OK",
+    "notes": "Whitespace removed from 'income' field."
+  }
+]

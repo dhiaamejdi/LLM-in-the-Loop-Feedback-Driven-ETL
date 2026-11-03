@@ -1,0 +1,6 @@
+{ "rows": [
+{ "Community Code": "41.0", "Community": "Brewster", "County Code": "1.0", "County Description": "Barnstable", "Year": "2019", "Sample Date": "2019-07-25 00:00:00", "Beach Name": "Crossroads for Kids, Inc.", "Beach Type Description": "Fresh", "Organism": "E. Coli", "Indicator Level": "20.0", "Violation": "NO" },
+{ "Community Code": "20.0", "Community": "Barnstable", "County Code": "1.0", "County Description": "Barnstable", "Year": "2019", "Sample Date": "2019-08-26 00:00:00", "Beach Name": "Long Pond Farms Neighborhood Association", "Beach Type Description": "Fresh", "Organism": "E. Coli", "Indicator Level": "4.0", "Violation": "NO" },
+{ "Community Code": "351.0", "Community": "Yarmouth", "County Code": "1.0", "County Description": "Barnstable", "Year": "2019", "Sample Date": "2019-07-29 00:00:00", "Beach Name": "Bay Road", "Beach Type Description": "Marine", "Organism": "Enterococci", "Indicator Level": "110.0", "Violation": "YES" },
+{ "Community Code": "20.0", "Community": "Barnstable", "County Code": "1.0", "County Description": "Barnstable", "Year": "2019", "Sample Date": "2019-07-15 00:00:00", "Beach Name": "Craigville", "Beach Type Description": "Marine", "Organism": "Enterococci", "Indicator Level": "1.0", "Violation": "NO" }
+] }

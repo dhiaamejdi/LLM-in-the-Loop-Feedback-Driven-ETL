@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 59,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 61,
+    "verdict": "NOK",
+    "notes": "Original 'marital-status' value was not trimmed."
+  },
+  {
+    "row_idx": 65,
+    "verdict": "NOK",
+    "notes": "Original 'marital-status' value was not trimmed."
+  },
+  {
+    "row_idx": 71,
+    "verdict": "NOK",
+    "notes": "Original 'income' label was not normalized correctly."
+  }
+]

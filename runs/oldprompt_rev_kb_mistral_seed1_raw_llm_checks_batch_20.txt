@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 55,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and 'County Description' label was normalized to an empty string."
+  },
+  {
+    "row_idx": 60,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 61,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 64,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and 'Beach Name' label was set to a default value 'Beach Name'."
+  }
+]

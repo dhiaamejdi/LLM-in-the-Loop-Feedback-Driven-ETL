@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 79,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized."
+  },
+  {
+    "row_idx": 81,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized."
+  },
+  {
+    "row_idx": 87,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized."
+  },
+  {
+    "row_idx": 90,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized."
+  }
+]

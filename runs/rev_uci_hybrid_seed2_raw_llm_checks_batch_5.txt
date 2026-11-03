@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 18,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in income was not trimmed."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Relationship was not normalized; capital-gain was not normalized."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  }
+]

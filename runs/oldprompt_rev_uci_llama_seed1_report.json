@@ -1,0 +1,188 @@
+{
+ "prefix": "rev_uci",
+ "worker": "mistral",
+ "checker": "llama",
+ "seed": 1,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 7,
+   "verdict": "NOK",
+   "notes": "Relationship and sex labels were not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 10,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 12,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 19,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed in workclass label.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 21,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 22,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 24,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 30,
+   "verdict": "NOK",
+   "notes": "Values were not trimmed and labels were not normalized correctly. 'divorced' was not normalized to 'Divorced', 'united-states' was not normalized to 'United-States', and '<=50k' was not normalized to '<=50K'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 31,
+   "verdict": "NOK",
+   "notes": "Values were not trimmed and labels were not normalized correctly. '354104' was not trimmed, '9' was not trimmed, and '<=50K' was not normalized to '<=50K'.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 33,
+   "verdict": "NG",
+   "notes": "Workclass was changed from 'Private' to 'Local-gov'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 34,
+   "verdict": "NG",
+   "notes": "Hours-per-week was changed from null to 40.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 35,
+   "verdict": "NG",
+   "notes": "Workclass was changed from 'Private' to 'Local-gov', education was changed from '9th' to 'Assoc-acdm', education-num was changed from 5 to 12, marital-status was changed from 'Married-civ-spouse' to 'Never-married', occupation was changed from 'Transport-moving' to '', relationship was changed from 'Other-relative' to 'Not-in-family', sex was changed from 'Female' to 'Male', hours-per-week was changed from 40 to 38, native-country was changed from 'White' to 'Cuba'.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 36,
+   "verdict": "NG",
+   "notes": "Workclass was changed from 'Private' to 'Local-gov', education was changed from '9th' to 'Assoc-acdm', education-num was changed from 5 to 12, marital-status was changed from 'Married-civ-spouse' to 'Never-married', occupation was changed from 'Transport-moving' to '', relationship was changed from 'Other-relative' to 'Not-in-family', sex was changed from 'Female' to 'Male', hours-per-week was changed from 40 to 38, native-country was changed from 'White' to 'Cuba'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 43,
+   "verdict": "NG",
+   "notes": "Workclass was changed from 'Private' to 'Local-gov'.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 48,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 50,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 55,
+   "verdict": "NOK",
+   "notes": "Original income label was not normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 56,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 63,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 69,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 70,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 77,
+   "verdict": "NOK",
+   "notes": "Hours-per-week was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 78,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 80,
+   "verdict": "NG",
+   "notes": "Whitespace was not trimmed and income label was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 89,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 91,
+   "verdict": "NG",
+   "notes": "Whitespace was not trimmed and native-country label was not normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 94,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  }
+ ]
+}

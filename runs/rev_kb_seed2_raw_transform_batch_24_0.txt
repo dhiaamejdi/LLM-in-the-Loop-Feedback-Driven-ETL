@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-15T00:00:00",
+      "Beach Name": "Wollaston @ Milton Street (DCR)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-05T00:00:00",
+      "Beach Name": "Wollaston @ Sachem Street (DCR)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-22T00:00:00",
+      "Beach Name": "constitution (dcr) @ middle",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "no"
+    },
+    {
+      "Community Code": "318.0",
+      "Community": "Wellfleet",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-12T00:00:00",
+      "Beach Name": "Duck Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "171.0",
+      "Community": "Marshfield",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-24T00:00:00",
+      "Beach Name": "Brant Rock",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "41.0",
+      "Community": "Brewster",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-01T00:00:00",
+      "Beach Name": "Long Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "169.0",
+      "Community": "Marion",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24T00:00:00",
+      "Beach Name": "",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "258.0",
+      "Community": "Salem",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-16T00:00:00",
+      "Beach Name": "Juniper Point",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "51.0",
+      "Violation": "NO"
+    }
+  ]
+}

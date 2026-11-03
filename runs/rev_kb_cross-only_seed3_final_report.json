@@ -1,0 +1,471 @@
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "verdict_coverage": {
+    "rows_sampled": 40,
+    "rows_with_verdict": 35,
+    "rows_missing_verdict": 5
+  },
+  "checker_metrics": {
+    "tp": 27,
+    "fp": 2,
+    "fn": 11,
+    "tn": 0,
+    "ground_truth_positives": 38,
+    "rows_flagged": 29,
+    "recall": 0.7105263157894737,
+    "recall_ci95": [
+      0.541,
+      0.8458
+    ],
+    "precision": 0.9310344827586207,
+    "precision_ci95": [
+      0.7723,
+      0.9915
+    ],
+    "per_path": {
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 0
+      },
+      "llm": {
+        "tp": 27,
+        "fp": 2,
+        "fn": 6,
+        "tn": 0
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-15 00:00:00', got '2019-08-15T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 5,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-09 00:00:00', got '2019-07-09T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Wellfleet', got ''",
+        "Sample Date: expected '2019-07-31 00:00:00', got '2019-07-31T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 9,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-11 00:00:00', got '2019-07-11T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 11,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-30 00:00:00', got '2019-05-30T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 12,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-04 00:00:00', got '2019-06-04T00:00:00'",
+        "Beach Type Description: expected 'Fresh', got 'fresh'"
+      ]
+    },
+    {
+      "row_idx": 15,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-23 00:00:00', got '2019-05-23T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 19,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-07 00:00:00', got '2019-08-07T00:00:00.000Z'",
+        "Organism: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 23,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-05 00:00:00', got '2019-06-05T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 26,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Beach Name was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(341.0), got ''",
+        "Community: expected nan, got 'Margaret Lindley Park'",
+        "Beach Name: expected 'Margaret Lindley Park', got ''"
+      ]
+    },
+    {
+      "row_idx": 29,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; Community, County Code, County Description, Year, Sample Date, Indicator Level labels were not normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 30,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Community label was not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'wellfleet', got 'Wellfleet'"
+      ]
+    },
+    {
+      "row_idx": 31,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Indicator Level was not trimmed; Community, County Code, County Description, Year, Indicator Level labels were not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(316.0), got 'Webster'",
+        "Community: expected 'Webster', got ''",
+        "Beach Type Description: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 32,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Sample Date was not trimmed; Sample Date label was not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-19 00:00:00', got '2019-08-19T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 35,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Sample Date was not trimmed; Sample Date label was not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-08 00:00:00', got '2019-07-08T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 36,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-19 00:00:00', got '2019-08-19T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 37,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-15 00:00:00', got '2019-07-15T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 39,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-23 00:00:00', got '2019-07-23T00:00:00.000Z'",
+        "Beach Type Description: expected 'Fresh', got 'fresh'"
+      ]
+    },
+    {
+      "row_idx": 43,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-19 00:00:00', got '2019-08-19T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 45,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Year was not trimmed; Year is null in original but not in transformed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-08-26 00:00:00', got '2019-08-26T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 49,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level, Violation was not trimmed; Community, County Description, Beach Type Description, Organism labels retain wrong casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-01 00:00:00', got '2019-07-01T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 51,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Year value is null in original, but not in transformed; leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level, Violation was not trimmed; Community, County Description, Beach Type Description, Organism labels retain wrong casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-07-01 00:00:00', got '2019-07-01T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 52,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level, Violation was not trimmed; Community, County Description, Beach Type Description, Organism labels retain wrong casing; Violation value is incorrect in transformed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'Enterococci' violates canonical set ['YES', 'NO']",
+        "Sample Date: expected '2019-08-27 00:00:00', got '2019-08-27T00:00:00.000Z'",
+        "Violation: expected 'ENTEROCOCCI', got 'Enterococci'"
+      ]
+    },
+    {
+      "row_idx": 53,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level, Violation was not trimmed; Community, County Description, Beach Type Description, Organism labels retain wrong casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-21 00:00:00', got '2019-05-21T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 57,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level, Violation was not trimmed; Community, County Description, Beach Type Description, Organism labels retain wrong casing; Violation value is incorrect in transformed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-24 00:00:00', got '2019-06-24T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 58,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-08 00:00:00', got '2019-07-08T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 62,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 63,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-06 00:00:00', got '2019-08-06T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 64,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-05 00:00:00', got '2019-08-05T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 66,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-20 00:00:00', got '2019-08-20T00:00:00.000Z'",
+        "Beach Name: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 68,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community Code label was not normalized; Sample Date label was not normalized; Beach Name label was not normalized; Indicator Level label was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-04 00:00:00', got '2019-08-04T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-15 00:00:00', got '2019-08-15T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 78,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-08-26 00:00:00', got '2019-08-26T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 84,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-12 00:00:00', got '2019-08-12T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 86,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-08-27 00:00:00', got '2019-08-27T00:00:00'",
+        "Beach Name: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 87,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in numeric fields was not trimmed; trailing period in Year and numeric fields was not removed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-27 00:00:00', got '2019-08-27T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 88,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in numeric fields was not trimmed; trailing period in Year and numeric fields was not removed; Sample Date was not normalized to datetime format.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Violation: 'no' violates canonical set ['YES', 'NO']",
+        "Sample Date: expected nan, got ''",
+        "Violation: expected 'NO', got 'no'"
+      ]
+    },
+    {
+      "row_idx": 92,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in numeric fields was not trimmed; trailing period in Year and numeric fields was not removed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 97,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in numeric fields was not trimmed; trailing period in Year and numeric fields was not removed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(2019.0), got '2019'"
+      ]
+    },
+    {
+      "row_idx": 98,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in numeric fields was not trimmed; trailing period in Year and numeric fields was not removed; 'marine' was not normalized to 'Marine'.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(2019.0), got '2019'"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved and values unchanged."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved and values unchanged."
+  },
+  {
+    "row_idx": 52,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved and values unchanged."
+  },
+  {
+    "row_idx": 53,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved and values unchanged."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved and values unchanged. 'Year' value is a number, no need for quotes."
+  }
+]

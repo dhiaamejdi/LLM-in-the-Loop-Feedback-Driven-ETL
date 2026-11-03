@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-17T00:00:00",
+      "Beach Name": "Parkers River West",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "223.0",
+      "Community": "Orange",
+      "County Code": "11.0",
+      "County Description": "Franklin",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02T00:00:00",
+      "Beach Name": "Orange Town Beach @ Location 1",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "3.1",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "Boston",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-07T00:00:00",
+      "Beach Name": "Constitution (DCR) @ Rec Center",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1126.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "Boston",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-19T00:00:00",
+      "Beach Name": "Constitution (DCR) @ Rec Center",
+      "Beach Type Description": "marine",
+      "Organism": "enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "126.0",
+      "Community": "Harwich",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-17T00:00:00",
+      "Beach Name": "Great Sand Lakes Association - Vacation Ln. (John Joseph Pond)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "20.0",
+      "Community": "barnstable",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-10T00:00:00",
+      "Beach Name": "Keyes Beach (Sea Street)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "173.0",
+      "Community": "Mattapoisett",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-29T00:00:00",
+      "Beach Name": "Holly Woods 1",
+      "Beach Type Description": "marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "300.0",
+      "Community": "Truro",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-13T00:00:00",
+      "Beach Name": "Shearwater Association",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    }
+  ]
+}

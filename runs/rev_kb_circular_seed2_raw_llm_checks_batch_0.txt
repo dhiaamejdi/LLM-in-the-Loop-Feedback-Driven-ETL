@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 3,
+    "verdict": "OK",
+    "notes": "Whitespace in Sample Date transformed to ISO format and County Description is empty in original and transformed data."
+  },
+  {
+    "row_idx": 4,
+    "verdict": "OK",
+    "notes": "No changes in original and transformed data."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "No changes in original and transformed data."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "OK",
+    "notes": "No changes in original and transformed data."
+  },
+  {
+    "row_idx": 13,
+    "verdict": "OK",
+    "notes": "No changes in original and transformed data."
+  }
+]

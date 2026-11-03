@@ -1,0 +1,7 @@
+[
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and label casing normalized correctly."
+  }
+]

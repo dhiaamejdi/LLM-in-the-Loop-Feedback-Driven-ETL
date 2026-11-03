@@ -1,0 +1,17 @@
+[
+  {
+    "row_idx": 96,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Organism, Indicator Level was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, Beach Name, Organism, Indicator Level was not trimmed."
+  },
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": "No issues found."
+  }
+]

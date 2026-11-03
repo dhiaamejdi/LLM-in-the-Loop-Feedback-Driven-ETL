@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 4,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 14,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 17,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 47,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  }
+]

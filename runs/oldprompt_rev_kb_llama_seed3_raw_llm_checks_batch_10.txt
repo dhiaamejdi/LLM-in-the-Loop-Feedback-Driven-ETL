@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 29,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "NOK",
+    "notes": "Community and Beach Type Description were not normalized correctly."
+  },
+  {
+    "row_idx": 32,
+    "verdict": "NOK",
+    "notes": "Sample Date was not normalized correctly."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  }
+]

@@ -1,0 +1,248 @@
+{
+ "prefix": "rev_kb",
+ "worker": "mistral",
+ "checker": "mistral",
+ "seed": 1,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 6,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 9,
+   "verdict": "Invalid",
+   "notes": "Community 'Chatham' was normalized to 'Stockbridge', but the Community Code '283.0' does not match the original '55.0'. Also, County Description 'Barnstable' was not normalized.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 11,
+   "verdict": "Invalid",
+   "notes": "Community 'West Brookfield' was normalized to 'Chicopee', but the Community Code '61.0' does not match the original '323.0'. Also, Year and Sample Date were changed, which is not allowed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 12,
+   "verdict": "Invalid",
+   "notes": "Community 'Chicopee' was normalized to 'Wendell', but the County Code '11.0' does not match the original '13.0'. Also, Year was changed, which is not allowed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 17,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and ISO 8601 format was added to Sample Date.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 19,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and ISO 8601 format was added to Sample Date.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 21,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 26,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 27,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and Indicator Level was set to an empty string.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 28,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 30,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 31,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 36,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Sample Date' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 38,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields. 'Year' field was set to '2019.0' in transformed data.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 39,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community', 'County Description', 'Sample Date', and 'Beach Name' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 41,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 42,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Sample Date' and 'Beach Name' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 45,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 47,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Beach Name' field.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 49,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 55,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and 'County Description' label was normalized to an empty string.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 60,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 61,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 64,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and 'Beach Name' label was set to a default value 'Beach Name'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 69,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 70,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 74,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 75,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 79,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 81,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 84,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 85,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 87,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 90,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 92,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 96,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 97,
+   "verdict": "Warning",
+   "notes": "Community is empty in the transformed data. This may not be semantically correct.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 98,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  }
+ ]
+}

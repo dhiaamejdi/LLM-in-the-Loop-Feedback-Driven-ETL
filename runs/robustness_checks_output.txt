@@ -1,0 +1,163 @@
+
+===== UCI Adult (uci) =====
+[1] cross TP 15, also caught by rules 2; cross TP lost inside hybrid 5; union of channels 28 vs hybrid 24; same checker, same row, different verdict 6/75
+[2] unscored rows: {} | circular&reflexion 0 | circular&hybrid-circular 0
+[3] discrimination           TPR   FPR     J  Fisher p
+    circular               0.925 0.730 +0.195  0.0175
+    reflexion              0.868 0.676 +0.192  0.0367
+    rules-only             0.283 0.000 +0.283  0.0003
+    cross-only             0.283 0.027 +0.256  0.0016
+    hybrid                 0.453 0.027 +0.426  0.0000
+    hybrid-circular        0.962 0.568 +0.395  0.0000
+[4] positives 53; format-only 27; remaining 26
+    configuration       primary TP/FN/FP recall prec | strict TP/FN/FP recall prec
+    circular            49/  4/ 27  0.925 0.645 |  23/  3/ 53  0.885 0.303
+    reflexion           46/  7/ 25  0.868 0.648 |  22/  4/ 49  0.846 0.310
+    rules-only          15/ 38/  0  0.283 1.000 |  13/ 13/  2  0.500 0.867
+    cross-only          15/ 38/  1  0.283 0.938 |  11/ 15/  5  0.423 0.688
+    hybrid              24/ 29/  1  0.453 0.960 |  20/  6/  5  0.769 0.800
+    hybrid-circular     51/  2/ 21  0.962 0.708 |  26/  0/ 46  1.000 0.361
+[5] cost, primary labels; rho* against hybrid (FN=29, FP=1):
+    circular           1.04  95% bootstrap [0.57, 2.00]
+    reflexion          1.09  95% bootstrap [0.59, 2.25]
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    0.74  95% bootstrap [0.39, 1.32]
+    flag-everything    1.24
+    cheapest overall: from 0.00: rules-only; from 0.11: hybrid; from 0.74: hybrid-circular; from 8.00: flag-everything
+[5] cost, strict labels; rho* against hybrid (FN=6, FP=5):
+    circular           16.00
+    reflexion          22.00
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    6.83
+    flag-everything    9.83
+    cheapest overall: from 0.00: rules-only; from 0.43: hybrid; from 6.83: hybrid-circular
+[6] positives on rows with no injected fault: 10/53
+
+===== KramaBench (kb) =====
+[1] cross TP 11, also caught by rules 1; cross TP lost inside hybrid 1; union of channels 27 vs hybrid 26; same checker, same row, different verdict 1/103
+[2] unscored rows: {'circular': (15, 4), 'reflexion': (15, 4), 'hybrid-circular': (15, 3)} | circular&reflexion 15 | circular&hybrid-circular 5
+[3] discrimination           TPR   FPR     J  Fisher p
+    circular               0.843 0.652 +0.191  0.0224
+    reflexion              0.843 0.565 +0.278  0.0014
+    rules-only             0.333 0.000 +0.333  0.0000
+    cross-only             0.216 0.000 +0.216  0.0000
+    hybrid                 0.510 0.000 +0.510  0.0000
+    hybrid-circular        0.824 0.681 +0.142  0.0936
+[4] positives 51; format-only 24; remaining 27
+    configuration       primary TP/FN/FP recall prec | strict TP/FN/FP recall prec
+    circular            43/  8/ 45  0.843 0.489 |  25/  2/ 63  0.926 0.284
+    reflexion           43/  8/ 39  0.843 0.524 |  25/  2/ 57  0.926 0.305
+    rules-only          17/ 34/  0  0.333 1.000 |  16/ 11/  1  0.593 0.941
+    cross-only          11/ 40/  0  0.216 1.000 |   9/ 18/  2  0.333 0.818
+    hybrid              26/ 25/  0  0.510 1.000 |  24/  3/  2  0.889 0.923
+    hybrid-circular     42/  9/ 47  0.824 0.472 |  26/  1/ 63  0.963 0.292
+[5] cost, primary labels; rho* against hybrid (FN=25, FP=0):
+    circular           2.65  95% bootstrap [1.50, 5.27]
+    reflexion          2.29  95% bootstrap [1.32, 4.44]
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    2.94  95% bootstrap [1.76, 5.78]
+    flag-everything    2.76
+    cheapest overall: from 0.00: hybrid; from 2.29: reflexion; from 3.75: flag-everything
+[5] cost, strict labels; rho* against hybrid (FN=3, FP=2):
+    circular           61.00
+    reflexion          55.00
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    30.50
+    flag-everything    30.33
+    cheapest overall: from 0.00: rules-only; from 0.12: hybrid; from 30.33: flag-everything
+[6] positives on rows with no injected fault: 1/51
+
+===== UCI Adult, reversed (rev_uci) =====
+[1] cross TP 43, also caught by rules 5; cross TP lost inside hybrid 1; union of channels 45 vs hybrid 44; same checker, same row, different verdict 13/83
+[2] unscored rows: {} | circular&reflexion 0 | circular&hybrid-circular 0
+[3] discrimination           TPR   FPR     J  Fisher p
+    circular               0.255 0.023 +0.232  0.0019
+    reflexion              0.149 0.000 +0.149  0.0127
+    rules-only             0.149 0.000 +0.149  0.0127
+    cross-only             0.915 0.814 +0.101  0.2178
+    hybrid                 0.936 0.628 +0.308  0.0005
+    hybrid-circular        0.468 0.000 +0.468  0.0000
+[4] positives 47; format-only 14; remaining 33
+    configuration       primary TP/FN/FP recall prec | strict TP/FN/FP recall prec
+    circular            12/ 35/  1  0.255 0.923 |  10/ 23/  3  0.303 0.769
+    reflexion            7/ 40/  0  0.149 1.000 |   7/ 26/  0  0.212 1.000
+    rules-only           7/ 40/  0  0.149 1.000 |   7/ 26/  0  0.212 1.000
+    cross-only          43/  4/ 35  0.915 0.551 |  29/  4/ 49  0.879 0.372
+    hybrid              44/  3/ 27  0.936 0.620 |  31/  2/ 40  0.939 0.437
+    hybrid-circular     22/ 25/  0  0.468 1.000 |  18/ 15/  4  0.545 0.818
+[5] cost, primary labels; rho* against hybrid (FN=3, FP=27):
+    circular           no finite break-even
+    reflexion          no finite break-even
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    no finite break-even
+    flag-everything    5.33
+    cheapest overall: from 0.00: hybrid-circular; from 1.23: hybrid; from 5.33: flag-everything
+[5] cost, strict labels; rho* against hybrid (FN=2, FP=40):
+    circular           no finite break-even
+    reflexion          no finite break-even
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    no finite break-even
+    flag-everything    8.50
+    cheapest overall: from 0.00: reflexion; from 0.36: hybrid-circular; from 2.77: hybrid; from 8.50: flag-everything
+[6] positives on rows with no injected fault: 8/47
+
+===== KramaBench, reversed (rev_kb) =====
+[1] cross TP 77, also caught by rules 6; cross TP lost inside hybrid 8; union of channels 78 vs hybrid 82; same checker, same row, different verdict 12/88
+[2] unscored rows: {'cross-only': (20, 20), 'hybrid': (20, 19)} | circular&reflexion 0 | circular&hybrid-circular 0
+[3] discrimination           TPR   FPR     J  Fisher p
+    circular               0.101 0.000 +0.101  0.5959
+    reflexion              0.055 0.000 +0.055  1.0000
+    rules-only             0.064 0.000 +0.064  1.0000
+    cross-only             0.706 0.818 -0.112  0.7264
+    hybrid                 0.752 0.818 -0.066  1.0000
+    hybrid-circular        0.147 0.000 +0.147  0.3561
+[4] positives 109; format-only 69; remaining 40
+    configuration       primary TP/FN/FP recall prec | strict TP/FN/FP recall prec
+    circular            11/ 98/  0  0.101 1.000 |  10/ 30/  1  0.250 0.909
+    reflexion            6/103/  0  0.055 1.000 |   5/ 35/  1  0.125 0.833
+    rules-only           7/102/  0  0.064 1.000 |   7/ 33/  0  0.175 1.000
+    cross-only          77/ 32/  9  0.706 0.895 |  30/ 10/ 56  0.750 0.349
+    hybrid              82/ 27/  9  0.752 0.901 |  32/  8/ 59  0.800 0.352
+    hybrid-circular     16/ 93/  0  0.147 1.000 |  15/ 25/  1  0.375 0.938
+[5] cost, primary labels; rho* against hybrid (FN=27, FP=9):
+    circular           no finite break-even
+    reflexion          no finite break-even
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    no finite break-even
+    flag-everything    0.07
+    cheapest overall: from 0.00: hybrid-circular; from 0.12: flag-everything
+[5] cost, strict labels; rho* against hybrid (FN=8, FP=59):
+    circular           no finite break-even
+    reflexion          no finite break-even
+    rules-only         no finite break-even
+    cross-only         no finite break-even
+    hybrid-circular    no finite break-even
+    flag-everything    2.62
+    cheapest overall: from 0.00: rules-only; from 0.12: hybrid-circular; from 3.16: flag-everything
+[6] positives on rows with no injected fault: 41/109
+
+===== [7] Worker x checker (single-pass LLM checker, no rules) =====
+dataset labels   worker/checker    relation   TP/FN/FP  recall  prec  flag%
+uci     primary  Llama  /Llama    same      49/  4/ 27  0.925  0.645  84%
+uci     primary  Llama  /Mistral  cross     15/ 38/  1  0.283  0.938  18%
+uci     primary  Mistral/Mistral  same      12/ 35/  1  0.255  0.923  14%
+uci     primary  Mistral/Llama    cross     43/  4/ 35  0.915  0.551  87%
+uci     strict   Llama  /Llama    same      23/  3/ 53  0.885  0.303  84%
+uci     strict   Llama  /Mistral  cross     11/ 15/  5  0.423  0.688  18%
+uci     strict   Mistral/Mistral  same      10/ 23/  3  0.303  0.769  14%
+uci     strict   Mistral/Llama    cross     29/  4/ 49  0.879  0.372  87%
+kb      primary  Llama  /Llama    same      43/  8/ 45  0.843  0.489  73%
+kb      primary  Llama  /Mistral  cross     11/ 40/  0  0.216  1.000  9%
+kb      primary  Mistral/Mistral  same      11/ 98/  0  0.101  1.000  9%
+kb      primary  Mistral/Llama    cross     77/ 32/  9  0.706  0.895  72%
+kb      strict   Llama  /Llama    same      25/  2/ 63  0.926  0.284  73%
+kb      strict   Llama  /Mistral  cross      9/ 18/  2  0.333  0.818  9%
+kb      strict   Mistral/Mistral  same      10/ 30/  1  0.250  0.909  9%
+kb      strict   Mistral/Llama    cross     30/ 10/ 56  0.750  0.349  72%

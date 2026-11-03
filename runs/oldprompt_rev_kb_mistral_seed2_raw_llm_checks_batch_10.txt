@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 23,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and ISO 8601 date format was added to 'Sample Date'."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and no changes were made to other fields."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and no changes were made to other fields."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and no changes were made to other fields."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and ISO 8601 date format was added to 'Sample Date'."
+  }
+]

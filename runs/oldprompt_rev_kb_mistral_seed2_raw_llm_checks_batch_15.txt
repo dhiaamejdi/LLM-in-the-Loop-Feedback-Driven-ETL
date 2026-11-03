@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Sample Date' and 'Year' fields."
+  },
+  {
+    "row_idx": 38,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 46,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": ""
+  }
+]

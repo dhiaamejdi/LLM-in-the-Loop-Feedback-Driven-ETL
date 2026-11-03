@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 51,
+    "verdict": "NOK",
+    "notes": "Original and transformed rows have different types for 'age' and 'fnlwgt'."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "NOK",
+    "notes": "Original and transformed rows have different types for 'age' and 'fnlwgt'."
+  },
+  {
+    "row_idx": 60,
+    "verdict": "NOK",
+    "notes": "Original and transformed rows have different types for 'age', 'fnlwgt', 'education', 'education-num', 'capital-gain', 'capital-loss', and 'hours-per-week'."
+  },
+  {
+    "row_idx": 64,
+    "verdict": "NOK",
+    "notes": "Original and transformed rows have different types for 'age', 'fnlwgt', 'education', 'education-num', 'capital-gain', 'capital-loss', and 'hours-per-week'."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "NOK",
+    "notes": "Original and transformed rows have different types for 'age', 'fnlwgt', 'education', 'education-num', 'capital-gain', 'capital-loss', and 'hours-per-week'."
+  }
+]

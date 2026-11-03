@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "Amherst",
+      "Community": "Amherst",
+      "County Code": "15.0",
+      "County Description": "Hampshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-03 00:00:00",
+      "Beach Name": "Puffers Pond (AKA Factory Hollow Pond) @ Mill St.",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "62.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "256.0",
+      "Community": "Russell",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22 00:00:00",
+      "Beach Name": "h.a. moses beach (scout reservation)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "27.5",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "Boston",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-23 00:00:00",
+      "Beach Name": "Constitution (DCR) @ North",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "72.0",
+      "Community": "Dartmouth",
+      "County Code": "5.0",
+      "County Description": "Bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02 00:00:00",
+      "Beach Name": "Oak Hill Shores",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "163.0",
+      "Community": "Lynn",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-11 00:00:00",
+      "Beach Name": "Kings (DCR) @ Eastern Ave.",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "63.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-09 00:00:00",
+      "Beach Name": "Fearings Pond (DCR) @ Beach 2",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "17.0",
+      "Community": "Auburn",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-01 00:00:00",
+      "Beach Name": "Century Sportsman's Club",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "26.2",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "77.0",
+      "Community": "Douglas",
+      "County Code": "Worcester",
+      "County Description": "",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-26 00:00:00",
+      "Beach Name": "Wallum Lake Terrace",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    }
+  ]
+}

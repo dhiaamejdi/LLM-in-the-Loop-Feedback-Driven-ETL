@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 89,
+    "verdict": "OK",
+    "notes": "No transformation needed as original and transformed data are identical."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "NG",
+    "notes": "Age was changed from 21 to 33, which is not semantically correct."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NG",
+    "notes": "Age was changed from 33 to 20, education was changed from HS-grad to Some-college, education-num was changed from null to 10, occupation was removed, relationship was changed from Other-relative to Own-child, and race was changed from Amer-Indian-Eskimo to White. These changes are not semantically correct."
+  }
+]

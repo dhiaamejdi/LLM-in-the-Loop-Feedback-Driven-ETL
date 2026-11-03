@@ -1,0 +1,5 @@
+{"rows": [
+{"age": "21.0", "workclass": "Private", "fnlwgt": "113106.0", "education": "Some-college", "education-num": "10.0", "marital-status": "Never-married", "occupation": "Other-service", "relationship": "Own-child", "race": "White", "sex": "Female", "capital-gain": "0.0", "capital-loss": "0.0", "hours-per-week": "30.0", "native-country": "United-States", "income": "<=50k"},
+{"age": "21.0", "workclass": "Private", "fnlwgt": null, "education": "Some-college", "education-num": "10.0", "marital-status": "Never-married", "occupation": "Machine-op-inspct", "relationship": "Other-relative", "race": "White", "sex": "Male", "capital-gain": "0.0", "capital-loss": "0.0", "hours-per-week": "35.0", "native-country": "United-States", "income": "<=50K"},
+{"age": "32.0", "workclass": "Private", "fnlwgt": "155151.0", "education": "HS-grad", "education-num": "9.0", "marital-status": "Married-civ-spouse", "occupation": "Craft-repair", "relationship": "Husband", "race": "White", "sex": "Male", "capital-gain": "0.0", "capital-loss": "0.0", "hours-per-week": "55.0", "native-country": "United-States", "income": "<=50K"}
+]}

@@ -1,0 +1,22 @@
+[
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "Whitespace removed from fields and income label normalized correctly."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Label 'education-num' in original data is a number but in transformed data is a string '9'. Also, label 'occupation' in transformed data is empty."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "NOT_OK",
+    "notes": "Age was changed from 21 to 33, which is not valid. Also, label 'education' in transformed data is empty and label 'occupation' is 'Other-service' instead of 'Machine-op-inspct'. Lastly, label 'race' in transformed data is 'Amer-Indian-Eskimo' instead of 'Black'."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Label 'education' in original data is 'HS-grad' but in transformed data is 'Some-college'. Also, label 'education-num' in original data is null but in transformed data is 10. Lastly, label 'occupation' in transformed data is empty."
+  }
+]

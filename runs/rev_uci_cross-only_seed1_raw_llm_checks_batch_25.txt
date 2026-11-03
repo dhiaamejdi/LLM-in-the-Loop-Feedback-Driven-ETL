@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 80,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in education was not trimmed; education-num label was not normalized; native-country label was not normalized."
+  },
+  {
+    "row_idx": 89,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age was not trimmed; leading/trailing whitespace in hours-per-week was not trimmed; income label was not normalized."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  }
+]

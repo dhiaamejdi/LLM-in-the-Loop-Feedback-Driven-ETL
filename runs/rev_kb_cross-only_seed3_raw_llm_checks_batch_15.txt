@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Year was not trimmed; Year is null in original but not in transformed."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 77,
+    "verdict": "OK",
+    "notes": "No changes to labels or whitespace."
+  },
+  {
+    "row_idx": 81,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in 'relationship' was not trimmed."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOT_OK",
+    "notes": "Label 'occupation' in transformed data is not 'prof-specialty' as expected."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "No changes to labels or whitespace."
+  },
+  {
+    "row_idx": 89,
+    "verdict": "OK",
+    "notes": "No changes to labels or whitespace."
+  }
+]

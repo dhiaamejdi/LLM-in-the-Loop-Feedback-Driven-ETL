@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 23,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  }
+]

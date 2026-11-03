@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 74,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 81,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "Warning",
+    "notes": "The 'occupation' field in the 'transformed' data is not normalized. It should be 'prof-specialty' or left empty if unknown."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  }
+]

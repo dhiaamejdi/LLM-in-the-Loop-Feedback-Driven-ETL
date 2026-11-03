@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 58,
+    "verdict": "OK",
+    "notes": "Whitespace, datetimes, and casing normalized correctly."
+  },
+  {
+    "row_idx": 62,
+    "verdict": "OK",
+    "notes": "Whitespace, datetimes, and casing normalized correctly."
+  },
+  {
+    "row_idx": 63,
+    "verdict": "OK",
+    "notes": "Whitespace, datetimes, and casing normalized correctly."
+  },
+  {
+    "row_idx": 64,
+    "verdict": "OK",
+    "notes": "Whitespace, datetimes, and casing normalized correctly."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "OK",
+    "notes": "Community Name is null in original and empty string in transformed, considered equivalent."
+  }
+]

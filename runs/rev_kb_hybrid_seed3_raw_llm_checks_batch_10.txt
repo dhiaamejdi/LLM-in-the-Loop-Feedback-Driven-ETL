@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 30,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, Beach Name, Beach Type Description, Indicator Level were not trimmed; Community label not normalized; Community Code, Community, County Code, Year, Indicator Level values do not belong in their columns."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community, County Code, Year, Beach Name, Beach Type Description, Indicator Level were not trimmed; Community label not normalized; Community, Beach Type Description values do not belong in their columns."
+  },
+  {
+    "row_idx": 32,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date were not trimmed; Sample Date format changed."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date were not trimmed; Sample Date format changed."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date were not trimmed; Sample Date format changed."
+  }
+]

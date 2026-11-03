@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 4,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'age', 'fnlwgt', 'education-num', 'hours-per-week', 'native-country' were not trimmed; 'marital-status' label was not normalized."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'age', 'fnlwgt', 'education-num', 'hours-per-week', 'native-country' were not trimmed; 'native-country' value was not normalized."
+  },
+  {
+    "row_idx": 14,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'age', 'fnlwgt', 'education-num', 'hours-per-week', 'native-country' were not trimmed; 'native-country' value was not normalized."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'age', 'fnlwgt', 'education-num', 'hours-per-week', 'native-country' were not trimmed; 'workclass', 'occupation' values were not normalized."
+  },
+  {
+    "row_idx": 17,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'age', 'fnlwgt', 'education-num', 'hours-per-week', 'native-country' were not trimmed; 'marital-status' label was not normalized."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 31,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 33,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week was not present in original data but is present in transformed data."
+  },
+  {
+    "row_idx": 34,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week in original data is null but is present in transformed data."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Multiple fields are incorrect: workclass, education, education-num, occupation, relationship, race, sex, hours-per-week, native-country."
+  }
+]

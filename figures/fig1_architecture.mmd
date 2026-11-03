@@ -1,0 +1,21 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Helvetica, Arial, sans-serif", "fontSize": "15px", "primaryColor": "#ffffff", "primaryBorderColor": "#444444", "lineColor": "#444444", "clusterBkg": "#f6f6f6", "clusterBorder": "#bbbbbb"}, "flowchart": {"curve": "basis", "nodeSpacing": 24, "rankSpacing": 34, "wrappingWidth": 260}}}%%
+flowchart TB
+    subgraph PIPE["Pipeline: each stage pairs a Worker with a Checker"]
+        direction LR
+        IN["Structured<br/>data"] --> S1["<b>1. Schema<br/>Understanding</b><br/>Worker LLM<br/>Checker LLM"] --> S2["<b>2. Semantic<br/>Transformation</b><br/>Worker LLM<br/>Checker: rules + LLM"] --> S3["<b>3. Feature<br/>Engineering</b><br/>Worker LLM<br/>Checker LLM"] --> S4["<b>4. Data<br/>Cleaning</b><br/>Worker LLM<br/>Checker LLM"] --> OUT["Clean<br/>dataset"]
+    end
+
+    subgraph HITL["Human review queues and corrections (specified, not yet evaluated)"]
+        direction LR
+        Q1["Flagged-row queue<br/>NOT_OK rows with rationale"] ~~~ Q2["Audit queue<br/>sample of OK rows"] ~~~ Q3["Rule queue<br/>confirmed error classes"] ~~~ KB["Corrections knowledge base<br/>(specified, not implemented)"]
+    end
+
+    PIPE -. "checker verdicts" .-> HITL
+    HITL -. "new fast-path rules, worker adaptation" .-> PIPE
+
+    classDef evaluated fill:#d9efe9,stroke:#1f6f5f,stroke-width:2px,color:#111111
+    classDef pilot fill:#ffffff,stroke:#444444,color:#111111
+    classDef planned fill:#ffffff,stroke:#888888,stroke-dasharray:5 4,color:#333333
+    class S2 evaluated
+    class S1,S3,S4,IN,OUT pilot
+    class Q1,Q2,Q3,KB planned

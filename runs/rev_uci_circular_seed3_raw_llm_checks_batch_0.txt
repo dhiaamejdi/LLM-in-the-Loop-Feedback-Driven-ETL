@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields and income label normalized correctly."
+  },
+  {
+    "row_idx": 3,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields and workclass field left unchanged."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields and income label normalized correctly."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week contains a string instead of a number."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "NOT_OK",
+    "notes": "Age contains a decimal point which is not expected."
+  }
+]

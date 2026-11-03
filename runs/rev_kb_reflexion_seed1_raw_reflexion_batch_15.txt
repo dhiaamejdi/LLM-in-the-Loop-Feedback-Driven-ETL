@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "OK",
+    "notes": "No changes needed."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "OK",
+    "notes": "No changes needed."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "No changes needed."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "Whitespace in Community name normalized."
+  },
+  {
+    "row_idx": 47,
+    "verdict": "OK",
+    "notes": "Leading whitespace in Beach Name was trimmed."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 59,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 61,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 65,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 71,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly. Capital gain was left unchanged."
+  }
+]

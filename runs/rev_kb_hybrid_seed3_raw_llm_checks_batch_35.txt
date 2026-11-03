@@ -1,0 +1,7 @@
+[
+  {
+    "row_idx": 98,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in numeric fields was not trimmed; 'Marine' should be 'marine' in Beach Type Description."
+  }
+]

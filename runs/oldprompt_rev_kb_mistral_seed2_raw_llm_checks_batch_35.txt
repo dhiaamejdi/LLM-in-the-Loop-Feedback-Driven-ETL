@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and 'County Description' label was normalized to empty string."
+  }
+]

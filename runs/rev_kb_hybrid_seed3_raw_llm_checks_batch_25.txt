@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 64,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Sample Date, Community Code, County Code, Year, Sample Date, Indicator Level was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, County Code, Year, Sample Date, Community Code, County Code, Year, Sample Date, Indicator Level was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 68,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 73,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community, County Description was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 78,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in County Description was not trimmed; income label retains trailing period."
+  }
+]

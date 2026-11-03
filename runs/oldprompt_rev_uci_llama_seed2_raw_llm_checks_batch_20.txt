@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 74,
+    "verdict": "NOK",
+    "notes": "Whitespace was not trimmed and occupation label was not normalized correctly."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 81,
+    "verdict": "NOK",
+    "notes": "Whitespace was not trimmed and relationship label was not normalized correctly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOK",
+    "notes": "Whitespace was not trimmed and occupation label was not normalized correctly."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  }
+]

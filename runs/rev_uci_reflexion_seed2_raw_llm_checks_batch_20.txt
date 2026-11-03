@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 74,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  },
+  {
+    "row_idx": 81,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOT_OK",
+    "notes": "Relationship label has trailing space."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "Whitespace and income label unchanged as per rule."
+  }
+]

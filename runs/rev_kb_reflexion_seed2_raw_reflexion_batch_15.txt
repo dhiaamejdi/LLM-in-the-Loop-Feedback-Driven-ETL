@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "No changes to make verification."
+  },
+  {
+    "row_idx": 38,
+    "verdict": "OK",
+    "notes": "No changes to make verification."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "NOT_OK",
+    "notes": "Missing 'Organism' value in transformed data. Should be: 'E. Coli'"
+  },
+  {
+    "row_idx": 46,
+    "verdict": "OK",
+    "notes": "No changes to make verification."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "Whitespace in 'Sample Date' transformed correctly."
+  }
+]

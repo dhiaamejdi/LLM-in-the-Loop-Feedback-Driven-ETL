@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "Year value in original is null, but transformed has a string representation of '2019.0'. This is a valid transformation according to the rule."
+  },
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  }
+]

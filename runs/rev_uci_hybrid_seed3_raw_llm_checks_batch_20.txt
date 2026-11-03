@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 73,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 85,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, marital-status, occupation, relationship, sex, capital-gain, capital-loss, hours-per-week, native-country were not trimmed; race was not normalized; income label retains trailing period."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 15,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, no leading/trailing whitespace in values."
+  },
+  {
+    "row_idx": 16,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, no leading/trailing whitespace in values."
+  },
+  {
+    "row_idx": 18,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, no leading/trailing whitespace in values."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, no leading/trailing whitespace in values."
+  },
+  {
+    "row_idx": 21,
+    "verdict": "OK",
+    "notes": "Community label in 'original' is 'Harwich' and in 'transformed' is empty. However, since the Community Code value is the same in both, this discrepancy should not affect the data validation. Therefore, the verdict remains 'OK'."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 17,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged."
+  },
+  {
+    "row_idx": 21,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "NOT_OK",
+    "notes": "Indicator Level in 'original' is null, but in 'transformed' it is an empty string. Both should be null or an actual number."
+  }
+]

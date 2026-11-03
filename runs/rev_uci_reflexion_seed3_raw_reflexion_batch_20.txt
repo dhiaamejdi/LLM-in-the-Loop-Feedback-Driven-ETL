@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 73,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed, income label normalized, and case of 'Marital-status' corrected."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 85,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed, income label normalized, and case of 'Marital-status' corrected."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed, 'education-num' value converted to number, and income label normalized correctly."
+  }
+]

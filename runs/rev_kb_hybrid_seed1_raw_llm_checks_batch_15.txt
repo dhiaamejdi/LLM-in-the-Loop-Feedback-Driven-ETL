@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' has wrong format; 'Beach Name' has wrong casing."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' has wrong format; 'Beach Name' has wrong casing."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' and 'Beach Name' have wrong values."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Community', 'Sample Date', 'Beach Type Description', 'Beach Name' were not trimmed; 'Sample Date' and 'Beach Name' have wrong values; 'Beach Type Description' has wrong casing."
+  },
+  {
+    "row_idx": 47,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' and 'Beach Name' have wrong values."
+  }
+]

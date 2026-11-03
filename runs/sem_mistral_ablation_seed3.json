@@ -1,0 +1,493 @@
+{
+ "model": "mistralai/Mistral-7B-Instruct-v0.2",
+ "prompt": "ablation",
+ "seed": 3,
+ "verdicts": {
+  "39": {
+   "verdict": "OK",
+   "notes": "Misr is Mali."
+  },
+  "83": {
+   "verdict": "NOT_OK",
+   "notes": "patrol officer with the city police is not equivalent to Transport-moving."
+  },
+  "71": {
+   "verdict": "NOT_OK",
+   "notes": "drives an 18-wheeler cross country is not equivalent to Sales."
+  },
+  "93": {
+   "verdict": "NOT_OK",
+   "notes": "teaches high school chemistry is not equivalent to Handlers-cleaners."
+  },
+  "90": {
+   "verdict": "OK",
+   "notes": "army infantry sergeant on active duty is equivalent to Armed-Forces."
+  },
+  "51": {
+   "verdict": "NOT_OK",
+   "notes": "Wash. is not Wisconsin."
+  },
+  "52": {
+   "verdict": "OK",
+   "notes": "Ark. is normalized to Arkansas."
+  },
+  "116": {
+   "verdict": "OK",
+   "notes": "Santiago de Compostela, Galicia is the same in both original and transformed."
+  },
+  "23": {
+   "verdict": "NOT_OK",
+   "notes": "Suomi is not Somalia."
+  },
+  "35": {
+   "verdict": "NOT_OK",
+   "notes": "Hanguk is not Hungary."
+  },
+  "79": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is 'runs a stamping press on the factory floor' and transformed occupation is 'Adm-clerical'. These do not match."
+  },
+  "28": {
+   "verdict": "OK",
+   "notes": "Zhongguo is transformed to China, which is the correct canonical form."
+  },
+  "59": {
+   "verdict": "OK",
+   "notes": "N. Dak. is transformed to 'South Dakota', which is the expected state name."
+  },
+  "84": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is 'loads pallets and sweeps the warehouse' and transformed occupation is 'Handlers-cleaners'. These do not match."
+  },
+  "15": {
+   "verdict": "NOT_OK",
+   "notes": "native-country is 'Ceylon' in original and 'Chile' in transformed. These are not the same country."
+  },
+  "86": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is help desk technician resetting passwords, not Tech-support."
+  },
+  "45": {
+   "verdict": "NOT_OK",
+   "notes": "state is Penna. and should be Pennsylvania."
+  },
+  "98": {
+   "verdict": "OK",
+   "notes": "location is Birmingham, AL and is the same in transformed data."
+  },
+  "101": {
+   "verdict": "OK",
+   "notes": "location is Birmingham, West Midlands and is the same in transformed data."
+  },
+  "109": {
+   "verdict": "NOT_OK",
+   "notes": "location is Victoria, BC and country is Canada, not Australia."
+  },
+  "92": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is 'teaches high school chemistry', but 'Prof-specialty' is not a valid transformation."
+  },
+  "57": {
+   "verdict": "NOT_OK",
+   "notes": "state is 'Mich.' which is not 'Minnesota'."
+  },
+  "78": {
+   "verdict": "OK",
+   "notes": "job_description is 'runs a stamping press on the factory floor', and 'Machine-op-inspct' is a valid transformation of 'occupation'."
+  },
+  "9": {
+   "verdict": "NOT_OK",
+   "notes": "native-country is 'Nippon', which is not 'Nepal'."
+  },
+  "0": {
+   "verdict": "OK",
+   "notes": "native-country is 'Deutschland', and 'Germany' is the correct transformation."
+  },
+  "65": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is not a field in the original data, and occupation is not a valid transformation of it."
+  },
+  "115": {
+   "verdict": "NOT_OK",
+   "notes": "The 'location' field in the original data is not the same as 'location' and 'country' fields in the transformed data."
+  },
+  "31": {
+   "verdict": "NOT_OK",
+   "notes": "Bharat is not the same as Bahrain."
+  },
+  "25": {
+   "verdict": "NOT_OK",
+   "notes": "Sverige is not the same as Serbia."
+  },
+  "11": {
+   "verdict": "NOT_OK",
+   "notes": "Persia is not the same as Iraq."
+  },
+  "2": {
+   "verdict": "OK",
+   "notes": "Holland is Netherlands."
+  },
+  "61": {
+   "verdict": "NOT_OK",
+   "notes": "W. Va. is not Virginia."
+  },
+  "119": {
+   "verdict": "OK",
+   "notes": "Valencia, Carabobo is Valencia, Carabobo."
+  },
+  "99": {
+   "verdict": "NOT_OK",
+   "notes": "Birmingham, AL is not Birmingham, AL, United Kingdom."
+  },
+  "7": {
+   "verdict": "NOT_OK",
+   "notes": "Eire is not Eritrea."
+  },
+  "18": {
+   "verdict": "OK",
+   "notes": "Hellas is equivalent to Greece."
+  },
+  "48": {
+   "verdict": "OK",
+   "notes": "Tenn. is equivalent to Tennessee."
+  },
+  "40": {
+   "verdict": "OK",
+   "notes": "Mass. is equivalent to Massachusetts."
+  },
+  "13": {
+   "verdict": "NOT_OK",
+   "notes": "Siam is not equivalent to Taiwan."
+  },
+  "6": {
+   "verdict": "OK",
+   "notes": "Eire is equivalent to Ireland."
+  },
+  "41": {
+   "verdict": "NOT_OK",
+   "notes": "'Mass.' in original is not the same as 'Mississippi' in transformed."
+  },
+  "58": {
+   "verdict": "OK",
+   "notes": "N. Dak. in original is normalized to North Dakota in transformed."
+  },
+  "111": {
+   "verdict": "OK",
+   "notes": "Melbourne, FL in original is the same as Melbourne, FL in transformed."
+  },
+  "87": {
+   "verdict": "NOT_OK",
+   "notes": "job_description in original is not the same as occupation in transformed."
+  },
+  "10": {
+   "verdict": "OK",
+   "notes": "Persia in original is normalized to Iran in transformed."
+  },
+  "44": {
+   "verdict": "NOT_OK",
+   "notes": "Penna. is not Pennsylvania."
+  },
+  "42": {
+   "verdict": "OK",
+   "notes": "Calif. is California."
+  },
+  "67": {
+   "verdict": "NOT_OK",
+   "notes": "line cook at a diner is not Exec-managerial."
+  },
+  "68": {
+   "verdict": "OK",
+   "notes": "fixes transmissions at an auto shop is Craft-repair."
+  },
+  "88": {
+   "verdict": "OK",
+   "notes": "live-in nanny for a private family is Priv-house-serv."
+  },
+  "43": {
+   "verdict": "NOT_OK",
+   "notes": "Calif. is not Colorado."
+  },
+  "21": {
+   "verdict": "NOT_OK",
+   "notes": "Magyarorszag is not Madagascar."
+  },
+  "14": {
+   "verdict": "OK",
+   "notes": "Ceylon is Sri Lanka."
+  },
+  "64": {
+   "verdict": "NOT_OK",
+   "notes": "RN on the night shift at the county hospital is not a Prof-specialty."
+  },
+  "62": {
+   "verdict": "OK",
+   "notes": "Nebr. is Nebraska."
+  },
+  "37": {
+   "verdict": "NOT_OK",
+   "notes": "Cote d'Ivoire is not Costa Rica."
+  },
+  "112": {
+   "verdict": "OK",
+   "notes": "Melbourne, Victoria is the same as Melbourne, Victoria."
+  },
+  "22": {
+   "verdict": "OK",
+   "notes": "Suomi is the same as Finland."
+  },
+  "36": {
+   "verdict": "OK",
+   "notes": "Cote d'Ivoire is the same as Ivory Coast."
+  },
+  "102": {
+   "verdict": "OK",
+   "notes": "Cambridge, Mass. is the same as Cambridge, Mass."
+  },
+  "53": {
+   "verdict": "NOT_OK",
+   "notes": "Ark. is not Alaska."
+  },
+  "32": {
+   "verdict": "OK",
+   "notes": "Czechia and Czech Republic are equivalent."
+  },
+  "26": {
+   "verdict": "OK",
+   "notes": "Oesterreich and Austria are equivalent."
+  },
+  "82": {
+   "verdict": "NOT_OK",
+   "notes": "patrol officer with the city police does not belong in the 'occupation' column."
+  },
+  "55": {
+   "verdict": "OK",
+   "notes": "Miss. is Missouri."
+  },
+  "105": {
+   "verdict": "NOT_OK",
+   "notes": "location is correct in both original and transformed, but country is incorrect in transformed (Georgia is not United States)."
+  },
+  "27": {
+   "verdict": "NOT_OK",
+   "notes": "native-country is incorrect in transformed (Oesterreich is Austria, not Australia)."
+  },
+  "63": {
+   "verdict": "NOT_OK",
+   "notes": "state is correct in original, but state is incorrect in transformed (Nebr. is not Nevada)."
+  },
+  "72": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is not present in transformed, and occupation is not the same as job_description."
+  },
+  "4": {
+   "verdict": "OK",
+   "notes": "native-country is correct in both original and transformed (Burma is Myanmar)."
+  },
+  "12": {
+   "verdict": "OK",
+   "notes": "Siam is Thailand."
+  },
+  "46": {
+   "verdict": "OK",
+   "notes": "Conn. is Connecticut."
+  },
+  "17": {
+   "verdict": "NOT_OK",
+   "notes": "Espana is not Estonia."
+  },
+  "56": {
+   "verdict": "OK",
+   "notes": "Mich. is Michigan."
+  },
+  "73": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is not Handlers-cleaners."
+  },
+  "96": {
+   "verdict": "OK",
+   "notes": "Paris, TX is the same in both original and transformed."
+  },
+  "54": {
+   "verdict": "OK",
+   "notes": "Miss. is equivalent to Mississippi."
+  },
+  "89": {
+   "verdict": "NOT_OK",
+   "notes": "Armed-Forces does not belong to the 'occupation' column."
+  },
+  "76": {
+   "verdict": "OK",
+   "notes": "Adm-clerical is a valid transformation of 'answers phones and files invoices at a law office'."
+  },
+  "97": {
+   "verdict": "NOT_OK",
+   "notes": "Country should be 'United States' instead of 'France'."
+  },
+  "34": {
+   "verdict": "OK",
+   "notes": "Hanguk is South Korea."
+  },
+  "3": {
+   "verdict": "NOT_OK",
+   "notes": "Holland is not Poland."
+  },
+  "38": {
+   "verdict": "OK",
+   "notes": "Misr is Egypt."
+  },
+  "5": {
+   "verdict": "NOT_OK",
+   "notes": "Burma is not Bermuda."
+  },
+  "118": {
+   "verdict": "OK",
+   "notes": "Valencia, Carabobo is the same in both original and transformed."
+  },
+  "20": {
+   "verdict": "OK",
+   "notes": "Magyarorszag is Hungary."
+  },
+  "110": {
+   "verdict": "OK",
+   "notes": "Melbourne, FL is Melbourne, FL."
+  },
+  "85": {
+   "verdict": "NOT_OK",
+   "notes": "The 'job_description' field was not transformed as expected. Exec-managerial does not belong in the 'occupation' column."
+  },
+  "108": {
+   "verdict": "OK",
+   "notes": "Victoria, BC is Victoria, BC."
+  },
+  "49": {
+   "verdict": "NOT_OK",
+   "notes": "Tenn. is Tennessee, not Texas."
+  },
+  "66": {
+   "verdict": "NOT_OK",
+   "notes": "The 'occupation' field in the 'transformed' data is not a valid transformation of the 'job_description' field in the 'original' data. 'Other-service' is not a valid transformation of 'line cook at a diner'."
+  },
+  "94": {
+   "verdict": "OK",
+   "notes": "The 'occupation' field in the 'transformed' data is a valid transformation of the 'job_description' field in the 'original' data. 'Craft-repair' is a valid transformation of 'welder at a shipyard'."
+  },
+  "95": {
+   "verdict": "NOT_OK",
+   "notes": "The 'occupation' field in the 'transformed' data is not a valid transformation of the 'job_description' field in the 'original' data. 'Sales' is not a valid transformation of 'welder at a shipyard'."
+  },
+  "103": {
+   "verdict": "NOT_OK",
+   "notes": "The 'location' field in the 'transformed' data is a valid transformation of the 'location' field in the 'original' data. However, the 'country' field in the 'transformed' data is not a valid transformation of any field in the 'original' data."
+  },
+  "19": {
+   "verdict": "NOT_OK",
+   "notes": "The 'native-country' field in the 'transformed' data is not a valid transformation of the 'native-country' field in the 'original' data. 'Haiti' is not a valid transformation of 'Hellas'."
+  },
+  "81": {
+   "verdict": "NOT_OK",
+   "notes": "job_description is not a field in the original data, and 'Protective-serv' does not belong in the 'occupation' field."
+  },
+  "50": {
+   "verdict": "OK",
+   "notes": "Wash. is Washington."
+  },
+  "100": {
+   "verdict": "OK",
+   "notes": "Birmingham, West Midlands is the same in both original and transformed data."
+  },
+  "104": {
+   "verdict": "OK",
+   "notes": "Tbilisi, Georgia is the same in both original and transformed data, and 'Georgia' is the correct country for this location."
+  },
+  "117": {
+   "verdict": "NOT_OK",
+   "notes": "Santiago de Compostela, Galicia is the same in both original and transformed data, but 'Chile' is not the correct country for this location. The correct country for this location is Spain."
+  },
+  "106": {
+   "verdict": "OK",
+   "notes": "Atlanta, Georgia is the same in both original and transformed."
+  },
+  "91": {
+   "verdict": "NOT_OK",
+   "notes": "army infantry sergeant on active duty is not Priv-house-serv. The transformed data does not belong in the 'occupation' column."
+  },
+  "24": {
+   "verdict": "OK",
+   "notes": "Sverige is the same as Sweden."
+  },
+  "29": {
+   "verdict": "NOT_OK",
+   "notes": "Zhongguo is not Zimbabwe."
+  },
+  "70": {
+   "verdict": "OK",
+   "notes": "drives an 18-wheeler cross country is the same as Transport-moving."
+  },
+  "8": {
+   "verdict": "OK",
+   "notes": "Nippon is equivalent to Japan."
+  },
+  "74": {
+   "verdict": "OK",
+   "notes": "sells used cars on commission can be transformed to Sales."
+  },
+  "80": {
+   "verdict": "NOT_OK",
+   "notes": "harvests apples at an orchard every season does not match Farming-fishing."
+  },
+  "60": {
+   "verdict": "OK",
+   "notes": "W. Va. is equivalent to West Virginia."
+  },
+  "77": {
+   "verdict": "NOT_OK",
+   "notes": "answers phones and files invoices at a law office does not match Prof-specialty."
+  },
+  "47": {
+   "verdict": "NOT_OK",
+   "notes": "The 'state' label in the 'original' data has a leading period that was not removed in the 'transformed' data."
+  },
+  "16": {
+   "verdict": "OK",
+   "notes": "Espana is normalized to Spain."
+  },
+  "69": {
+   "verdict": "NOT_OK",
+   "notes": "The 'job_description' value in the 'original' data does not belong in the 'occupation' column."
+  },
+  "75": {
+   "verdict": "NOT_OK",
+   "notes": "The 'occupation' label in the 'transformed' data is not normalized to 'machine_inspector'."
+  },
+  "30": {
+   "verdict": "OK",
+   "notes": "Bharat is normalized to India."
+  }
+ },
+ "raw": [
+  "[\n  {\n    \"row_idx\": 39,\n    \"verdict\": \"OK\",\n    \"notes\": \"Misr is Mali.\"\n  },\n  {\n    \"row_idx\": 83,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"patrol officer with the city police is not equivalent to Transport-moving.\"\n  },\n  {\n    \"row_idx\": 71,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"drives an 18-wheeler cross country is not equivalent to Sales.\"\n  },\n  {\n    \"row_idx\": 93,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"teaches high school chemistry is not equivalent to Handlers-cleaners.\"\n  },\n  {\n    \"row_idx\": 90,\n    \"verdict\": \"OK\",\n    \"notes\": \"army infantry sergeant on active duty is equivalent to Armed-Forces.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 51,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Wash. is not Wisconsin.\"\n  },\n  {\n    \"row_idx\": 52,\n    \"verdict\": \"OK\",\n    \"notes\": \"Ark. is normalized to Arkansas.\"\n  },\n  {\n    \"row_idx\": 116,\n    \"verdict\": \"OK\",\n    \"notes\": \"Santiago de Compostela, Galicia is the same in both original and transformed.\"\n  },\n  {\n    \"row_idx\": 23,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Suomi is not Somalia.\"\n  },\n  {\n    \"row_idx\": 35,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Hanguk is not Hungary.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 79,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is 'runs a stamping press on the factory floor' and transformed occupation is 'Adm-clerical'. These do not match.\"\n  },\n  {\n    \"row_idx\": 28,\n    \"verdict\": \"OK\",\n    \"notes\": \"Zhongguo is transformed to China, which is the correct canonical form.\"\n  },\n  {\n    \"row_idx\": 59,\n    \"verdict\": \"OK\",\n    \"notes\": \"N. Dak. is transformed to 'South Dakota', which is the expected state name.\"\n  },\n  {\n    \"row_idx\": 84,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is 'loads pallets and sweeps the warehouse' and transformed occupation is 'Handlers-cleaners'. These do not match.\"\n  },\n  {\n    \"row_idx\": 15,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"native-country is 'Ceylon' in original and 'Chile' in transformed. These are not the same country.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 86,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is help desk technician resetting passwords, not Tech-support.\"\n  },\n  {\n    \"row_idx\": 45,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"state is Penna. and should be Pennsylvania.\"\n  },\n  {\n    \"row_idx\": 98,\n    \"verdict\": \"OK\",\n    \"notes\": \"location is Birmingham, AL and is the same in transformed data.\"\n  },\n  {\n    \"row_idx\": 101,\n    \"verdict\": \"OK\",\n    \"notes\": \"location is Birmingham, West Midlands and is the same in transformed data.\"\n  },\n  {\n    \"row_idx\": 109,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"location is Victoria, BC and country is Canada, not Australia.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 92,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is 'teaches high school chemistry', but 'Prof-specialty' is not a valid transformation.\"\n  },\n  {\n    \"row_idx\": 57,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"state is 'Mich.' which is not 'Minnesota'.\"\n  },\n  {\n    \"row_idx\": 78,\n    \"verdict\": \"OK\",\n    \"notes\": \"job_description is 'runs a stamping press on the factory floor', and 'Machine-op-inspct' is a valid transformation of 'occupation'.\"\n  },\n  {\n    \"row_idx\": 9,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"native-country is 'Nippon', which is not 'Nepal'.\"\n  },\n  {\n    \"row_idx\": 0,\n    \"verdict\": \"OK\",\n    \"notes\": \"native-country is 'Deutschland', and 'Germany' is the correct transformation.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 65,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is not a field in the original data, and occupation is not a valid transformation of it.\"\n  },\n  {\n    \"row_idx\": 115,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'location' field in the original data is not the same as 'location' and 'country' fields in the transformed data.\"\n  },\n  {\n    \"row_idx\": 31,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Bharat is not the same as Bahrain.\"\n  },\n  {\n    \"row_idx\": 25,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Sverige is not the same as Serbia.\"\n  },\n  {\n    \"row_idx\": 11,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Persia is not the same as Iraq.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 2,\n    \"verdict\": \"OK\",\n    \"notes\": \"Holland is Netherlands.\"\n  },\n  {\n    \"row_idx\": 61,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"W. Va. is not Virginia.\"\n  },\n  {\n    \"row_idx\": 119,\n    \"verdict\": \"OK\",\n    \"notes\": \"Valencia, Carabobo is Valencia, Carabobo.\"\n  },\n  {\n    \"row_idx\": 99,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Birmingham, AL is not Birmingham, AL, United Kingdom.\"\n  },\n  {\n    \"row_idx\": 7,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Eire is not Eritrea.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 18,\n    \"verdict\": \"OK\",\n    \"notes\": \"Hellas is equivalent to Greece.\"\n  },\n  {\n    \"row_idx\": 48,\n    \"verdict\": \"OK\",\n    \"notes\": \"Tenn. is equivalent to Tennessee.\"\n  },\n  {\n    \"row_idx\": 40,\n    \"verdict\": \"OK\",\n    \"notes\": \"Mass. is equivalent to Massachusetts.\"\n  },\n  {\n    \"row_idx\": 13,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Siam is not equivalent to Taiwan.\"\n  },\n  {\n    \"row_idx\": 6,\n    \"verdict\": \"OK\",\n    \"notes\": \"Eire is equivalent to Ireland.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 41,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"'Mass.' in original is not the same as 'Mississippi' in transformed.\"\n  },\n  {\n    \"row_idx\": 58,\n    \"verdict\": \"OK\",\n    \"notes\": \"N. Dak. in original is normalized to North Dakota in transformed.\"\n  },\n  {\n    \"row_idx\": 111,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, FL in original is the same as Melbourne, FL in transformed.\"\n  },\n  {\n    \"row_idx\": 87,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description in original is not the same as occupation in transformed.\"\n  },\n  {\n    \"row_idx\": 10,\n    \"verdict\": \"OK\",\n    \"notes\": \"Persia in original is normalized to Iran in transformed.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 44,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Penna. is not Pennsylvania.\"\n  },\n  {\n    \"row_idx\": 42,\n    \"verdict\": \"OK\",\n    \"notes\": \"Calif. is California.\"\n  },\n  {\n    \"row_idx\": 67,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"line cook at a diner is not Exec-managerial.\"\n  },\n  {\n    \"row_idx\": 68,\n    \"verdict\": \"OK\",\n    \"notes\": \"fixes transmissions at an auto shop is Craft-repair.\"\n  },\n  {\n    \"row_idx\": 88,\n    \"verdict\": \"OK\",\n    \"notes\": \"live-in nanny for a private family is Priv-house-serv.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 43,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Calif. is not Colorado.\"\n  },\n  {\n    \"row_idx\": 21,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Magyarorszag is not Madagascar.\"\n  },\n  {\n    \"row_idx\": 14,\n    \"verdict\": \"OK\",\n    \"notes\": \"Ceylon is Sri Lanka.\"\n  },\n  {\n    \"row_idx\": 64,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"RN on the night shift at the county hospital is not a Prof-specialty.\"\n  },\n  {\n    \"row_idx\": 62,\n    \"verdict\": \"OK\",\n    \"notes\": \"Nebr. is Nebraska.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 37,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Cote d'Ivoire is not Costa Rica.\"\n  },\n  {\n    \"row_idx\": 112,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, Victoria is the same as Melbourne, Victoria.\"\n  },\n  {\n    \"row_idx\": 22,\n    \"verdict\": \"OK\",\n    \"notes\": \"Suomi is the same as Finland.\"\n  },\n  {\n    \"row_idx\": 36,\n    \"verdict\": \"OK\",\n    \"notes\": \"Cote d'Ivoire is the same as Ivory Coast.\"\n  },\n  {\n    \"row_idx\": 102,\n    \"verdict\": \"OK\",\n    \"notes\": \"Cambridge, Mass. is the same as Cambridge, Mass.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 53,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Ark. is not Alaska.\"\n  },\n  {\n    \"row_idx\": 32,\n    \"verdict\": \"OK\",\n    \"notes\": \"Czechia and Czech Republic are equivalent.\"\n  },\n  {\n    \"row_idx\": 26,\n    \"verdict\": \"OK\",\n    \"notes\": \"Oesterreich and Austria are equivalent.\"\n  },\n  {\n    \"row_idx\": 82,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"patrol officer with the city police does not belong in the 'occupation' column.\"\n  },\n  {\n    \"row_idx\": 55,\n    \"verdict\": \"OK\",\n    \"notes\": \"Miss. is Missouri.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 105,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"location is correct in both original and transformed, but country is incorrect in transformed (Georgia is not United States).\"\n  },\n  {\n    \"row_idx\": 27,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"native-country is incorrect in transformed (Oesterreich is Austria, not Australia).\"\n  },\n  {\n    \"row_idx\": 63,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"state is correct in original, but state is incorrect in transformed (Nebr. is not Nevada).\"\n  },\n  {\n    \"row_idx\": 72,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is not present in transformed, and occupation is not the same as job_description.\"\n  },\n  {\n    \"row_idx\": 4,\n    \"verdict\": \"OK\",\n    \"notes\": \"native-country is correct in both original and transformed (Burma is Myanmar).\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 12,\n    \"verdict\": \"OK\",\n    \"notes\": \"Siam is Thailand.\"\n  },\n  {\n    \"row_idx\": 46,\n    \"verdict\": \"OK\",\n    \"notes\": \"Conn. is Connecticut.\"\n  },\n  {\n    \"row_idx\": 17,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Espana is not Estonia.\"\n  },\n  {\n    \"row_idx\": 56,\n    \"verdict\": \"OK\",\n    \"notes\": \"Mich. is Michigan.\"\n  },\n  {\n    \"row_idx\": 73,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is not Handlers-cleaners.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 96,\n    \"verdict\": \"OK\",\n    \"notes\": \"Paris, TX is the same in both original and transformed.\"\n  },\n  {\n    \"row_idx\": 54,\n    \"verdict\": \"OK\",\n    \"notes\": \"Miss. is equivalent to Mississippi.\"\n  },\n  {\n    \"row_idx\": 89,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Armed-Forces does not belong to the 'occupation' column.\"\n  },\n  {\n    \"row_idx\": 76,\n    \"verdict\": \"OK\",\n    \"notes\": \"Adm-clerical is a valid transformation of 'answers phones and files invoices at a law office'.\"\n  },\n  {\n    \"row_idx\": 97,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Country should be 'United States' instead of 'France'.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 34,\n    \"verdict\": \"OK\",\n    \"notes\": \"Hanguk is South Korea.\"\n  },\n  {\n    \"row_idx\": 3,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Holland is not Poland.\"\n  },\n  {\n    \"row_idx\": 38,\n    \"verdict\": \"OK\",\n    \"notes\": \"Misr is Egypt.\"\n  },\n  {\n    \"row_idx\": 5,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Burma is not Bermuda.\"\n  },\n  {\n    \"row_idx\": 118,\n    \"verdict\": \"OK\",\n    \"notes\": \"Valencia, Carabobo is the same in both original and transformed.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 20,\n    \"verdict\": \"OK\",\n    \"notes\": \"Magyarorszag is Hungary.\"\n  },\n  {\n    \"row_idx\": 110,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, FL is Melbourne, FL.\"\n  },\n  {\n    \"row_idx\": 85,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'job_description' field was not transformed as expected. Exec-managerial does not belong in the 'occupation' column.\"\n  },\n  {\n    \"row_idx\": 108,\n    \"verdict\": \"OK\",\n    \"notes\": \"Victoria, BC is Victoria, BC.\"\n  },\n  {\n    \"row_idx\": 49,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Tenn. is Tennessee, not Texas.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 66,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'occupation' field in the 'transformed' data is not a valid transformation of the 'job_description' field in the 'original' data. 'Other-service' is not a valid transformation of 'line cook at a diner'.\"\n  },\n  {\n    \"row_idx\": 94,\n    \"verdict\": \"OK\",\n    \"notes\": \"The 'occupation' field in the 'transformed' data is a valid transformation of the 'job_description' field in the 'original' data. 'Craft-repair' is a valid transformation of 'welder at a shipyard'.\"\n  },\n  {\n    \"row_idx\": 95,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'occupation' field in the 'transformed' data is not a valid transformation of the 'job_description' field in the 'original' data. 'Sales' is not a valid transformation of 'welder at a shipyard'.\"\n  },\n  {\n    \"row_idx\": 103,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'location' field in the 'transformed' data is a valid transformation of the 'location' field in the 'original' data. However, the 'country' field in the 'transformed' data is not a valid transformation of any field in the 'original' data.\"\n  },\n  {\n    \"row_idx\": 19,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'native-country' field in the 'transformed' data is not a valid transformation of the 'native-country' field in the 'original' data. 'Haiti' is not a valid transformation of 'Hellas'.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 81,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"job_description is not a field in the original data, and 'Protective-serv' does not belong in the 'occupation' field.\"\n  },\n  {\n    \"row_idx\": 50,\n    \"verdict\": \"OK\",\n    \"notes\": \"Wash. is Washington.\"\n  },\n  {\n    \"row_idx\": 100,\n    \"verdict\": \"OK\",\n    \"notes\": \"Birmingham, West Midlands is the same in both original and transformed data.\"\n  },\n  {\n    \"row_idx\": 104,\n    \"verdict\": \"OK\",\n    \"notes\": \"Tbilisi, Georgia is the same in both original and transformed data, and 'Georgia' is the correct country for this location.\"\n  },\n  {\n    \"row_idx\": 117,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Santiago de Compostela, Galicia is the same in both original and transformed data, but 'Chile' is not the correct country for this location. The correct country for this location is Spain.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 106,\n    \"verdict\": \"OK\",\n    \"notes\": \"Atlanta, Georgia is the same in both original and transformed.\"\n  },\n  {\n    \"row_idx\": 91,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"army infantry sergeant on active duty is not Priv-house-serv. The transformed data does not belong in the 'occupation' column.\"\n  },\n  {\n    \"row_idx\": 24,\n    \"verdict\": \"OK\",\n    \"notes\": \"Sverige is the same as Sweden.\"\n  },\n  {\n    \"row_idx\": 29,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Zhongguo is not Zimbabwe.\"\n  },\n  {\n    \"row_idx\": 70,\n    \"verdict\": \"OK\",\n    \"notes\": \"drives an 18-wheeler cross country is the same as Transport-moving.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 33,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Czechia is not Croatia.\"\n  },\n  {\n    \"row_idx\": 113,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, Victoria is the same in both original and transformed.\"\n  },\n  {\n    \"row_idx\": 107,\n    \"verdict\": \"OK\",\n    \"notes\": \"Atlanta, Georgia is the same in both original and transformed.\"\n  },\n  {\n    \"row_idx\": 1,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Deutschland is Germany, not Denmark.\"\n  },\n  {\n    \"row_idx\": 114,\n    \"verdict\": \"OK\",\n    \"notes\": \"London, Ontario is the same in both original and transformed.\"\n    \"country\": \"Canada is the expected country for this location.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 8,\n    \"verdict\": \"OK\",\n    \"notes\": \"Nippon is equivalent to Japan.\"\n  },\n  {\n    \"row_idx\": 74,\n    \"verdict\": \"OK\",\n    \"notes\": \"sells used cars on commission can be transformed to Sales.\"\n  },\n  {\n    \"row_idx\": 80,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"harvests apples at an orchard every season does not match Farming-fishing.\"\n  },\n  {\n    \"row_idx\": 60,\n    \"verdict\": \"OK\",\n    \"notes\": \"W. Va. is equivalent to West Virginia.\"\n  },\n  {\n    \"row_idx\": 77,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"answers phones and files invoices at a law office does not match Prof-specialty.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 47,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'state' label in the 'original' data has a leading period that was not removed in the 'transformed' data.\"\n  },\n  {\n    \"row_idx\": 16,\n    \"verdict\": \"OK\",\n    \"notes\": \"Espana is normalized to Spain.\"\n  },\n  {\n    \"row_idx\": 69,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'job_description' value in the 'original' data does not belong in the 'occupation' column.\"\n  },\n  {\n    \"row_idx\": 75,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The 'occupation' label in the 'transformed' data is not normalized to 'machine_inspector'.\"\n  },\n  {\n    \"row_idx\": 30,\n    \"verdict\": \"OK\",\n    \"notes\": \"Bharat is normalized to India.\"\n  }\n]"
+ ]
+}

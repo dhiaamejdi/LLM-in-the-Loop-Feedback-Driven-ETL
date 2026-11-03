@@ -1,0 +1,22 @@
+[
+  {
+    "row_idx": 92,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'relationship' was not trimmed; 'education-num' value is incorrect; 'age' value is incorrect; 'sex' value is incorrect; 'income' label was not normalized correctly."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in 'sex' was not trimmed; 'income' value is incorrect."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "NOT_OK",
+    "notes": "Incorrect 'age' value; 'education' value is incorrect; 'education-num' value is incorrect; 'occupation' value is incorrect; 'relationship' value is incorrect; 'race' value is incorrect; 'sex' value is incorrect; 'hours-per-week' value is incorrect; 'native-country' value is incorrect; 'income' value is incorrect."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Incorrect 'age' value; 'workclass' value is incorrect; 'education-num' value is incorrect; 'marital-status' value is incorrect; 'occupation' value is incorrect; 'relationship' value is incorrect; 'race' value is incorrect; 'sex' value is incorrect; 'hours-per-week' value is incorrect; 'native-country' value is incorrect; 'income' value is incorrect."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 73,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 85,
+    "verdict": "NOT_OK",
+    "notes": "Leading uppercase letters in 'Married-civ-spouse' label were not normalized to lowercase."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  }
+]

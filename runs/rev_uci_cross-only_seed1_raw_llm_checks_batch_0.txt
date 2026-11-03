@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; education-num is missing in original but present in transformed."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; relationship is missing in original but present in transformed."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; income label was not normalized correctly."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in multiple fields was not trimmed; occupation and relationship are missing in original but present in transformed."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "No issues found."
+  }
+]

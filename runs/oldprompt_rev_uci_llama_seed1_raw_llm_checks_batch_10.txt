@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 33,
+    "verdict": "NG",
+    "notes": "Workclass was changed from 'Private' to 'Local-gov'."
+  },
+  {
+    "row_idx": 34,
+    "verdict": "NG",
+    "notes": "Hours-per-week was changed from null to 40."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "NG",
+    "notes": "Workclass was changed from 'Private' to 'Local-gov', education was changed from '9th' to 'Assoc-acdm', education-num was changed from 5 to 12, marital-status was changed from 'Married-civ-spouse' to 'Never-married', occupation was changed from 'Transport-moving' to '', relationship was changed from 'Other-relative' to 'Not-in-family', sex was changed from 'Female' to 'Male', hours-per-week was changed from 40 to 38, native-country was changed from 'White' to 'Cuba'."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NG",
+    "notes": "Workclass was changed from 'Private' to 'Local-gov', education was changed from '9th' to 'Assoc-acdm', education-num was changed from 5 to 12, marital-status was changed from 'Married-civ-spouse' to 'Never-married', occupation was changed from 'Transport-moving' to '', relationship was changed from 'Other-relative' to 'Not-in-family', sex was changed from 'Female' to 'Male', hours-per-week was changed from 40 to 38, native-country was changed from 'White' to 'Cuba'."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "NG",
+    "notes": "Workclass was changed from 'Private' to 'Local-gov'."
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "351.0",
+      "Community": "Yarmouth",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-03T00:00:00.000Z",
+      "Beach Name": "Columbus Avenue",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "198.0",
+      "Community": "Natick",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24T00:00:00.000Z",
+      "Beach Name": "Camp Arrowhead",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "292.0",
+      "Community": "Swansea",
+      "County Code": "5.0",
+      "County Description": "Bristol",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-08T00:00:00.000Z",
+      "Beach Name": "Swansea Town Beach",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "125.0",
+      "Community": "Harvard",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22T00:00:00.000Z",
+      "Beach Name": "Harvard Town Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "10.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "65.0",
+      "Community": "Cohasset",
+      "County Code": "21.0",
+      "County Description": "Black Rock",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-25T00:00:00.000Z",
+      "Beach Name": "Norfolk",
+      "Beach Type Description": "",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "77.0",
+      "Community": "Douglas",
+      "County Code": "27.0",
+      "County Description": "Worcester",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-19T00:00:00.000Z",
+      "Beach Name": "Breezy Picnic Grounds",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "61.7",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "296.0",
+      "Community": "Tisbury",
+      "County Code": "7.0",
+      "County Description": "Dukes",
+      "Year": "2019.0",
+      "Sample Date": "",
+      "Beach Name": "Tashmoo Cut",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "110.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "67.0",
+      "Community": "Concord",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-06T00:00:00.000Z",
+      "Beach Name": "White Pond Assoc",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    }
+  ]
+}

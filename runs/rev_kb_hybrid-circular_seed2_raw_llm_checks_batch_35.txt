@@ -1,0 +1,22 @@
+[
+  {
+    "row_idx": 91,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "Sample Date in transformed data has been changed to ISO format."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "OK",
+    "notes": "Whitespace in 'County Description' field of original data was removed in transformed data."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 96,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Community field in original data is empty in transformed data."
+  },
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": ""
+  }
+]

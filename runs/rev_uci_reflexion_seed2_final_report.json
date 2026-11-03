@@ -1,0 +1,356 @@
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "verdict_coverage": {
+    "rows_sampled": 30,
+    "rows_with_verdict": 30,
+    "rows_missing_verdict": 0
+  },
+  "checker_metrics": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 12,
+    "tn": 15,
+    "ground_truth_positives": 15,
+    "rows_flagged": 3,
+    "recall": 0.2,
+    "recall_ci95": [
+      0.0433,
+      0.4809
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.2924,
+      1.0
+    ],
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 12,
+        "tn": 15
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 4,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 7,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label in lowercase.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 14,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "native-country: expected 'United-States', got nan"
+      ]
+    },
+    {
+      "row_idx": 15,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 17,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 18,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "All fields have been trimmed and normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "race: expected 'white', got 'White'"
+      ]
+    },
+    {
+      "row_idx": 22,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Race label has been normalized and all fields are as expected.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "relationship: expected nan, got ''",
+        "race: expected 'White', got ' White '"
+      ]
+    },
+    {
+      "row_idx": 24,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Leading whitespace removed from income label and education-num field.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 26,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Capital loss value has been converted to number and all fields are as expected.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "relationship: expected 'Husband', got ''",
+        "capital-gain: expected np.float64(0.0), got 1977",
+        "capital-loss: expected np.float64(1977.0), got 0"
+      ]
+    },
+    {
+      "row_idx": 27,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Occupation label has been corrected to Handlers-cleaners and all fields are as expected.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 31,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 34,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 41,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "hours-per-week: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 42,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 48,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "native-country: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 51,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(27.0), got '27'",
+        "fnlwgt: expected np.float64(452963.0), got '452963'",
+        "education-num: expected np.float64(10.0), got '10'",
+        "capital-gain: expected np.float64(0.0), got '0'",
+        "capital-loss: expected np.float64(0.0), got '0'",
+        "hours-per-week: expected np.float64(40.0), got '40'"
+      ]
+    },
+    {
+      "row_idx": 59,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(73.0), got '73'",
+        "fnlwgt: expected np.float64(39212.0), got '39212'",
+        "education-num: expected np.float64(9.0), got '9'",
+        "relationship: expected nan, got ''",
+        "sex: expected nan, got ''",
+        "capital-gain: expected np.float64(0.0), got '0'",
+        "capital-loss: expected np.float64(0.0), got '0'",
+        "hours-per-week: expected np.float64(20.0), got '20'"
+      ]
+    },
+    {
+      "row_idx": 61,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 65,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 71,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 74,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace unchanged, income label unchanged as per rule.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "occupation: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 77,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace unchanged, income label unchanged as per rule.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 81,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-gain: expected np.float64(nan), got ''",
+        "capital-loss: expected np.float64(0.0), got '70.0'",
+        "hours-per-week: expected np.float64(70.0), got '40.0'"
+      ]
+    },
+    {
+      "row_idx": 82,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Relationship label has no trailing space.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "workclass: expected nan, got ''",
+        "occupation: expected nan, got 'prof-specialty'",
+        "capital-loss: expected np.float64(0.0), got '2377.0'"
+      ]
+    },
+    {
+      "row_idx": 86,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Whitespace and income label unchanged as per rule.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "race: expected 'white', got 'White'",
+        "capital-gain: expected np.float64(nan), got ''",
+        "capital-loss: expected np.float64(0.0), got ''"
+      ]
+    },
+    {
+      "row_idx": 89,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "No changes in labels or whitespace.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 92,
+      "verdict": "OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "No changes in labels or whitespace.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 93,
+      "verdict": "NOT_OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Income label in 'original' is '>50K' but in 'transformed' is '<=50K'.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "income: expected nan, got '<=50K'"
+      ]
+    },
+    {
+      "row_idx": 96,
+      "verdict": "NOT_OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Age was changed from 21 to 33, education-num was changed from 9 to '', and income was changed from '<=50K' to '>50K'. Multiple fields were changed, and some fields were changed to incorrect values.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(21.0), got 33",
+        "fnlwgt: expected np.float64(184135.0), got 110998",
+        "education: expected 'HS-grad', got ''",
+        "occupation: expected 'Machine-op-inspct', got 'Other-service'",
+        "relationship: expected 'Own-child', got 'Other-relative'",
+        "race: expected 'Black', got 'Amer-Indian-Eskimo'",
+        "sex: expected 'Male', got 'Female'",
+        "hours-per-week: expected np.float64(1.0), got 36"
+      ]
+    },
+    {
+      "row_idx": 97,
+      "verdict": "NOT_OK",
+      "checker_path": "llm-reflexion",
+      "checker_notes": "Age was changed from 33 to 20, workclass was removed, education was changed from 'HS-grad' to 'Some-college', education-num was changed from null to 10, relationship was changed from 'Other-relative' to 'Own-child', and fnlwgt was changed from 110998 to null. Multiple fields were changed, and some fields were changed to incorrect values.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(33.0), got 20",
+        "fnlwgt: expected np.float64(110998.0), got None",
+        "education: expected 'HS-grad', got 'Some-college'",
+        "education-num: expected np.float64(nan), got 10",
+        "occupation: expected 'Other-service', got ''",
+        "relationship: expected 'Other-relative', got 'Own-child'",
+        "race: expected 'Amer-Indian-Eskimo', got 'White'",
+        "hours-per-week: expected np.float64(36.0), got 40"
+      ]
+    }
+  ]
+}

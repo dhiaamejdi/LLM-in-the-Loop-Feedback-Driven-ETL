@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 74,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, native-country was not trimmed; occupation was not normalized; relationship was not normalized; race was not normalized; income label retains trailing period."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in fnlwgt, capital-loss was not trimmed; occupation was not normalized; income label retains trailing period."
+  },
+  {
+    "row_idx": 81,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in relationship, native-country was not trimmed; occupation was not normalized; capital-loss was not normalized; hours-per-week was not normalized."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in workclass, occupation was not trimmed; occupation was not normalized; capital-loss was not normalized; hours-per-week was not normalized."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-loss, hours-per-week, native-country was not trimmed; occupation was not normalized; relationship was not normalized; race was not normalized; income label retains trailing period."
+  }
+]

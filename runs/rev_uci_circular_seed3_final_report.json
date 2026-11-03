@@ -1,0 +1,354 @@
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "verdict_coverage": {
+    "rows_sampled": 30,
+    "rows_with_verdict": 30,
+    "rows_missing_verdict": 0
+  },
+  "checker_metrics": {
+    "tp": 5,
+    "fp": 1,
+    "fn": 11,
+    "tn": 13,
+    "ground_truth_positives": 16,
+    "rows_flagged": 6,
+    "recall": 0.3125,
+    "recall_ci95": [
+      0.1102,
+      0.5866
+    ],
+    "precision": 0.8333333333333334,
+    "precision_ci95": [
+      0.3588,
+      0.9958
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 11,
+        "tn": 13
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace removed from empty fields and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-gain: expected np.float64(0.0), got ''",
+        "hours-per-week: expected np.float64(35.0), got ''",
+        "native-country: expected 'United-States', got nan"
+      ]
+    },
+    {
+      "row_idx": 3,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace removed from empty fields and workclass field left unchanged.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "workclass: expected nan, got ''",
+        "capital-gain: expected np.float64(0.0), got ''",
+        "capital-loss: expected np.float64(0.0), got ''",
+        "hours-per-week: expected np.float64(50.0), got ''",
+        "native-country: expected 'United-States', got nan"
+      ]
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace removed from empty fields and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-gain: expected np.float64(0.0), got ''",
+        "capital-loss: expected np.float64(0.0), got ''",
+        "hours-per-week: expected np.float64(40.0), got 'Ireland'",
+        "native-country: expected 'Ireland', got nan"
+      ]
+    },
+    {
+      "row_idx": 7,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Hours-per-week contains a string instead of a number.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-gain: expected np.float64(0.0), got ''",
+        "capital-loss: expected np.float64(0.0), got ''",
+        "hours-per-week: expected np.float64(63.0), got 'United-States'",
+        "native-country: expected 'United-States', got nan",
+        "income: expected nan, got '<=50K'"
+      ]
+    },
+    {
+      "row_idx": 10,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Age contains a decimal point which is not expected.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 13,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 17,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No changes to make.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 22,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 26,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Relationship label is null instead of 'Not-in-family'.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "relationship: expected 'Not-in-family', got nan"
+      ]
+    },
+    {
+      "row_idx": 35,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 39,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 40,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 41,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 45,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Marital status normalized to empty string.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "marital-status: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 48,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Capital loss normalized to empty string and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "capital-loss: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 51,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "marital-status: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 57,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 60,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Age is a number, not a string; workclass label casing is incorrect; capital-gain and capital-loss are numbers, not strings.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "race: expected 'White', got ''",
+        "sex: expected nan, got 'Male'"
+      ]
+    },
+    {
+      "row_idx": 64,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 66,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "relationship: expected 'Own-child', got ''",
+        "race: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 74,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 82,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(21.0), got '21'",
+        "fnlwgt: expected np.float64(165475.0), got '165475'",
+        "education-num: expected np.float64(9.0), got '9'",
+        "capital-gain: expected np.float64(0.0), got '0'",
+        "capital-loss: expected np.float64(0.0), got '0'",
+        "hours-per-week: expected np.float64(40.0), got '40'"
+      ]
+    },
+    {
+      "row_idx": 85,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading uppercase letters in 'Married-civ-spouse' label were not normalized to lowercase.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(52.0), got '52'",
+        "fnlwgt: expected np.float64(204402.0), got '204402'",
+        "education-num: expected np.float64(9.0), got '9'",
+        "capital-gain: expected np.float64(0.0), got '0'",
+        "capital-loss: expected np.float64(0.0), got '0'",
+        "hours-per-week: expected np.float64(85.0), got '85'"
+      ]
+    },
+    {
+      "row_idx": 86,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed and income label normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "age: expected np.float64(29.0), got '29'",
+        "fnlwgt: expected np.float64(101597.0), got '101597'",
+        "education-num: expected np.float64(nan), got ''",
+        "race: expected nan, got 'White'",
+        "capital-gain: expected np.float64(0.0), got '0'",
+        "capital-loss: expected np.float64(0.0), got '0'",
+        "hours-per-week: expected np.float64(54.0), got '54'"
+      ]
+    },
+    {
+      "row_idx": 91,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "occupation: expected nan, got 'Other-service'"
+      ]
+    },
+    {
+      "row_idx": 95,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "race: expected 'white', got 'White'"
+      ]
+    },
+    {
+      "row_idx": 96,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 97,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 98,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Trailing period in income label was not removed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "occupation: expected 'other-service', got 'Other-service'"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 23,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and ISO 8601 date format normalized correctly."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and ISO 8601 date format normalized correctly."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and Beach Name field is null in both original and transformed data."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and ISO 8601 date format normalized correctly."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and ISO 8601 date format normalized correctly."
+  }
+]

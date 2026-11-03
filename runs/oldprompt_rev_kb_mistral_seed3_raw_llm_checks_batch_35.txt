@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 87,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Sample Date' and 'Year' fields."
+  },
+  {
+    "row_idx": 88,
+    "verdict": "OK",
+    "notes": "No changes were needed."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "No changes were needed."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "Year was changed from '2019.0' to '2019'."
+  },
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": "No changes were needed."
+  }
+]

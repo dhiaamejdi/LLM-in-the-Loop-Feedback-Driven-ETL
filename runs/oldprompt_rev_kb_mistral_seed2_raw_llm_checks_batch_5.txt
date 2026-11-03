@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 15,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields."
+  },
+  {
+    "row_idx": 16,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 18,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 21,
+    "verdict": "Warning",
+    "notes": "The 'Community' field in the 'transformed' data is empty. This may not be semantically correct."
+  }
+]

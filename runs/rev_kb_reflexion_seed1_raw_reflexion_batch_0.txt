@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed from 'Community' and 'Sample Date' fields."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "No changes to labels or values."
+  },
+  {
+    "row_idx": 9,
+    "verdict": "NOT_OK",
+    "notes": "Community label remains the same but value changed from 'Chatham' to 'Stockbridge'. County Description label changed from 'Barnstable' to 'Berkshire'. Year label remains the same but value changed from '2019.0' to null. Sample Date remains the same but format changed to ISO 8601. Beach Name label remains the same but value changed from 'Ridgevale' to 'Kripalu Beach'. Organism label remains the same but value changed from 'Enterococci' to 'E. Coli'. Indicator Level label remains the same but value changed from '80.0' to '0.5'. Violation label remains the same but value changed from 'NO' to null."
+  },
+  {
+    "row_idx": 11,
+    "verdict": "NOT_OK",
+    "notes": "Community label changed from 'West Brookfield' to 'Chicopee'. County Code label removed. County Description label removed. Year label remains the same but value changed from '2019.0' to null. Sample Date remains the same but format changed to ISO 8601. Beach Name label remains the same but value changed from 'Lake Wickabog Boat Club' to 'Chicopee Beach (DCR)'. Organism label remains the same but value changed from 'E. Coli' to 'Enterococci'. Indicator Level label changed from '10.0' to '16.0'."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Community label changed from 'Chicopee' to 'Wendell'. County Code label removed. County Description label removed. Year label remains the same but value changed from '2019.0' to null. Sample Date remains the same but format changed to ISO 8601. Beach Name label remains the same but value changed from 'Chicopee Beach (DCR)' to 'Ruggles Pond (DCR)'. Organism label remains the same but value changed from 'Enterococci' to null. Indicator Level label changed from '16.0' to '32.0'."
+  }
+]

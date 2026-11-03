@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 84,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed in Beach Name."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "County Description in original is null, but transformed has an empty string instead. This is not a problem as per the rule."
+  },
+  {
+    "row_idx": 87,
+    "verdict": "OK",
+    "notes": "No whitespace trimming or normalization needed."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "No whitespace trimming or normalization needed."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "Year in transformed is not a number type, but the rule does not specify that the Year field must be a number. Therefore, this is considered OK."
+  }
+]

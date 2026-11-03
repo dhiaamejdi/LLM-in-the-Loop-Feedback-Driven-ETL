@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 10,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; wrong casing in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; wrong casing in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; missing values in workclass, occupation."
+  },
+  {
+    "row_idx": 21,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; wrong casing in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; wrong casing in occupation."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; wrong casing in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; wrong casing in age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week, income; missing values in education-num."
+  }
+]

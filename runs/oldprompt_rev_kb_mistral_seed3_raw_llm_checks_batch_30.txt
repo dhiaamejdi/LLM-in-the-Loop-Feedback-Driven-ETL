@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 68,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community Description' and 'Sample Date' fields."
+  },
+  {
+    "row_idx": 73,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 78,
+    "verdict": "OK",
+    "notes": "County Description field is null in the original data, so no action was taken."
+  },
+  {
+    "row_idx": 84,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "Beach Name is null in the original data, so no action was taken."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 52,
+    "verdict": "OK",
+    "notes": "Sample Date was normalized correctly."
+  },
+  {
+    "row_idx": 53,
+    "verdict": "OK",
+    "notes": "No issues found."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "OK",
+    "notes": "Sample Date was normalized correctly."
+  },
+  {
+    "row_idx": 58,
+    "verdict": "OK",
+    "notes": "Organism was normalized correctly."
+  },
+  {
+    "row_idx": 59,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and Community was normalized correctly."
+  }
+]

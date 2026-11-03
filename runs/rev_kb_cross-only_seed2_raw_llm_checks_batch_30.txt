@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 76,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community Code, Year, Indicator Level labels retain non-canonical casing; Community Code, Year, Indicator Level values retain non-canonical formatting."
+  },
+  {
+    "row_idx": 79,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community Code, Year, Indicator Level labels retain non-canonical casing; Community Code, Year, Indicator Level values retain non-canonical formatting."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community Code, Year, Indicator Level labels retain non-canonical casing; Community Code, Year, Indicator Level values retain non-canonical formatting; Organism value contains extra whitespace."
+  },
+  {
+    "row_idx": 84,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community Code, Year, Indicator Level labels retain non-canonical casing; Community Code, Year, Indicator Level values retain non-canonical formatting."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Indicator Level was not trimmed; Community Code, Year, Indicator Level labels retain non-canonical casing; Community Code, Year, Indicator Level values retain non-canonical formatting; Beach Type Description value is missing."
+  }
+]

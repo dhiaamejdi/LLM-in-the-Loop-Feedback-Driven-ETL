@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 69,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in occupation was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 70,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 73,
+    "verdict": "NOT_OK",
+    "notes": "Hours-per-week is null in original data but present in transformed data."
+  },
+  {
+    "row_idx": 77,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in sex was not trimmed; hours-per-week and native-country are missing in original data but present in transformed data."
+  },
+  {
+    "row_idx": 78,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in workclass was not trimmed; income label retains trailing period."
+  }
+]

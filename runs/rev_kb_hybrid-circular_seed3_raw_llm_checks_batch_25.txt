@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 64,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  },
+  {
+    "row_idx": 68,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  },
+  {
+    "row_idx": 73,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  },
+  {
+    "row_idx": 78,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  }
+]

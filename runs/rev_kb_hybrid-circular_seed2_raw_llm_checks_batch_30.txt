@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 79,
+    "verdict": "OK",
+    "notes": "No changes were made to the original data."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "OK",
+    "notes": "No changes were made to the original data."
+  },
+  {
+    "row_idx": 84,
+    "verdict": "OK",
+    "notes": "No changes were made to the original data."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "OK",
+    "notes": "No changes were made to the original data."
+  },
+  {
+    "row_idx": 90,
+    "verdict": "OK",
+    "notes": "No changes were made to the original data."
+  }
+]

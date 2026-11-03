@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 36,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 37,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 39,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 43,
+    "verdict": "OK",
+    "notes": "All values were trimmed and date format was normalized correctly."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "All values were trimmed, but 'Year' was not normalized because it was null in the original data."
+  }
+]

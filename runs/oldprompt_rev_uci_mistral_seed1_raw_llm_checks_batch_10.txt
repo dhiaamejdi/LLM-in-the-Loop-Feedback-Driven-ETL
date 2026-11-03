@@ -1,0 +1,34 @@
+[
+  {
+    "row_idx": 33,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 34,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "Error",
+    "notes": "workclass was not normalized to a semantically correct version: 'Local-gov' instead of 'Govt-local'"
+  },
+  {
+    "row_idx": 36,
+    "verdict": "Error",
+    "notes": "occupation was not transformed: 'Exec-managerial' should be transformed to a semantically correct version"
+  },
+  {
+    "row_idx": 43,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  }
+]
+
+In the third case for row_idx 36, the 'workclass' label was not normalized to 'Govt-local' as per the rule. In the fourth case for row_idx 36, the 'occupation' label was not transformed to a semantically correct version. These errors resulted in 'Error' verdicts for those cases.

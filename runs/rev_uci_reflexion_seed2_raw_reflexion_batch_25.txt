@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 89,
+    "verdict": "OK",
+    "notes": "No changes in labels or whitespace."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "No changes in labels or whitespace."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Income label in 'original' is '>50K' but in 'transformed' is '<=50K'."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "NOT_OK",
+    "notes": "Age was changed from 21 to 33, education-num was changed from 9 to '', and income was changed from '<=50K' to '>50K'. Multiple fields were changed, and some fields were changed to incorrect values."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Age was changed from 33 to 20, workclass was removed, education was changed from 'HS-grad' to 'Some-college', education-num was changed from null to 10, relationship was changed from 'Other-relative' to 'Own-child', and fnlwgt was changed from 110998 to null. Multiple fields were changed, and some fields were changed to incorrect values."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 58,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 62,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 63,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 64,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  }
+]

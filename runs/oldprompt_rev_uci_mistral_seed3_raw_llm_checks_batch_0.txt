@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 3,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "Warning",
+    "notes": "The 'native-country' label in the 'transformed' data is empty. It should be 'Ireland' to maintain semantic correctness."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "Warning",
+    "notes": "The 'hours-per-week' label in the 'transformed' data is 'United-States'. It should be empty to maintain semantic correctness."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  }
+]

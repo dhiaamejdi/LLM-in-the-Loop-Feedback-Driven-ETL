@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' and 'Beach Name' fields."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "Null values were replaced with empty strings."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' field."
+  },
+  {
+    "row_idx": 47,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 9,
+    "verdict": "NOK",
+    "notes": "Community Code was not correctly normalized, County Code was not correctly normalized, County Description was not correctly normalized, Year was not correctly normalized, Sample Date was not correctly normalized, Beach Name was not affected, Beach Type Description was not correctly normalized, Organism was not affected, Indicator Level was not correctly normalized, Violation was not affected."
+  },
+  {
+    "row_idx": 11,
+    "verdict": "NOK",
+    "notes": "Community Code was not correctly normalized, Community was not correctly normalized, County Code was not correctly normalized, County Description was not correctly normalized, Year was not correctly normalized, Sample Date was not correctly normalized, Beach Name was not affected, Beach Type Description was not affected, Organism was not affected, Indicator Level was not correctly normalized, Violation was not affected."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOK",
+    "notes": "Community Code was not correctly normalized, Community was not correctly normalized, County Code was not correctly normalized, County Description was not correctly normalized, Year was not correctly normalized, Sample Date was not affected, Beach Name was not affected, Beach Type Description was not affected, Organism was not affected, Indicator Level was not correctly normalized, Violation was not affected."
+  }
+]

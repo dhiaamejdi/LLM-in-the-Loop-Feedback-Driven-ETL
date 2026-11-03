@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed correctly."
+  },
+  {
+    "row_idx": 5,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed correctly."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "NOK",
+    "notes": "Community label was not normalized correctly."
+  },
+  {
+    "row_idx": 9,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed correctly."
+  },
+  {
+    "row_idx": 11,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed correctly."
+  }
+]

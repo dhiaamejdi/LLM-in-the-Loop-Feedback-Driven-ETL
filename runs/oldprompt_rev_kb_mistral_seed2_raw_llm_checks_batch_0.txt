@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 3,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Sample Date' and 'County Description' fields."
+  },
+  {
+    "row_idx": 4,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  },
+  {
+    "row_idx": 13,
+    "verdict": "OK",
+    "notes": "No whitespace trimming was required."
+  }
+]

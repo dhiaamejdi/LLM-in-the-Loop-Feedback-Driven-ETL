@@ -1,0 +1,496 @@
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "verdict_coverage": {
+    "rows_sampled": 40,
+    "rows_with_verdict": 35,
+    "rows_missing_verdict": 5
+  },
+  "checker_metrics": {
+    "tp": 27,
+    "fp": 5,
+    "fn": 7,
+    "tn": 1,
+    "ground_truth_positives": 34,
+    "rows_flagged": 32,
+    "recall": 0.7941176470588235,
+    "recall_ci95": [
+      0.621,
+      0.913
+    ],
+    "precision": 0.84375,
+    "precision_ci95": [
+      0.6721,
+      0.9472
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 25,
+        "fp": 5,
+        "fn": 2,
+        "tn": 1
+      },
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 0
+      },
+      "deterministic": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Organism, Indicator Level was not trimmed; Community, County Description, Beach Type Description, Violation labels retain original casing; Community Code, Year, Indicator Level values do not belong in their columns.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-08 00:00:00', got '2019-07-08T00:00:00.000Z'",
+        "Organism: expected 'Enterococci', got ''"
+      ]
+    },
+    {
+      "row_idx": 6,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community, Sample Date was not trimmed; Community Code, Year, Sample Date, Organism, Indicator Level values do not belong in their columns.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-08-27 00:00:00', got '2019-08-27T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 9,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community Code, County Code, Year, Sample Date, Beach Name, Organism, Indicator Level values do not belong in their columns; Beach Type Description label retains original casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(55.0), got '283.0'",
+        "Community: expected 'Chatham', got 'Stockbridge'",
+        "County Code: expected np.float64(1.0), got '3.0'",
+        "County Description: expected 'Barnstable', got 'Berkshire'",
+        "Sample Date: expected '2019-07-29 00:00:00', got '2019-08-05 00:00:00'",
+        "Beach Name: expected 'Ridgevale', got 'Kripalu Beach'",
+        "Beach Type Description: expected nan, got 'Fresh'",
+        "Organism: expected 'Enterococci', got 'E. Coli'",
+        "Indicator Level: expected np.float64(80.0), got '0.5'"
+      ]
+    },
+    {
+      "row_idx": 11,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community Code, County Code, Year, Sample Date, Beach Name, Organism, Indicator Level values do not belong in their columns; County Description, Violation labels retain original casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(323.0), got '61.0'",
+        "Community: expected 'West Brookfield', got 'Chicopee'",
+        "County Code: expected np.float64(27.0), got nan",
+        "County Description: expected 'Worcester', got nan",
+        "Sample Date: expected '2019-07-31 00:00:00', got '2019-07-15 00:00:00'",
+        "Beach Name: expected 'Lake Wickabog Boat Club', got 'Chicopee Beach (DCR)'",
+        "Organism: expected 'E. Coli', got 'Enterococci'",
+        "Indicator Level: expected np.float64(10.0), got '16.0'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 12,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community Code, County Code, Year, Sample Date, Beach Name, Organism, Indicator Level values do not belong in their columns; County Description, Violation labels retain original casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(61.0), got '319.0'",
+        "Community: expected 'Chicopee', got 'Wendell'",
+        "County Code: expected np.float64(13.0), got '11.0'",
+        "County Description: expected nan, got 'Franklin'",
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-07-15 00:00:00', got '2019-07-23 00:00:00'",
+        "Beach Name: expected 'Chicopee Beach (DCR)', got 'Ruggles Pond (DCR)'",
+        "Indicator Level: expected np.float64(16.0), got '32.0'"
+      ]
+    },
+    {
+      "row_idx": 17,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-23 00:00:00', got '2019-07-23T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 19,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "All fields are correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-13 00:00:00', got '2019-05-13T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 21,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-22 00:00:00', got '2019-07-22T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 26,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 27,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, County Code, Year, Indicator Level was not trimmed; Violation value is not correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Indicator Level: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 28,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Beach Type Description label retains wrong casing.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 30,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 31,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 36,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Sample Date label retains wrong formatting.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-17 00:00:00', got '2019-06-17T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 38,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Year value is incorrect.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-07-22 00:00:00', got '2019-07-22T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 39,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' has wrong format; 'Beach Name' has wrong casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-10 00:00:00', got '2019-06-10T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 41,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' has wrong format; 'Beach Name' has wrong casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-26 00:00:00', got '2019-08-26T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 42,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' and 'Beach Name' have wrong values.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''",
+        "Beach Name: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 45,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in 'Community', 'Sample Date', 'Beach Type Description', 'Beach Name' were not trimmed; 'Sample Date' and 'Beach Name' have wrong values; 'Beach Type Description' has wrong casing.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected 'Fresh', got '2019-07-22T00:00:00.000Z'",
+        "Beach Type Description: expected '2019-07-22 00:00:00', got 'Fresh'",
+        "Organism: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 47,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in 'Community Code', 'County Code', 'Year', 'Sample Date', 'Beach Name', 'Indicator Level' were not trimmed; 'Sample Date' and 'Beach Name' have wrong values.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 49,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 55,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(1.0), got 'Barnstable'",
+        "County Description: expected 'Barnstable', got ''",
+        "Sample Date: expected '2019-07-31 00:00:00', got '2019-07-31T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 60,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(1.0), got 'Barnstable'",
+        "Sample Date: expected '2019-07-02 00:00:00', got '2019-07-02T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 61,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(21.0), got 'Norfolk'",
+        "Sample Date: expected '2019-08-20 00:00:00', got '2019-08-20T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 64,
+      "verdict": "OK",
+      "checker_path": "missing",
+      "checker_notes": "NO VERDICT RETURNED (parse failure or row skipped)",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-22 00:00:00', got '2019-07-22T00:00:00.000Z'",
+        "Beach Name: expected nan, got 'Beach Name'"
+      ]
+    },
+    {
+      "row_idx": 69,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels were not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-24 00:00:00', got '2019-06-24T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 70,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels were not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-30 00:00:00', got '2019-07-30T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 74,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels were not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Falmouth', got 'Old Silver Residents'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 75,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Indicator Level was not trimmed; Community, County Description, Beach Name, Beach Type Description, Organism, Violation labels were not normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Marblehead', got 'Stramski'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 79,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 81,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-07-09 00:00:00', got '2019-07-09T00:00:00Z'"
+      ]
+    },
+    {
+      "row_idx": 84,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'fresh' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-20 00:00:00', got '2019-05-20T00:00:00Z'",
+        "Beach Type Description: expected 'Fresh', got 'fresh'"
+      ]
+    },
+    {
+      "row_idx": 85,
+      "verdict": "NOT_OK",
+      "checker_path": "deterministic",
+      "checker_notes": "DETERMINISTIC_FAIL: Beach Type Description 'marine' not title-case",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-23 00:00:00', got '2019-07-23T00:00:00Z'",
+        "Beach Type Description: expected 'Marine', got 'marine'"
+      ]
+    },
+    {
+      "row_idx": 87,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-08 00:00:00', got '2019-07-08T00:00:00Z'"
+      ]
+    },
+    {
+      "row_idx": 90,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(nan), got 'Barnstable'",
+        "County Description: expected 'Barnstable', got ''",
+        "Sample Date: expected '2019-07-02 00:00:00', got '2019-07-02T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 92,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, and Indicator Level was not trimmed; County Description was not normalized; Organism label was not normalized.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(9.0), got 'Barnstable'",
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-06-25 00:00:00', got '2019-06-25T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 96,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Organism, Indicator Level was not trimmed; income label retains trailing period.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-05 00:00:00', got '2019-06-05T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 97,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading/trailing whitespace in Community Code, Community, County Code, Year, Sample Date, Beach Name, Organism, Indicator Level was not trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(351.0), got ''",
+        "Community: expected nan, got ''",
+        "Sample Date: expected '2019-06-10 00:00:00', got '2019-06-10T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 98,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-20 00:00:00', got '2019-06-20T00:00:00'"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+[
+  {
+    "row": 83,
+    "column": "education",
+    "type": "missing_value"
+  },
+  {
+    "row": 10,
+    "column": "education-num",
+    "type": "missing_value"
+  },
+  {
+    "row": 41,
+    "column": "hours-per-week",
+    "type": "missing_value"
+  },
+  {
+    "row": 45,
+    "column": "workclass",
+    "type": "missing_value"
+  },
+  {
+    "row": 33,
+    "column": "sex",
+    "type": "missing_value"
+  },
+  {
+    "row": 81,
+    "column": "capital-gain",
+    "type": "missing_value"
+  },
+  {
+    "row": 99,
+    "column": "fnlwgt",
+    "type": "missing_value"
+  },
+  {
+    "row": 88,
+    "column": "age",
+    "type": "missing_value"
+  },
+  {
+    "row": 55,
+    "column": "education-num",
+    "type": "missing_value"
+  },
+  {
+    "row": 20,
+    "column": "sex",
+    "type": "missing_value"
+  },
+  {
+    "row": 30,
+    "column": "race",
+    "type": "missing_value"
+  },
+  {
+    "row": 26,
+    "column": "fnlwgt",
+    "type": "missing_value"
+  },
+  {
+    "row": 74,
+    "column": "occupation",
+    "type": "missing_value"
+  },
+  {
+    "row": 67,
+    "column": "capital-gain",
+    "type": "missing_value"
+  },
+  {
+    "row": 94,
+    "column": "occupation",
+    "type": "missing_value"
+  },
+  {
+    "row": 21,
+    "column": "sex",
+    "type": "missing_value"
+  },
+  {
+    "row": 93,
+    "column": "income",
+    "type": "missing_value"
+  },
+  {
+    "row": 86,
+    "column": "capital-gain",
+    "type": "missing_value"
+  },
+  {
+    "row": 38,
+    "column": "marital-status",
+    "type": "missing_value"
+  },
+  {
+    "row": 3,
+    "column": "fnlwgt",
+    "type": "missing_value"
+  },
+  {
+    "row": 33,
+    "column": "marital-status",
+    "type": "missing_value"
+  },
+  {
+    "row": 57,
+    "column": "relationship",
+    "type": "missing_value"
+  },
+  {
+    "row": 69,
+    "column": "native-country",
+    "type": "missing_value"
+  },
+  {
+    "row": 87,
+    "column": "capital-loss",
+    "type": "missing_value"
+  },
+  {
+    "row": 97,
+    "column": "education-num",
+    "type": "missing_value"
+  },
+  {
+    "row": 90,
+    "column": "native-country",
+    "type": "missing_value"
+  },
+  {
+    "row": 22,
+    "column": "relationship",
+    "type": "missing_value"
+  },
+  {
+    "row": 56,
+    "column": "capital-gain",
+    "type": "missing_value"
+  },
+  {
+    "row": 70,
+    "column": "workclass",
+    "type": "missing_value"
+  },
+  {
+    "row": 47,
+    "column": "workclass",
+    "type": "missing_value"
+  },
+  {
+    "row": 95,
+    "column": "education",
+    "type": "missing_value"
+  },
+  {
+    "row": 44,
+    "column": "native-country",
+    "type": "missing_value"
+  },
+  {
+    "row": 52,
+    "column": "capital-gain",
+    "type": "missing_value"
+  },
+  {
+    "row": 49,
+    "column": "hours-per-week",
+    "type": "missing_value"
+  },
+  {
+    "row": 59,
+    "column": "sex",
+    "type": "missing_value"
+  },
+  {
+    "row": 45,
+    "column": "occupation",
+    "type": "missing_value"
+  },
+  {
+    "row": 59,
+    "column": "relationship",
+    "type": "missing_value"
+  },
+  {
+    "row": 78,
+    "column": "race",
+    "type": "missing_value"
+  },
+  {
+    "row": 47,
+    "column": "hours-per-week",
+    "type": "missing_value"
+  },
+  {
+    "row": 21,
+    "column": "occupation",
+    "type": "missing_value"
+  },
+  {
+    "row": 48,
+    "column": "native-country",
+    "type": "missing_value"
+  },
+  {
+    "row": 44,
+    "column": "sex",
+    "type": "missing_value"
+  },
+  {
+    "row": 7,
+    "column": "hours-per-week",
+    "type": "missing_value"
+  },
+  {
+    "row": 44,
+    "column": "relationship",
+    "type": "missing_value"
+  },
+  {
+    "row": 9,
+    "column": "capital-gain",
+    "type": "missing_value"
+  },
+  {
+    "row": 63,
+    "column": "marital-status<->sex",
+    "type": "swap_columns"
+  },
+  {
+    "row": 5,
+    "column": "marital-status<->education",
+    "type": "swap_columns"
+  },
+  {
+    "row": 46,
+    "column": "workclass",
+    "type": "bad_casing"
+  },
+  {
+    "row": 3,
+    "column": "workclass",
+    "type": "bad_casing"
+  },
+  {
+    "row": 50,
+    "column": "workclass",
+    "type": "bad_casing"
+  },
+  {
+    "row": 87,
+    "column": "workclass",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 25,
+    "column": "workclass",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 41,
+    "column": "workclass",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 42,
+    "column": "education",
+    "type": "bad_casing"
+  },
+  {
+    "row": 37,
+    "column": "education",
+    "type": "bad_casing"
+  },
+  {
+    "row": 67,
+    "column": "education",
+    "type": "bad_casing"
+  },
+  {
+    "row": 10,
+    "column": "education",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 56,
+    "column": "education",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 75,
+    "column": "education",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 19,
+    "column": "marital-status",
+    "type": "bad_casing"
+  },
+  {
+    "row": 98,
+    "column": "marital-status",
+    "type": "bad_casing"
+  },
+  {
+    "row": 35,
+    "column": "marital-status",
+    "type": "bad_casing"
+  },
+  {
+    "row": 78,
+    "column": "marital-status",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 61,
+    "column": "marital-status",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 17,
+    "column": "marital-status",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 1,
+    "column": "occupation",
+    "type": "bad_casing"
+  },
+  {
+    "row": 8,
+    "column": "occupation",
+    "type": "bad_casing"
+  },
+  {
+    "row": 83,
+    "column": "occupation",
+    "type": "bad_casing"
+  },
+  {
+    "row": 42,
+    "column": "occupation",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 8,
+    "column": "occupation",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 27,
+    "column": "occupation",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 64,
+    "column": "relationship",
+    "type": "bad_casing"
+  },
+  {
+    "row": 62,
+    "column": "relationship",
+    "type": "bad_casing"
+  },
+  {
+    "row": 98,
+    "column": "relationship",
+    "type": "bad_casing"
+  },
+  {
+    "row": 76,
+    "column": "relationship",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 81,
+    "column": "relationship",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 92,
+    "column": "relationship",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 86,
+    "column": "race",
+    "type": "bad_casing"
+  },
+  {
+    "row": 18,
+    "column": "race",
+    "type": "bad_casing"
+  },
+  {
+    "row": 60,
+    "column": "race",
+    "type": "bad_casing"
+  },
+  {
+    "row": 22,
+    "column": "race",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 54,
+    "column": "race",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 94,
+    "column": "race",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 9,
+    "column": "sex",
+    "type": "bad_casing"
+  },
+  {
+    "row": 56,
+    "column": "sex",
+    "type": "bad_casing"
+  },
+  {
+    "row": 96,
+    "column": "sex",
+    "type": "bad_casing"
+  },
+  {
+    "row": 93,
+    "column": "sex",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 49,
+    "column": "sex",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 29,
+    "column": "sex",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 1,
+    "column": "native-country",
+    "type": "bad_casing"
+  },
+  {
+    "row": 3,
+    "column": "native-country",
+    "type": "bad_casing"
+  },
+  {
+    "row": 7,
+    "column": "native-country",
+    "type": "bad_casing"
+  },
+  {
+    "row": 81,
+    "column": "native-country",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 0,
+    "column": "native-country",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 60,
+    "column": "native-country",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 5,
+    "column": "income",
+    "type": "bad_casing"
+  },
+  {
+    "row": 79,
+    "column": "income",
+    "type": "bad_casing"
+  },
+  {
+    "row": 50,
+    "column": "income",
+    "type": "bad_casing"
+  },
+  {
+    "row": 24,
+    "column": "income",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 31,
+    "column": "income",
+    "type": "stray_whitespace"
+  },
+  {
+    "row": 43,
+    "column": "income",
+    "type": "stray_whitespace"
+  }
+]

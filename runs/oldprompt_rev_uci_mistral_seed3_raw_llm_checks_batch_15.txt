@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 57,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 60,
+    "verdict": "Warning",
+    "notes": "Age value in 'transformed' should be an integer, not a string."
+  },
+  {
+    "row_idx": 64,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 66,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  }
+]

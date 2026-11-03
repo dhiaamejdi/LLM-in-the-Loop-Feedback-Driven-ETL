@@ -1,0 +1,513 @@
+{
+ "model": "mistralai/Mistral-7B-Instruct-v0.2",
+ "prompt": "semantic",
+ "seed": 1,
+ "verdicts": {
+  "119": {
+   "verdict": "OK",
+   "notes": "Valencia, Carabobo is the same location in both original and transformed."
+  },
+  "81": {
+   "verdict": "NOT_OK",
+   "notes": "The original job description 'harvests apples at an orchard every season' implies the occupation of a farmer or orchard worker. The transformed 'Protective-serv' denotes a different real-world entity and category."
+  },
+  "20": {
+   "verdict": "OK",
+   "notes": "Magyarorszag and Hungary denote the same real-world country."
+  },
+  "90": {
+   "verdict": "OK",
+   "notes": "Army infantry sergeant on active duty and Armed-Forces denote the same real-world occupation."
+  },
+  "68": {
+   "verdict": "OK",
+   "notes": "Fixing transmissions at an auto shop and craft repair denote the same real-world occupation."
+  },
+  "41": {
+   "verdict": "NOT_OK",
+   "notes": "Mass. is a state in the US, Mississippi is a different state."
+  },
+  "4": {
+   "verdict": "OK",
+   "notes": "Burma and Myanmar refer to the same country."
+  },
+  "79": {
+   "verdict": "NOT_OK",
+   "notes": "Running a stamping press on the factory floor is not the same as an administrative-clerical occupation."
+  },
+  "38": {
+   "verdict": "OK",
+   "notes": "Misr is an alternative name for Egypt."
+  },
+  "10": {
+   "verdict": "OK",
+   "notes": "Persia and Iran are different names for the same country."
+  },
+  "14": {
+   "verdict": "OK",
+   "notes": "Ceylon is Sri Lanka."
+  },
+  "95": {
+   "verdict": "NOT_OK",
+   "notes": "welder at a shipyard is not Sales."
+  },
+  "22": {
+   "verdict": "OK",
+   "notes": "Suomi is Finland."
+  },
+  "78": {
+   "verdict": "OK",
+   "notes": "runs a stamping press on the factory floor can be Machine-op-inspector."
+  },
+  "114": {
+   "verdict": "OK",
+   "notes": "London, Ontario is the same location."
+  },
+  "71": {
+   "verdict": "NOT_OK",
+   "notes": "A person who drives an 18-wheeler cross country is an '18-wheeler driver' or 'truck driver', not 'Sales'."
+  },
+  "73": {
+   "verdict": "OK",
+   "notes": "A vice president of a regional division is a 'regional vice president', which can be considered a 'Handler' or 'manager' in a broader sense, thus 'Handlers-cleaners' is a valid transformation."
+  },
+  "52": {
+   "verdict": "OK",
+   "notes": "Ark. is a postal abbreviation for Arkansas."
+  },
+  "94": {
+   "verdict": "OK",
+   "notes": "A welder at a shipyard is a 'shipyard welder' or 'marine welder', which can be considered a 'Craft-repair' worker."
+  },
+  "9": {
+   "verdict": "NOT_OK",
+   "notes": "Nippon is Japan, not Nepal."
+  },
+  "82": {
+   "verdict": "OK",
+   "notes": "A patrol officer with the city police is the same as a protective service occupant."
+  },
+  "116": {
+   "verdict": "OK",
+   "notes": "Santiago de Compostela, Galicia is the same location in both the original and transformed data."
+  },
+  "96": {
+   "verdict": "OK",
+   "notes": "Paris, TX is the same location in both the original and transformed data."
+  },
+  "93": {
+   "verdict": "NOT_OK",
+   "notes": "A high school chemistry teacher is not the same occupation as handlers-cleaners."
+  },
+  "39": {
+   "verdict": "OK",
+   "notes": "Misr is the same as Mali, both being the native country of the individual."
+  },
+  "36": {
+   "verdict": "OK",
+   "notes": "Cote d'Ivoire is the same as Ivory Coast."
+  },
+  "105": {
+   "verdict": "OK",
+   "notes": "Tbilisi, Georgia is the same as Tbilisi, Georgia."
+  },
+  "50": {
+   "verdict": "OK",
+   "notes": "Wash. is the same as Washington."
+  },
+  "16": {
+   "verdict": "OK",
+   "notes": "Espana is the same as Spain."
+  },
+  "33": {
+   "verdict": "NOT_OK",
+   "notes": "Czechia is not Croatia."
+  },
+  "24": {
+   "verdict": "OK",
+   "notes": "Sverige is the Swedish name for Sweden."
+  },
+  "6": {
+   "verdict": "OK",
+   "notes": "Eire is an alternative name for Ireland."
+  },
+  "84": {
+   "verdict": "OK",
+   "notes": "Handlers-cleaners is a valid transformation of 'loads pallets and sweeps the warehouse'."
+  },
+  "5": {
+   "verdict": "NOT_OK",
+   "notes": "Burma and Bermuda are different countries."
+  },
+  "35": {
+   "verdict": "NOT_OK",
+   "notes": "Hanguk is the Korean language name for Korea, not Hungary."
+  },
+  "74": {
+   "verdict": "OK",
+   "notes": "Selling used cars on commission is a type of sales."
+  },
+  "11": {
+   "verdict": "NOT_OK",
+   "notes": "Persia and Iraq are different countries."
+  },
+  "104": {
+   "verdict": "OK",
+   "notes": "Tbilisi, Georgia and Tbilisi, Georgia, Georgia are the same location."
+  },
+  "43": {
+   "verdict": "NOT_OK",
+   "notes": "Calif. is a state abbreviation for California, not Colorado."
+  },
+  "112": {
+   "verdict": "OK",
+   "notes": "Melbourne, Victoria and Melbourne, Victoria, Australia are the same location."
+  },
+  "30": {
+   "verdict": "OK",
+   "notes": "Bharat is the native name for India."
+  },
+  "66": {
+   "verdict": "OK",
+   "notes": "A line cook at a diner is an 'Other-service' occupation."
+  },
+  "117": {
+   "verdict": "OK",
+   "notes": "Santiago de Compostela, Galicia is the same location in both cases."
+  },
+  "25": {
+   "verdict": "NOT_OK",
+   "notes": "Sverige is the native name for Sweden, not Serbia."
+  },
+  "51": {
+   "verdict": "OK",
+   "notes": "Wisconsin is also a valid state name."
+  },
+  "31": {
+   "verdict": "NOT_OK",
+   "notes": "Bharat is India, not Bahrain."
+  },
+  "98": {
+   "verdict": "OK",
+   "notes": "Birmingham, AL is the same location."
+  },
+  "59": {
+   "verdict": "OK",
+   "notes": "N. Dak. is an abbreviation for North Dakota."
+  },
+  "19": {
+   "verdict": "NOT_OK",
+   "notes": "Hellas is Greece, not Haiti."
+  },
+  "64": {
+   "verdict": "NOT_OK",
+   "notes": "RN on the night shift at the county hospital is a job title, Prof-specialty is a profession and specialty."
+  },
+  "42": {
+   "verdict": "OK",
+   "notes": "Calif. is equivalent to California."
+  },
+  "65": {
+   "verdict": "NOT_OK",
+   "notes": "RN on the night shift at the county hospital is not the same as Craft-repair."
+  },
+  "80": {
+   "verdict": "OK",
+   "notes": "harvests apples at an orchard every season is a fact that can be represented as Farming-fishing."
+  },
+  "113": {
+   "verdict": "OK",
+   "notes": "Melbourne, Victoria is the same location as Melbourne, Victoria, regardless of the country."
+  },
+  "45": {
+   "verdict": "NOT_OK",
+   "notes": "Penna. is Pennsylvania, not Indiana."
+  },
+  "61": {
+   "verdict": "OK",
+   "notes": "W. Va. is a part of the state of Virginia in the United States."
+  },
+  "21": {
+   "verdict": "NOT_OK",
+   "notes": "Magyarorszag is Hungary, not Madagascar."
+  },
+  "47": {
+   "verdict": "NOT_OK",
+   "notes": "Conn. is Connecticut, not Colorado."
+  },
+  "7": {
+   "verdict": "NOT_OK",
+   "notes": "Eire is Ireland, not Eritrea."
+  },
+  "18": {
+   "verdict": "OK",
+   "notes": "Hellas is an ancient name for Greece."
+  },
+  "99": {
+   "verdict": "OK",
+   "notes": "Birmingham, AL is the same location as Birmingham, AL."
+  },
+  "46": {
+   "verdict": "OK",
+   "notes": "Conn. is the same state as Connecticut."
+  },
+  "88": {
+   "verdict": "OK",
+   "notes": "live-in nanny for a private family implies the occupation of a live-in nanny. priv-house-serv is a valid abbreviation for private household servant."
+  },
+  "23": {
+   "verdict": "NOT_OK",
+   "notes": "Suomi is Finland, not Somalia."
+  },
+  "103": {
+   "verdict": "OK",
+   "notes": "Cambridge, Mass. is the same location as Cambridge, Mass. Adding 'country' field with 'United Kingdom' value does not change the real-world facts."
+  },
+  "53": {
+   "verdict": "NOT_OK",
+   "notes": "Ark. is a state in the US, Alaska is a different state in the US."
+  },
+  "86": {
+   "verdict": "OK",
+   "notes": "help desk technician and tech-support are related jobs."
+  },
+  "37": {
+   "verdict": "NOT_OK",
+   "notes": "Cote d'Ivoire is a country in West Africa, Costa Rica is a country in Central America."
+  },
+  "58": {
+   "verdict": "OK",
+   "notes": "N. Dak. is an abbreviation for North Dakota."
+  },
+  "76": {
+   "verdict": "OK",
+   "notes": "answering phones and filing invoices are tasks related to administrative-clerical work."
+  },
+  "118": {
+   "verdict": "OK",
+   "notes": "Valencia, Carabobo is in Venezuela."
+  },
+  "44": {
+   "verdict": "OK",
+   "notes": "Penna. is short for Pennsylvania."
+  },
+  "91": {
+   "verdict": "NOT_OK",
+   "notes": "army infantry sergeant on active duty is not the same as priv-house-serv."
+  },
+  "70": {
+   "verdict": "OK",
+   "notes": "drives an 18-wheeler cross country is the same as transport-moving."
+  },
+  "111": {
+   "verdict": "OK",
+   "notes": "Melbourne, FL is in Florida, which is in Australia."
+  },
+  "56": {
+   "verdict": "OK",
+   "notes": "Mich. is equivalent to Michigan."
+  },
+  "28": {
+   "verdict": "OK",
+   "notes": "Zhongguo is the native name for China."
+  },
+  "67": {
+   "verdict": "NOT_OK",
+   "notes": "A line cook at a diner is not an executive manager."
+  },
+  "85": {
+   "verdict": "NOT_OK",
+   "notes": "Loading pallets and sweeping the warehouse is not an executive managerial job."
+  },
+  "54": {
+   "verdict": "OK",
+   "notes": "Miss. is equivalent to Mississippi."
+  },
+  "27": {
+   "verdict": "NOT_OK",
+   "notes": "Oesterreich is Austria, not Australia."
+  },
+  "106": {
+   "verdict": "OK",
+   "notes": "Both original and transformed state that the location is Atlanta, Georgia. The addition of 'country' field in the transformed data with value 'United States' does not change the real-world facts."
+  },
+  "1": {
+   "verdict": "NOT_OK",
+   "notes": "Deutschland is Germany, not Denmark."
+  },
+  "69": {
+   "verdict": "NOT_OK",
+   "notes": "The original data states that the job description is 'fixes transmissions at an auto shop'. The transformed data states that the occupation is 'Tech-support'. These denote different real-world entities and categories."
+  },
+  "107": {
+   "verdict": "OK",
+   "notes": "Both original and transformed state that the location is Atlanta, Georgia. The addition of 'country' field in the transformed data with value 'Georgia' does not change the real-world facts."
+  },
+  "87": {
+   "verdict": "NOT_OK",
+   "notes": "A help desk technician does not have an occupation in Farming-fishing."
+  },
+  "2": {
+   "verdict": "OK",
+   "notes": "Holland and Netherlands refer to the same country."
+  },
+  "101": {
+   "verdict": "NOT_OK",
+   "notes": "Birmingham, West Midlands is in the United Kingdom, not the United States."
+  },
+  "40": {
+   "verdict": "OK",
+   "notes": "Mass. and Massachusetts both refer to the same US state."
+  },
+  "13": {
+   "verdict": "NOT_OK",
+   "notes": "Siam is Thailand, not Taiwan."
+  },
+  "75": {
+   "verdict": "OK",
+   "notes": "Selling used cars on commission is the same fact as being a 'Machine Operator Inspector' in the context of a job."
+  },
+  "29": {
+   "verdict": "NOT_OK",
+   "notes": "Zhongguo is China, not Zimbabwe."
+  },
+  "92": {
+   "verdict": "OK",
+   "notes": "Teaching high school chemistry is the same fact as being a 'Professor, specialty' in the context of an occupation."
+  },
+  "34": {
+   "verdict": "OK",
+   "notes": "Hanguk is South Korea."
+  },
+  "109": {
+   "verdict": "OK",
+   "notes": "Victoria, BC is the same location regardless of the country."
+  },
+  "89": {
+   "verdict": "NOT_OK",
+   "notes": "A live-in nanny for a private family is not an Armed-Forces member."
+  },
+  "0": {
+   "verdict": "OK",
+   "notes": "Deutschland is Germany."
+  },
+  "110": {
+   "verdict": "OK",
+   "notes": "Melbourne, FL is the same location in both the original and transformed data."
+  },
+  "77": {
+   "verdict": "NOT_OK",
+   "notes": "Answering phones and filing invoices at a law office is not a professional specialty."
+  },
+  "55": {
+   "verdict": "OK",
+   "notes": "Miss. is the postal abbreviation for Mississippi, and Missouri is a different state. However, since the original data only includes the postal abbreviation, it is assumed that the transformed data refers to the same state, and the real-world facts are the same."
+  },
+  "49": {
+   "verdict": "NOT_OK",
+   "notes": "Tenn. is not Texas."
+  },
+  "3": {
+   "verdict": "NOT_OK",
+   "notes": "Holland is not Poland."
+  },
+  "62": {
+   "verdict": "OK",
+   "notes": "Nebr. is the same as Nebraska."
+  },
+  "12": {
+   "verdict": "OK",
+   "notes": "Siam is the same as Thailand."
+  },
+  "26": {
+   "verdict": "OK",
+   "notes": "Oesterreich is the same as Austria."
+  },
+  "100": {
+   "verdict": "OK",
+   "notes": "Birmingham, West Midlands is the same location as Birmingham, West Midlands, United Kingdom."
+  },
+  "48": {
+   "verdict": "OK",
+   "notes": "Tenn. is the same state as Tennessee."
+  },
+  "83": {
+   "verdict": "OK",
+   "notes": "A patrol officer with the city police is an occupation that involves transport-moving people or maintaining order in a transport system."
+  },
+  "60": {
+   "verdict": "OK",
+   "notes": "W. Va. is the same state as West Virginia."
+  },
+  "57": {
+   "verdict": "NOT_OK",
+   "notes": "Michigan is a different state than Minnesota."
+  },
+  "115": {
+   "verdict": "OK",
+   "notes": "London, Ontario is still in Ontario, Canada which is part of North America and not United Kingdom."
+  },
+  "63": {
+   "verdict": "NOT_OK",
+   "notes": "Nebraska is a state in the United States, not Nevada."
+  },
+  "15": {
+   "verdict": "NOT_OK",
+   "notes": "Ceylon is an island country in the Indian Ocean, not Chile."
+  },
+  "32": {
+   "verdict": "OK",
+   "notes": "Czechia and Czech Republic refer to the same country."
+  },
+  "8": {
+   "verdict": "OK",
+   "notes": "Nippon is an old name for Japan."
+  },
+  "97": {
+   "verdict": "OK",
+   "notes": "Paris, TX is still in Texas, USA."
+  },
+  "102": {
+   "verdict": "OK",
+   "notes": "Cambridge, Mass. is still in the United States."
+  },
+  "108": {
+   "verdict": "OK",
+   "notes": "Victoria, BC is still in Canada."
+  },
+  "72": {
+   "verdict": "OK",
+   "notes": "The vice president of a regional division is an executive manager."
+  },
+  "17": {
+   "verdict": "NOT_OK",
+   "notes": "Espana is Spain, not Estonia."
+  }
+ },
+ "raw": [
+  "[\n  {\n    \"row_idx\": 119,\n    \"verdict\": \"OK\",\n    \"notes\": \"Valencia, Carabobo is the same location in both original and transformed.\"\n  },\n  {\n    \"row_idx\": 81,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The original job description 'harvests apples at an orchard every season' implies the occupation of a farmer or orchard worker. The transformed 'Protective-serv' denotes a different real-world entity and category.\"\n  },\n  {\n    \"row_idx\": 20,\n    \"verdict\": \"OK\",\n    \"notes\": \"Magyarorszag and Hungary denote the same real-world country.\"\n  },\n  {\n    \"row_idx\": 90,\n    \"verdict\": \"OK\",\n    \"notes\": \"Army infantry sergeant on active duty and Armed-Forces denote the same real-world occupation.\"\n  },\n  {\n    \"row_idx\": 68,\n    \"verdict\": \"OK\",\n    \"notes\": \"Fixing transmissions at an auto shop and craft repair denote the same real-world occupation.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 41,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Mass. is a state in the US, Mississippi is a different state.\"\n  },\n  {\n    \"row_idx\": 4,\n    \"verdict\": \"OK\",\n    \"notes\": \"Burma and Myanmar refer to the same country.\"\n  },\n  {\n    \"row_idx\": 79,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Running a stamping press on the factory floor is not the same as an administrative-clerical occupation.\"\n  },\n  {\n    \"row_idx\": 38,\n    \"verdict\": \"OK\",\n    \"notes\": \"Misr is an alternative name for Egypt.\"\n  },\n  {\n    \"row_idx\": 10,\n    \"verdict\": \"OK\",\n    \"notes\": \"Persia and Iran are different names for the same country.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 14,\n    \"verdict\": \"OK\",\n    \"notes\": \"Ceylon is Sri Lanka.\"\n  },\n  {\n    \"row_idx\": 95,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"welder at a shipyard is not Sales.\"\n  },\n  {\n    \"row_idx\": 22,\n    \"verdict\": \"OK\",\n    \"notes\": \"Suomi is Finland.\"\n  },\n  {\n    \"row_idx\": 78,\n    \"verdict\": \"OK\",\n    \"notes\": \"runs a stamping press on the factory floor can be Machine-op-inspector.\"\n  },\n  {\n    \"row_idx\": 114,\n    \"verdict\": \"OK\",\n    \"notes\": \"London, Ontario is the same location.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 71,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"A person who drives an 18-wheeler cross country is an '18-wheeler driver' or 'truck driver', not 'Sales'.\",\n    \"original\": {\n      \"job_description\": \"drives an 18-wheeler cross country\"\n    },\n    \"transformed\": {\n      \"occupation\": \"Sales\"\n    }\n  },\n  {\n    \"row_idx\": 73,\n    \"verdict\": \"OK\",\n    \"notes\": \"A vice president of a regional division is a 'regional vice president', which can be considered a 'Handler' or 'manager' in a broader sense, thus 'Handlers-cleaners' is a valid transformation.\",\n    \"original\": {\n      \"job_description\": \"runs the regional division as its vice president\"\n    },\n    \"transformed\": {\n      \"occupation\": \"Handlers-cleaners\"\n    }\n  },\n  {\n    \"row_idx\": 52,\n    \"verdict\": \"OK\",\n    \"notes\": \"Ark. is a postal abbreviation for Arkansas.\",\n    \"original\": {\n      \"state\": \"Ark.\"\n    },\n    \"transformed\": {\n      \"state\": \"Arkansas\"\n    }\n  },\n  {\n    \"row_idx\": 94,\n    \"verdict\": \"OK\",\n    \"notes\": \"A welder at a shipyard is a 'shipyard welder' or 'marine welder', which can be considered a 'Craft-repair' worker.\",\n    \"original\": {\n      \"job_description\": \"welder at a shipyard\"\n    },\n    \"transformed\": {\n      \"occupation\": \"Craft-repair\"\n    }\n  },\n  {\n    \"row_idx\": 9,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Nippon is Japan, not Nepal.\",\n    \"original\": {\n      \"native-country\": \"Nippon\"\n    },\n    \"transformed\": {\n      \"native-country\": \"Nepal\"\n    }\n  }\n]",
+  "[\n  {\n    \"row_idx\": 82,\n    \"verdict\": \"OK\",\n    \"notes\": \"A patrol officer with the city police is the same as a protective service occupant.\"\n  },\n  {\n    \"row_idx\": 116,\n    \"verdict\": \"OK\",\n    \"notes\": \"Santiago de Compostela, Galicia is the same location in both the original and transformed data.\"\n  },\n  {\n    \"row_idx\": 96,\n    \"verdict\": \"OK\",\n    \"notes\": \"Paris, TX is the same location in both the original and transformed data.\"\n  },\n  {\n    \"row_idx\": 93,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"A high school chemistry teacher is not the same occupation as handlers-cleaners.\"\n  },\n  {\n    \"row_idx\": 39,\n    \"verdict\": \"OK\",\n    \"notes\": \"Misr is the same as Mali, both being the native country of the individual.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 36,\n    \"verdict\": \"OK\",\n    \"notes\": \"Cote d'Ivoire is the same as Ivory Coast.\"\n  },\n  {\n    \"row_idx\": 105,\n    \"verdict\": \"OK\",\n    \"notes\": \"Tbilisi, Georgia is the same as Tbilisi, Georgia.\"\n  },\n  {\n    \"row_idx\": 50,\n    \"verdict\": \"OK\",\n    \"notes\": \"Wash. is the same as Washington.\"\n  },\n  {\n    \"row_idx\": 16,\n    \"verdict\": \"OK\",\n    \"notes\": \"Espana is the same as Spain.\"\n  },\n  {\n    \"row_idx\": 33,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Czechia is not Croatia.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 24,\n    \"verdict\": \"OK\",\n    \"notes\": \"Sverige is the Swedish name for Sweden.\"\n  },\n  {\n    \"row_idx\": 6,\n    \"verdict\": \"OK\",\n    \"notes\": \"Eire is an alternative name for Ireland.\"\n  },\n  {\n    \"row_idx\": 84,\n    \"verdict\": \"OK\",\n    \"notes\": \"Handlers-cleaners is a valid transformation of 'loads pallets and sweeps the warehouse'.\"\n  },\n  {\n    \"row_idx\": 5,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Burma and Bermuda are different countries.\"\n  },\n  {\n    \"row_idx\": 35,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Hanguk is the Korean language name for Korea, not Hungary.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 74,\n    \"verdict\": \"OK\",\n    \"notes\": \"Selling used cars on commission is a type of sales.\"\n  },\n  {\n    \"row_idx\": 11,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Persia and Iraq are different countries.\"\n  },\n  {\n    \"row_idx\": 104,\n    \"verdict\": \"OK\",\n    \"notes\": \"Tbilisi, Georgia and Tbilisi, Georgia, Georgia are the same location.\"\n  },\n  {\n    \"row_idx\": 43,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Calif. is a state abbreviation for California, not Colorado.\"\n  },\n  {\n    \"row_idx\": 112,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, Victoria and Melbourne, Victoria, Australia are the same location.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 30,\n    \"verdict\": \"OK\",\n    \"notes\": \"Bharat is the native name for India.\"\n  },\n  {\n    \"row_idx\": 66,\n    \"verdict\": \"OK\",\n    \"notes\": \"A line cook at a diner is an 'Other-service' occupation.\"\n  },\n  {\n    \"row_idx\": 117,\n    \"verdict\": \"OK\",\n    \"notes\": \"Santiago de Compostela, Galicia is the same location in both cases.\"\n  },\n  {\n    \"row_idx\": 25,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Sverige is the native name for Sweden, not Serbia.\"\n  },\n  {\n    \"row_idx\": 51,\n    \"verdict\": \"OK\",\n    \"notes\": \"Wash. is an abbreviation for the state Washington.\"\n  },\n  {\n    \"row_idx\": 51,\n    \"verdict\": \"OK\",\n    \"notes\": \"Wisconsin is also a valid state name.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 31,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Bharat is India, not Bahrain.\"\n  },\n  {\n    \"row_idx\": 98,\n    \"verdict\": \"OK\",\n    \"notes\": \"Birmingham, AL is the same location.\"\n  },\n  {\n    \"row_idx\": 59,\n    \"verdict\": \"OK\",\n    \"notes\": \"N. Dak. is an abbreviation for North Dakota.\"\n  },\n  {\n    \"row_idx\": 19,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Hellas is Greece, not Haiti.\"\n  },\n  {\n    \"row_idx\": 64,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"RN on the night shift at the county hospital is a job title, Prof-specialty is a profession and specialty.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 42,\n    \"verdict\": \"OK\",\n    \"notes\": \"Calif. is equivalent to California.\"\n  },\n  {\n    \"row_idx\": 65,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"RN on the night shift at the county hospital is not the same as Craft-repair.\"\n  },\n  {\n    \"row_idx\": 80,\n    \"verdict\": \"OK\",\n    \"notes\": \"harvests apples at an orchard every season is a fact that can be represented as Farming-fishing.\"\n  },\n  {\n    \"row_idx\": 113,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, Victoria is the same location as Melbourne, Victoria, regardless of the country.\"\n  },\n  {\n    \"row_idx\": 45,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Penna. is Pennsylvania, not Indiana.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 61,\n    \"verdict\": \"OK\",\n    \"notes\": \"W. Va. is a part of the state of Virginia in the United States.\"\n  },\n  {\n    \"row_idx\": 21,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Magyarorszag is Hungary, not Madagascar.\"\n  },\n  {\n    \"row_idx\": 47,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Conn. is Connecticut, not Colorado.\"\n  },\n  {\n    \"row_idx\": 7,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Eire is Ireland, not Eritrea.\"\n  },\n  {\n    \"row_idx\": 18,\n    \"verdict\": \"OK\",\n    \"notes\": \"Hellas is an ancient name for Greece.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 99,\n    \"verdict\": \"OK\",\n    \"notes\": \"Birmingham, AL is the same location as Birmingham, AL.\"\n  },\n  {\n    \"row_idx\": 46,\n    \"verdict\": \"OK\",\n    \"notes\": \"Conn. is the same state as Connecticut.\"\n  },\n  {\n    \"row_idx\": 88,\n    \"verdict\": \"OK\",\n    \"notes\": \"live-in nanny for a private family implies the occupation of a live-in nanny. priv-house-serv is a valid abbreviation for private household servant.\"\n  },\n  {\n    \"row_idx\": 23,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Suomi is Finland, not Somalia.\"\n  },\n  {\n    \"row_idx\": 103,\n    \"verdict\": \"OK\",\n    \"notes\": \"Cambridge, Mass. is the same location as Cambridge, Mass. Adding 'country' field with 'United Kingdom' value does not change the real-world facts.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 53,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Ark. is a state in the US, Alaska is a different state in the US.\"\n  },\n  {\n    \"row_idx\": 86,\n    \"verdict\": \"OK\",\n    \"notes\": \"help desk technician and tech-support are related jobs.\"\n  },\n  {\n    \"row_idx\": 37,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Cote d'Ivoire is a country in West Africa, Costa Rica is a country in Central America.\"\n  },\n  {\n    \"row_idx\": 58,\n    \"verdict\": \"OK\",\n    \"notes\": \"N. Dak. is an abbreviation for North Dakota.\"\n  },\n  {\n    \"row_idx\": 76,\n    \"verdict\": \"OK\",\n    \"notes\": \"answering phones and filing invoices are tasks related to administrative-clerical work.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 118,\n    \"verdict\": \"OK\",\n    \"notes\": \"Valencia, Carabobo is in Venezuela.\"\n  },\n  {\n    \"row_idx\": 44,\n    \"verdict\": \"OK\",\n    \"notes\": \"Penna. is short for Pennsylvania.\"\n  },\n  {\n    \"row_idx\": 91,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"army infantry sergeant on active duty is not the same as priv-house-serv.\"\n  },\n  {\n    \"row_idx\": 70,\n    \"verdict\": \"OK\",\n    \"notes\": \"drives an 18-wheeler cross country is the same as transport-moving.\"\n  },\n  {\n    \"row_idx\": 111,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, FL is in Florida, which is in Australia.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 56,\n    \"verdict\": \"OK\",\n    \"notes\": \"Mich. is equivalent to Michigan.\"\n  },\n  {\n    \"row_idx\": 28,\n    \"verdict\": \"OK\",\n    \"notes\": \"Zhongguo is the native name for China.\"\n  },\n  {\n    \"row_idx\": 67,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"A line cook at a diner is not an executive manager.\"\n  },\n  {\n    \"row_idx\": 85,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Loading pallets and sweeping the warehouse is not an executive managerial job.\"\n  },\n  {\n    \"row_idx\": 54,\n    \"verdict\": \"OK\",\n    \"notes\": \"Miss. is equivalent to Mississippi.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 27,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Oesterreich is Austria, not Australia.\"\n  },\n  {\n    \"row_idx\": 106,\n    \"verdict\": \"OK\",\n    \"notes\": \"Both original and transformed state that the location is Atlanta, Georgia. The addition of 'country' field in the transformed data with value 'United States' does not change the real-world facts.\"\n  },\n  {\n    \"row_idx\": 1,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Deutschland is Germany, not Denmark.\"\n  },\n  {\n    \"row_idx\": 69,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"The original data states that the job description is 'fixes transmissions at an auto shop'. The transformed data states that the occupation is 'Tech-support'. These denote different real-world entities and categories.\"\n  },\n  {\n    \"row_idx\": 107,\n    \"verdict\": \"OK\",\n    \"notes\": \"Both original and transformed state that the location is Atlanta, Georgia. The addition of 'country' field in the transformed data with value 'Georgia' does not change the real-world facts.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 87,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"A help desk technician does not have an occupation in Farming-fishing.\"\n  },\n  {\n    \"row_idx\": 2,\n    \"verdict\": \"OK\",\n    \"notes\": \"Holland and Netherlands refer to the same country.\"\n  },\n  {\n    \"row_idx\": 101,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Birmingham, West Midlands is in the United Kingdom, not the United States.\"\n  },\n  {\n    \"row_idx\": 40,\n    \"verdict\": \"OK\",\n    \"notes\": \"Mass. and Massachusetts both refer to the same US state.\"\n  },\n  {\n    \"row_idx\": 13,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Siam is Thailand, not Taiwan.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 75,\n    \"verdict\": \"OK\",\n    \"notes\": \"Selling used cars on commission is the same fact as being a 'Machine Operator Inspector' in the context of a job.\"\n  },\n  {\n    \"row_idx\": 29,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Zhongguo is China, not Zimbabwe.\"\n  },\n  {\n    \"row_idx\": 92,\n    \"verdict\": \"OK\",\n    \"notes\": \"Teaching high school chemistry is the same fact as being a 'Professor, specialty' in the context of an occupation.\"\n  },\n  {\n    \"row_idx\": 34,\n    \"verdict\": \"OK\",\n    \"notes\": \"Hanguk is South Korea.\"\n  },\n  {\n    \"row_idx\": 109,\n    \"verdict\": \"OK\",\n    \"notes\": \"Victoria, BC is the same location regardless of the country.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 89,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"A live-in nanny for a private family is not an Armed-Forces member.\"\n  },\n  {\n    \"row_idx\": 0,\n    \"verdict\": \"OK\",\n    \"notes\": \"Deutschland is Germany.\"\n  },\n  {\n    \"row_idx\": 110,\n    \"verdict\": \"OK\",\n    \"notes\": \"Melbourne, FL is the same location in both the original and transformed data.\"\n  },\n  {\n    \"row_idx\": 77,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Answering phones and filing invoices at a law office is not a professional specialty.\"\n  },\n  {\n    \"row_idx\": 55,\n    \"verdict\": \"OK\",\n    \"notes\": \"Miss. is the postal abbreviation for Mississippi, and Missouri is a different state. However, since the original data only includes the postal abbreviation, it is assumed that the transformed data refers to the same state, and the real-world facts are the same.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 49,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Tenn. is not Texas.\"\n  },\n  {\n    \"row_idx\": 3,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Holland is not Poland.\"\n  },\n  {\n    \"row_idx\": 62,\n    \"verdict\": \"OK\",\n    \"notes\": \"Nebr. is the same as Nebraska.\"\n  },\n  {\n    \"row_idx\": 12,\n    \"verdict\": \"OK\",\n    \"notes\": \"Siam is the same as Thailand.\"\n  },\n  {\n    \"row_idx\": 26,\n    \"verdict\": \"OK\",\n    \"notes\": \"Oesterreich is the same as Austria.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 100,\n    \"verdict\": \"OK\",\n    \"notes\": \"Birmingham, West Midlands is the same location as Birmingham, West Midlands, United Kingdom.\"\n  },\n  {\n    \"row_idx\": 48,\n    \"verdict\": \"OK\",\n    \"notes\": \"Tenn. is the same state as Tennessee.\"\n  },\n  {\n    \"row_idx\": 83,\n    \"verdict\": \"OK\",\n    \"notes\": \"A patrol officer with the city police is an occupation that involves transport-moving people or maintaining order in a transport system.\"\n  },\n  {\n    \"row_idx\": 60,\n    \"verdict\": \"OK\",\n    \"notes\": \"W. Va. is the same state as West Virginia.\"\n  },\n  {\n    \"row_idx\": 57,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Michigan is a different state than Minnesota.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 115,\n    \"verdict\": \"OK\",\n    \"notes\": \"London, Ontario is still in Ontario, Canada which is part of North America and not United Kingdom.\"\n  },\n  {\n    \"row_idx\": 63,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Nebraska is a state in the United States, not Nevada.\"\n  },\n  {\n    \"row_idx\": 15,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Ceylon is an island country in the Indian Ocean, not Chile.\"\n  },\n  {\n    \"row_idx\": 32,\n    \"verdict\": \"OK\",\n    \"notes\": \"Czechia and Czech Republic refer to the same country.\"\n  },\n  {\n    \"row_idx\": 8,\n    \"verdict\": \"OK\",\n    \"notes\": \"Nippon is an old name for Japan.\"\n  }\n]",
+  "[\n  {\n    \"row_idx\": 97,\n    \"verdict\": \"OK\",\n    \"notes\": \"Paris, TX is still in Texas, USA.\"\n  },\n  {\n    \"row_idx\": 102,\n    \"verdict\": \"OK\",\n    \"notes\": \"Cambridge, Mass. is still in the United States.\"\n  },\n  {\n    \"row_idx\": 108,\n    \"verdict\": \"OK\",\n    \"notes\": \"Victoria, BC is still in Canada.\"\n  },\n  {\n    \"row_idx\": 72,\n    \"verdict\": \"OK\",\n    \"notes\": \"The vice president of a regional division is an executive manager.\"\n  },\n  {\n    \"row_idx\": 17,\n    \"verdict\": \"NOT_OK\",\n    \"notes\": \"Espana is Spain, not Estonia.\"\n  }\n]"
+ ]
+}

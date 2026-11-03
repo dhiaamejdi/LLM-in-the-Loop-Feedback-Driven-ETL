@@ -1,0 +1,188 @@
+{
+ "prefix": "rev_uci",
+ "worker": "mistral",
+ "checker": "llama",
+ "seed": 3,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "NG",
+   "notes": "Whitespace was trimmed but income label was not normalized correctly. Expected '<=50K.' but got '<=50K'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 3,
+   "verdict": "NG",
+   "notes": "Whitespace was trimmed but workclass was not normalized correctly. Expected 'Private' but got ''.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 6,
+   "verdict": "NG",
+   "notes": "Whitespace was trimmed but hours-per-week was not normalized correctly. Expected '40.0' but got 'Ireland'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 7,
+   "verdict": "NG",
+   "notes": "Whitespace was trimmed but hours-per-week was not normalized correctly. Expected '63.0' but got 'United-States'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 10,
+   "verdict": "NG",
+   "notes": "Whitespace was not trimmed. Expected '29' but got '29.0'.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 13,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 17,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 22,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 26,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 35,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 39,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 40,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed in the 'sex' field.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 41,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed in the 'age' field.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 45,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 48,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 51,
+   "verdict": "NOK",
+   "notes": "Original and transformed rows have different types for 'age' and 'fnlwgt'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 57,
+   "verdict": "NOK",
+   "notes": "Original and transformed rows have different types for 'age' and 'fnlwgt'.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 60,
+   "verdict": "NOK",
+   "notes": "Original and transformed rows have different types for 'age', 'fnlwgt', 'education', 'education-num', 'capital-gain', 'capital-loss', and 'hours-per-week'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 64,
+   "verdict": "NOK",
+   "notes": "Original and transformed rows have different types for 'age', 'fnlwgt', 'education', 'education-num', 'capital-gain', 'capital-loss', and 'hours-per-week'.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 66,
+   "verdict": "NOK",
+   "notes": "Original and transformed rows have different types for 'age', 'fnlwgt', 'education', 'education-num', 'capital-gain', 'capital-loss', and 'hours-per-week'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 74,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 82,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed and labels were not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 85,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 86,
+   "verdict": "NOK",
+   "notes": "Original 'race' value was null, but transformed value was set to 'White'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 91,
+   "verdict": "NG",
+   "notes": "Occupation was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 95,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 96,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 98,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  }
+ ]
+}

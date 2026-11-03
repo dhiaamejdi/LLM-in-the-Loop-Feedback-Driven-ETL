@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "261.0",
+      "Community": "Sandwich",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-01T00:00:00",
+      "Beach Name": "Rolling Ridge Farm Homeowners Association (Lawrence Pond)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "32.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "36.0",
+      "Community": "Bourne",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-10T00:00:00",
+      "Beach Name": "Wings Neck Trust Association (North Beach)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "197.0",
+      "Community": "Nantucket",
+      "County Code": "19.0",
+      "County Description": "Nantucket",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-25T00:00:00",
+      "Beach Name": "Cisco",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "2.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "172.0",
+      "Community": "Mashpee",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-25T00:00:00",
+      "Beach Name": "John's Pond (Public) @ John's Pond (Back Road)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "297.0",
+      "Community": "Tolland",
+      "County Code": "13.0",
+      "County Description": "Hampden",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-17T00:00:00",
+      "Beach Name": "Wildwood - Lakeside",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "3.1",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "266.0",
+      "Community": "Sharon",
+      "County Code": "21.0",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-08T00:00:00",
+      "Beach Name": "Massapoag Yacht Club",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-22T00:00:00",
+      "Beach Name": "Blueberry Hill Camp (Curlew Pond)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "52.0",
+      "Community": "Carver",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-10T00:00:00",
+      "Beach Name": "Sampson's Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    }
+  ]
+}

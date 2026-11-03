@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 29,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed in 'Community' field."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 31,
+    "verdict": "Warning",
+    "notes": "Empty 'Community' field is not semantically correct."
+  },
+  {
+    "row_idx": 32,
+    "verdict": "OK",
+    "notes": ""
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": ""
+  }
+]

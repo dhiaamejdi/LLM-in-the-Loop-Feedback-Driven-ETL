@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "253.0",
+      "Community": "rowe",
+      "County Code": "11.0",
+      "County Description": "Franklin",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-24T00:00:00.000Z",
+      "Beach Name": "Rowe Town Beach at Pelham Park @ Right",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "13.4",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "197.0",
+      "Community": "Nantucket",
+      "County Code": "19.0",
+      "County Description": "Nantucket",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-16T00:00:00.000Z",
+      "Beach Name": "Children's",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "34.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "7.0",
+      "Community": "Amesbury",
+      "County Code": "9.0",
+      "County Description": "Essex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-17T00:00:00.000Z",
+      "Beach Name": "Tuxbury RV Resort Lagoon",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "1259.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "52.0",
+      "Community": "Carver",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-05-29T00:00:00.000Z",
+      "Beach Name": "John's Pond",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "126.0",
+      "Community": "Harwich",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-31T00:00:00.000Z",
+      "Beach Name": "Red River (Middle)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "79.0",
+      "Community": "Dracut",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-01T00:00:00.000Z",
+      "Beach Name": "Richardson",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "12.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "35.0",
+      "Community": "Boston",
+      "County Code": "25.0",
+      "County Description": "Suffolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-17T00:00:00.000Z",
+      "Beach Name": "Constitution (DCR) @ Middle",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "126.0",
+      "Community": "Harwich",
+      "County Code": "1.0",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-31T00:00:00.000Z",
+      "Beach Name": "Neel Road",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    }
+  ]
+}

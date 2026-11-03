@@ -1,0 +1,248 @@
+{
+ "prefix": "rev_kb",
+ "worker": "mistral",
+ "checker": "mistral",
+ "seed": 2,
+ "rows": [
+  {
+   "row_idx": 3,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Sample Date' and 'County Description' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 4,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 6,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 12,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 13,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 15,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 16,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 18,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 19,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 21,
+   "verdict": "Warning",
+   "notes": "The 'Community' field in the 'transformed' data is empty. This may not be semantically correct.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 23,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and ISO 8601 date format was added to 'Sample Date'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 24,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and no changes were made to other fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 26,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and no changes were made to other fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 30,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and no changes were made to other fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 36,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and ISO 8601 date format was added to 'Sample Date'.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 37,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Sample Date' and 'Year' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 38,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 42,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 46,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 51,
+   "verdict": "OK",
+   "notes": "",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 52,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 53,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 57,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 58,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 59,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 63,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community Description' and 'Sample Date' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 65,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 66,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 67,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 72,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was required.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 76,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Sample Date' fields.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 79,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 82,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed in 'Community' and 'Organism' fields.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 84,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 86,
+   "verdict": "OK",
+   "notes": "No whitespace trimming was necessary.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 90,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 91,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 93,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 94,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and 'County Description' label was normalized to empty string.",
+   "ground_truth_bad": true
+  }
+ ]
+}

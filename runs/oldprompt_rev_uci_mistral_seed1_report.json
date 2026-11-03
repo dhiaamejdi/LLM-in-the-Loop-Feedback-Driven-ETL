@@ -1,0 +1,188 @@
+{
+ "prefix": "rev_uci",
+ "worker": "mistral",
+ "checker": "mistral",
+ "seed": 1,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 7,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 10,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 12,
+   "verdict": "Warning",
+   "notes": "Occupation and relationship fields in the transformed data are empty, but they were not empty in the original data.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 19,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 21,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 22,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 24,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 30,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 31,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 33,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 34,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 35,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 36,
+   "verdict": "Error",
+   "notes": "occupation was not transformed: 'Exec-managerial' should be transformed to a semantically correct version",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 43,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 48,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 50,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 55,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 56,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 63,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 69,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 70,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 77,
+   "verdict": "Error",
+   "notes": "Income label in original data is not semantically correct as it contains '>' symbol. The transformed data should only contain semantically correct labels.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 78,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 80,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 89,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 91,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 94,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  }
+ ]
+}

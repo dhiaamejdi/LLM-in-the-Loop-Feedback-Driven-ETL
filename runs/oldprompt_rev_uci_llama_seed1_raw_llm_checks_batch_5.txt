@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 21,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "OK",
+    "notes": "All values were trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "NOK",
+    "notes": "Values were not trimmed and labels were not normalized correctly. 'divorced' was not normalized to 'Divorced', 'united-states' was not normalized to 'United-States', and '<=50k' was not normalized to '<=50K'."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "NOK",
+    "notes": "Values were not trimmed and labels were not normalized correctly. '354104' was not trimmed, '9' was not trimmed, and '<=50K' was not normalized to '<=50K'."
+  }
+]

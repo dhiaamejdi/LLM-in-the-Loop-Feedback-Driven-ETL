@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 18,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in race was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in income was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in capital-loss was not trimmed; capital-loss value was not normalized."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "Warning",
+    "notes": "Community is empty in the transformed data. This may not be semantically correct."
+  },
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  }
+]

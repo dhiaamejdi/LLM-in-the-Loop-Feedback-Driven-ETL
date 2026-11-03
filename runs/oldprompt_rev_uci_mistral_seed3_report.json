@@ -1,0 +1,188 @@
+{
+ "prefix": "rev_uci",
+ "worker": "mistral",
+ "checker": "mistral",
+ "seed": 3,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 3,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 6,
+   "verdict": "Warning",
+   "notes": "The 'native-country' label in the 'transformed' data is empty. It should be 'Ireland' to maintain semantic correctness.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 7,
+   "verdict": "Warning",
+   "notes": "The 'hours-per-week' label in the 'transformed' data is 'United-States'. It should be empty to maintain semantic correctness.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 10,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 13,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 17,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 22,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 26,
+   "verdict": "Warning",
+   "notes": "The 'workclass' and 'race' labels in the 'transformed' object were normalized to all lowercase, but the rule does not specify this behavior for these labels. The transformation is still semantically correct, but the 'verdict' is marked as a warning to reflect the potential discrepancy.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 35,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 39,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 40,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 41,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 45,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and marital_status was set to an empty string.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 48,
+   "verdict": "Error",
+   "notes": "The income label in the original data is '>50K' which is not semantically correct for this rule. It should be '<=50K' or '<=50K.' instead.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 51,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 57,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 60,
+   "verdict": "Warning",
+   "notes": "Age value in 'transformed' should be an integer, not a string.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 64,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 66,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 74,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 82,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 85,
+   "verdict": "NG",
+   "notes": "Income label was not normalized to a number.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 86,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 91,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 95,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 96,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 98,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and income label was normalized correctly.",
+   "ground_truth_bad": true
+  }
+ ]
+}

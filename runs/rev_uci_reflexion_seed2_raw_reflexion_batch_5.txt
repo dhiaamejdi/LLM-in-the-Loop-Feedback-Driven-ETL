@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 18,
+    "verdict": "OK",
+    "notes": "All fields have been trimmed and normalized."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "OK",
+    "notes": "Race label has been normalized and all fields are as expected."
+  },
+  {
+    "row_idx": 24,
+    "verdict": "OK",
+    "notes": "Leading whitespace removed from income label and education-num field."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "Capital loss value has been converted to number and all fields are as expected."
+  },
+  {
+    "row_idx": 27,
+    "verdict": "OK",
+    "notes": "Occupation label has been corrected to Handlers-cleaners and all fields are as expected."
+  }
+]

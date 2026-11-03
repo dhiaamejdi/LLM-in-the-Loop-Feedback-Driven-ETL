@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 48,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 50,
+    "verdict": "NOT_OK",
+    "notes": "String values in 'transformed' are not the same type as 'original' for 'age' and 'fnlwgt' fields."
+  },
+  {
+    "row_idx": 55,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 56,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 63,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and income label normalized correctly."
+  },
+  {
+    "row_idx": 50,
+    "verdict": "NOT_OK",
+    "notes": "Leading whitespace in 'workclass' and 'occupation' fields were not trimmed."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields, income label normalized correctly, and 'native-country' value set to null."
+  },
+  {
+    "row_idx": 3,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields and income label normalized correctly."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields and 'native-country' value set to null."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "OK",
+    "notes": "Whitespace removed from empty fields and 'hours-per-week' value corrected to a number."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "OK",
+    "notes": "Whitespace removed from 'age' field and income label normalized correctly."
+  }
+]

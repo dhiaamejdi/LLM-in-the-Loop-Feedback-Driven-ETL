@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 12,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 15,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 23,
+    "verdict": "OK",
+    "notes": "Whitespace and label formatting in keys preserved, and all values are the same."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "OK",
+    "notes": "Community key in 'transformed' is empty, but it should be the same as in 'original'. In this case, it is 'Margaret Lindley Park'. So, the 'transformed' object should be updated accordingly."
+  }
+]

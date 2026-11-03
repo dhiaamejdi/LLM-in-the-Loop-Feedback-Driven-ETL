@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in capital-gain, capital-loss, hours-per-week, native-country; income label normalized incorrectly."
+  },
+  {
+    "row_idx": 3,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in workclass, capital-gain, capital-loss, hours-per-week, native-country; income label normalized incorrectly."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in hours-per-week; native-country value incorrect."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in hours-per-week; native-country value incorrect; income value incorrect."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age; income label normalized incorrectly."
+  }
+]

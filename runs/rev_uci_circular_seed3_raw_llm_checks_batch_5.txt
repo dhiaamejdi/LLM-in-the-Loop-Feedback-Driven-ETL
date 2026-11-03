@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 13,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 17,
+    "verdict": "OK",
+    "notes": "No changes to make."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "NOT_OK",
+    "notes": "Relationship label is null instead of 'Not-in-family'."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  }
+]

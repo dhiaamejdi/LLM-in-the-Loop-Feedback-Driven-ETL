@@ -1,0 +1,32 @@
+[
+  {
+    "row_idx": 38,
+    "verdict": "OK",
+    "notes": "Whitespace in Year and Sample Date transformed to ISO format, no other changes."
+  },
+  {
+    "row_idx": 42,
+    "verdict": "OK",
+    "notes": "No changes necessary."
+  },
+  {
+    "row_idx": 46,
+    "verdict": "OK",
+    "notes": "No changes necessary."
+  },
+  {
+    "row_idx": 49,
+    "verdict": "OK",
+    "notes": "Whitespace in Sample Date transformed to ISO format."
+  },
+  {
+    "row_idx": 51,
+    "verdict": "OK",
+    "notes": "No changes necessary."
+  },
+  {
+    "row_idx": 52,
+    "verdict": "OK",
+    "notes": "Beach Type Description transformed to 'Marine'."
+  }
+]

@@ -1,0 +1,188 @@
+{
+ "prefix": "rev_uci",
+ "worker": "mistral",
+ "checker": "llama",
+ "seed": 2,
+ "rows": [
+  {
+   "row_idx": 4,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 7,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 14,
+   "verdict": "NOK",
+   "notes": "Whitespace was trimmed but native-country was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 15,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 17,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 18,
+   "verdict": "OK",
+   "notes": "All fields were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 22,
+   "verdict": "OK",
+   "notes": "All fields were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 24,
+   "verdict": "OK",
+   "notes": "All fields were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 26,
+   "verdict": "OK",
+   "notes": "All fields were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 27,
+   "verdict": "OK",
+   "notes": "All fields were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 31,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 34,
+   "verdict": "OK",
+   "notes": "Labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 41,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 42,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 48,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 51,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 59,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 61,
+   "verdict": "NOK",
+   "notes": "Original 'marital-status' value was not trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 65,
+   "verdict": "NOK",
+   "notes": "Original 'marital-status' value was not trimmed.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 71,
+   "verdict": "NOK",
+   "notes": "Original 'income' label was not normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 74,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed and occupation label was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 77,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 81,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed and relationship label was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 82,
+   "verdict": "NOK",
+   "notes": "Whitespace was not trimmed and occupation label was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 86,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 89,
+   "verdict": "NG",
+   "notes": "Labels were not normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 92,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 93,
+   "verdict": "NG",
+   "notes": "Income label was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 96,
+   "verdict": "NG",
+   "notes": "Multiple fields were not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 97,
+   "verdict": "NG",
+   "notes": "Multiple fields were not normalized correctly.",
+   "ground_truth_bad": true
+  }
+ ]
+}

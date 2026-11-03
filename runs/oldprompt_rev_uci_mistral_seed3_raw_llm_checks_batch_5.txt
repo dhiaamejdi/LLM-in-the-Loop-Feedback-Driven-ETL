@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 13,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 17,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 22,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  },
+  {
+    "row_idx": 26,
+    "verdict": "Warning",
+    "notes": "The 'workclass' and 'race' labels in the 'transformed' object were normalized to all lowercase, but the rule does not specify this behavior for these labels. The transformation is still semantically correct, but the 'verdict' is marked as a warning to reflect the potential discrepancy."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and income label was normalized correctly."
+  }
+]

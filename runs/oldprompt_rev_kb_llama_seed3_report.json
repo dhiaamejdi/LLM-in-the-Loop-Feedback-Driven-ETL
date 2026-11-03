@@ -1,0 +1,248 @@
+{
+ "prefix": "rev_kb",
+ "worker": "mistral",
+ "checker": "llama",
+ "seed": 3,
+ "rows": [
+  {
+   "row_idx": 2,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 5,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 6,
+   "verdict": "NOK",
+   "notes": "Community label was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 9,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 11,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 12,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 15,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 19,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 23,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 26,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 29,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 30,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 31,
+   "verdict": "NOK",
+   "notes": "Community and Beach Type Description were not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 32,
+   "verdict": "NOK",
+   "notes": "Sample Date was not normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 35,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 36,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 37,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 39,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 43,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 45,
+   "verdict": "OK",
+   "notes": "All values were trimmed, but 'Year' was not normalized because it was null in the original data.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 49,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 51,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 52,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 53,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 57,
+   "verdict": "OK",
+   "notes": "Whitespace was trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 58,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 62,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 63,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 64,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 66,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 68,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 73,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 78,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 84,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 86,
+   "verdict": "OK",
+   "notes": "All values were trimmed and date format was normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 87,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 88,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 92,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": false
+  },
+  {
+   "row_idx": 97,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  },
+  {
+   "row_idx": 98,
+   "verdict": "OK",
+   "notes": "All values were trimmed and labels were normalized correctly.",
+   "ground_truth_bad": true
+  }
+ ]
+}

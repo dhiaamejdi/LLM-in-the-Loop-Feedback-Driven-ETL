@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 3,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Sample Date was not trimmed; County Code is not a string; Year is not a string; Sample Date is not in ISO 8601 format."
+  },
+  {
+    "row_idx": 4,
+    "verdict": "NOT_OK",
+    "notes": "County Code is not a string; Year is not a string; Sample Date is not in ISO 8601 format."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Sample Date was not trimmed; Year is not a string; Sample Date is not in ISO 8601 format."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Sample Date was not trimmed; Year is not a string; Sample Date is not in ISO 8601 format."
+  },
+  {
+    "row_idx": 13,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Sample Date was not trimmed; Year is not a string; Sample Date is not in ISO 8601 format."
+  }
+]

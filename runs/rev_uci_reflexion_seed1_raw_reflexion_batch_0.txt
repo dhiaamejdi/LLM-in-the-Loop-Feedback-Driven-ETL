@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 7,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed, income label normalized, and 'marital-status' and 'occupation' fields have null values corrected."
+  },
+  {
+    "row_idx": 10,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOT_OK",
+    "notes": "Missing 'num' suffix in 'education-num' field and 'occupation' and 'relationship' fields have empty strings."
+  },
+  {
+    "row_idx": 19,
+    "verdict": "OK",
+    "notes": "Whitespace and income label normalized correctly."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 39,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, education, sex, capital-gain, capital-loss, income; wrong casing in workclass, education, marital-status, occupation, relationship, sex, income."
+  },
+  {
+    "row_idx": 40,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, sex, income; wrong casing in workclass, marital-status, sex, income."
+  },
+  {
+    "row_idx": 41,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, sex, income; wrong casing in workclass, marital-status, sex, income."
+  },
+  {
+    "row_idx": 45,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, marital-status, income; wrong casing in workclass, marital-status, income."
+  },
+  {
+    "row_idx": 48,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in age, sex, capital-loss, income; wrong casing in workclass, marital-status, sex, income."
+  }
+]

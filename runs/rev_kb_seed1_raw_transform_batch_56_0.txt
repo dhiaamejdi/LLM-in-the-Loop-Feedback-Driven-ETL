@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "Community Code": "176.0",
+      "Community": "Medford",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-11T00:00:00",
+      "Beach Name": "Wrights Pond @ Shallow End",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "308.0",
+      "Violation": "YES"
+    },
+    {
+      "Community Code": "22.0",
+      "Community": "Becket",
+      "County Code": "3.0",
+      "County Description": "Berkshire",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-17T00:00:00",
+      "Beach Name": "Indian Lake Assoc - Boulder Beach",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "1.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "155.0",
+      "Community": "Lexington",
+      "County Code": "17.0",
+      "County Description": "Middlesex",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-09T00:00:00",
+      "Beach Name": "Old Reservoir Swim Area #1",
+      "Beach Type Description": "Fresh",
+      "Organism": "Enterococci",
+      "Indicator Level": "5.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "239.0",
+      "Community": "Plymouth",
+      "County Code": "23.0",
+      "County Description": "Plymouth",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-18T00:00:00",
+      "Beach Name": "Fresh Pond @ 1 (End Pond)",
+      "Beach Type Description": "Fresh",
+      "Organism": "E. Coli",
+      "Indicator Level": "68.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "126.0",
+      "Community": "Harwich",
+      "County Code": "Barnstable",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-07-02T00:00:00",
+      "Beach Name": "Neel Road",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "4.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "Norfolk",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-08-20T00:00:00",
+      "Beach Name": "Wollaston @ Milton Street (DCR)",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "243.0",
+      "Community": "Quincy",
+      "County Code": "Norfolk",
+      "County Description": "Norfolk",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-18T00:00:00",
+      "Beach Name": "Delano Ave.",
+      "Beach Type Description": "Marine",
+      "Organism": "Enterococci",
+      "Indicator Level": "20.0",
+      "Violation": "NO"
+    },
+    {
+      "Community Code": "96.0",
+      "Community": "Falmouth",
+      "County Code": "Barnstable",
+      "County Description": "Barnstable",
+      "Year": "2019.0",
+      "Sample Date": "2019-06-18T00:00:00",
+      "Beach Name": "Chapoquoit Associates (Big)",
+      "Beach Type Description": "Marine",
+      "Organism": "enterococci",
+      "Indicator Level": "6.0",
+      "Violation": "NO"
+    }
+  ]
+}

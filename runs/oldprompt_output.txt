@@ -1,0 +1,13 @@
+flags = any non-OK verdict; exact = literally NOT_OK; miss = no parsable verdict
+transforms  checker  rel    rows pos | early prompt: exact other miss flags TP FP | ablation prompt: exact miss TP FP
+rev_uci     llama    cross    90  47 |   0  39   0  39  25  14 |  78   0  43  35
+rev_uci     mistral  same     90  47 |   0  12   0  12  12   0 |  13   0  12   1
+rev_kb      llama    cross   120 109 |   0  11   0  11  11   0 |  86  20  77   9
+rev_kb      mistral  same    120 109 |   0   7   0   7   7   0 |  11   0  11   0
+kb          llama    same     40  21 |   0   3   0   3   3   0 |  33   5  19  14
+kb          mistral  cross    40  21 |   0   3   0   3   3   0 |   5   0   5   0
+TOTAL llama early prompt: 250 rows, 177 bad; exact 0; other words 53; missing 0; flags 53 (21%); recall 0.220; precision 0.736
+TOTAL llama ablation prompt: 250 rows, 177 bad; exact 197; other words 0; missing 25; flags 197 (79%); recall 0.785; precision 0.706
+TOTAL mistral early prompt: 250 rows, 177 bad; exact 0; other words 22; missing 0; flags 22 (9%); recall 0.124; precision 1.000
+TOTAL mistral ablation prompt: 250 rows, 177 bad; exact 29; other words 0; missing 0; flags 29 (12%); recall 0.158; precision 0.966
+non-OK verdict words: {'llama': {'NOK': 36, 'NG': 17}, 'mistral': {'Warning': 9, 'Error': 4, 'NG': 3, 'Invalid': 6}}

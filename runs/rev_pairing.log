@@ -1,0 +1,2804 @@
+=== UCI Adult, reversed pairing (seeds: 1,2,3) ===
+
+=== Safeguarded pipeline | mode=circular | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+W1102 20:18:41.328000 48756 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: mistralai/Mistral-7B-Instruct-v0.2 (quantization=4bit)
+W1102 20:18:46.875000 48756 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files:  33%|███▎      | 1/3 [20:03<40:06, 1203.25s/it]Fetching 3 files:  67%|██████▋   | 2/3 [22:08<09:29, 569.28s/it] Fetching 3 files: 100%|██████████| 3/3 [22:13<00:00, 311.28s/it]Fetching 3 files: 100%|██████████| 3/3 [22:13<00:00, 444.33s/it]
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:33,  3.09it/s]Loading weights:   1%|          | 2/291 [00:00<01:28,  3.27it/s]Loading weights:   1%|▏         | 4/291 [00:00<01:00,  4.76it/s]Loading weights:   2%|▏         | 5/291 [00:01<00:51,  5.51it/s]Loading weights:   2%|▏         | 6/291 [00:01<00:46,  6.13it/s]Loading weights:   4%|▍         | 13/291 [00:01<00:17, 15.90it/s]Loading weights:   5%|▌         | 15/291 [00:01<00:21, 12.60it/s]Loading weights:   8%|▊         | 22/291 [00:01<00:14, 18.95it/s]Loading weights:   8%|▊         | 24/291 [00:02<00:17, 15.15it/s]Loading weights:  11%|█         | 31/291 [00:02<00:12, 20.17it/s]Loading weights:  12%|█▏        | 34/291 [00:02<00:14, 17.34it/s]Loading weights:  14%|█▎        | 40/291 [00:02<00:12, 20.52it/s]Loading weights:  15%|█▍        | 43/291 [00:03<00:13, 17.96it/s]Loading weights:  17%|█▋        | 49/291 [00:03<00:11, 20.82it/s]Loading weights:  18%|█▊        | 52/291 [00:03<00:13, 17.80it/s]Loading weights:  20%|█▉        | 58/291 [00:03<00:11, 20.81it/s]Loading weights:  21%|██        | 61/291 [00:03<00:13, 17.62it/s]Loading weights:  23%|██▎       | 67/291 [00:04<00:10, 20.61it/s]Loading weights:  24%|██▍       | 70/291 [00:04<00:12, 17.83it/s]Loading weights:  26%|██▌       | 76/291 [00:04<00:10, 20.90it/s]Loading weights:  27%|██▋       | 79/291 [00:04<00:10, 19.31it/s]Loading weights:  29%|██▉       | 85/291 [00:04<00:08, 24.69it/s]Loading weights:  30%|███       | 88/291 [00:05<00:08, 23.26it/s]Loading weights:  32%|███▏      | 94/291 [00:05<00:07, 26.03it/s]Loading weights:  33%|███▎      | 97/291 [00:05<00:09, 20.85it/s]Loading weights:  35%|███▌      | 103/291 [00:05<00:08, 22.83it/s]Loading weights:  36%|███▋      | 106/291 [00:06<00:10, 17.81it/s]Loading weights:  38%|███▊      | 110/291 [00:06<00:08, 21.14it/s]Loading weights:  39%|███▉      | 113/291 [00:06<00:10, 16.46it/s]Loading weights:  40%|███▉      | 116/291 [00:06<00:10, 16.95it/s]Loading weights:  42%|████▏     | 121/291 [00:06<00:09, 17.90it/s]Loading weights:  43%|████▎     | 124/291 [00:07<00:11, 14.92it/s]Loading weights:  44%|████▍     | 128/291 [00:07<00:08, 18.61it/s]Loading weights:  45%|████▌     | 131/291 [00:07<00:10, 14.92it/s]Loading weights:  46%|████▌     | 133/291 [00:07<00:10, 14.56it/s]Loading weights:  48%|████▊     | 139/291 [00:08<00:08, 17.18it/s]Loading weights:  48%|████▊     | 141/291 [00:08<00:11, 13.25it/s]Loading weights:  50%|█████     | 146/291 [00:08<00:07, 18.37it/s]Loading weights:  51%|█████     | 149/291 [00:08<00:09, 14.92it/s]Loading weights:  52%|█████▏    | 152/291 [00:08<00:08, 15.70it/s]Loading weights:  54%|█████▍    | 157/291 [00:09<00:07, 16.89it/s]Loading weights:  55%|█████▍    | 159/291 [00:09<00:10, 12.26it/s]Loading weights:  56%|█████▋    | 164/291 [00:09<00:07, 17.26it/s]Loading weights:  57%|█████▋    | 167/291 [00:10<00:08, 14.36it/s]Loading weights:  58%|█████▊    | 170/291 [00:10<00:07, 15.42it/s]Loading weights:  60%|██████    | 175/291 [00:10<00:06, 17.10it/s]Loading weights:  61%|██████    | 178/291 [00:10<00:07, 14.74it/s]Loading weights:  63%|██████▎   | 184/291 [00:10<00:05, 17.92it/s]Loading weights:  64%|██████▍   | 186/291 [00:11<00:07, 14.40it/s]Loading weights:  66%|██████▌   | 191/291 [00:11<00:05, 19.53it/s]Loading weights:  67%|██████▋   | 194/291 [00:11<00:06, 15.68it/s]Loading weights:  68%|██████▊   | 197/291 [00:11<00:05, 16.72it/s]Loading weights:  69%|██████▉   | 202/291 [00:11<00:04, 18.34it/s]Loading weights:  70%|███████   | 205/291 [00:12<00:05, 15.14it/s]Loading weights:  73%|███████▎  | 211/291 [00:12<00:04, 17.88it/s]Loading weights:  73%|███████▎  | 213/291 [00:12<00:05, 13.86it/s]Loading weights:  76%|███████▌  | 220/291 [00:13<00:03, 17.82it/s]Loading weights:  76%|███████▋  | 222/291 [00:13<00:04, 14.16it/s]Loading weights:  78%|███████▊  | 228/291 [00:13<00:03, 20.38it/s]Loading weights:  79%|███████▉  | 231/291 [00:13<00:04, 13.57it/s]Loading weights:  81%|████████  | 236/291 [00:14<00:03, 18.10it/s]Loading weights:  82%|████████▏ | 240/291 [00:14<00:04, 12.61it/s]Loading weights:  84%|████████▍ | 244/291 [00:14<00:02, 15.71it/s]Loading weights:  85%|████████▍ | 247/291 [00:14<00:02, 16.09it/s]Loading weights:  86%|████████▌ | 250/291 [00:15<00:02, 13.86it/s]Loading weights:  88%|████████▊ | 256/291 [00:15<00:02, 16.56it/s]Loading weights:  89%|████████▉ | 259/291 [00:15<00:02, 14.22it/s]Loading weights:  91%|█████████ | 265/291 [00:16<00:01, 16.79it/s]Loading weights:  92%|█████████▏| 267/291 [00:16<00:01, 13.48it/s]Loading weights:  94%|█████████▍| 274/291 [00:16<00:01, 16.65it/s]Loading weights:  95%|█████████▍| 276/291 [00:17<00:01, 12.91it/s]Loading weights:  97%|█████████▋| 281/291 [00:17<00:00, 17.45it/s]Loading weights:  98%|█████████▊| 284/291 [00:17<00:00, 14.32it/s]Loading weights:  98%|█████████▊| 286/291 [00:17<00:00, 14.08it/s]Loading weights: 100%|██████████| 291/291 [00:17<00:00, 16.44it/s]
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 0..9 (batch 1/10)
+  chunk 0 attempt 1 unparsable (no valid, balanced JSON block found)
+  splitting chunk 0 (10 rows) -> halves
+  chunk 0a attempt 1 unparsable (no valid, balanced JSON block found)
+  splitting chunk 0a (5 rows) -> halves
+  batch done in 150.5s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 10..19 (batch 2/10)
+  batch done in 52.5s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 20..29 (batch 3/10)
+  batch done in 63.5s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 30..39 (batch 4/10)
+  batch done in 48.3s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 40..49 (batch 5/10)
+  batch done in 60.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 50..59 (batch 6/10)
+  batch done in 65.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 60..69 (batch 7/10)
+  batch done in 57.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 70..79 (batch 8/10)
+  batch done in 58.1s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 80..89 (batch 9/10)
+  batch done in 52.3s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 90..99 (batch 10/10)
+  batch done in 62.0s
+[Worker LLM] WARNING: 4/100 rows (4.0%) fell back to originals. If this exceeds a few percent, results reflect a partially-passthrough worker — reduce --batch-size or raise --max-new-tokens and rerun.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=circular) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 14.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.5s
+
+[Done] Report saved to runs/rev_uci_circular_seed1_final_report.json
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 13,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 3,
+    "recall": 0.1875,
+    "recall_ci95": [
+      0.0405,
+      0.4565
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.2924,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 13,
+        "tn": 14
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=circular | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 0..9 (batch 1/10)
+  batch done in 69.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 10..19 (batch 2/10)
+  batch done in 73.1s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 20..29 (batch 3/10)
+  batch done in 60.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 30..39 (batch 4/10)
+  batch done in 61.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 40..49 (batch 5/10)
+  batch done in 62.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 50..59 (batch 6/10)
+  batch done in 60.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 60..69 (batch 7/10)
+  batch done in 67.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 70..79 (batch 8/10)
+  batch done in 85.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 80..89 (batch 9/10)
+  batch done in 71.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 90..99 (batch 10/10)
+  batch done in 55.5s
+[Worker LLM] WARNING: 2/100 rows (2.0%) fell back to originals. If this exceeds a few percent, results reflect a partially-passthrough worker — reduce --batch-size or raise --max-new-tokens and rerun.
+[Ground truth] 55/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=circular) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 15.9s
+
+[Done] Report saved to runs/rev_uci_circular_seed2_final_report.json
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "checker_metrics": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 11,
+    "tn": 15,
+    "ground_truth_positives": 15,
+    "rows_flagged": 4,
+    "recall": 0.26666666666666666,
+    "recall_ci95": [
+      0.0779,
+      0.551
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.3976,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 11,
+        "tn": 15
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=circular | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 0..9 (batch 1/10)
+  batch done in 57.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 10..19 (batch 2/10)
+  batch done in 64.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 20..29 (batch 3/10)
+  batch done in 66.1s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 30..39 (batch 4/10)
+  batch done in 61.1s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 40..49 (batch 5/10)
+  batch done in 64.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 50..59 (batch 6/10)
+  batch done in 58.9s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 60..69 (batch 7/10)
+  batch done in 61.5s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 70..79 (batch 8/10)
+  batch done in 78.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 80..89 (batch 9/10)
+  batch done in 57.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 90..99 (batch 10/10)
+  batch done in 95.8s
+[Worker LLM] All 100 rows transformed by the model (0 fallbacks).
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=circular) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 28.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 27.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 30.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 26.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 23.2s
+
+[Done] Report saved to runs/rev_uci_circular_seed3_final_report.json
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 5,
+    "fp": 1,
+    "fn": 11,
+    "tn": 13,
+    "ground_truth_positives": 16,
+    "rows_flagged": 6,
+    "recall": 0.3125,
+    "recall_ci95": [
+      0.1102,
+      0.5866
+    ],
+    "precision": 0.8333333333333334,
+    "precision_ci95": [
+      0.3588,
+      0.9958
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 11,
+        "tn": 13
+      }
+    }
+  }
+}
+Total execution time: 3704.21 seconds.
+
+=== Safeguarded pipeline | mode=reflexion | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=reflexion) ---
+W1102 21:21:18.743000 20040 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: mistralai/Mistral-7B-Instruct-v0.2 (quantization=4bit)
+W1102 21:21:22.776000 20040 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<02:49,  1.71it/s]Loading weights:   1%|          | 2/291 [00:01<02:36,  1.84it/s]Loading weights:   1%|▏         | 4/291 [00:01<01:21,  3.53it/s]Loading weights:   2%|▏         | 5/291 [00:01<01:13,  3.88it/s]Loading weights:   2%|▏         | 6/291 [00:01<01:08,  4.16it/s]Loading weights:   3%|▎         | 10/291 [00:01<00:29,  9.59it/s]Loading weights:   4%|▍         | 13/291 [00:02<00:25, 10.88it/s]Loading weights:   5%|▌         | 15/291 [00:02<00:33,  8.16it/s]Loading weights:   7%|▋         | 19/291 [00:02<00:21, 12.52it/s]Loading weights:   8%|▊         | 22/291 [00:02<00:20, 12.86it/s]Loading weights:   8%|▊         | 24/291 [00:03<00:27,  9.72it/s]Loading weights:  10%|▉         | 28/291 [00:03<00:19, 13.73it/s]Loading weights:  11%|█         | 31/291 [00:03<00:20, 12.84it/s]Loading weights:  11%|█▏        | 33/291 [00:04<00:29,  8.69it/s]Loading weights:  13%|█▎        | 37/291 [00:04<00:21, 11.91it/s]Loading weights:  14%|█▎        | 40/291 [00:04<00:21, 11.72it/s]Loading weights:  14%|█▍        | 42/291 [00:04<00:28,  8.82it/s]Loading weights:  16%|█▌        | 46/291 [00:05<00:19, 12.33it/s]Loading weights:  17%|█▋        | 49/291 [00:05<00:19, 12.27it/s]Loading weights:  18%|█▊        | 51/291 [00:05<00:28,  8.41it/s]Loading weights:  19%|█▉        | 55/291 [00:05<00:20, 11.33it/s]Loading weights:  20%|█▉        | 58/291 [00:06<00:20, 11.11it/s]Loading weights:  21%|██        | 60/291 [00:06<00:28,  8.02it/s]Loading weights:  22%|██▏       | 64/291 [00:06<00:20, 11.10it/s]Loading weights:  23%|██▎       | 67/291 [00:07<00:20, 10.70it/s]Loading weights:  24%|██▎       | 69/291 [00:07<00:29,  7.44it/s]Loading weights:  25%|██▌       | 73/291 [00:07<00:21, 10.17it/s]Loading weights:  26%|██▌       | 76/291 [00:08<00:20, 10.30it/s]Loading weights:  27%|██▋       | 78/291 [00:08<00:27,  7.72it/s]Loading weights:  28%|██▊       | 82/291 [00:08<00:19, 10.79it/s]Loading weights:  29%|██▉       | 85/291 [00:09<00:18, 11.01it/s]Loading weights:  30%|██▉       | 87/291 [00:09<00:24,  8.19it/s]Loading weights:  31%|███▏      | 91/291 [00:09<00:17, 11.35it/s]Loading weights:  32%|███▏      | 94/291 [00:09<00:17, 11.02it/s]Loading weights:  33%|███▎      | 96/291 [00:10<00:26,  7.33it/s]Loading weights:  34%|███▍      | 99/291 [00:10<00:19,  9.64it/s]Loading weights:  35%|███▌      | 103/291 [00:11<00:19,  9.86it/s]Loading weights:  36%|███▌      | 105/291 [00:11<00:25,  7.27it/s]Loading weights:  37%|███▋      | 109/291 [00:11<00:18,  9.87it/s]Loading weights:  38%|███▊      | 112/291 [00:12<00:18,  9.67it/s]Loading weights:  39%|███▉      | 114/291 [00:12<00:24,  7.23it/s]Loading weights:  41%|████      | 118/291 [00:12<00:17, 10.02it/s]Loading weights:  42%|████▏     | 121/291 [00:13<00:16, 10.12it/s]Loading weights:  42%|████▏     | 123/291 [00:13<00:22,  7.37it/s]Loading weights:  44%|████▎     | 127/291 [00:13<00:15, 10.28it/s]Loading weights:  45%|████▍     | 130/291 [00:13<00:14, 10.75it/s]Loading weights:  45%|████▌     | 132/291 [00:14<00:19,  8.08it/s]Loading weights:  47%|████▋     | 136/291 [00:14<00:14, 10.96it/s]Loading weights:  48%|████▊     | 139/291 [00:14<00:13, 10.86it/s]Loading weights:  48%|████▊     | 141/291 [00:15<00:18,  8.02it/s]Loading weights:  50%|████▉     | 145/291 [00:15<00:13, 10.87it/s]Loading weights:  51%|█████     | 148/291 [00:15<00:13, 10.46it/s]Loading weights:  52%|█████▏    | 150/291 [00:16<00:18,  7.45it/s]Loading weights:  53%|█████▎    | 154/291 [00:16<00:13, 10.30it/s]Loading weights:  54%|█████▍    | 157/291 [00:16<00:13, 10.30it/s]Loading weights:  55%|█████▍    | 159/291 [00:17<00:18,  7.12it/s]Loading weights:  56%|█████▌    | 163/291 [00:17<00:13,  9.77it/s]Loading weights:  57%|█████▋    | 166/291 [00:17<00:12,  9.63it/s]Loading weights:  58%|█████▊    | 168/291 [00:18<00:18,  6.83it/s]Loading weights:  59%|█████▉    | 172/291 [00:18<00:12,  9.44it/s]Loading weights:  60%|██████    | 175/291 [00:18<00:11,  9.81it/s]Loading weights:  61%|██████    | 177/291 [00:19<00:15,  7.46it/s]Loading weights:  62%|██████▏   | 181/291 [00:19<00:10, 10.41it/s]Loading weights:  63%|██████▎   | 184/291 [00:19<00:10, 10.43it/s]Loading weights:  64%|██████▍   | 186/291 [00:20<00:13,  7.54it/s]Loading weights:  65%|██████▍   | 189/291 [00:20<00:10,  9.86it/s]Loading weights:  66%|██████▋   | 193/291 [00:20<00:09, 10.03it/s]Loading weights:  67%|██████▋   | 195/291 [00:21<00:13,  7.29it/s]Loading weights:  68%|██████▊   | 199/291 [00:21<00:09,  9.96it/s]Loading weights:  69%|██████▉   | 202/291 [00:21<00:08,  9.95it/s]Loading weights:  70%|███████   | 204/291 [00:22<00:11,  7.29it/s]Loading weights:  71%|███████▏  | 208/291 [00:22<00:08, 10.13it/s]Loading weights:  73%|███████▎  | 211/291 [00:22<00:07, 10.73it/s]Loading weights:  73%|███████▎  | 213/291 [00:23<00:09,  8.16it/s]Loading weights:  75%|███████▍  | 217/291 [00:23<00:06, 11.15it/s]Loading weights:  76%|███████▌  | 220/291 [00:23<00:06, 11.21it/s]Loading weights:  76%|███████▋  | 222/291 [00:24<00:08,  8.37it/s]Loading weights:  78%|███████▊  | 226/291 [00:24<00:05, 11.63it/s]Loading weights:  79%|███████▊  | 229/291 [00:24<00:05, 11.06it/s]Loading weights:  79%|███████▉  | 231/291 [00:25<00:08,  7.50it/s]Loading weights:  81%|████████  | 235/291 [00:25<00:05, 10.13it/s]Loading weights:  82%|████████▏ | 238/291 [00:25<00:05,  9.97it/s]Loading weights:  82%|████████▏ | 240/291 [00:26<00:07,  7.17it/s]Loading weights:  84%|████████▍ | 244/291 [00:26<00:04,  9.83it/s]Loading weights:  85%|████████▍ | 247/291 [00:26<00:04,  9.79it/s]Loading weights:  86%|████████▌ | 249/291 [00:27<00:05,  7.30it/s]Loading weights:  87%|████████▋ | 253/291 [00:27<00:03, 10.04it/s]Loading weights:  88%|████████▊ | 256/291 [00:27<00:03,  9.98it/s]Loading weights:  89%|████████▊ | 258/291 [00:28<00:04,  7.27it/s]Loading weights:  90%|█████████ | 262/291 [00:28<00:02, 10.07it/s]Loading weights:  91%|█████████ | 265/291 [00:28<00:02,  9.99it/s]Loading weights:  92%|█████████▏| 267/291 [00:29<00:03,  7.16it/s]Loading weights:  93%|█████████▎| 271/291 [00:29<00:02,  9.88it/s]Loading weights:  94%|█████████▍| 274/291 [00:29<00:01, 10.00it/s]Loading weights:  95%|█████████▍| 276/291 [00:30<00:01,  7.59it/s]Loading weights:  96%|█████████▌| 280/291 [00:30<00:01, 10.56it/s]Loading weights:  97%|█████████▋| 283/291 [00:30<00:00, 11.05it/s]Loading weights:  98%|█████████▊| 285/291 [00:31<00:00,  8.09it/s]Loading weights:  99%|█████████▉| 289/291 [00:31<00:00, 11.05it/s]Loading weights: 100%|██████████| 291/291 [00:31<00:00,  9.33it/s]
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 30.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 29.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 37.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 45.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 37.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.8s
+
+[Done] Report saved to runs/rev_uci_reflexion_seed1_final_report.json
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 14,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 2,
+    "recall": 0.125,
+    "recall_ci95": [
+      0.0155,
+      0.3835
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.1581,
+      1.0
+    ],
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 14,
+        "tn": 14
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=reflexion | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 55/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=reflexion) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 35.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 49.8s
+
+[Done] Report saved to runs/rev_uci_reflexion_seed2_final_report.json
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "checker_metrics": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 12,
+    "tn": 15,
+    "ground_truth_positives": 15,
+    "rows_flagged": 3,
+    "recall": 0.2,
+    "recall_ci95": [
+      0.0433,
+      0.4809
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.2924,
+      1.0
+    ],
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 12,
+        "tn": 15
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=reflexion | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=reflexion) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 35.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 34.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 39.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 35.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 31.5s
+
+[Done] Report saved to runs/rev_uci_reflexion_seed3_final_report.json
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 14,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 2,
+    "recall": 0.125,
+    "recall_ci95": [
+      0.0155,
+      0.3835
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.1581,
+      1.0
+    ],
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 14,
+        "tn": 14
+      }
+    }
+  }
+}
+Total execution time: 1366.17 seconds.
+
+=== Safeguarded pipeline | mode=rules-only | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=rules-only) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 6 rows failed deterministic checks.
+
+[Done] Report saved to runs/rev_uci_rules-only_seed1_final_report.json
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": null,
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 10,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 6,
+    "recall": 0.375,
+    "recall_ci95": [
+      0.152,
+      0.6457
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5407,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 10,
+        "tn": 14
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=rules-only | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 55/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=rules-only) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 1 rows failed deterministic checks.
+
+[Done] Report saved to runs/rev_uci_rules-only_seed2_final_report.json
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": null,
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "checker_metrics": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 14,
+    "tn": 15,
+    "ground_truth_positives": 15,
+    "rows_flagged": 1,
+    "recall": 0.06666666666666667,
+    "recall_ci95": [
+      0.0017,
+      0.3195
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.025,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 14,
+        "tn": 15
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=rules-only | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=rules-only) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 0 rows failed deterministic checks.
+
+[Done] Report saved to runs/rev_uci_rules-only_seed3_final_report.json
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": null,
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 16,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 0,
+    "recall": 0.0,
+    "recall_ci95": [
+      0.0,
+      0.2059
+    ],
+    "precision": null,
+    "precision_ci95": null,
+    "per_path": {
+      "deterministic": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 16,
+        "tn": 14
+      }
+    }
+  }
+}
+Total execution time: 36.00 seconds.
+
+=== Safeguarded pipeline | mode=cross-only | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=cross-only) ---
+W1102 21:44:56.469000 13196 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: meta-llama/Llama-3.1-8B-Instruct (quantization=4bit)
+W1102 21:45:02.657000 13196 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [03:42<11:08, 222.98s/it]Fetching 4 files:  50%|█████     | 2/4 [13:59<15:08, 454.18s/it]Fetching 4 files:  75%|███████▌  | 3/4 [13:59<04:06, 246.85s/it]Fetching 4 files: 100%|██████████| 4/4 [14:06<00:00, 152.35s/it]Fetching 4 files: 100%|██████████| 4/4 [14:06<00:00, 211.65s/it]
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:02<11:57,  2.47s/it]Loading weights:   1%|          | 2/291 [00:04<10:24,  2.16s/it]Loading weights:   1%|▏         | 4/291 [00:05<04:48,  1.00s/it]Loading weights:   2%|▏         | 5/291 [00:05<03:36,  1.32it/s]Loading weights:   2%|▏         | 6/291 [00:05<02:47,  1.70it/s]Loading weights:   3%|▎         | 10/291 [00:05<01:06,  4.25it/s]Loading weights:   4%|▍         | 13/291 [00:05<00:47,  5.88it/s]Loading weights:   5%|▌         | 15/291 [00:06<00:50,  5.50it/s]Loading weights:   7%|▋         | 19/291 [00:06<00:31,  8.57it/s]Loading weights:   8%|▊         | 22/291 [00:06<00:28,  9.44it/s]Loading weights:   8%|▊         | 24/291 [00:07<00:34,  7.81it/s]Loading weights:  10%|▉         | 28/291 [00:07<00:24, 10.93it/s]Loading weights:  11%|█         | 31/291 [00:07<00:22, 11.54it/s]Loading weights:  11%|█▏        | 33/291 [00:07<00:28,  9.02it/s]Loading weights:  13%|█▎        | 37/291 [00:07<00:20, 12.38it/s]Loading weights:  14%|█▎        | 40/291 [00:08<00:18, 13.23it/s]Loading weights:  14%|█▍        | 42/291 [00:08<00:27,  8.92it/s]Loading weights:  16%|█▌        | 46/291 [00:08<00:19, 12.51it/s]Loading weights:  17%|█▋        | 49/291 [00:08<00:18, 13.02it/s]Loading weights:  18%|█▊        | 51/291 [00:09<00:26,  8.93it/s]Loading weights:  19%|█▉        | 55/291 [00:09<00:19, 12.18it/s]Loading weights:  20%|█▉        | 58/291 [00:09<00:18, 12.51it/s]Loading weights:  21%|██        | 60/291 [00:10<00:24,  9.42it/s]Loading weights:  22%|██▏       | 64/291 [00:10<00:17, 12.76it/s]Loading weights:  23%|██▎       | 67/291 [00:10<00:16, 13.67it/s]Loading weights:  24%|██▎       | 69/291 [00:10<00:22,  9.72it/s]Loading weights:  25%|██▌       | 73/291 [00:11<00:16, 13.30it/s]Loading weights:  26%|██▌       | 76/291 [00:11<00:15, 13.61it/s]Loading weights:  27%|██▋       | 78/291 [00:11<00:21, 10.09it/s]Loading weights:  28%|██▊       | 82/291 [00:11<00:15, 13.39it/s]Loading weights:  29%|██▉       | 85/291 [00:11<00:15, 13.39it/s]Loading weights:  30%|██▉       | 87/291 [00:12<00:19, 10.26it/s]Loading weights:  31%|███▏      | 91/291 [00:12<00:14, 13.69it/s]Loading weights:  32%|███▏      | 94/291 [00:12<00:15, 12.65it/s]Loading weights:  33%|███▎      | 96/291 [00:13<00:21,  9.02it/s]Loading weights:  34%|███▍      | 100/291 [00:13<00:15, 12.34it/s]Loading weights:  35%|███▌      | 103/291 [00:13<00:15, 12.42it/s]Loading weights:  36%|███▌      | 105/291 [00:14<00:21,  8.47it/s]Loading weights:  37%|███▋      | 109/291 [00:14<00:15, 11.58it/s]Loading weights:  38%|███▊      | 112/291 [00:14<00:14, 12.44it/s]Loading weights:  39%|███▉      | 114/291 [00:14<00:17,  9.97it/s]Loading weights:  42%|████▏     | 121/291 [00:15<00:11, 14.79it/s]Loading weights:  42%|████▏     | 123/291 [00:15<00:14, 11.74it/s]Loading weights:  45%|████▍     | 130/291 [00:15<00:10, 15.66it/s]Loading weights:  45%|████▌     | 132/291 [00:15<00:12, 12.49it/s]Loading weights:  47%|████▋     | 137/291 [00:16<00:08, 17.17it/s]Loading weights:  48%|████▊     | 140/291 [00:16<00:10, 13.95it/s]Loading weights:  49%|████▉     | 142/291 [00:16<00:10, 13.55it/s]Loading weights:  51%|█████     | 148/291 [00:16<00:09, 15.64it/s]Loading weights:  52%|█████▏    | 150/291 [00:17<00:11, 12.07it/s]Loading weights:  53%|█████▎    | 154/291 [00:17<00:08, 15.70it/s]Loading weights:  54%|█████▍    | 157/291 [00:17<00:08, 15.90it/s]Loading weights:  55%|█████▍    | 160/291 [00:17<00:09, 13.37it/s]Loading weights:  57%|█████▋    | 166/291 [00:18<00:07, 16.04it/s]Loading weights:  58%|█████▊    | 168/291 [00:18<00:10, 12.13it/s]Loading weights:  60%|██████    | 175/291 [00:18<00:07, 16.00it/s]Loading weights:  61%|██████    | 177/291 [00:19<00:08, 12.88it/s]Loading weights:  63%|██████▎   | 184/291 [00:19<00:06, 16.11it/s]Loading weights:  64%|██████▍   | 186/291 [00:19<00:08, 12.49it/s]Loading weights:  66%|██████▌   | 191/291 [00:19<00:05, 16.93it/s]Loading weights:  67%|██████▋   | 194/291 [00:20<00:07, 12.84it/s]Loading weights:  67%|██████▋   | 196/291 [00:20<00:07, 12.68it/s]Loading weights:  69%|██████▊   | 200/291 [00:20<00:05, 16.46it/s]Loading weights:  70%|██████▉   | 203/291 [00:20<00:07, 12.44it/s]Loading weights:  70%|███████   | 205/291 [00:21<00:07, 12.00it/s]Loading weights:  71%|███████▏  | 208/291 [00:21<00:05, 14.42it/s]Loading weights:  73%|███████▎  | 211/291 [00:21<00:05, 14.54it/s]Loading weights:  73%|███████▎  | 213/291 [00:21<00:07, 10.64it/s]Loading weights:  75%|███████▍  | 218/291 [00:21<00:04, 16.13it/s]Loading weights:  76%|███████▌  | 221/291 [00:22<00:05, 12.41it/s]Loading weights:  77%|███████▋  | 223/291 [00:22<00:05, 12.49it/s]Loading weights:  79%|███████▊  | 229/291 [00:22<00:03, 15.84it/s]Loading weights:  79%|███████▉  | 231/291 [00:23<00:05, 11.64it/s]Loading weights:  81%|████████  | 235/291 [00:23<00:03, 15.24it/s]Loading weights:  82%|████████▏ | 238/291 [00:23<00:03, 14.91it/s]Loading weights:  82%|████████▏ | 240/291 [00:23<00:04, 11.06it/s]Loading weights:  84%|████████▍ | 245/291 [00:23<00:02, 16.29it/s]Loading weights:  85%|████████▌ | 248/291 [00:24<00:03, 12.84it/s]Loading weights:  86%|████████▌ | 250/291 [00:24<00:03, 12.36it/s]Loading weights:  87%|████████▋ | 253/291 [00:24<00:02, 14.88it/s]Loading weights:  88%|████████▊ | 256/291 [00:24<00:02, 14.58it/s]Loading weights:  89%|████████▊ | 258/291 [00:25<00:02, 11.12it/s]Loading weights:  90%|█████████ | 263/291 [00:25<00:01, 16.85it/s]Loading weights:  91%|█████████▏| 266/291 [00:25<00:01, 13.27it/s]Loading weights:  92%|█████████▏| 268/291 [00:25<00:01, 13.33it/s]Loading weights:  93%|█████████▎| 271/291 [00:25<00:01, 16.00it/s]Loading weights:  94%|█████████▍| 274/291 [00:25<00:01, 15.84it/s]Loading weights:  95%|█████████▍| 276/291 [00:26<00:01, 11.54it/s]Loading weights:  97%|█████████▋| 283/291 [00:26<00:00, 16.25it/s]Loading weights:  98%|█████████▊| 285/291 [00:26<00:00, 12.51it/s]Loading weights: 100%|█████████▉| 290/291 [00:27<00:00, 17.60it/s]Loading weights: 100%|██████████| 291/291 [00:27<00:00, 10.77it/s]
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 21.7s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 24.8s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 35.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 28.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 24.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 20.5s
+
+[Done] Report saved to runs/rev_uci_cross-only_seed1_final_report.json
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 14,
+    "fp": 10,
+    "fn": 2,
+    "tn": 4,
+    "ground_truth_positives": 16,
+    "rows_flagged": 24,
+    "recall": 0.875,
+    "recall_ci95": [
+      0.6165,
+      0.9845
+    ],
+    "precision": 0.5833333333333334,
+    "precision_ci95": [
+      0.3664,
+      0.7789
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 14,
+        "fp": 10,
+        "fn": 2,
+        "tn": 4
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=cross-only | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 55/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=cross-only) ---
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 29.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 21.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 18.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 45.7s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 46.4s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 32.5s
+
+[Done] Report saved to runs/rev_uci_cross-only_seed2_final_report.json
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "checker_metrics": {
+    "tp": 14,
+    "fp": 13,
+    "fn": 1,
+    "tn": 2,
+    "ground_truth_positives": 15,
+    "rows_flagged": 27,
+    "recall": 0.9333333333333333,
+    "recall_ci95": [
+      0.6805,
+      0.9983
+    ],
+    "precision": 0.5185185185185185,
+    "precision_ci95": [
+      0.3195,
+      0.7133
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 14,
+        "fp": 13,
+        "fn": 1,
+        "tn": 2
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=cross-only | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=cross-only) ---
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 32.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 27.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 38.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 45.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 54.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 39.7s
+
+[Done] Report saved to runs/rev_uci_cross-only_seed3_final_report.json
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 15,
+    "fp": 12,
+    "fn": 1,
+    "tn": 2,
+    "ground_truth_positives": 16,
+    "rows_flagged": 27,
+    "recall": 0.9375,
+    "recall_ci95": [
+      0.6977,
+      0.9984
+    ],
+    "precision": 0.5555555555555556,
+    "precision_ci95": [
+      0.3533,
+      0.7452
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 15,
+        "fp": 12,
+        "fn": 1,
+        "tn": 2
+      }
+    }
+  }
+}
+Total execution time: 1505.83 seconds.
+
+=== Safeguarded pipeline | mode=hybrid | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid) ---
+W1102 22:10:14.992000 15420 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: meta-llama/Llama-3.1-8B-Instruct (quantization=4bit)
+W1102 22:10:19.226000 15420 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:02<11:05,  2.30s/it]Loading weights:   1%|          | 2/291 [00:04<10:59,  2.28s/it]Loading weights:   1%|▏         | 4/291 [00:04<04:26,  1.08it/s]Loading weights:   2%|▏         | 5/291 [00:05<03:21,  1.42it/s]Loading weights:   2%|▏         | 6/291 [00:05<02:36,  1.82it/s]Loading weights:   3%|▎         | 10/291 [00:05<01:02,  4.50it/s]Loading weights:   4%|▍         | 13/291 [00:05<00:44,  6.22it/s]Loading weights:   5%|▌         | 15/291 [00:05<00:46,  5.94it/s]Loading weights:   7%|▋         | 19/291 [00:06<00:29,  9.28it/s]Loading weights:   8%|▊         | 22/291 [00:06<00:24, 10.80it/s]Loading weights:   8%|▊         | 24/291 [00:06<00:30,  8.76it/s]Loading weights:  10%|▉         | 28/291 [00:06<00:21, 12.44it/s]Loading weights:  11%|█         | 31/291 [00:06<00:19, 13.32it/s]Loading weights:  11%|█▏        | 33/291 [00:07<00:26,  9.88it/s]Loading weights:  13%|█▎        | 37/291 [00:07<00:18, 13.53it/s]Loading weights:  14%|█▎        | 40/291 [00:07<00:18, 13.86it/s]Loading weights:  14%|█▍        | 42/291 [00:08<00:26,  9.23it/s]Loading weights:  16%|█▌        | 46/291 [00:08<00:19, 12.68it/s]Loading weights:  17%|█▋        | 49/291 [00:08<00:20, 11.74it/s]Loading weights:  18%|█▊        | 51/291 [00:08<00:27,  8.73it/s]Loading weights:  19%|█▉        | 55/291 [00:09<00:19, 11.86it/s]Loading weights:  20%|█▉        | 58/291 [00:09<00:19, 11.78it/s]Loading weights:  21%|██        | 60/291 [00:09<00:26,  8.62it/s]Loading weights:  22%|██▏       | 64/291 [00:09<00:18, 12.01it/s]Loading weights:  23%|██▎       | 67/291 [00:10<00:18, 12.20it/s]Loading weights:  24%|██▎       | 69/291 [00:10<00:25,  8.88it/s]Loading weights:  25%|██▌       | 73/291 [00:10<00:18, 12.08it/s]Loading weights:  26%|██▌       | 76/291 [00:11<00:18, 11.93it/s]Loading weights:  27%|██▋       | 78/291 [00:11<00:24,  8.78it/s]Loading weights:  28%|██▊       | 82/291 [00:11<00:17, 12.21it/s]Loading weights:  29%|██▉       | 85/291 [00:11<00:16, 12.26it/s]Loading weights:  30%|██▉       | 87/291 [00:12<00:22,  9.11it/s]Loading weights:  31%|███▏      | 91/291 [00:12<00:16, 12.16it/s]Loading weights:  32%|███▏      | 94/291 [00:12<00:16, 11.79it/s]Loading weights:  33%|███▎      | 96/291 [00:13<00:22,  8.64it/s]Loading weights:  34%|███▍      | 100/291 [00:13<00:16, 11.81it/s]Loading weights:  35%|███▌      | 103/291 [00:13<00:16, 11.63it/s]Loading weights:  36%|███▌      | 105/291 [00:14<00:21,  8.59it/s]Loading weights:  37%|███▋      | 109/291 [00:14<00:15, 12.12it/s]Loading weights:  38%|███▊      | 112/291 [00:14<00:14, 12.15it/s]Loading weights:  39%|███▉      | 114/291 [00:14<00:21,  8.36it/s]Loading weights:  41%|████      | 118/291 [00:15<00:15, 11.32it/s]Loading weights:  42%|████▏     | 121/291 [00:15<00:14, 11.34it/s]Loading weights:  42%|████▏     | 123/291 [00:15<00:19,  8.49it/s]Loading weights:  44%|████▎     | 127/291 [00:15<00:13, 11.74it/s]Loading weights:  45%|████▍     | 130/291 [00:16<00:13, 11.89it/s]Loading weights:  45%|████▌     | 132/291 [00:16<00:17,  9.00it/s]Loading weights:  47%|████▋     | 136/291 [00:16<00:12, 12.54it/s]Loading weights:  48%|████▊     | 139/291 [00:16<00:12, 12.57it/s]Loading weights:  48%|████▊     | 141/291 [00:17<00:16,  9.04it/s]Loading weights:  50%|████▉     | 145/291 [00:17<00:11, 12.48it/s]Loading weights:  51%|█████     | 148/291 [00:17<00:11, 12.83it/s]Loading weights:  52%|█████▏    | 150/291 [00:18<00:15,  9.35it/s]Loading weights:  53%|█████▎    | 154/291 [00:18<00:10, 12.85it/s]Loading weights:  54%|█████▍    | 157/291 [00:18<00:10, 12.47it/s]Loading weights:  55%|█████▍    | 159/291 [00:18<00:14,  9.14it/s]Loading weights:  56%|█████▌    | 163/291 [00:19<00:10, 12.68it/s]Loading weights:  57%|█████▋    | 166/291 [00:19<00:10, 12.34it/s]Loading weights:  58%|█████▊    | 168/291 [00:19<00:14,  8.54it/s]Loading weights:  59%|█████▉    | 172/291 [00:19<00:09, 12.09it/s]Loading weights:  60%|██████    | 175/291 [00:20<00:09, 11.69it/s]Loading weights:  61%|██████    | 177/291 [00:20<00:13,  8.57it/s]Loading weights:  62%|██████▏   | 181/291 [00:20<00:09, 12.03it/s]Loading weights:  63%|██████▎   | 184/291 [00:20<00:08, 12.05it/s]Loading weights:  64%|██████▍   | 186/291 [00:21<00:12,  8.66it/s]Loading weights:  65%|██████▌   | 190/291 [00:21<00:08, 12.01it/s]Loading weights:  66%|██████▋   | 193/291 [00:21<00:08, 11.72it/s]Loading weights:  67%|██████▋   | 195/291 [00:22<00:11,  8.49it/s]Loading weights:  68%|██████▊   | 199/291 [00:22<00:07, 11.60it/s]Loading weights:  69%|██████▉   | 202/291 [00:22<00:07, 11.50it/s]Loading weights:  70%|███████   | 204/291 [00:23<00:10,  8.46it/s]Loading weights:  71%|███████▏  | 208/291 [00:23<00:07, 11.70it/s]Loading weights:  73%|███████▎  | 211/291 [00:23<00:07, 11.28it/s]Loading weights:  73%|███████▎  | 213/291 [00:24<00:09,  8.26it/s]Loading weights:  75%|███████▍  | 217/291 [00:24<00:06, 11.42it/s]Loading weights:  76%|███████▌  | 220/291 [00:24<00:06, 11.36it/s]Loading weights:  76%|███████▋  | 222/291 [00:24<00:08,  8.40it/s]Loading weights:  78%|███████▊  | 226/291 [00:25<00:05, 11.75it/s]Loading weights:  79%|███████▊  | 229/291 [00:25<00:05, 12.12it/s]Loading weights:  79%|███████▉  | 231/291 [00:25<00:06,  8.60it/s]Loading weights:  81%|████████  | 235/291 [00:25<00:04, 12.02it/s]Loading weights:  82%|████████▏ | 238/291 [00:26<00:04, 11.87it/s]Loading weights:  82%|████████▏ | 240/291 [00:26<00:06,  8.20it/s]Loading weights:  84%|████████▍ | 244/291 [00:26<00:04, 11.35it/s]Loading weights:  85%|████████▍ | 247/291 [00:27<00:03, 11.31it/s]Loading weights:  86%|████████▌ | 249/291 [00:27<00:04,  8.44it/s]Loading weights:  87%|████████▋ | 253/291 [00:27<00:03, 11.73it/s]Loading weights:  88%|████████▊ | 256/291 [00:27<00:03, 11.04it/s]Loading weights:  89%|████████▊ | 258/291 [00:28<00:04,  7.80it/s]Loading weights:  90%|█████████ | 262/291 [00:28<00:02, 10.87it/s]Loading weights:  91%|█████████ | 265/291 [00:28<00:02, 11.07it/s]Loading weights:  92%|█████████▏| 267/291 [00:29<00:02,  8.44it/s]Loading weights:  93%|█████████▎| 271/291 [00:29<00:01, 11.64it/s]Loading weights:  94%|█████████▍| 274/291 [00:29<00:01, 11.99it/s]Loading weights:  95%|█████████▍| 276/291 [00:30<00:01,  9.17it/s]Loading weights:  96%|█████████▌| 280/291 [00:30<00:00, 12.72it/s]Loading weights:  97%|█████████▋| 283/291 [00:30<00:00, 12.55it/s]Loading weights:  98%|█████████▊| 285/291 [00:30<00:00,  9.33it/s]Loading weights:  99%|█████████▉| 289/291 [00:30<00:00, 13.13it/s]Loading weights: 100%|██████████| 291/291 [00:30<00:00,  9.39it/s]
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 6 rows failed deterministic checks.
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 60.1s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 27.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 41.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 32.4s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 4 rows...
+  checker batch done in 19.0s
+
+[Done] Report saved to runs/rev_uci_hybrid_seed1_final_report.json
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 16,
+    "fp": 5,
+    "fn": 0,
+    "tn": 9,
+    "ground_truth_positives": 16,
+    "rows_flagged": 21,
+    "recall": 1.0,
+    "recall_ci95": [
+      0.7941,
+      1.0
+    ],
+    "precision": 0.7619047619047619,
+    "precision_ci95": [
+      0.5283,
+      0.9178
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "llm": {
+        "tp": 10,
+        "fp": 5,
+        "fn": 0,
+        "tn": 9
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=hybrid | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 55/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 1 rows failed deterministic checks.
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 50.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 25.8s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 37.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 30.1s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 33.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 4 rows...
+  checker batch done in 47.0s
+
+[Done] Report saved to runs/rev_uci_hybrid_seed2_final_report.json
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "checker_metrics": {
+    "tp": 13,
+    "fp": 10,
+    "fn": 2,
+    "tn": 5,
+    "ground_truth_positives": 15,
+    "rows_flagged": 23,
+    "recall": 0.8666666666666667,
+    "recall_ci95": [
+      0.5954,
+      0.9834
+    ],
+    "precision": 0.5652173913043478,
+    "precision_ci95": [
+      0.3449,
+      0.7681
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 12,
+        "fp": 10,
+        "fn": 2,
+        "tn": 5
+      },
+      "deterministic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=hybrid | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 0 rows failed deterministic checks.
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 32.6s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 27.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 38.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 48.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 54.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 38.6s
+
+[Done] Report saved to runs/rev_uci_hybrid_seed3_final_report.json
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 15,
+    "fp": 12,
+    "fn": 1,
+    "tn": 2,
+    "ground_truth_positives": 16,
+    "rows_flagged": 27,
+    "recall": 0.9375,
+    "recall_ci95": [
+      0.6977,
+      0.9984
+    ],
+    "precision": 0.5555555555555556,
+    "precision_ci95": [
+      0.3533,
+      0.7452
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 15,
+        "fp": 12,
+        "fn": 1,
+        "tn": 2
+      }
+    }
+  }
+}
+Total execution time: 715.46 seconds.
+
+=== Safeguarded pipeline | mode=hybrid-circular | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid-circular) ---
+W1102 22:22:24.881000 30928 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: mistralai/Mistral-7B-Instruct-v0.2 (quantization=4bit)
+W1102 22:22:28.324000 30928 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:59,  2.43it/s]Loading weights:   1%|          | 2/291 [00:00<02:00,  2.41it/s]Loading weights:   1%|▏         | 4/291 [00:01<01:06,  4.35it/s]Loading weights:   2%|▏         | 5/291 [00:01<01:01,  4.66it/s]Loading weights:   2%|▏         | 6/291 [00:01<00:59,  4.83it/s]Loading weights:   3%|▎         | 10/291 [00:01<00:26, 10.63it/s]Loading weights:   4%|▍         | 13/291 [00:01<00:23, 11.88it/s]Loading weights:   5%|▌         | 15/291 [00:02<00:31,  8.86it/s]Loading weights:   7%|▋         | 19/291 [00:02<00:20, 13.03it/s]Loading weights:   8%|▊         | 22/291 [00:02<00:20, 13.34it/s]Loading weights:   8%|▊         | 24/291 [00:02<00:30,  8.65it/s]Loading weights:  10%|▉         | 28/291 [00:03<00:21, 12.19it/s]Loading weights:  11%|█         | 31/291 [00:03<00:22, 11.70it/s]Loading weights:  11%|█▏        | 33/291 [00:03<00:31,  8.14it/s]Loading weights:  13%|█▎        | 37/291 [00:04<00:22, 11.40it/s]Loading weights:  14%|█▎        | 40/291 [00:04<00:22, 11.08it/s]Loading weights:  14%|█▍        | 42/291 [00:04<00:32,  7.69it/s]Loading weights:  16%|█▌        | 46/291 [00:04<00:22, 10.68it/s]Loading weights:  17%|█▋        | 49/291 [00:05<00:23, 10.44it/s]Loading weights:  18%|█▊        | 51/291 [00:05<00:30,  7.75it/s]Loading weights:  19%|█▉        | 55/291 [00:05<00:21, 10.86it/s]Loading weights:  20%|█▉        | 58/291 [00:06<00:20, 11.16it/s]Loading weights:  21%|██        | 60/291 [00:06<00:29,  7.89it/s]Loading weights:  22%|██▏       | 64/291 [00:06<00:20, 11.04it/s]Loading weights:  23%|██▎       | 67/291 [00:07<00:20, 10.94it/s]Loading weights:  24%|██▎       | 69/291 [00:07<00:27,  8.13it/s]Loading weights:  25%|██▌       | 73/291 [00:07<00:19, 11.11it/s]Loading weights:  26%|██▌       | 76/291 [00:08<00:19, 10.92it/s]Loading weights:  27%|██▋       | 78/291 [00:08<00:26,  7.92it/s]Loading weights:  28%|██▊       | 81/291 [00:08<00:20, 10.32it/s]Loading weights:  29%|██▉       | 85/291 [00:08<00:18, 11.32it/s]Loading weights:  30%|██▉       | 87/291 [00:09<00:24,  8.21it/s]Loading weights:  31%|███▏      | 91/291 [00:09<00:17, 11.40it/s]Loading weights:  32%|███▏      | 94/291 [00:09<00:17, 11.55it/s]Loading weights:  33%|███▎      | 96/291 [00:10<00:23,  8.26it/s]Loading weights:  34%|███▍      | 100/291 [00:10<00:16, 11.27it/s]Loading weights:  35%|███▌      | 103/291 [00:10<00:16, 11.15it/s]Loading weights:  36%|███▌      | 105/291 [00:11<00:23,  7.96it/s]Loading weights:  37%|███▋      | 109/291 [00:11<00:16, 11.09it/s]Loading weights:  38%|███▊      | 112/291 [00:11<00:16, 10.97it/s]Loading weights:  39%|███▉      | 114/291 [00:12<00:21,  8.20it/s]Loading weights:  41%|████      | 118/291 [00:12<00:15, 11.41it/s]Loading weights:  42%|████▏     | 121/291 [00:12<00:15, 11.24it/s]Loading weights:  42%|████▏     | 123/291 [00:12<00:20,  8.20it/s]Loading weights:  44%|████▎     | 127/291 [00:13<00:14, 11.43it/s]Loading weights:  45%|████▍     | 130/291 [00:13<00:13, 11.64it/s]Loading weights:  45%|████▌     | 132/291 [00:13<00:18,  8.53it/s]Loading weights:  47%|████▋     | 136/291 [00:13<00:13, 11.90it/s]Loading weights:  48%|████▊     | 139/291 [00:14<00:12, 11.72it/s]Loading weights:  48%|████▊     | 141/291 [00:14<00:17,  8.42it/s]Loading weights:  50%|████▉     | 145/291 [00:14<00:12, 11.49it/s]Loading weights:  51%|█████     | 148/291 [00:15<00:12, 11.57it/s]Loading weights:  52%|█████▏    | 150/291 [00:15<00:16,  8.72it/s]Loading weights:  53%|█████▎    | 154/291 [00:15<00:11, 12.16it/s]Loading weights:  54%|█████▍    | 157/291 [00:15<00:11, 12.15it/s]Loading weights:  55%|█████▍    | 159/291 [00:16<00:15,  8.59it/s]Loading weights:  56%|█████▌    | 163/291 [00:16<00:11, 11.63it/s]Loading weights:  57%|█████▋    | 166/291 [00:16<00:10, 11.45it/s]Loading weights:  58%|█████▊    | 168/291 [00:17<00:14,  8.42it/s]Loading weights:  59%|█████▉    | 172/291 [00:17<00:10, 11.79it/s]Loading weights:  60%|██████    | 175/291 [00:17<00:09, 11.71it/s]Loading weights:  61%|██████    | 177/291 [00:18<00:13,  8.43it/s]Loading weights:  62%|██████▏   | 181/291 [00:18<00:09, 11.63it/s]Loading weights:  63%|██████▎   | 184/291 [00:18<00:09, 11.76it/s]Loading weights:  64%|██████▍   | 186/291 [00:18<00:12,  8.52it/s]Loading weights:  65%|██████▌   | 190/291 [00:19<00:08, 11.53it/s]Loading weights:  66%|██████▋   | 193/291 [00:19<00:08, 11.40it/s]Loading weights:  67%|██████▋   | 195/291 [00:19<00:11,  8.35it/s]Loading weights:  68%|██████▊   | 199/291 [00:19<00:07, 11.61it/s]Loading weights:  69%|██████▉   | 202/291 [00:20<00:07, 11.47it/s]Loading weights:  70%|███████   | 204/291 [00:20<00:10,  8.46it/s]Loading weights:  71%|███████▏  | 208/291 [00:20<00:06, 11.95it/s]Loading weights:  73%|███████▎  | 211/291 [00:21<00:07, 11.18it/s]Loading weights:  73%|███████▎  | 213/291 [00:21<00:09,  8.19it/s]Loading weights:  75%|███████▍  | 217/291 [00:21<00:06, 11.28it/s]Loading weights:  76%|███████▌  | 220/291 [00:22<00:06, 11.14it/s]Loading weights:  76%|███████▋  | 222/291 [00:22<00:08,  8.13it/s]Loading weights:  78%|███████▊  | 226/291 [00:22<00:05, 11.41it/s]Loading weights:  79%|███████▊  | 229/291 [00:22<00:05, 11.43it/s]Loading weights:  79%|███████▉  | 231/291 [00:23<00:07,  8.23it/s]Loading weights:  81%|████████  | 235/291 [00:23<00:04, 11.45it/s]Loading weights:  82%|████████▏ | 238/291 [00:23<00:04, 11.56it/s]Loading weights:  82%|████████▏ | 240/291 [00:24<00:06,  8.49it/s]Loading weights:  84%|████████▍ | 244/291 [00:24<00:04, 11.60it/s]Loading weights:  85%|████████▍ | 247/291 [00:24<00:03, 11.29it/s]Loading weights:  86%|████████▌ | 249/291 [00:25<00:05,  7.98it/s]Loading weights:  87%|████████▋ | 253/291 [00:25<00:03, 11.12it/s]Loading weights:  88%|████████▊ | 256/291 [00:25<00:03, 11.07it/s]Loading weights:  89%|████████▊ | 258/291 [00:26<00:04,  8.15it/s]Loading weights:  90%|█████████ | 262/291 [00:26<00:02, 11.43it/s]Loading weights:  91%|█████████ | 265/291 [00:26<00:02, 11.49it/s]Loading weights:  92%|█████████▏| 267/291 [00:26<00:02,  8.28it/s]Loading weights:  93%|█████████▎| 271/291 [00:27<00:01, 11.46it/s]Loading weights:  94%|█████████▍| 274/291 [00:27<00:01, 11.30it/s]Loading weights:  95%|█████████▍| 276/291 [00:27<00:01,  8.54it/s]Loading weights:  96%|█████████▌| 280/291 [00:27<00:00, 11.94it/s]Loading weights:  97%|█████████▋| 283/291 [00:28<00:00, 11.85it/s]Loading weights:  98%|█████████▊| 285/291 [00:28<00:00,  8.93it/s]Loading weights:  99%|█████████▉| 289/291 [00:28<00:00, 12.24it/s]Loading weights: 100%|██████████| 291/291 [00:28<00:00, 10.14it/s]
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 6 rows failed deterministic checks.
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 34.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 4 rows...
+  checker batch done in 27.7s
+
+[Done] Report saved to runs/rev_uci_hybrid-circular_seed1_final_report.json
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 7,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 9,
+    "recall": 0.5625,
+    "recall_ci95": [
+      0.2988,
+      0.8025
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.6637,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "llm": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 7,
+        "tn": 14
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=hybrid-circular | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 55/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid-circular) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 1 rows failed deterministic checks.
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 34.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 33.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 35.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 34.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 4 rows...
+  checker batch done in 48.8s
+
+[Done] Report saved to runs/rev_uci_hybrid-circular_seed2_final_report.json
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 55,
+    "residual_bad_rows_in_heldout": 15
+  },
+  "checker_metrics": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 8,
+    "tn": 15,
+    "ground_truth_positives": 15,
+    "rows_flagged": 7,
+    "recall": 0.4666666666666667,
+    "recall_ci95": [
+      0.2127,
+      0.7341
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5904,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 8,
+        "tn": 15
+      },
+      "deterministic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  }
+}
+
+=== Safeguarded pipeline | mode=hybrid-circular | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Injected 101 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 50/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid-circular) ---
+[Checker] Deterministic fast path on 30 rows...
+[Checker] 0 rows failed deterministic checks.
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 34.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 31.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 31.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 34.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 29.2s
+
+[Done] Report saved to runs/rev_uci_hybrid-circular_seed3_final_report.json
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "UCI Adult (default)",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 30,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 101,
+    "residual_bad_rows_full_sample": 50,
+    "residual_bad_rows_in_heldout": 16
+  },
+  "checker_metrics": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 10,
+    "tn": 14,
+    "ground_truth_positives": 16,
+    "rows_flagged": 6,
+    "recall": 0.375,
+    "recall_ci95": [
+      0.152,
+      0.6457
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5407,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 10,
+        "tn": 14
+      }
+    }
+  }
+}
+Total execution time: 647.43 seconds.
+=== KramaBench water-quality, reversed pairing ===
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=circular | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+W1102 22:33:05.386000 43868 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: mistralai/Mistral-7B-Instruct-v0.2 (quantization=4bit)
+W1102 22:33:08.713000 43868 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<02:57,  1.63it/s]Loading weights:   1%|          | 2/291 [00:01<02:35,  1.86it/s]Loading weights:   1%|▏         | 4/291 [00:01<01:19,  3.60it/s]Loading weights:   2%|▏         | 5/291 [00:01<01:12,  3.95it/s]Loading weights:   2%|▏         | 6/291 [00:01<01:10,  4.06it/s]Loading weights:   3%|▎         | 10/291 [00:01<00:31,  8.85it/s]Loading weights:   4%|▍         | 13/291 [00:02<00:29,  9.55it/s]Loading weights:   5%|▌         | 15/291 [00:02<00:38,  7.20it/s]Loading weights:   7%|▋         | 19/291 [00:02<00:24, 11.07it/s]Loading weights:   8%|▊         | 22/291 [00:03<00:23, 11.38it/s]Loading weights:   8%|▊         | 24/291 [00:03<00:33,  8.08it/s]Loading weights:  10%|▉         | 28/291 [00:03<00:22, 11.57it/s]Loading weights:  11%|█         | 31/291 [00:03<00:22, 11.74it/s]Loading weights:  11%|█▏        | 33/291 [00:04<00:30,  8.55it/s]Loading weights:  13%|█▎        | 37/291 [00:04<00:21, 11.95it/s]Loading weights:  14%|█▎        | 40/291 [00:04<00:21, 11.82it/s]Loading weights:  14%|█▍        | 42/291 [00:05<00:28,  8.64it/s]Loading weights:  16%|█▌        | 46/291 [00:05<00:20, 11.88it/s]Loading weights:  17%|█▋        | 49/291 [00:05<00:20, 11.91it/s]Loading weights:  18%|█▊        | 51/291 [00:05<00:27,  8.78it/s]Loading weights:  19%|█▉        | 55/291 [00:06<00:19, 11.96it/s]Loading weights:  20%|█▉        | 58/291 [00:06<00:20, 11.38it/s]Loading weights:  21%|██        | 60/291 [00:06<00:27,  8.26it/s]Loading weights:  22%|██▏       | 64/291 [00:07<00:19, 11.42it/s]Loading weights:  23%|██▎       | 67/291 [00:07<00:20, 11.14it/s]Loading weights:  24%|██▎       | 69/291 [00:07<00:26,  8.30it/s]Loading weights:  25%|██▌       | 73/291 [00:07<00:18, 11.59it/s]Loading weights:  26%|██▌       | 76/291 [00:08<00:18, 11.34it/s]Loading weights:  27%|██▋       | 78/291 [00:08<00:25,  8.45it/s]Loading weights:  28%|██▊       | 82/291 [00:08<00:18, 11.59it/s]Loading weights:  29%|██▉       | 85/291 [00:09<00:17, 11.57it/s]Loading weights:  30%|██▉       | 87/291 [00:09<00:23,  8.59it/s]Loading weights:  31%|███▏      | 91/291 [00:09<00:17, 11.73it/s]Loading weights:  32%|███▏      | 94/291 [00:09<00:16, 11.87it/s]Loading weights:  33%|███▎      | 96/291 [00:10<00:23,  8.22it/s]Loading weights:  34%|███▍      | 100/291 [00:10<00:16, 11.27it/s]Loading weights:  35%|███▌      | 103/291 [00:10<00:16, 11.21it/s]Loading weights:  36%|███▌      | 105/291 [00:11<00:22,  8.33it/s]Loading weights:  37%|███▋      | 109/291 [00:11<00:15, 11.57it/s]Loading weights:  38%|███▊      | 112/291 [00:11<00:15, 11.61it/s]Loading weights:  39%|███▉      | 114/291 [00:12<00:21,  8.40it/s]Loading weights:  41%|████      | 118/291 [00:12<00:14, 11.63it/s]Loading weights:  42%|████▏     | 121/291 [00:12<00:14, 11.72it/s]Loading weights:  42%|████▏     | 123/291 [00:12<00:19,  8.81it/s]Loading weights:  44%|████▎     | 127/291 [00:13<00:13, 12.35it/s]Loading weights:  45%|████▍     | 130/291 [00:13<00:12, 12.50it/s]Loading weights:  45%|████▌     | 132/291 [00:13<00:17,  9.14it/s]Loading weights:  47%|████▋     | 136/291 [00:13<00:12, 12.78it/s]Loading weights:  48%|████▊     | 139/291 [00:14<00:11, 12.72it/s]Loading weights:  48%|████▊     | 141/291 [00:14<00:17,  8.54it/s]Loading weights:  50%|████▉     | 145/291 [00:14<00:12, 12.00it/s]Loading weights:  51%|█████     | 148/291 [00:14<00:11, 11.94it/s]Loading weights:  52%|█████▏    | 150/291 [00:15<00:16,  8.56it/s]Loading weights:  53%|█████▎    | 154/291 [00:15<00:11, 11.74it/s]Loading weights:  54%|█████▍    | 157/291 [00:15<00:11, 11.69it/s]Loading weights:  55%|█████▍    | 159/291 [00:16<00:15,  8.46it/s]Loading weights:  56%|█████▌    | 163/291 [00:16<00:11, 11.62it/s]Loading weights:  57%|█████▋    | 166/291 [00:16<00:10, 11.59it/s]Loading weights:  58%|█████▊    | 168/291 [00:17<00:14,  8.42it/s]Loading weights:  59%|█████▉    | 172/291 [00:17<00:10, 11.65it/s]Loading weights:  60%|██████    | 175/291 [00:17<00:10, 11.48it/s]Loading weights:  61%|██████    | 177/291 [00:18<00:13,  8.36it/s]Loading weights:  62%|██████▏   | 181/291 [00:18<00:09, 11.67it/s]Loading weights:  63%|██████▎   | 184/291 [00:18<00:09, 11.27it/s]Loading weights:  64%|██████▍   | 186/291 [00:18<00:12,  8.52it/s]Loading weights:  65%|██████▌   | 190/291 [00:19<00:08, 11.80it/s]Loading weights:  66%|██████▋   | 193/291 [00:19<00:08, 11.81it/s]Loading weights:  67%|██████▋   | 195/291 [00:19<00:10,  8.76it/s]Loading weights:  68%|██████▊   | 199/291 [00:19<00:07, 12.21it/s]Loading weights:  69%|██████▉   | 202/291 [00:20<00:07, 12.13it/s]Loading weights:  70%|███████   | 204/291 [00:20<00:10,  8.29it/s]Loading weights:  71%|███████▏  | 208/291 [00:20<00:07, 11.58it/s]Loading weights:  73%|███████▎  | 211/291 [00:20<00:06, 11.64it/s]Loading weights:  73%|███████▎  | 213/291 [00:21<00:09,  8.58it/s]Loading weights:  75%|███████▍  | 217/291 [00:21<00:06, 11.97it/s]Loading weights:  76%|███████▌  | 220/291 [00:21<00:06, 11.59it/s]Loading weights:  76%|███████▋  | 222/291 [00:22<00:08,  8.21it/s]Loading weights:  78%|███████▊  | 226/291 [00:22<00:05, 11.39it/s]Loading weights:  79%|███████▊  | 229/291 [00:22<00:05, 11.59it/s]Loading weights:  79%|███████▉  | 231/291 [00:23<00:06,  8.72it/s]Loading weights:  81%|████████  | 235/291 [00:23<00:04, 12.27it/s]Loading weights:  82%|████████▏ | 238/291 [00:23<00:04, 12.16it/s]Loading weights:  82%|████████▏ | 240/291 [00:23<00:05,  8.99it/s]Loading weights:  84%|████████▍ | 244/291 [00:24<00:03, 12.53it/s]Loading weights:  85%|████████▍ | 247/291 [00:24<00:03, 11.88it/s]Loading weights:  86%|████████▌ | 249/291 [00:24<00:04,  8.90it/s]Loading weights:  87%|████████▋ | 253/291 [00:24<00:03, 12.23it/s]Loading weights:  88%|████████▊ | 256/291 [00:25<00:02, 12.22it/s]Loading weights:  89%|████████▊ | 258/291 [00:25<00:03,  8.94it/s]Loading weights:  90%|█████████ | 262/291 [00:25<00:02, 12.49it/s]Loading weights:  91%|█████████ | 265/291 [00:25<00:02, 12.10it/s]Loading weights:  92%|█████████▏| 267/291 [00:26<00:02,  8.68it/s]Loading weights:  93%|█████████▎| 271/291 [00:26<00:01, 11.80it/s]Loading weights:  94%|█████████▍| 274/291 [00:26<00:01, 12.11it/s]Loading weights:  95%|█████████▍| 276/291 [00:27<00:01,  8.65it/s]Loading weights:  96%|█████████▌| 280/291 [00:27<00:00, 11.94it/s]Loading weights:  97%|█████████▋| 283/291 [00:27<00:00, 11.86it/s]Loading weights:  98%|█████████▊| 285/291 [00:28<00:00,  8.40it/s]Loading weights:  99%|█████████▉| 289/291 [00:28<00:00, 11.73it/s]Loading weights: 100%|██████████| 291/291 [00:28<00:00, 10.28it/s]
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 0..7 (batch 1/13)
+  batch done in 171.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 8..15 (batch 2/13)
+  batch done in 167.3s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 16..23 (batch 3/13)
+  batch done in 175.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 24..31 (batch 4/13)
+  batch done in 162.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 32..39 (batch 5/13)
+  batch done in 173.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 40..47 (batch 6/13)
+  batch done in 166.4s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 48..55 (batch 7/13)
+  batch done in 167.9s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 56..63 (batch 8/13)
+  batch done in 163.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 64..71 (batch 9/13)
+  batch done in 174.3s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 72..79 (batch 10/13)
+  batch done in 155.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 80..87 (batch 11/13)
+  batch done in 181.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 88..95 (batch 12/13)
+  batch done in 178.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 96..99 (batch 13/13)
+  batch done in 89.3s
+[Worker LLM] All 100 rows transformed by the model (0 fallbacks).
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=circular) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 101.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 38.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 28.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 31.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 32.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 28.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 28.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 30.6s
+
+[Done] Report saved to runs/rev_kb_circular_seed1_final_report.json
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "checker_metrics": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 28,
+    "tn": 6,
+    "ground_truth_positives": 34,
+    "rows_flagged": 6,
+    "recall": 0.17647058823529413,
+    "recall_ci95": [
+      0.0676,
+      0.3453
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5407,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 28,
+        "tn": 6
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=circular | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 0..7 (batch 1/13)
+  batch done in 182.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 8..15 (batch 2/13)
+  batch done in 182.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 16..23 (batch 3/13)
+  batch done in 183.9s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 24..31 (batch 4/13)
+  batch done in 96.1s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 32..39 (batch 5/13)
+  batch done in 71.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 40..47 (batch 6/13)
+  batch done in 66.4s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 48..55 (batch 7/13)
+  batch done in 70.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 56..63 (batch 8/13)
+  batch done in 67.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 64..71 (batch 9/13)
+  batch done in 68.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 72..79 (batch 10/13)
+  batch done in 68.8s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 80..87 (batch 11/13)
+  batch done in 70.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 88..95 (batch 12/13)
+  batch done in 68.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 96..99 (batch 13/13)
+  batch done in 35.8s
+[Worker LLM] All 100 rows transformed by the model (0 fallbacks).
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=circular) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 15.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 14.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 15.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.6s
+
+[Done] Report saved to runs/rev_kb_circular_seed2_final_report.json
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 37
+  },
+  "checker_metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 35,
+    "tn": 3,
+    "ground_truth_positives": 37,
+    "rows_flagged": 2,
+    "recall": 0.05405405405405406,
+    "recall_ci95": [
+      0.0066,
+      0.1819
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.1581,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 35,
+        "tn": 3
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=circular | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 0..7 (batch 1/13)
+  batch done in 65.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 8..15 (batch 2/13)
+  batch done in 69.2s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 16..23 (batch 3/13)
+  batch done in 69.3s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 24..31 (batch 4/13)
+  batch done in 65.3s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 32..39 (batch 5/13)
+  batch done in 73.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 40..47 (batch 6/13)
+  batch done in 70.1s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 48..55 (batch 7/13)
+  batch done in 72.6s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 56..63 (batch 8/13)
+  batch done in 67.7s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 64..71 (batch 9/13)
+  batch done in 69.9s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 72..79 (batch 10/13)
+  batch done in 69.4s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 80..87 (batch 11/13)
+  batch done in 67.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 88..95 (batch 12/13)
+  batch done in 65.0s
+[Worker LLM: mistralai/Mistral-7B-Instruct-v0.2] Transforming rows 96..99 (batch 13/13)
+  batch done in 28.5s
+[Worker LLM] All 100 rows transformed by the model (0 fallbacks).
+[Ground truth] 92/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=circular) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 14.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 14.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.8s
+
+[Done] Report saved to runs/rev_kb_circular_seed3_final_report.json
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "checker_metrics": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 35,
+    "tn": 2,
+    "ground_truth_positives": 38,
+    "rows_flagged": 3,
+    "recall": 0.07894736842105263,
+    "recall_ci95": [
+      0.0166,
+      0.2138
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.2924,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 35,
+        "tn": 2
+      }
+    }
+  }
+}
+Total execution time: 4786.92 seconds.
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=reflexion | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=reflexion) ---
+W1102 23:53:14.715000 33264 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: mistralai/Mistral-7B-Instruct-v0.2 (quantization=4bit)
+W1102 23:53:16.808000 33264 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:21,  3.54it/s]Loading weights:   1%|          | 2/291 [00:00<01:20,  3.59it/s]Loading weights:   1%|▏         | 4/291 [00:00<00:44,  6.42it/s]Loading weights:   2%|▏         | 5/291 [00:00<00:42,  6.77it/s]Loading weights:   2%|▏         | 6/291 [00:00<00:40,  7.03it/s]Loading weights:   4%|▍         | 11/291 [00:01<00:16, 17.06it/s]Loading weights:   5%|▍         | 14/291 [00:01<00:20, 13.77it/s]Loading weights:   5%|▌         | 16/291 [00:01<00:19, 13.91it/s]Loading weights:   8%|▊         | 22/291 [00:01<00:14, 18.22it/s]Loading weights:   8%|▊         | 24/291 [00:02<00:20, 12.84it/s]Loading weights:  11%|█         | 31/291 [00:02<00:15, 16.61it/s]Loading weights:  11%|█▏        | 33/291 [00:02<00:21, 12.28it/s]Loading weights:  13%|█▎        | 37/291 [00:02<00:16, 15.84it/s]Loading weights:  14%|█▎        | 40/291 [00:03<00:15, 15.79it/s]Loading weights:  14%|█▍        | 42/291 [00:03<00:20, 12.27it/s]Loading weights:  16%|█▌        | 47/291 [00:03<00:13, 17.75it/s]Loading weights:  17%|█▋        | 50/291 [00:03<00:16, 14.46it/s]Loading weights:  18%|█▊        | 53/291 [00:03<00:15, 15.49it/s]Loading weights:  20%|█▉        | 58/291 [00:04<00:13, 17.12it/s]Loading weights:  21%|██        | 61/291 [00:04<00:16, 14.31it/s]Loading weights:  23%|██▎       | 67/291 [00:04<00:13, 17.11it/s]Loading weights:  24%|██▎       | 69/291 [00:05<00:16, 13.55it/s]Loading weights:  26%|██▌       | 76/291 [00:05<00:12, 17.15it/s]Loading weights:  27%|██▋       | 78/291 [00:05<00:15, 13.47it/s]Loading weights:  28%|██▊       | 82/291 [00:05<00:12, 16.85it/s]Loading weights:  29%|██▉       | 85/291 [00:05<00:12, 16.64it/s]Loading weights:  30%|███       | 88/291 [00:06<00:14, 13.76it/s]Loading weights:  32%|███▏      | 94/291 [00:06<00:11, 16.78it/s]Loading weights:  33%|███▎      | 96/291 [00:06<00:15, 12.54it/s]Loading weights:  35%|███▌      | 103/291 [00:07<00:11, 16.29it/s]Loading weights:  36%|███▌      | 105/291 [00:07<00:14, 12.77it/s]Loading weights:  38%|███▊      | 110/291 [00:07<00:10, 17.25it/s]Loading weights:  39%|███▉      | 113/291 [00:07<00:12, 14.15it/s]Loading weights:  40%|███▉      | 115/291 [00:08<00:12, 13.85it/s]Loading weights:  42%|████▏     | 121/291 [00:08<00:09, 17.17it/s]Loading weights:  42%|████▏     | 123/291 [00:08<00:12, 13.88it/s]Loading weights:  45%|████▍     | 130/291 [00:08<00:08, 18.20it/s]Loading weights:  45%|████▌     | 132/291 [00:09<00:10, 14.49it/s]Loading weights:  48%|████▊     | 139/291 [00:09<00:08, 17.60it/s]Loading weights:  48%|████▊     | 141/291 [00:09<00:10, 14.29it/s]Loading weights:  51%|█████     | 148/291 [00:09<00:07, 18.33it/s]Loading weights:  52%|█████▏    | 150/291 [00:10<00:09, 14.79it/s]Loading weights:  54%|█████▍    | 157/291 [00:10<00:07, 18.38it/s]Loading weights:  55%|█████▍    | 159/291 [00:10<00:09, 14.66it/s]Loading weights:  57%|█████▋    | 166/291 [00:11<00:06, 18.19it/s]Loading weights:  58%|█████▊    | 168/291 [00:11<00:08, 14.63it/s]Loading weights:  60%|██████    | 175/291 [00:11<00:06, 18.34it/s]Loading weights:  61%|██████    | 177/291 [00:11<00:08, 14.21it/s]Loading weights:  63%|██████▎   | 184/291 [00:12<00:06, 17.78it/s]Loading weights:  64%|██████▍   | 186/291 [00:12<00:07, 14.22it/s]Loading weights:  66%|██████▌   | 191/291 [00:12<00:05, 18.72it/s]Loading weights:  67%|██████▋   | 194/291 [00:12<00:06, 15.14it/s]Loading weights:  67%|██████▋   | 196/291 [00:13<00:06, 14.90it/s]Loading weights:  69%|██████▉   | 202/291 [00:13<00:05, 17.67it/s]Loading weights:  70%|███████   | 204/291 [00:13<00:06, 13.67it/s]Loading weights:  73%|███████▎  | 211/291 [00:13<00:04, 17.90it/s]Loading weights:  73%|███████▎  | 213/291 [00:14<00:05, 13.96it/s]Loading weights:  76%|███████▌  | 220/291 [00:14<00:03, 17.92it/s]Loading weights:  76%|███████▋  | 222/291 [00:14<00:04, 14.29it/s]Loading weights:  78%|███████▊  | 227/291 [00:14<00:03, 19.08it/s]Loading weights:  79%|███████▉  | 230/291 [00:15<00:04, 14.40it/s]Loading weights:  80%|████████  | 233/291 [00:15<00:03, 15.04it/s]Loading weights:  82%|████████▏ | 238/291 [00:15<00:03, 16.72it/s]Loading weights:  82%|████████▏ | 240/291 [00:15<00:03, 13.19it/s]Loading weights:  85%|████████▍ | 247/291 [00:16<00:02, 17.65it/s]Loading weights:  86%|████████▌ | 249/291 [00:16<00:03, 13.95it/s]Loading weights:  87%|████████▋ | 254/291 [00:16<00:01, 18.85it/s]Loading weights:  88%|████████▊ | 257/291 [00:16<00:02, 15.51it/s]Loading weights:  89%|████████▉ | 260/291 [00:17<00:01, 16.55it/s]Loading weights:  91%|█████████ | 265/291 [00:17<00:01, 18.17it/s]Loading weights:  92%|█████████▏| 268/291 [00:17<00:01, 15.58it/s]Loading weights:  94%|█████████▍| 274/291 [00:17<00:00, 17.25it/s]Loading weights:  95%|█████████▍| 276/291 [00:18<00:01, 13.78it/s]Loading weights:  97%|█████████▋| 283/291 [00:18<00:00, 17.85it/s]Loading weights:  98%|█████████▊| 285/291 [00:18<00:00, 14.16it/s]Loading weights: 100%|█████████▉| 290/291 [00:18<00:00, 18.94it/s]Loading weights: 100%|██████████| 291/291 [00:18<00:00, 15.50it/s]
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 38.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 14.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.5s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.5s
+
+[Done] Report saved to runs/rev_kb_reflexion_seed1_final_report.json
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "checker_metrics": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 29,
+    "tn": 6,
+    "ground_truth_positives": 34,
+    "rows_flagged": 5,
+    "recall": 0.14705882352941177,
+    "recall_ci95": [
+      0.0495,
+      0.3106
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.4782,
+      1.0
+    ],
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 29,
+        "tn": 6
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=reflexion | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=reflexion) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 13.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 16.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 14.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.3s
+
+[Done] Report saved to runs/rev_kb_reflexion_seed2_final_report.json
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 37
+  },
+  "checker_metrics": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 36,
+    "tn": 3,
+    "ground_truth_positives": 37,
+    "rows_flagged": 1,
+    "recall": 0.02702702702702703,
+    "recall_ci95": [
+      0.0007,
+      0.1416
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.025,
+      1.0
+    ],
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 36,
+        "tn": 3
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=reflexion | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 92/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=reflexion) ---
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.3s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.3s
+
+[Done] Report saved to runs/rev_kb_reflexion_seed3_final_report.json
+{
+  "config": {
+    "mode": "reflexion",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "checker_metrics": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 38,
+    "tn": 2,
+    "ground_truth_positives": 38,
+    "rows_flagged": 0,
+    "recall": 0.0,
+    "recall_ci95": [
+      0.0,
+      0.0925
+    ],
+    "precision": null,
+    "precision_ci95": null,
+    "per_path": {
+      "llm-reflexion": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 38,
+        "tn": 2
+      }
+    }
+  }
+}
+Total execution time: 645.29 seconds.
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=rules-only | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=rules-only) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 2 rows failed deterministic checks.
+
+[Done] Report saved to runs/rev_kb_rules-only_seed1_final_report.json
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": null,
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "checker_metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 32,
+    "tn": 6,
+    "ground_truth_positives": 34,
+    "rows_flagged": 2,
+    "recall": 0.058823529411764705,
+    "recall_ci95": [
+      0.0072,
+      0.1968
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.1581,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 32,
+        "tn": 6
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=rules-only | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=rules-only) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 1 rows failed deterministic checks.
+
+[Done] Report saved to runs/rev_kb_rules-only_seed2_final_report.json
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": null,
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 37
+  },
+  "checker_metrics": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 36,
+    "tn": 3,
+    "ground_truth_positives": 37,
+    "rows_flagged": 1,
+    "recall": 0.02702702702702703,
+    "recall_ci95": [
+      0.0007,
+      0.1416
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.025,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 36,
+        "tn": 3
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=rules-only | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 92/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=rules-only) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 4 rows failed deterministic checks.
+
+[Done] Report saved to runs/rev_kb_rules-only_seed3_final_report.json
+{
+  "config": {
+    "mode": "rules-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": null,
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "checker_metrics": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 34,
+    "tn": 2,
+    "ground_truth_positives": 38,
+    "rows_flagged": 4,
+    "recall": 0.10526315789473684,
+    "recall_ci95": [
+      0.0294,
+      0.248
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.3976,
+      1.0
+    ],
+    "per_path": {
+      "deterministic": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 34,
+        "tn": 2
+      }
+    }
+  }
+}
+Total execution time: 0.06 seconds.
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=cross-only | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=cross-only) ---
+W1103 00:04:07.639000 25712 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: meta-llama/Llama-3.1-8B-Instruct (quantization=4bit)
+W1103 00:04:09.867000 25712 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:01<05:20,  1.11s/it]Loading weights:   1%|          | 2/291 [00:02<05:22,  1.11s/it]Loading weights:   1%|▏         | 4/291 [00:02<02:11,  2.18it/s]Loading weights:   2%|▏         | 5/291 [00:02<01:40,  2.84it/s]Loading weights:   2%|▏         | 6/291 [00:02<01:19,  3.57it/s]Loading weights:   4%|▍         | 13/291 [00:02<00:24, 11.22it/s]Loading weights:   5%|▌         | 15/291 [00:03<00:26, 10.56it/s]Loading weights:   8%|▊         | 22/291 [00:03<00:15, 17.36it/s]Loading weights:   9%|▊         | 25/291 [00:03<00:16, 16.09it/s]Loading weights:  11%|█         | 31/291 [00:03<00:12, 20.19it/s]Loading weights:  12%|█▏        | 34/291 [00:03<00:14, 18.08it/s]Loading weights:  14%|█▎        | 40/291 [00:04<00:11, 21.44it/s]Loading weights:  15%|█▍        | 43/291 [00:04<00:13, 18.31it/s]Loading weights:  17%|█▋        | 49/291 [00:04<00:11, 20.89it/s]Loading weights:  18%|█▊        | 52/291 [00:04<00:13, 17.59it/s]Loading weights:  20%|█▉        | 58/291 [00:04<00:11, 20.49it/s]Loading weights:  21%|██        | 61/291 [00:05<00:12, 17.76it/s]Loading weights:  23%|██▎       | 67/291 [00:05<00:10, 20.56it/s]Loading weights:  24%|██▍       | 70/291 [00:05<00:12, 17.74it/s]Loading weights:  26%|██▌       | 76/291 [00:05<00:10, 20.63it/s]Loading weights:  27%|██▋       | 79/291 [00:06<00:11, 17.89it/s]Loading weights:  29%|██▉       | 85/291 [00:06<00:10, 20.05it/s]Loading weights:  30%|███       | 88/291 [00:06<00:12, 16.28it/s]Loading weights:  32%|███▏      | 93/291 [00:06<00:09, 21.05it/s]Loading weights:  33%|███▎      | 96/291 [00:07<00:14, 13.48it/s]Loading weights:  35%|███▍      | 101/291 [00:07<00:10, 17.93it/s]Loading weights:  36%|███▌      | 104/291 [00:07<00:12, 14.95it/s]Loading weights:  37%|███▋      | 107/291 [00:07<00:11, 15.46it/s]Loading weights:  38%|███▊      | 112/291 [00:08<00:10, 17.02it/s]Loading weights:  40%|███▉      | 115/291 [00:08<00:12, 14.37it/s]Loading weights:  41%|████      | 119/291 [00:08<00:09, 17.85it/s]Loading weights:  42%|████▏     | 122/291 [00:08<00:11, 14.61it/s]Loading weights:  43%|████▎     | 124/291 [00:09<00:11, 14.34it/s]Loading weights:  45%|████▍     | 130/291 [00:09<00:09, 17.29it/s]Loading weights:  45%|████▌     | 132/291 [00:09<00:11, 13.27it/s]Loading weights:  47%|████▋     | 137/291 [00:09<00:08, 18.42it/s]Loading weights:  48%|████▊     | 140/291 [00:10<00:11, 13.30it/s]Loading weights:  49%|████▉     | 142/291 [00:10<00:11, 12.84it/s]Loading weights:  50%|█████     | 146/291 [00:10<00:08, 16.71it/s]Loading weights:  51%|█████     | 149/291 [00:10<00:10, 13.74it/s]Loading weights:  52%|█████▏    | 151/291 [00:10<00:10, 13.62it/s]Loading weights:  54%|█████▍    | 157/291 [00:11<00:07, 17.00it/s]Loading weights:  55%|█████▍    | 159/291 [00:11<00:10, 13.08it/s]Loading weights:  56%|█████▋    | 164/291 [00:11<00:06, 18.44it/s]Loading weights:  57%|█████▋    | 167/291 [00:11<00:08, 14.67it/s]Loading weights:  58%|█████▊    | 170/291 [00:12<00:08, 14.18it/s]Loading weights:  60%|██████    | 175/291 [00:12<00:07, 15.24it/s]Loading weights:  61%|██████    | 177/291 [00:12<00:09, 11.71it/s]Loading weights:  63%|██████▎   | 182/291 [00:12<00:06, 16.57it/s]Loading weights:  64%|██████▎   | 185/291 [00:13<00:07, 13.87it/s]Loading weights:  64%|██████▍   | 187/291 [00:13<00:07, 13.73it/s]Loading weights:  66%|██████▌   | 191/291 [00:13<00:05, 17.79it/s]Loading weights:  67%|██████▋   | 194/291 [00:13<00:06, 14.71it/s]Loading weights:  67%|██████▋   | 196/291 [00:13<00:06, 14.35it/s]Loading weights:  69%|██████▊   | 200/291 [00:14<00:04, 18.60it/s]Loading weights:  70%|██████▉   | 203/291 [00:14<00:05, 14.87it/s]Loading weights:  70%|███████   | 205/291 [00:14<00:05, 14.46it/s]Loading weights:  71%|███████▏  | 208/291 [00:14<00:04, 17.07it/s]Loading weights:  73%|███████▎  | 211/291 [00:14<00:04, 16.30it/s]Loading weights:  73%|███████▎  | 213/291 [00:15<00:06, 12.16it/s]Loading weights:  76%|███████▌  | 220/291 [00:15<00:04, 17.53it/s]Loading weights:  76%|███████▋  | 222/291 [00:15<00:05, 13.52it/s]Loading weights:  78%|███████▊  | 226/291 [00:15<00:03, 17.37it/s]Loading weights:  79%|███████▊  | 229/291 [00:15<00:03, 17.62it/s]Loading weights:  80%|███████▉  | 232/291 [00:16<00:04, 14.38it/s]Loading weights:  82%|████████▏ | 238/291 [00:16<00:03, 17.28it/s]Loading weights:  82%|████████▏ | 240/291 [00:16<00:03, 12.82it/s]Loading weights:  84%|████████▍ | 244/291 [00:16<00:02, 16.41it/s]Loading weights:  85%|████████▍ | 247/291 [00:17<00:02, 16.59it/s]Loading weights:  86%|████████▌ | 250/291 [00:17<00:02, 13.96it/s]Loading weights:  87%|████████▋ | 254/291 [00:17<00:02, 17.93it/s]Loading weights:  88%|████████▊ | 257/291 [00:17<00:02, 14.35it/s]Loading weights:  89%|████████▉ | 259/291 [00:17<00:02, 14.09it/s]Loading weights:  90%|█████████ | 263/291 [00:18<00:01, 18.29it/s]Loading weights:  91%|█████████▏| 266/291 [00:18<00:01, 14.41it/s]Loading weights:  92%|█████████▏| 268/291 [00:18<00:01, 14.21it/s]Loading weights:  93%|█████████▎| 272/291 [00:18<00:01, 18.56it/s]Loading weights:  95%|█████████▍| 275/291 [00:18<00:01, 14.37it/s]Loading weights:  95%|█████████▌| 277/291 [00:19<00:01, 14.00it/s]Loading weights:  97%|█████████▋| 281/291 [00:19<00:00, 18.55it/s]Loading weights:  98%|█████████▊| 284/291 [00:19<00:00, 14.43it/s]Loading weights:  98%|█████████▊| 286/291 [00:19<00:00, 14.03it/s]Loading weights:  99%|█████████▉| 289/291 [00:19<00:00, 16.43it/s]Loading weights: 100%|██████████| 291/291 [00:19<00:00, 14.67it/s]
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 15.6s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.6s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 16.8s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 44.1s
+  WARNING: failed to parse LLM checker output for batch 20: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 13.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.7s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 16.0s
+
+[Done] Report saved to runs/rev_kb_cross-only_seed1_final_report.json
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "checker_metrics": {
+    "tp": 28,
+    "fp": 5,
+    "fn": 6,
+    "tn": 1,
+    "ground_truth_positives": 34,
+    "rows_flagged": 33,
+    "recall": 0.8235294117647058,
+    "recall_ci95": [
+      0.6547,
+      0.9324
+    ],
+    "precision": 0.8484848484848485,
+    "precision_ci95": [
+      0.681,
+      0.9489
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 28,
+        "fp": 5,
+        "fn": 1,
+        "tn": 1
+      },
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 0
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=cross-only | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=cross-only) ---
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 43.6s
+  WARNING: failed to parse LLM checker output for batch 10: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.4s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 43.0s
+  WARNING: failed to parse LLM checker output for batch 20: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 9.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 16.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.2s
+
+[Done] Report saved to runs/rev_kb_cross-only_seed2_final_report.json
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 37
+  },
+  "checker_metrics": {
+    "tp": 22,
+    "fp": 2,
+    "fn": 15,
+    "tn": 1,
+    "ground_truth_positives": 37,
+    "rows_flagged": 24,
+    "recall": 0.5945945945945946,
+    "recall_ci95": [
+      0.421,
+      0.7525
+    ],
+    "precision": 0.9166666666666666,
+    "precision_ci95": [
+      0.73,
+      0.9897
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 22,
+        "fp": 2,
+        "fn": 5,
+        "tn": 1
+      },
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "tn": 0
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=cross-only | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 92/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=cross-only) ---
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 45.5s
+  WARNING: failed to parse LLM checker output for batch 0: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.1s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.6s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 15.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 9.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 9.0s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.8s
+
+[Done] Report saved to runs/rev_kb_cross-only_seed3_final_report.json
+{
+  "config": {
+    "mode": "cross-only",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "checker_metrics": {
+    "tp": 27,
+    "fp": 2,
+    "fn": 11,
+    "tn": 0,
+    "ground_truth_positives": 38,
+    "rows_flagged": 29,
+    "recall": 0.7105263157894737,
+    "recall_ci95": [
+      0.541,
+      0.8458
+    ],
+    "precision": 0.9310344827586207,
+    "precision_ci95": [
+      0.7723,
+      0.9915
+    ],
+    "per_path": {
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 0
+      },
+      "llm": {
+        "tp": 27,
+        "fp": 2,
+        "fn": 6,
+        "tn": 0
+      }
+    }
+  }
+}
+Total execution time: 447.08 seconds.
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=hybrid | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid) ---
+W1103 00:11:39.502000 55152 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: meta-llama/Llama-3.1-8B-Instruct (quantization=4bit)
+W1103 00:11:41.695000 55152 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:01<06:09,  1.27s/it]Loading weights:   1%|          | 2/291 [00:02<05:55,  1.23s/it]Loading weights:   1%|▏         | 4/291 [00:02<02:25,  1.98it/s]Loading weights:   2%|▏         | 5/291 [00:02<01:50,  2.59it/s]Loading weights:   2%|▏         | 6/291 [00:02<01:26,  3.28it/s]Loading weights:   4%|▍         | 13/291 [00:03<00:26, 10.49it/s]Loading weights:   5%|▌         | 15/291 [00:03<00:27, 10.06it/s]Loading weights:   8%|▊         | 22/291 [00:03<00:16, 16.64it/s]Loading weights:   9%|▊         | 25/291 [00:03<00:17, 15.33it/s]Loading weights:  11%|█         | 31/291 [00:03<00:13, 19.19it/s]Loading weights:  12%|█▏        | 34/291 [00:04<00:14, 17.36it/s]Loading weights:  14%|█▎        | 40/291 [00:04<00:12, 20.75it/s]Loading weights:  15%|█▍        | 43/291 [00:04<00:13, 17.90it/s]Loading weights:  17%|█▋        | 49/291 [00:04<00:11, 20.73it/s]Loading weights:  18%|█▊        | 52/291 [00:05<00:13, 17.90it/s]Loading weights:  20%|█▉        | 58/291 [00:05<00:10, 21.20it/s]Loading weights:  21%|██        | 61/291 [00:05<00:12, 18.37it/s]Loading weights:  23%|██▎       | 67/291 [00:05<00:10, 20.88it/s]Loading weights:  24%|██▍       | 70/291 [00:05<00:12, 18.03it/s]Loading weights:  26%|██▌       | 76/291 [00:06<00:10, 20.78it/s]Loading weights:  27%|██▋       | 79/291 [00:06<00:11, 17.86it/s]Loading weights:  29%|██▉       | 85/291 [00:06<00:10, 19.65it/s]Loading weights:  30%|███       | 88/291 [00:07<00:12, 15.86it/s]Loading weights:  32%|███▏      | 93/291 [00:07<00:09, 20.58it/s]Loading weights:  33%|███▎      | 96/291 [00:07<00:14, 13.49it/s]Loading weights:  35%|███▍      | 101/291 [00:07<00:10, 17.91it/s]Loading weights:  36%|███▌      | 104/291 [00:08<00:12, 14.52it/s]Loading weights:  37%|███▋      | 107/291 [00:08<00:12, 15.08it/s]Loading weights:  38%|███▊      | 112/291 [00:08<00:10, 16.65it/s]Loading weights:  40%|███▉      | 115/291 [00:08<00:12, 13.65it/s]Loading weights:  41%|████      | 118/291 [00:08<00:10, 15.81it/s]Loading weights:  42%|████▏     | 121/291 [00:09<00:10, 16.10it/s]Loading weights:  42%|████▏     | 123/291 [00:09<00:14, 11.62it/s]Loading weights:  44%|████▎     | 127/291 [00:09<00:10, 15.51it/s]Loading weights:  45%|████▍     | 130/291 [00:09<00:10, 16.01it/s]Loading weights:  46%|████▌     | 133/291 [00:10<00:11, 13.44it/s]Loading weights:  47%|████▋     | 137/291 [00:10<00:08, 17.53it/s]Loading weights:  48%|████▊     | 140/291 [00:10<00:10, 13.91it/s]Loading weights:  49%|████▉     | 142/291 [00:10<00:10, 13.68it/s]Loading weights:  51%|█████     | 148/291 [00:10<00:08, 17.00it/s]Loading weights:  52%|█████▏    | 150/291 [00:11<00:10, 13.20it/s]Loading weights:  54%|█████▍    | 157/291 [00:11<00:07, 17.50it/s]Loading weights:  55%|█████▍    | 159/291 [00:11<00:10, 13.05it/s]Loading weights:  56%|█████▋    | 164/291 [00:11<00:07, 17.85it/s]Loading weights:  57%|█████▋    | 167/291 [00:12<00:08, 14.84it/s]Loading weights:  58%|█████▊    | 170/291 [00:12<00:07, 15.50it/s]Loading weights:  60%|██████    | 175/291 [00:12<00:06, 16.85it/s]Loading weights:  61%|██████    | 177/291 [00:13<00:09, 11.99it/s]Loading weights:  62%|██████▏   | 181/291 [00:13<00:07, 15.52it/s]Loading weights:  63%|██████▎   | 184/291 [00:13<00:06, 15.78it/s]Loading weights:  64%|██████▍   | 187/291 [00:13<00:07, 13.45it/s]Loading weights:  66%|██████▌   | 191/291 [00:13<00:05, 17.34it/s]Loading weights:  67%|██████▋   | 194/291 [00:14<00:06, 14.28it/s]Loading weights:  67%|██████▋   | 196/291 [00:14<00:06, 14.07it/s]Loading weights:  69%|██████▊   | 200/291 [00:14<00:04, 18.29it/s]Loading weights:  70%|██████▉   | 203/291 [00:14<00:05, 14.72it/s]Loading weights:  70%|███████   | 205/291 [00:14<00:05, 14.38it/s]Loading weights:  72%|███████▏  | 209/291 [00:14<00:04, 18.94it/s]Loading weights:  73%|███████▎  | 212/291 [00:15<00:05, 14.54it/s]Loading weights:  74%|███████▎  | 214/291 [00:15<00:05, 13.92it/s]Loading weights:  76%|███████▌  | 220/291 [00:15<00:04, 17.33it/s]Loading weights:  76%|███████▋  | 222/291 [00:15<00:05, 13.15it/s]Loading weights:  78%|███████▊  | 226/291 [00:16<00:03, 17.10it/s]Loading weights:  79%|███████▊  | 229/291 [00:16<00:03, 16.02it/s]Loading weights:  79%|███████▉  | 231/291 [00:16<00:05, 11.56it/s]Loading weights:  82%|████████▏ | 238/291 [00:16<00:03, 16.26it/s]Loading weights:  82%|████████▏ | 240/291 [00:17<00:03, 12.96it/s]Loading weights:  84%|████████▍ | 245/291 [00:17<00:02, 17.82it/s]Loading weights:  85%|████████▌ | 248/291 [00:17<00:02, 14.63it/s]Loading weights:  86%|████████▌ | 250/291 [00:17<00:02, 14.18it/s]Loading weights:  87%|████████▋ | 254/291 [00:17<00:02, 18.30it/s]Loading weights:  88%|████████▊ | 257/291 [00:18<00:02, 14.52it/s]Loading weights:  89%|████████▉ | 259/291 [00:18<00:02, 14.10it/s]Loading weights:  90%|█████████ | 262/291 [00:18<00:01, 16.60it/s]Loading weights:  91%|█████████ | 265/291 [00:18<00:01, 15.80it/s]Loading weights:  92%|█████████▏| 267/291 [00:18<00:02, 12.00it/s]Loading weights:  93%|█████████▎| 272/291 [00:19<00:01, 17.98it/s]Loading weights:  95%|█████████▍| 275/291 [00:19<00:01, 14.14it/s]Loading weights:  96%|█████████▌| 278/291 [00:19<00:00, 15.10it/s]Loading weights:  97%|█████████▋| 283/291 [00:19<00:00, 16.72it/s]Loading weights:  98%|█████████▊| 285/291 [00:20<00:00, 12.70it/s]Loading weights: 100%|█████████▉| 290/291 [00:20<00:00, 18.01it/s]Loading weights: 100%|██████████| 291/291 [00:20<00:00, 14.38it/s]
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 2 rows failed deterministic checks.
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 16.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.7s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 16.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 42.9s
+  WARNING: failed to parse LLM checker output for batch 20: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 13.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 14.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 3 rows...
+  checker batch done in 6.6s
+
+[Done] Report saved to runs/rev_kb_hybrid_seed1_final_report.json
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "checker_metrics": {
+    "tp": 27,
+    "fp": 5,
+    "fn": 7,
+    "tn": 1,
+    "ground_truth_positives": 34,
+    "rows_flagged": 32,
+    "recall": 0.7941176470588235,
+    "recall_ci95": [
+      0.621,
+      0.913
+    ],
+    "precision": 0.84375,
+    "precision_ci95": [
+      0.6721,
+      0.9472
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 25,
+        "fp": 5,
+        "fn": 2,
+        "tn": 1
+      },
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 0
+      },
+      "deterministic": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=hybrid | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 1 rows failed deterministic checks.
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.3s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 10.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.1s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 43.5s
+  WARNING: failed to parse LLM checker output for batch 20: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 15.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 14.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 4 rows...
+  checker batch done in 12.5s
+
+[Done] Report saved to runs/rev_kb_hybrid_seed2_final_report.json
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 37
+  },
+  "checker_metrics": {
+    "tp": 29,
+    "fp": 3,
+    "fn": 8,
+    "tn": 0,
+    "ground_truth_positives": 37,
+    "rows_flagged": 32,
+    "recall": 0.7837837837837838,
+    "recall_ci95": [
+      0.6179,
+      0.9017
+    ],
+    "precision": 0.90625,
+    "precision_ci95": [
+      0.7498,
+      0.9802
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 28,
+        "fp": 3,
+        "fn": 3,
+        "tn": 0
+      },
+      "deterministic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 0
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=hybrid | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 92/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 4 rows failed deterministic checks.
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 44.2s
+  WARNING: failed to parse LLM checker output for batch 0: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 43.6s
+  WARNING: failed to parse LLM checker output for batch 5: no valid, balanced JSON block found
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 12.8s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.1s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 15.5s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.2s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 5 rows...
+  checker batch done in 11.9s
+[Checker LLM: meta-llama/Llama-3.1-8B-Instruct] Validating batch of 1 rows...
+  checker batch done in 2.7s
+
+[Done] Report saved to runs/rev_kb_hybrid_seed3_final_report.json
+{
+  "config": {
+    "mode": "hybrid",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "checker_metrics": {
+    "tp": 26,
+    "fp": 1,
+    "fn": 12,
+    "tn": 1,
+    "ground_truth_positives": 38,
+    "rows_flagged": 27,
+    "recall": 0.6842105263157895,
+    "recall_ci95": [
+      0.5135,
+      0.825
+    ],
+    "precision": 0.9629629629629629,
+    "precision_ci95": [
+      0.8103,
+      0.9991
+    ],
+    "per_path": {
+      "missing": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "tn": 1
+      },
+      "deterministic": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "llm": {
+        "tp": 22,
+        "fp": 1,
+        "fn": 3,
+        "tn": 0
+      }
+    }
+  }
+}
+Total execution time: 440.84 seconds.
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=hybrid-circular | seed=1 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 1 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid-circular) ---
+W1103 00:19:05.058000 30592 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+[LLM Client] Loading tokenizer and model: mistralai/Mistral-7B-Instruct-v0.2 (quantization=4bit)
+W1103 00:19:06.940000 30592 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:18,  3.71it/s]Loading weights:   1%|          | 2/291 [00:00<01:20,  3.60it/s]Loading weights:   1%|▏         | 4/291 [00:00<00:42,  6.71it/s]Loading weights:   2%|▏         | 5/291 [00:00<00:40,  7.13it/s]Loading weights:   2%|▏         | 6/291 [00:00<00:38,  7.42it/s]Loading weights:   4%|▍         | 13/291 [00:01<00:15, 17.84it/s]Loading weights:   5%|▌         | 15/291 [00:01<00:20, 13.49it/s]Loading weights:   8%|▊         | 22/291 [00:01<00:13, 19.28it/s]Loading weights:   8%|▊         | 24/291 [00:01<00:17, 15.15it/s]Loading weights:  11%|█         | 31/291 [00:02<00:12, 20.38it/s]Loading weights:  12%|█▏        | 34/291 [00:02<00:14, 17.42it/s]Loading weights:  14%|█▎        | 40/291 [00:02<00:12, 20.66it/s]Loading weights:  15%|█▍        | 43/291 [00:02<00:13, 17.81it/s]Loading weights:  17%|█▋        | 49/291 [00:03<00:11, 20.76it/s]Loading weights:  18%|█▊        | 52/291 [00:03<00:13, 18.09it/s]Loading weights:  20%|█▉        | 58/291 [00:03<00:11, 21.02it/s]Loading weights:  21%|██        | 61/291 [00:03<00:12, 18.43it/s]Loading weights:  23%|██▎       | 67/291 [00:03<00:10, 21.23it/s]Loading weights:  24%|██▍       | 70/291 [00:04<00:12, 18.36it/s]Loading weights:  26%|██▌       | 76/291 [00:04<00:10, 21.28it/s]Loading weights:  27%|██▋       | 79/291 [00:04<00:11, 18.41it/s]Loading weights:  29%|██▉       | 85/291 [00:04<00:09, 21.38it/s]Loading weights:  30%|███       | 88/291 [00:05<00:10, 18.56it/s]Loading weights:  32%|███▏      | 94/291 [00:05<00:09, 20.48it/s]Loading weights:  33%|███▎      | 97/291 [00:05<00:10, 17.90it/s]Loading weights:  35%|███▌      | 103/291 [00:05<00:09, 20.24it/s]Loading weights:  36%|███▋      | 106/291 [00:06<00:10, 17.77it/s]Loading weights:  38%|███▊      | 112/291 [00:06<00:08, 20.88it/s]Loading weights:  40%|███▉      | 115/291 [00:06<00:09, 17.97it/s]Loading weights:  41%|████      | 119/291 [00:06<00:08, 21.14it/s]Loading weights:  42%|████▏     | 122/291 [00:06<00:10, 16.33it/s]Loading weights:  43%|████▎     | 124/291 [00:07<00:10, 15.70it/s]Loading weights:  45%|████▍     | 130/291 [00:07<00:08, 18.37it/s]Loading weights:  45%|████▌     | 132/291 [00:07<00:11, 13.89it/s]Loading weights:  48%|████▊     | 139/291 [00:07<00:08, 18.06it/s]Loading weights:  48%|████▊     | 141/291 [00:08<00:10, 13.95it/s]Loading weights:  50%|█████     | 146/291 [00:08<00:07, 18.74it/s]Loading weights:  51%|█████     | 149/291 [00:08<00:09, 14.91it/s]Loading weights:  52%|█████▏    | 152/291 [00:08<00:08, 15.57it/s]Loading weights:  54%|█████▍    | 157/291 [00:09<00:07, 17.03it/s]Loading weights:  55%|█████▍    | 159/291 [00:09<00:09, 13.37it/s]Loading weights:  56%|█████▋    | 164/291 [00:09<00:06, 18.64it/s]Loading weights:  57%|█████▋    | 167/291 [00:09<00:08, 15.09it/s]Loading weights:  58%|█████▊    | 170/291 [00:09<00:07, 15.84it/s]Loading weights:  60%|██████    | 175/291 [00:10<00:07, 16.15it/s]Loading weights:  61%|██████    | 177/291 [00:10<00:09, 11.67it/s]Loading weights:  63%|██████▎   | 184/291 [00:10<00:06, 16.15it/s]Loading weights:  64%|██████▍   | 186/291 [00:11<00:07, 13.16it/s]Loading weights:  66%|██████▋   | 193/291 [00:11<00:05, 17.21it/s]Loading weights:  67%|██████▋   | 195/291 [00:11<00:06, 13.73it/s]Loading weights:  69%|██████▊   | 200/291 [00:11<00:04, 18.29it/s]Loading weights:  70%|██████▉   | 203/291 [00:12<00:05, 15.18it/s]Loading weights:  71%|███████   | 206/291 [00:12<00:05, 16.03it/s]Loading weights:  73%|███████▎  | 211/291 [00:12<00:04, 16.38it/s]Loading weights:  73%|███████▎  | 213/291 [00:12<00:06, 12.91it/s]Loading weights:  76%|███████▌  | 220/291 [00:13<00:04, 17.11it/s]Loading weights:  76%|███████▋  | 222/291 [00:13<00:05, 13.53it/s]Loading weights:  79%|███████▊  | 229/291 [00:13<00:03, 17.49it/s]Loading weights:  79%|███████▉  | 231/291 [00:14<00:04, 13.96it/s]Loading weights:  82%|████████▏ | 238/291 [00:14<00:02, 17.75it/s]Loading weights:  82%|████████▏ | 240/291 [00:14<00:03, 13.04it/s]Loading weights:  84%|████████▍ | 244/291 [00:14<00:02, 15.89it/s]Loading weights:  85%|████████▍ | 247/291 [00:14<00:02, 16.18it/s]Loading weights:  86%|████████▌ | 249/291 [00:15<00:03, 12.58it/s]Loading weights:  87%|████████▋ | 254/291 [00:15<00:02, 17.84it/s]Loading weights:  88%|████████▊ | 257/291 [00:15<00:02, 14.63it/s]Loading weights:  89%|████████▉ | 260/291 [00:15<00:01, 15.63it/s]Loading weights:  91%|█████████ | 265/291 [00:16<00:01, 17.21it/s]Loading weights:  92%|█████████▏| 268/291 [00:16<00:01, 14.54it/s]Loading weights:  93%|█████████▎| 271/291 [00:16<00:01, 16.60it/s]Loading weights:  94%|█████████▍| 274/291 [00:16<00:01, 16.94it/s]Loading weights:  95%|█████████▍| 276/291 [00:17<00:01, 12.60it/s]Loading weights:  96%|█████████▌| 280/291 [00:17<00:00, 16.81it/s]Loading weights:  97%|█████████▋| 283/291 [00:17<00:00, 16.93it/s]Loading weights:  98%|█████████▊| 286/291 [00:17<00:00, 13.93it/s]Loading weights: 100%|██████████| 291/291 [00:17<00:00, 16.44it/s]
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 2 rows failed deterministic checks.
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 31.7s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.1s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 8.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 8.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 8.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 3 rows...
+  checker batch done in 6.4s
+
+[Done] Report saved to runs/rev_kb_hybrid-circular_seed1_final_report.json
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "checker_metrics": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 27,
+    "tn": 6,
+    "ground_truth_positives": 34,
+    "rows_flagged": 7,
+    "recall": 0.20588235294117646,
+    "recall_ci95": [
+      0.087,
+      0.379
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5904,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 27,
+        "tn": 6
+      },
+      "deterministic": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=hybrid-circular | seed=2 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 2 (100 rows) — no worker LLM call needed.
+[Ground truth] 93/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid-circular) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 1 rows failed deterministic checks.
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.2s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 4 rows...
+  checker batch done in 7.3s
+
+[Done] Report saved to runs/rev_kb_hybrid-circular_seed2_final_report.json
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 2,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 37
+  },
+  "checker_metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 35,
+    "tn": 3,
+    "ground_truth_positives": 37,
+    "rows_flagged": 2,
+    "recall": 0.05405405405405406,
+    "recall_ci95": [
+      0.0066,
+      0.1819
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.1581,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 35,
+        "tn": 3
+      },
+      "deterministic": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  }
+}
+[Pipeline] Loaded 5 typed business rules from datasets/kramabench_water_rules.json
+
+=== Safeguarded pipeline | mode=hybrid-circular | seed=3 ===
+[Pipeline] Loading and preparing dataset...
+[Pipeline] Loading custom dataset: datasets/water-body-testing-2019.csv
+[Pipeline] Injected 77 faults (ground-truth log saved).
+
+--- [Stage] Semantic Transformation (Worker: llm) ---
+[Transform cache] Reusing exact transformed table for seed 3 (100 rows) — no worker LLM call needed.
+[Ground truth] 92/100 transformed rows contain residual rule violations.
+
+--- [Stage] Validation (mode=hybrid-circular) ---
+[Checker] Deterministic fast path on 40 rows...
+[Checker] 4 rows failed deterministic checks.
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.8s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 12.4s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 9.9s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 10.0s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 5 rows...
+  checker batch done in 11.6s
+[Checker LLM: mistralai/Mistral-7B-Instruct-v0.2] Validating batch of 1 rows...
+  checker batch done in 2.4s
+
+[Done] Report saved to runs/rev_kb_hybrid-circular_seed3_final_report.json
+{
+  "config": {
+    "mode": "hybrid-circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 3,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 92,
+    "residual_bad_rows_in_heldout": 38
+  },
+  "checker_metrics": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 31,
+    "tn": 2,
+    "ground_truth_positives": 38,
+    "rows_flagged": 7,
+    "recall": 0.18421052631578946,
+    "recall_ci95": [
+      0.0774,
+      0.3433
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5904,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 31,
+        "tn": 2
+      },
+      "deterministic": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      }
+    }
+  }
+}
+Total execution time: 280.11 seconds.
+Done. Compare rev_* reports against the original runs/ reports:
+  if the 'same-family over-flags / cross is conservative' pattern follows the
+  CHECKER model (Llama still over-flags as cross checker; Mistral is still
+  conservative when checking itself), the family interpretation is ruled out.

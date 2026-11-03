@@ -1,0 +1,17 @@
+[
+  {
+    "row_idx": 96,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "OK",
+    "notes": "Community field null in original is an empty string in transformed; whitespace and label normalization correct."
+  },
+  {
+    "row_idx": 98,
+    "verdict": "OK",
+    "notes": "Whitespace and label normalization correct."
+  }
+]

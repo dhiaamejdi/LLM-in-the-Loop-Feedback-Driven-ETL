@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 2,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 6,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 9,
+    "verdict": "NOK",
+    "notes": "Community Code was changed from 55.0 to 283.0, Community was changed from Chatham to Stockbridge, County Code was changed from 1.0 to 3.0, County Description was changed from Barnstable to Berkshire, Year was unchanged, Sample Date was changed from 2019-07-29 00:00:00 to 2019-08-05 00:00:00, Beach Name was changed from Ridgevale to Kripalu Beach, Beach Type Description was changed from null to Fresh, Organism was changed from Enterococci to E. Coli, Indicator Level was changed from 80.0 to 0.5, Violation was unchanged."
+  },
+  {
+    "row_idx": 11,
+    "verdict": "NOK",
+    "notes": "Community Code was changed from 323.0 to 61.0, Community was changed from West Brookfield to Chicopee, County Code was changed from 27.0 to null, County Description was changed from Worcester to null, Year was unchanged, Sample Date was changed from 2019-07-31 00:00:00 to 2019-07-15 00:00:00, Beach Name was changed from Lake Wickabog Boat Club to Chicopee Beach (DCR), Beach Type Description was unchanged, Organism was changed from E. Coli to Enterococci, Indicator Level was changed from 10.0 to 16.0, Violation was changed from null to NO."
+  },
+  {
+    "row_idx": 12,
+    "verdict": "NOK",
+    "notes": "Community Code was changed from 61.0 to 319.0, Community was changed from Chicopee to Wendell, County Code was changed from 13.0 to 11.0, County Description was changed from null to Franklin, Year was changed from null to 2019.0, Sample Date was unchanged, Beach Name was unchanged, Beach Type Description was unchanged, Organism was unchanged, Indicator Level was changed from 16.0 to 32.0, Violation was unchanged."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 29,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other changes."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other changes."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "OK",
+    "notes": "Community field is now populated with 'Webster' in transformed data."
+  },
+  {
+    "row_idx": 32,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed, ISO 8601 format added to Sample Date, and no other changes."
+  },
+  {
+    "row_idx": 35,
+    "verdict": "OK",
+    "notes": "Whitespace trimmed and no other changes."
+  }
+]

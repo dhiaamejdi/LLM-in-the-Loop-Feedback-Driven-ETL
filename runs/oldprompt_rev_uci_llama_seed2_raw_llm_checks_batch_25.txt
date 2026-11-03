@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 89,
+    "verdict": "NG",
+    "notes": "Labels were not normalized correctly."
+  },
+  {
+    "row_idx": 92,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NG",
+    "notes": "Income label was not normalized correctly."
+  },
+  {
+    "row_idx": 96,
+    "verdict": "NG",
+    "notes": "Multiple fields were not normalized correctly."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NG",
+    "notes": "Multiple fields were not normalized correctly."
+  }
+]

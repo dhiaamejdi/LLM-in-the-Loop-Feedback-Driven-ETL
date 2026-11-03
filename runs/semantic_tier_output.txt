@@ -1,0 +1,19 @@
+vocabulary (one-input)     TP  0/60 recall 0.000 [0.000, 0.060]  FP  0  prec nan  acc 0.500
+comparator (two-input)     TP 60/60 recall 1.000 [0.940, 1.000]  FP 60  prec 0.500  acc 0.500
+similarity (t=0.50)        TP 40/60 recall 0.667 [0.533, 0.783]  FP 34  prec 0.541  acc 0.550
+llama/ablation (miss 5)    TP 60/60 recall 1.000 [0.940, 1.000]  FP 55  prec 0.522  acc 0.542
+                           verdict changes across seeds on 26/120 items; vs similarity b=23 c=24 exact McNemar p=1.0000
+llama/semantic (miss 0)    TP 57/60 recall 0.950 [0.861, 0.990]  FP 12  prec 0.826  acc 0.875
+                           verdict changes across seeds on 24/120 items; vs similarity b=44 c=5 exact McNemar p=0.0000
+mistral/ablation (miss 5)  TP 52/60 recall 0.867 [0.754, 0.941]  FP  8  prec 0.867  acc 0.867
+                           verdict changes across seeds on 22/120 items; vs similarity b=38 c=0 exact McNemar p=0.0000
+mistral/semantic (miss 0)  TP 45/60 recall 0.750 [0.621, 0.853]  FP  1  prec 0.978  acc 0.867
+                           verdict changes across seeds on 18/120 items; vs similarity b=41 c=3 exact McNemar p=0.0000
+
+Per category (accuracy on 2 x items):
+                          context_depe country_alia occupation_f state_abbrev
+similarity                       0.500        0.425        0.500        0.875
+llama/ablation                   0.500        0.600        0.500        0.542
+llama/semantic                   0.792        1.000        0.750        0.917
+mistral/ablation                 0.750        0.975        0.750        0.958
+mistral/semantic                 0.583        0.975        0.938        0.875

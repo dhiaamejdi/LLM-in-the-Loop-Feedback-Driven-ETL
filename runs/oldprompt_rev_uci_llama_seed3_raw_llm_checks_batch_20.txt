@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 73,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 74,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 82,
+    "verdict": "NOK",
+    "notes": "Whitespace was not trimmed and labels were not normalized correctly."
+  },
+  {
+    "row_idx": 85,
+    "verdict": "OK",
+    "notes": "Whitespace was trimmed and labels were normalized correctly."
+  },
+  {
+    "row_idx": 86,
+    "verdict": "NOK",
+    "notes": "Original 'race' value was null, but transformed value was set to 'White'."
+  }
+]

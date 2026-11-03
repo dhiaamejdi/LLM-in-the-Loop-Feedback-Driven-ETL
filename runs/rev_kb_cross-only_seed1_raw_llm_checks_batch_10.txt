@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 28,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Beach Type Description label retains wrong casing."
+  },
+  {
+    "row_idx": 30,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed."
+  },
+  {
+    "row_idx": 31,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed."
+  },
+  {
+    "row_idx": 36,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Sample Date label retains wrong formatting."
+  },
+  {
+    "row_idx": 38,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Indicator Level was not trimmed; Year value is incorrect."
+  }
+]

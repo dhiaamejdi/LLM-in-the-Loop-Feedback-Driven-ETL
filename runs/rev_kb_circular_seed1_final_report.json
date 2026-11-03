@@ -1,0 +1,484 @@
+{
+  "config": {
+    "mode": "circular",
+    "worker_mode": "llm",
+    "data_csv": "datasets/water-body-testing-2019.csv",
+    "worker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "checker_model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "seed": 1,
+    "sample_size": 100,
+    "heldout_size": 40,
+    "resumed_from_files": false
+  },
+  "ground_truth": {
+    "injected_faults": 77,
+    "residual_bad_rows_full_sample": 93,
+    "residual_bad_rows_in_heldout": 34
+  },
+  "verdict_coverage": {
+    "rows_sampled": 40,
+    "rows_with_verdict": 40,
+    "rows_missing_verdict": 0
+  },
+  "checker_metrics": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 28,
+    "tn": 6,
+    "ground_truth_positives": 34,
+    "rows_flagged": 6,
+    "recall": 0.17647058823529413,
+    "recall_ci95": [
+      0.0676,
+      0.3453
+    ],
+    "precision": 1.0,
+    "precision_ci95": [
+      0.5407,
+      1.0
+    ],
+    "per_path": {
+      "llm": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 28,
+        "tn": 6
+      }
+    }
+  },
+  "row_level_results": [
+    {
+      "row_idx": 2,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace trimmed from 'Community' and 'Sample Date' fields.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-08 00:00:00', got '2019-07-08T00:00:00.000Z'",
+        "Organism: expected 'Enterococci', got ''"
+      ]
+    },
+    {
+      "row_idx": 6,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No changes to labels or values.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-08-27 00:00:00', got '2019-08-27T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 9,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community label changed from 'Chatham' to 'Stockbridge'; Community Code also changed accordingly. County Description label changed from 'Barnstable' to 'Berkshire'; County Code also changed accordingly. Year label changed from '2019.0' to null. Sample Date changed from '2019-07-29 00:00:00' to '2019-08-05 00:00:00'. Beach Name label remains the same but value changed from 'Ridgevale' to 'Kripalu Beach'. Organism label remains the same but value changed from 'Enterococci' to 'E. Coli'. Indicator Level label remains the same but value changed from '80.0' to '0.5'. Violation label remains the same but value changed from 'NO' to null.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(55.0), got '283.0'",
+        "Community: expected 'Chatham', got 'Stockbridge'",
+        "County Code: expected np.float64(1.0), got '3.0'",
+        "County Description: expected 'Barnstable', got 'Berkshire'",
+        "Sample Date: expected '2019-07-29 00:00:00', got '2019-08-05 00:00:00'",
+        "Beach Name: expected 'Ridgevale', got 'Kripalu Beach'",
+        "Beach Type Description: expected nan, got 'Fresh'",
+        "Organism: expected 'Enterococci', got 'E. Coli'",
+        "Indicator Level: expected np.float64(80.0), got '0.5'"
+      ]
+    },
+    {
+      "row_idx": 11,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community label changed from 'West Brookfield' to 'Chicopee'. County Code label removed. County Description label removed. Year label remains the same but value changed from '2019.0' to null. Sample Date changed from '2019-07-31 00:00:00' to '2019-07-15 00:00:00'. Beach Name label remains the same but value changed from 'Lake Wickabog Boat Club' to 'Chicopee Beach (DCR)'. Organism label remains the same but value changed from 'E. Coli' to 'Enterococci'. Indicator Level label changed from '10.0' to '16.0'.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(323.0), got '61.0'",
+        "Community: expected 'West Brookfield', got 'Chicopee'",
+        "County Code: expected np.float64(27.0), got nan",
+        "County Description: expected 'Worcester', got nan",
+        "Sample Date: expected '2019-07-31 00:00:00', got '2019-07-15 00:00:00'",
+        "Beach Name: expected 'Lake Wickabog Boat Club', got 'Chicopee Beach (DCR)'",
+        "Organism: expected 'E. Coli', got 'Enterococci'",
+        "Indicator Level: expected np.float64(10.0), got '16.0'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 12,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community label changed from 'Chicopee' to 'Wendell'. County Code label removed. County Description label removed. Year label remains the same but value changed from '2019.0' to null. Sample Date changed from '2019-07-15 00:00:00' to '2019-07-23 00:00:00'. Beach Name label remains the same but value changed from 'Chicopee Beach (DCR)' to 'Ruggles Pond (DCR)'. Organism label remains the same but value changed from 'Enterococci' to null. Indicator Level label changed from '16.0' to '32.0'.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(61.0), got '319.0'",
+        "Community: expected 'Chicopee', got 'Wendell'",
+        "County Code: expected np.float64(13.0), got '11.0'",
+        "County Description: expected nan, got 'Franklin'",
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-07-15 00:00:00', got '2019-07-23 00:00:00'",
+        "Beach Name: expected 'Chicopee Beach (DCR)', got 'Ruggles Pond (DCR)'",
+        "Indicator Level: expected np.float64(16.0), got '32.0'"
+      ]
+    },
+    {
+      "row_idx": 17,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-23 00:00:00', got '2019-07-23T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 19,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-13 00:00:00', got '2019-05-13T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 21,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-22 00:00:00', got '2019-07-22T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 26,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label formatting in keys preserved, and all other fields are unchanged.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 27,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Indicator Level in 'original' is null, but in 'transformed' it is an empty string.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Indicator Level: expected np.float64(nan), got ''"
+      ]
+    },
+    {
+      "row_idx": 28,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 30,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 31,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 36,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-17 00:00:00', got '2019-06-17T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 38,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Year: expected np.float64(nan), got '2019.0'",
+        "Sample Date: expected '2019-07-22 00:00:00', got '2019-07-22T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 39,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and date format normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-10 00:00:00', got '2019-06-10T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 41,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No changes needed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-08-26 00:00:00', got '2019-08-26T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 42,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Null values handled correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''",
+        "Beach Name: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 45,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and date format normalized correctly.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected 'Fresh', got '2019-07-22T00:00:00.000Z'",
+        "Beach Type Description: expected '2019-07-22 00:00:00', got 'Fresh'",
+        "Organism: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 47,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Leading whitespace in Community Name was trimmed.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 49,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label normalization correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected nan, got ''"
+      ]
+    },
+    {
+      "row_idx": 55,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label normalization correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(1.0), got 'Barnstable'",
+        "County Description: expected 'Barnstable', got ''",
+        "Sample Date: expected '2019-07-31 00:00:00', got '2019-07-31T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 60,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label normalization correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(1.0), got 'Barnstable'",
+        "Sample Date: expected '2019-07-02 00:00:00', got '2019-07-02T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 61,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace and label normalization correct.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(21.0), got 'Norfolk'",
+        "Sample Date: expected '2019-08-20 00:00:00', got '2019-08-20T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 64,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Missing 'Beach Name' value in 'original' data.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-22 00:00:00', got '2019-07-22T00:00:00.000Z'",
+        "Beach Name: expected nan, got 'Beach Name'"
+      ]
+    },
+    {
+      "row_idx": 69,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-24 00:00:00', got '2019-06-24T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 70,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-30 00:00:00', got '2019-07-30T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 73,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 74,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Falmouth', got 'Old Silver Residents'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 75,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community: expected 'Marblehead', got 'Stramski'",
+        "Violation: expected nan, got 'NO'"
+      ]
+    },
+    {
+      "row_idx": 79,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": false,
+      "ground_truth_reasons": []
+    },
+    {
+      "row_idx": 81,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-07-09 00:00:00', got '2019-07-09T00:00:00Z'"
+      ]
+    },
+    {
+      "row_idx": 84,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-05-20 00:00:00', got '2019-05-20T00:00:00Z'",
+        "Beach Type Description: expected 'Fresh', got 'fresh'"
+      ]
+    },
+    {
+      "row_idx": 85,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-23 00:00:00', got '2019-07-23T00:00:00Z'",
+        "Beach Type Description: expected 'Marine', got 'marine'"
+      ]
+    },
+    {
+      "row_idx": 87,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "No issues found.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-07-08 00:00:00', got '2019-07-08T00:00:00Z'"
+      ]
+    },
+    {
+      "row_idx": 90,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "Whitespace in 'County Description' field of original data was removed in transformed data.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(nan), got 'Barnstable'",
+        "County Description: expected 'Barnstable', got ''",
+        "Sample Date: expected '2019-07-02 00:00:00', got '2019-07-02T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 92,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "County Code: expected np.float64(9.0), got 'Barnstable'",
+        "County Description: expected nan, got ''",
+        "Sample Date: expected '2019-06-25 00:00:00', got '2019-06-25T00:00:00.000Z'"
+      ]
+    },
+    {
+      "row_idx": 96,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-05 00:00:00', got '2019-06-05T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 97,
+      "verdict": "NOT_OK",
+      "checker_path": "llm",
+      "checker_notes": "Community field in original data is empty in transformed data.",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Community Code: expected np.float64(351.0), got ''",
+        "Community: expected nan, got ''",
+        "Sample Date: expected '2019-06-10 00:00:00', got '2019-06-10T00:00:00'"
+      ]
+    },
+    {
+      "row_idx": 98,
+      "verdict": "OK",
+      "checker_path": "llm",
+      "checker_notes": "",
+      "ground_truth_bad": true,
+      "ground_truth_reasons": [
+        "Sample Date: expected '2019-06-20 00:00:00', got '2019-06-20T00:00:00'"
+      ]
+    }
+  ]
+}

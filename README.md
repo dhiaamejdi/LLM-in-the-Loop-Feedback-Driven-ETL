@@ -5,9 +5,9 @@ A modular architecture for trustworthy Extract-Transform-Load (ETL) pipelines au
 This repository contains the prototype and evaluation harness for the paper:
 
 > **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy Data Pipelines**
-> Anonymous Authors.
+> Dhiaa Mejdi and Adel M. Alimi. NewInML Workshop at NeurIPS 2026, Paris.
 
-The paper's arc, honestly: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors, echoing LLM self-correction limits [Kamoi et al. 2024] and evaluator self-preference [Panickssery et al. 2024]). A controlled six-configuration, multi-seed ablation — the primary evidence of the paper — did **not** reproduce that blindness: with a balanced checker prompt, the same-family checker in our pairing *over-flags* (recall 0.84–0.93 at precision 0.49–0.64, barely above a flag-everything floor of 0.43–0.59), cross-architecture checkers are conservative-but-precise (0.22–0.28 recall at 0.94–1.00 precision), Reflexion-style self-critique shows no detectable benefit at this scale, and the durable positive result is that deterministic rules and cross-model checking catch **complementary** errors: the rules+cross hybrid achieves the best near-zero-false-positive coverage (0.45–0.51 recall at ≥0.96 precision) while sending 14–17% fewer rows to the LLM, and a rules+same-family hybrid attains the highest observed recall (0.96 on UCI) but inherits the same-family false-positive flood — hybridization complements precision, it does not repair it. The pilot's apparent blindness traces to an OK-anchored checker prompt — prompt specification is a first-order variable in LLM-validation studies. All numbers reproduce from the committed `runs/` artifacts.
+The paper's arc: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors). A controlled six-configuration, multi-seed ablation, run in **both worker/checker role assignments**, does not support a family effect in either direction: in this model pair, behavior follows the checker model. Llama flags 72-87% of rows and is the only model with parse failures, whichever worker it checks; Mistral flags 9-18% and never fails. Rules and LLMs catch largely disjoint errors, so hybrids raise recall, while precision comes from the LLM chosen. On compilable requirements a two-input comparator equals ground truth and dominates every checker. About half of the positive labels are format-only differences, which strongly affects recall and break-even costs. In a small authored pilot of requirements that resist compilation, LLM checkers reached accuracy 0.87 against 0.55 for the best string baseline, and rewording the checker's rule alone moved Llama from 0.54 to 0.88. Ablation numbers reproduce from the committed `runs/` artifacts.
 
 ---
 
@@ -42,7 +42,14 @@ The harness was rewritten to make every claim in the paper attributable and repr
 | Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
 | Reflexion baseline / rules+same-family hybrid | `--mode reflexion` / `--mode hybrid-circular` |
 | FP audit (finding 1, 39/39) | `python audit_fps.py runs` |
-| Cost analysis (Table 2) | Estimated from token counts; not auto-generated |
+| Paired McNemar tests (Section 6) | `python mcnemar_tests.py runs` |
+| Cost-weighted break-even ratios (rho* column of the ablation table, Section 6) | `python cost_breakeven.py runs` |
+| Two-input comparator reference rows | By construction equal to the oracle (`cost_breakeven.py` prints them) |
+| Reversed pairing (Table 2 of the paper) | `./run_reversed_pairing.sh 1,2,3 runs`, then `python robustness_checks.py runs` |
+| Channel overlap, label sensitivity, cost lower envelope, bootstrap intervals | `python robustness_checks.py runs` (saved in `runs/robustness_checks_output.txt`) |
+| Semantic pilot (Table 3 of the paper) | `python semantic_tier.py run`, then `python semantic_tier.py score` (saved in `runs/semantic_tier_output.txt`) |
+| Early prompt rerun (Section 6 of the paper) | `python early_prompt_rerun.py run`, then `python early_prompt_rerun.py score` (saved in `runs/oldprompt_output.txt`) |
+| Figures 1 and 2 | Mermaid sources in `figures/*.mmd` |
 
 ## Setup
 
@@ -142,8 +149,9 @@ Pooled results:
 | **Full lake (22 files)**, detection | **10 seeds × 1000 checks** | **9102** | **0** | **0** | **898** | **100% [0.9996, 1.00]** | **100%** |
 
 A bonus finding from the full lake: the `Violation` column's vocabulary drifts across years
-(`no/yes` → `NO/YES` → `No/Yes`), so ~half of the detected faults are **naturally occurring**
-data-quality errors, not injected ones — real faults, caught alongside synthetic ones.
+(`no/yes` → `NO/YES` → `No/Yes`), so 46% of bad checked rows across the lake (4,196/9,102) carry no injected fault:
+real data-quality errors. This does not extend to the single 2019 table used in the ablation
+(0/796 in passthrough; 1/51 with the Llama worker).
 
 These runs validate the **deterministic path** and dataset generality. The **LLM** worker/checker
 modes were subsequently run on this same table as part of the six-configuration ablation
@@ -160,11 +168,72 @@ transform identity against the rules+same-family reports, and mechanically check
 circular-checker false positive's stated rationale. Expected output on this repo:
 `verifiable: 39 ... 39/39`.
 
+## Cost-weighted comparison
+
+`cost_breakeven.py` regenerates the paper's cost-weighted comparison. With `c_FN` the cost of a
+missed error and `c_FP` the cost of an unnecessary review, a configuration beats the rules+cross
+hybrid exactly when `c_FN / c_FP` exceeds the printed break-even ratio `rho*`. Expected output on
+this repo: circular 1.04 (UCI) / 2.65 (KramaBench), rules+same-family 0.74 / 2.94,
+flag-everything 1.24 / 2.76; cross-only is dominated on both datasets.
+
+## Cost case study (removed from the paper)
+
+Earlier token-count estimates for one 10,000-record job, kept for the record. They are no longer
+reported: the listed tokens could not carry 10,000 rows through the batched worker, and the costs
+cannot be regenerated from the artifacts.
+
+| Component | Calls | Tokens (in / out) | Cost |
+|---|---|---|---|
+| Schema Understanding | 1 | 5.2k / 1.8k | $0.032 |
+| Semantic Transform | 3 | 8.7k / 3.2k | $0.118 |
+| Feature Engineering | 2 | 6.5k / 2.1k | $0.061 |
+| Data Cleaning | 2 | 7.3k / 2.5k | $0.074 |
+| LLM Checkers (x4) | 4 | 4.8k / 1.2k | $0.048 |
+| **Total** | **12** | | **$0.333** |
+
 ## Paired significance tests
 
 `mcnemar_tests.py` regenerates the paper's paired-significance paragraph: exact McNemar
 tests and approximate minimum detectable effects for every comparison, computed from the
 per-row verdicts on the identical row sets of the original five configurations.
+
+## Reversed pairing
+
+`run_reversed_pairing.sh` runs all six configurations with Mistral as worker (Llama as the cross-family checker,
+Mistral checking itself), at the sample sizes, worker batch sizes, seeds and injected faults of the original runs.
+Reports are the `runs/rev_*` files.
+
+```bash
+export HF_TOKEN=...            # GPU machine
+./run_reversed_pairing.sh 1,2,3 runs
+python robustness_checks.py runs
+```
+
+Pooled recall / share of rows flagged, single-pass LLM checker, primary labels:
+
+| Worker -> checker | Relation | UCI Adult | KramaBench |
+|---|---|---|---|
+| Llama -> Llama | same | 0.925 / 84% | 0.843 / 73% |
+| Mistral -> Llama | cross | 0.915 / 87% | 0.706 / 72% |
+| Mistral -> Mistral | same | 0.255 / 14% | 0.101 / 9% |
+| Llama -> Mistral | cross | 0.283 / 18% | 0.216 / 9% |
+
+Workers differ between rows, so labels differ and these comparisons are unpaired. The reversed runs used different
+hardware and library versions from the originals (RTX 4090 16 GB, torch 2.11, transformers 5.22).
+
+## Label sensitivity
+
+Injected missing values are `NaN`, but the worker sees them as empty CSV fields, so echoing `""` differs from the
+oracle's `NaN` without violating a typed rule. `robustness_checks.py` also scores with "format-clean" labels, which
+count such differences and same-value rewrites (for example a date in ISO 8601 form) as clean. Primary labels are
+unchanged; the format-clean definition was chosen after seeing results and is reported as a sensitivity analysis.
+
+## Semantic pilot
+
+`datasets/semantic_tier_cases.json` holds 60 authored record pairs, each with one correct and one wrong transformation,
+under a same-real-world-entity requirement. `semantic_tier.py` scores LLM checkers against deterministic baselines. The
+items were authored to resist string rules, so results carry no prevalence information, and a complete lookup table
+would compile the requirement away.
 
 ## Reflexion baseline (agentic self-feedback)
 
@@ -201,9 +270,9 @@ Each run writes:
 
 ## Scope and known limitations (post-ablation)
 
-- **Executed.** The Low-Ambiguity tier (UCI Adult); the six-configuration, three-seed checker ablation on UCI Adult **and** the KramaBench water-quality table (the paper's primary evidence; Section 6); and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7). **Planned:** the CORD and NYC Open Data tiers, DS-1000.
+- **Executed.** The six-configuration, three-seed checker ablation in both role assignments on UCI Adult and the KramaBench water-quality table (the paper's primary evidence; Section 6); a small authored pilot on requirements that resist compilation; and the deterministic-path consistency run over the full 320k-row KramaBench lake (Section 7). **Planned:** the CORD and NYC Open Data tiers, DS-1000.
 - **Sample sizes.** The ablation checks 90 (UCI) and 120 (KramaBench) rows across 3 seeds per configuration — usable but with wide confidence intervals; the superseded single-seed pilot (N=30) is retained in the paper only as a record.
-- **Fault realism.** UCI-tier errors are synthetically injected; on the KramaBench tier roughly half of detected faults are *naturally occurring* vocabulary-drift errors (Section 7), dominated by one error class (label casing).
-- **Prompt sensitivity.** The paper's own results show checker-prompt specification can qualitatively change conclusions; all findings are conditional on the fixed, balanced prompt used in the ablation.
+- **Fault realism.** Ablation faults are synthetic or worker-introduced. The roughly half of faults that occur naturally (46%) applies to the full KramaBench lake, not to the single 2019 table used in the ablation (0/796 in passthrough; 1/51 with the Llama worker).
+- **Prompt sensitivity.** In the semantic pilot, rewording the rule alone cut Llama's false positives from 55 to 12. All ablation findings are conditional on one fixed prompt, which does not receive the typed rules.
 - **Quantization & hardware.** Ablation models ran in 4-bit NF4 on a single 16 GB GPU; full-precision behavior may differ. Outputs are not bit-reproducible across hardware, which is why seeds, model commit pins (`runs/model_pins.json`), and raw outputs are archived.
-- **Known engineering hazard.** Same-family (Llama) checkers degenerated into unparsable repetition on 12.5% of checked KramaBench rows' batches, while Mistral parsed cleanly on every batch (388 checked rows) — see paper Section 6, finding 5. The recursive batch-splitting transform and per-verdict attribution exist because of this.
+- **Known engineering hazard.** Llama checkers degenerated into unparsable repetition on KramaBench whichever worker they checked (85 of 1,007 Llama-checked rows across both assignments, all on KramaBench); Mistral returned a verdict for all 1,004 rows it checked.

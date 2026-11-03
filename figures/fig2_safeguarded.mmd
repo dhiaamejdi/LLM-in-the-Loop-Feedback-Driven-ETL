@@ -1,0 +1,40 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Helvetica, Arial, sans-serif", "fontSize": "15px", "primaryColor": "#ffffff", "primaryBorderColor": "#444444", "lineColor": "#444444", "clusterBkg": "#f6f6f6", "clusterBorder": "#bbbbbb"}, "flowchart": {"curve": "basis", "nodeSpacing": 22, "rankSpacing": 30, "wrappingWidth": 320}}}%%
+flowchart TB
+    subgraph L1["1. Data and seeded error injection"]
+        direction LR
+        LOAD["Load dataset"] --> SAMPLE["Seeded sample"] --> INJECT["Inject faults, logged as<br/>(row, column, type)"] --> ORIG["Source rows<br/>(with faults)"]
+    end
+
+    subgraph L2["2. Worker transformation"]
+        direction LR
+        PROMPT["Prompt: typed rules<br/>+ source rows"] --> WORKER["Worker LLM<br/>(Llama-3.1-8B)"] --> PARSE{"Parses?"}
+        PARSE -- "no: retry, split batch,<br/>then keep source row" --> WORKER
+        PARSE -- "yes" --> TRANS["Transformed rows<br/>(shared by all modes)"]
+    end
+
+    subgraph L3["3. Hybrid validation"]
+        direction LR
+        FAST["Fast path: typed rules on<br/>transformed row only"]
+        SLOW["Slow path: Mistral-7B, 5 rows per call<br/>sees source + transformed rows<br/>fixed prompt, typed rules not supplied"]
+        VERDICT["Verdict per row<br/>OK / NOT_OK + path tag<br/>no parsable verdict: scored OK"]
+        FAST -- "pass" --> SLOW --> VERDICT
+        FAST -- "fail: NOT_OK" --> VERDICT
+    end
+
+    subgraph L4["4. Scoring against ground truth"]
+        direction LR
+        ORACLE["Oracle = two-input comparator:<br/>transformed row vs. expected transform<br/>of source row, plus canonical values"] --> SCORE["TP / FP / FN / TN, exact 95% CIs,<br/>per-path attribution"] --> REPORT["Reports and<br/>raw outputs"]
+    end
+
+    L1 -- "source rows" --> L2
+    L2 -- "source + transformed rows" --> L3
+    L3 -- "verdicts + source + transformed rows" --> L4
+
+    classDef inject fill:#fbe7cf,stroke:#b4690e,color:#111111
+    classDef worker fill:#efe3f7,stroke:#6d3f8f,color:#111111
+    classDef det fill:#d9efe9,stroke:#1f6f5f,stroke-width:2px,color:#111111
+    classDef llm fill:#eef8f5,stroke:#1f6f5f,stroke-dasharray:5 4,color:#111111
+    class INJECT inject
+    class WORKER,PARSE worker
+    class FAST det
+    class SLOW llm

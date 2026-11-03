@@ -1,0 +1,27 @@
+[
+  {
+    "row_idx": 90,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Beach Type Description, Indicator Level, Violation was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 91,
+    "verdict": "OK",
+    "notes": "All fields are correct."
+  },
+  {
+    "row_idx": 93,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Beach Type Description, Indicator Level, Violation was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 94,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Beach Type Description, Indicator Level, Violation was not trimmed; income label retains trailing period."
+  },
+  {
+    "row_idx": 97,
+    "verdict": "NOT_OK",
+    "notes": "Leading/trailing whitespace in Community Code, Year, Sample Date, Beach Name, Beach Type Description, Indicator Level, Violation was not trimmed; income label retains trailing period."
+  }
+]
