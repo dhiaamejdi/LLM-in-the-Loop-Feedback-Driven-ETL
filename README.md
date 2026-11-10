@@ -7,7 +7,7 @@ This repository contains the prototype and evaluation harness for the paper:
 > **LLM-in-the-Loop Feedback-Driven ETL: Toward Trustworthy Data Pipelines**
 > Dhiaa Mejdi and Adel M. Alimi. NewInML Workshop at NeurIPS 2026, Paris.
 
-The paper's arc: an early pilot suggested a **circular validation problem** (same-family checkers blind to their own errors). A controlled six-configuration, multi-seed ablation, run in **both worker/checker role assignments**, does not support a family effect in either direction: in this model pair, behavior follows the checker model. Under the ablation's prompt, Llama flags 72-87% of rows and is the only model with parse failures, whichever worker it checks; Mistral flags 9-18% and never fails. Rules and LLMs catch largely disjoint errors, so hybrids usually raise recall, while precision comes from the LLM chosen. On compilable requirements a two-input comparator equals ground truth and dominates every checker. About half of the positive labels are format-only differences, which strongly affects recall and break-even costs. In a small authored pilot of requirements that resist compilation, LLM checkers reached accuracy 0.87-0.88 against 0.55 for the best string baseline, and rewording the checker's rule alone moved Llama from 0.54 to 0.88. An early prompt that never named the rejection verdict produced an apparent 0 flags, a scoring artifact: the models wrote other rejection words, which exact matching read as not flagged. Ablation numbers reproduce from the committed `runs/` artifacts.
+The paper's arc: an early pilot suggested a **circular validation problem** (a model checking its own output misses its own errors). A controlled six-configuration, multi-seed ablation, run in **both worker/checker role assignments**, does not support an effect of the worker-checker relationship in either direction: in this model pair, behavior follows the checker model. Under the ablation's prompt, Llama flags 72-87% of rows and is the only model with parse failures, whichever worker it checks; Mistral flags 9-18% and never fails. Rules and LLMs catch largely disjoint errors, so hybrids usually raise recall, while precision comes from the LLM chosen. On compilable requirements a two-input comparator reproduces ground truth by construction and dominates every checker. About half of the positive labels are format-only differences, which strongly affects recall and break-even costs. In a small exploratory pilot, on items we authored, of requirements that resist compilation, LLM checkers reached accuracy 0.87-0.88 against 0.55 for the best string baseline, and rewording the checker's rule alone moved Llama from 0.54 to 0.88. An early prompt that never named the rejection verdict produced an apparent 0 flags, a scoring artifact: the models wrote other rejection words, which exact matching read as not flagged. Ablation numbers reproduce from the committed `runs/` artifacts.
 
 ---
 
@@ -15,7 +15,7 @@ The paper's arc: an early pilot suggested a **circular validation problem** (sam
 
 The harness was rewritten to make checker results attributable and reproducible:
 
-1. **Ablation modes.** `--mode {circular, reflexion, cross-only, rules-only, hybrid, hybrid-circular}` runs all six cells of the design (same-family vs. cross-family checker × with/without deterministic rules, plus a Reflexion-style self-critique baseline), so the contribution of each safeguard can be measured separately instead of being confounded.
+1. **Ablation modes.** `--mode {circular, reflexion, cross-only, rules-only, hybrid, hybrid-circular}` runs all six cells of the design (same-model vs. cross-model checker × with/without deterministic rules, plus a Reflexion-style self-critique baseline), so the contribution of each safeguard can be measured separately instead of being confounded.
 2. **Ground-truth metrics.** `inject_errors()` now logs every injected fault as `(row, column, error_type)`, and a deterministic oracle labels every transformed row as clean / residual-error. Checker verdicts are scored against this ground truth: TP/FP/FN/TN, recall, precision, and **exact Clopper–Pearson 95% confidence intervals** (pure Python, no scipy).
 3. **Per-path attribution.** Every verdict is tagged `checker="deterministic"` or `checker="llm"`, and the final report breaks metrics down per path.
 4. **Full seeding and multi-seed runs.** `--seed N` or `--seeds 1,2,...,10`.
@@ -34,7 +34,7 @@ The harness was rewritten to make checker results attributable and reproducible:
 | `aggregate_results.py` | Pools the reports into the ablation summary and LaTeX table. |
 | `mcnemar_tests.py` | Paired significance tests. |
 | `cost_breakeven.py` | Break-even ratios for the cost-weighted comparison. |
-| `audit_fps.py` | Checks the same-family checker's false-positive rationales against the rows. |
+| `audit_fps.py` | Checks the same-model checker's false-positive rationales against the rows. |
 | `robustness_checks.py` | Row-level channel overlap, label sensitivity, cost lower envelope and the worker-by-checker table. |
 | `semantic_tier.py` | Pilot on requirements that resist compilation. |
 | `early_prompt_rerun.py` | Reruns the harness's early checker prompt on archived transforms. |
@@ -50,8 +50,8 @@ The harness was rewritten to make checker results attributable and reproducible:
 | Pilot worker accuracy per stage (94-100%: 100% / 94.73% / 95.47% / 94.35%) | Pilot notebook, via oracle comparison (pilot scope; see paper §5) |
 | Circular validation baseline (Llama checks Llama) | `--mode circular` |
 | Safeguarded results (recall/precision + 95% CI, Table 1) | `--mode hybrid` → `*_final_report.json` |
-| Cross-architecture-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
-| Reflexion baseline / rules+same-family hybrid | `--mode reflexion` / `--mode hybrid-circular` |
+| Cross-model-only / rules-only ablation cells | `--mode cross-only` / `--mode rules-only` |
+| Reflexion baseline / rules+same-model hybrid | `--mode reflexion` / `--mode hybrid-circular` |
 | FP audit (finding 2, 39/39) | `python audit_fps.py runs` |
 | Paired McNemar tests (Section 6) | `python mcnemar_tests.py runs` |
 | Cost-weighted break-even ratios (rho* column of the ablation table, Section 6) | `python cost_breakeven.py runs` |
@@ -70,6 +70,23 @@ Requires Python 3.9+ and a GPU for the LLM stages (`Llama-3.1-8B-Instruct` and `
 pip install -r requirements.txt
 export HF_TOKEN="your_token_here"   # never hardcode it
 ```
+
+## Reproducibility details
+
+| Item | Setting |
+|---|---|
+| Models | `meta-llama/Llama-3.1-8B-Instruct` at commit `0e9e39f249a16976918f6564b8830bc894c89659`; `mistralai/Mistral-7B-Instruct-v0.2` at commit `63a8b081895390a26e140280378bc85ec8bce07a` (`runs/model_pins.json`) |
+| Quantization | bitsandbytes 4-bit NF4, double quantization, float16 compute |
+| Decoding | Greedy (`do_sample=False`, temperature 0); stop at EOS, plus `<\|eot_id\|>` for Llama |
+| Token caps | 2,048 new tokens per worker call; 1,024 per checker call (and per Reflexion second pass) |
+| Batches | Worker: 10 rows (UCI) or 8 rows (KramaBench), as in `run_reversed_pairing.sh`. Checker: 5 rows per call |
+| Worker retries | Up to 2 attempts per chunk; a truncated output splits the chunk in half instead; a single row that still fails keeps its source row (fallback rate is logged) |
+| Checker parsing | No retry. A batch with no parsable JSON leaves its rows without a verdict, scored as `OK` (the "No verdict" column) |
+| Samples | 100 rows per seed; 30 checked rows (UCI) or 40 (KramaBench) |
+| Seeds | Seed *s* seeds Python and NumPy, draws the sample (`random_state=s`), the injected faults and the checked rows (`default_rng(s)`). Tables 1 and 2 use seeds 1-3; the full KramaBench consistency run uses seeds 1-10; in the semantic pilot seeds 1-3 only reorder rows |
+| Environment | Reversed-pairing runs: RTX 4090 16 GB, torch 2.11, transformers 5.22. The original Llama-worker runs used a single 16 GB GPU; their library versions were not recorded |
+
+Outputs are not bit-reproducible across hardware or library versions, which is why every raw LLM output is archived in `runs/`.
 
 ## Running
 
@@ -175,7 +192,7 @@ measures checker FPs), `passthrough` (no repair, no GPU, measures checker detect
 
 `audit_fps.py` regenerates the paper's FP-audit claim (finding 2) from the committed
 artifacts: it reconstructs transformed rows from the raw worker outputs, certifies per-seed
-transform identity against the rules+same-family reports, and mechanically checks each
+transform identity against the rules+same-model reports, and mechanically checks each
 circular-checker false positive's stated rationale. Expected output on this repo:
 `verifiable: 39 ... 39/39`.
 
@@ -184,7 +201,7 @@ circular-checker false positive's stated rationale. Expected output on this repo
 `cost_breakeven.py` regenerates the paper's cost-weighted comparison. With `c_FN` the cost of a
 missed error and `c_FP` the cost of an unnecessary review, a configuration beats the rules+cross
 hybrid exactly when `c_FN / c_FP` exceeds the printed break-even ratio `rho*`. Expected output on
-this repo: circular 1.04 (UCI) / 2.65 (KramaBench), rules+same-family 0.74 / 2.94,
+this repo: circular 1.04 (UCI) / 2.65 (KramaBench), rules+same-model 0.74 / 2.94,
 flag-everything 1.24 / 2.76; cross-only is dominated on both datasets.
 
 ## Paired significance tests
@@ -195,7 +212,7 @@ per-row verdicts on the identical row sets of the original five configurations.
 
 ## Reversed pairing
 
-`run_reversed_pairing.sh` runs all six configurations with Mistral as worker (Llama as the cross-family checker,
+`run_reversed_pairing.sh` runs all six configurations with Mistral as worker (Llama as the cross-model checker,
 Mistral checking itself), at the sample sizes, worker batch sizes, seeds and injected faults of the original runs.
 Reports are the `runs/rev_*` files.
 
@@ -252,10 +269,10 @@ The prompts differ in rule, exemplars and vocabulary at once, so these runs cann
 
 ## Reflexion baseline (agentic self-feedback)
 
-`--mode reflexion` runs a same-family checker with a Reflexion-style second pass (the model is
+`--mode reflexion` runs a same-model checker with a Reflexion-style second pass (the model is
 shown its own verdicts and asked to reflect and revise). This is the agentic self-feedback
 baseline: if the circular-validation hypothesis (H1) holds, self-critique alone should *not*
-recover the blind-spot errors that a different-family checker catches. Comparing
+recover the blind-spot errors that a different checker model catches. Comparing
 `circular` vs `reflexion` vs `cross-only` tests exactly that.
 
 ## One-command full evaluation
@@ -272,7 +289,7 @@ KramaBench water-quality} × seeds — with each model loaded once per mode, the
 - `runs/ablation_summary.md` — pooled TP/FP/FN/TN, recall/precision with exact 95% CIs
 - `runs/ablation_table.tex` — a paste-ready LaTeX table for Section 6 of the paper
 
-The rules+same-family cell (the sixth configuration) runs separately via `--mode hybrid-circular`
+The rules+same-model cell (the sixth configuration) runs separately via `--mode hybrid-circular`
 on the same seeds and sample sizes; the aggregator picks its reports up automatically.
 
 No local GPU? Open **`run_ablation_kaggle.ipynb`** on Kaggle or Colab (T4 is enough), add your
